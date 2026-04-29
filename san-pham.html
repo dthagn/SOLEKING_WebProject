@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Danh sách sản phẩm - SOLEKING">
+  <title>Sản Phẩm - SOLEKING</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/home.css">
+  <link rel="stylesheet" href="css/product.css">
+  <link rel="stylesheet" href="css/form.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+  <!-- HEADER -->
+  <header class="header">
+    <div class="header__top">
+      <div class="header__top-content">
+        <div class="header__top-promo">
+          🎉 Miễn phí ship trên toàn quốc cho đơn hàng trên 500k
+        </div>
+        <div class="header__top-contact">
+          <a href="tel:0123456789">Hotline: 0123.456.789</a>
+          <a href="mailto:contact@soleking.com">Email: contact@soleking.com</a>
+        </div>
+      </div>
+    </div>
+
+    <nav class="header__main">
+      <div class="header__content">
+        <a href="index.html" class="header__logo">
+          <span>👟</span> SOLEKING
+        </a>
+
+        <div class="header__nav">
+          <a href="index.html" class="header__nav-link">Trang Chủ</a>
+          <a href="san-pham.html" class="header__nav-link active">Sản Phẩm</a>
+          <a href="#" class="header__nav-link">Thương Hiệu</a>
+          <a href="#" class="header__nav-link">Khuyến Mại</a>
+          <a href="#" class="header__nav-link">Liên Hệ</a>
+        </div>
+
+        <div class="header__actions">
+          <input type="text" class="header__search" placeholder="Tìm kiếm...">
+          <button class="header__action-btn" aria-label="Tìm kiếm">🔍</button>
+          <button class="header__action-btn" aria-label="Yêu thích">❤️</button>
+          <button class="header__action-btn" aria-label="Giỏ hàng">
+            🛒
+            <span class="header__action-badge">0</span>
+          </button>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- BREADCRUMB -->
+  <nav class="breadcrumb">
+    <ul class="breadcrumb__list">
+      <li class="breadcrumb__item">
+        <a href="index.html" class="breadcrumb__link">Trang Chủ</a>
+      </li>
+      <li class="breadcrumb__item breadcrumb__current">Sản Phẩm</li>
+    </ul>
+  </nav>
+
+  <!-- PRODUCTS SECTION -->
+  <section class="products-section">
+    <!-- SIDEBAR FILTER -->
+    <aside class="sidebar">
+      <div class="sidebar__title">
+        <span>🔍 Bộ Lọc</span>
+        <button class="sidebar__toggle" aria-label="Toggle filters">☰</button>
+      </div>
+
+      <!-- Category Filter -->
+      <div class="filter-group">
+        <h3 class="filter-group__title">Danh Mục</h3>
+        <label class="filter-item">
+          <input type="checkbox" class="filter-item__checkbox" checked>
+          <div class="filter-item__label">
+            <span>Tất Cả</span>
+            <span class="filter-item__count">(180)</span>
+          </div>
+        </label>
+        <label class="filter-item">
+          <input type="checkbox" class="filter-item__checkbox">
+          <div class="filter-item__label">
+            <span>Giày Chạy Bộ</span>
+            <span class="filter-item__count">(45)</span>
+          </div>
+        </label>
+        <label class="filter-item">
+          <input type="checkbox" class="filter-item__checkbox">
+          <div class="filter-item__label">
+            <span>Giày Bóng Rổ</span>
+            <span class="filter-item__count">(38)</span>
+          </div>
+        </label>
+        <label class="filter-item">
+          <input type="checkbox" class="filter-item__checkbox">
+          <div class="filter-item__label">
+            <span>Giày Casual</span>
+            <span class="filter-item__count">(52)</span>
+          </div>
+        </label>
+        <label class="filter-item">
+          <input type="checkbox" class="filter-item__checkbox">
+          <div class="filter-item__label">
+            <span>Giày Lifestyle</span>
+            <span class="filter-item__count">(45)</span>
+          </div>
+        </label>
+      </div>
+
+      <!-- Brand Filter -->
+      <div class="filter-group">
+        <h3 class="filter-group__title">Thương Hiệu</h3>
+        <label class="filter-item">
+          <input type="checkbox" class="filter-item__checkbox">
+          <div class="filter-item__label">
+            <span>Nike</span>
+            <span class="filter-item__count">(42)</span>
+          </div>
+        </label>
+        <label class="filter-item">
+          <input type="checkbox" class="filter-item__checkbox">
+          <div class="filter-item__label">
+            <span>Adidas</span>
+            <span class="filter-item__count">(35)</span>
+          </div>
+        </label>
+        <label class="filter-item">
+          <input type="checkbox" class="filter-item__checkbox">
+          <div class="filter-item__label">
+            <span>Jordan</span>
+            <span class="filter-item__count">(28)</span>
+          </div>
+        </label>
+        <label class="filter-item">
+          <input type="checkbox" class="filter-item__checkbox">
+          <div class="filter-item__label">
+            <span>Puma</span>
+            <span class="filter-item__count">(20)</span>
+          </div>
+        </label>
+        <label class="filter-item">
+          <input type="checkbox" class="filter-item__checkbox">
+          <div class="filter-item__label">
+            <span>New Balance</span>
+            <span class="filter-item__count">(18)</span>
+          </div>
+        </label>
+        <label class="filter-item">
+          <input type="checkbox" class="filter-item__checkbox">
+          <div class="filter-item__label">
+            <span>Khác</span>
+            <span class="filter-item__count">(37)</span>
+          </div>
+        </label>
+      </div>
+
+      <!-- Price Filter -->
+      <div class="filter-group">
+        <h3 class="filter-group__title">Giá Tiền</h3>
+        <div class="price-filter">
+          <label>Từ</label>
+          <input type="number" class="price-filter__input" placeholder="0" min="0">
+          <label>Đến</label>
+          <input type="number" class="price-filter__input" placeholder="10.000.000" max="10000000">
+        </div>
+      </div>
+
+      <!-- Rating Filter -->
+      <div class="filter-group">
+        <h3 class="filter-group__title">Đánh Giá</h3>
+        <label class="filter-item">
+          <input type="radio" name="rating" class="filter-item__checkbox">
+          <div class="filter-item__label">★★★★★ (5 sao)</div>
+        </label>
+        <label class="filter-item">
+          <input type="radio" name="rating" class="filter-item__checkbox">
+          <div class="filter-item__label">★★★★☆ (4+ sao)</div>
+        </label>
+        <label class="filter-item">
+          <input type="radio" name="rating" class="filter-item__checkbox">
+          <div class="filter-item__label">★★★☆☆ (3+ sao)</div>
+        </label>
+      </div>
+
+      <!-- Color Filter -->
+      <div class="filter-group">
+        <h3 class="filter-group__title">Màu Sắc</h3>
+        <label class="filter-item">
+          <input type="checkbox" class="filter-item__checkbox">
+          <div class="filter-item__label">
+            <span>Đen</span>
+            <span class="filter-item__count">(45)</span>
+          </div>
+        </label>
+        <label class="filter-item">
+          <input type="checkbox" class="filter-item__checkbox">
+          <div class="filter-item__label">
+            <span>Trắng</span>
+            <span class="filter-item__count">(38)</span>
+          </div>
+        </label>
+        <label class="filter-item">
+          <input type="checkbox" class="filter-item__checkbox">
+          <div class="filter-item__label">
+            <span>Xám</span>
+            <span class="filter-item__count">(32)</span>
+          </div>
+        </label>
+        <label class="filter-item">
+          <input type="checkbox" class="filter-item__checkbox">
+          <div class="filter-item__label">
+            <span>Đỏ</span>
+            <span class="filter-item__count">(25)</span>
+          </div>
+        </label>
+        <label class="filter-item">
+          <input type="checkbox" class="filter-item__checkbox">
+          <div class="filter-item__label">
+            <span>Xanh</span>
+            <span class="filter-item__count">(28)</span>
+          </div>
+        </label>
+      </div>
+
+      <!-- Filter Actions -->
+      <button class="filter-button">Áp Dụng Bộ Lọc</button>
+      <button class="filter-reset">Xóa Bộ Lọc</button>
+    </aside>
+
+    <!-- MAIN CONTENT -->
+    <div class="products-main">
+      <!-- TOOLBAR -->
+      <div class="products-toolbar">
+        <div class="products-toolbar__count">
+          Hiển thị 1-24 của 180 sản phẩm
+        </div>
+        <div class="products-toolbar__sort">
+          <label class="products-toolbar__label" for="sort">Sắp xếp:</label>
+          <select id="sort" class="products-toolbar__select">
+            <option value="newest">Mới Nhất</option>
+            <option value="price-low">Giá: Thấp → Cao</option>
+            <option value="price-high">Giá: Cao → Thấp</option>
+            <option value="popular">Phổ Biến Nhất</option>
+            <option value="rating">Đánh Giá Cao</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- PRODUCTS GRID -->
+      <div class="products-grid">
+        <!-- Product 1 -->
+        <div class="product-card">
+          <div class="product-card__image">
+            <img src="assets/images/shoe-1.jpg" alt="Nike Air Force 1">
+            <span class="product-card__badge">-50%</span>
+          </div>
+          <div class="product-card__body">
+            <p class="product-card__category">Nike</p>
+            <h3 class="product-card__name">Nike Air Force 1 '07</h3>
+            <div class="product-card__rating">
+              <span class="product-card__stars">★★★★★</span>
+              <span class="product-card__reviews">(245)</span>
+            </div>
+            <div class="product-card__price">
+              <span class="product-card__price-current">1.599.000đ</span>
+              <span class="product-card__price-original">3.199.000đ</span>
+            </div>
+            <div class="product-card__actions">
+              <button class="product-card__action-btn">❤️</button>
+              <button class="product-card__add-to-cart">Thêm Vào Giỏ</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 2 -->
+        <div class="product-card">
+          <div class="product-card__image">
+            <img src="assets/images/shoe-2.jpg" alt="Adidas Ultraboost">
+            <span class="product-card__badge">-40%</span>
+          </div>
+          <div class="product-card__body">
+            <p class="product-card__category">Adidas</p>
+            <h3 class="product-card__name">Adidas Ultraboost 22</h3>
+            <div class="product-card__rating">
+              <span class="product-card__stars">★★★★☆</span>
+              <span class="product-card__reviews">(189)</span>
+            </div>
+            <div class="product-card__price">
+              <span class="product-card__price-current">2.299.000đ</span>
+              <span class="product-card__price-original">3.899.000đ</span>
+            </div>
+            <div class="product-card__actions">
+              <button class="product-card__action-btn">❤️</button>
+              <button class="product-card__add-to-cart">Thêm Vào Giỏ</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 3 -->
+        <div class="product-card">
+          <div class="product-card__image">
+            <img src="assets/images/shoe-3.jpg" alt="Puma RS-X">
+            <span class="product-card__badge">-35%</span>
+          </div>
+          <div class="product-card__body">
+            <p class="product-card__category">Puma</p>
+            <h3 class="product-card__name">Puma RS-X Millennium</h3>
+            <div class="product-card__rating">
+              <span class="product-card__stars">★★★★★</span>
+              <span class="product-card__reviews">(156)</span>
+            </div>
+            <div class="product-card__price">
+              <span class="product-card__price-current">1.799.000đ</span>
+              <span class="product-card__price-original">2.799.000đ</span>
+            </div>
+            <div class="product-card__actions">
+              <button class="product-card__action-btn">❤️</button>
+              <button class="product-card__add-to-cart">Thêm Vào Giỏ</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 4 -->
+        <div class="product-card">
+          <div class="product-card__image">
+            <img src="assets/images/shoe-4.jpg" alt="New Balance 990v6">
+          </div>
+          <div class="product-card__body">
+            <p class="product-card__category">New Balance</p>
+            <h3 class="product-card__name">New Balance 990v6</h3>
+            <div class="product-card__rating">
+              <span class="product-card__stars">★★★★★</span>
+              <span class="product-card__reviews">(312)</span>
+            </div>
+            <div class="product-card__price">
+              <span class="product-card__price-current">2.899.000đ</span>
+            </div>
+            <div class="product-card__actions">
+              <button class="product-card__action-btn">❤️</button>
+              <button class="product-card__add-to-cart">Thêm Vào Giỏ</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 5 -->
+        <div class="product-card">
+          <div class="product-card__image">
+            <img src="assets/images/shoe-5.jpg" alt="Jordan 1 Retro">
+          </div>
+          <div class="product-card__body">
+            <p class="product-card__category">Jordan</p>
+            <h3 class="product-card__name">Air Jordan 1 Retro High OG</h3>
+            <div class="product-card__rating">
+              <span class="product-card__stars">★★★★★</span>
+              <span class="product-card__reviews">(523)</span>
+            </div>
+            <div class="product-card__price">
+              <span class="product-card__price-current">2.699.000đ</span>
+            </div>
+            <div class="product-card__actions">
+              <button class="product-card__action-btn">❤️</button>
+              <button class="product-card__add-to-cart">Thêm Vào Giỏ</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 6-24 -->
+        <div class="product-card">
+          <div class="product-card__image">
+            <img src="assets/images/shoe-6.jpg" alt="Converse Chuck Taylor">
+          </div>
+          <div class="product-card__body">
+            <p class="product-card__category">Converse</p>
+            <h3 class="product-card__name">Chuck Taylor All Star</h3>
+            <div class="product-card__rating">
+              <span class="product-card__stars">★★★★☆</span>
+              <span class="product-card__reviews">(278)</span>
+            </div>
+            <div class="product-card__price">
+              <span class="product-card__price-current">899.000đ</span>
+            </div>
+            <div class="product-card__actions">
+              <button class="product-card__action-btn">❤️</button>
+              <button class="product-card__add-to-cart">Thêm Vào Giỏ</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div class="product-card__image">
+            <img src="assets/images/shoe-7.jpg" alt="Vans Old Skool">
+          </div>
+          <div class="product-card__body">
+            <p class="product-card__category">Vans</p>
+            <h3 class="product-card__name">Vans Old Skool</h3>
+            <div class="product-card__rating">
+              <span class="product-card__stars">★★★★★</span>
+              <span class="product-card__reviews">(401)</span>
+            </div>
+            <div class="product-card__price">
+              <span class="product-card__price-current">1.199.000đ</span>
+            </div>
+            <div class="product-card__actions">
+              <button class="product-card__action-btn">❤️</button>
+              <button class="product-card__add-to-cart">Thêm Vào Giỏ</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div class="product-card__image">
+            <img src="assets/images/shoe-8.jpg" alt="Asics Gel-Lyte III">
+          </div>
+          <div class="product-card__body">
+            <p class="product-card__category">Asics</p>
+            <h3 class="product-card__name">Asics Gel-Lyte III OG</h3>
+            <div class="product-card__rating">
+              <span class="product-card__stars">★★★★★</span>
+              <span class="product-card__reviews">(234)</span>
+            </div>
+            <div class="product-card__price">
+              <span class="product-card__price-current">1.599.000đ</span>
+            </div>
+            <div class="product-card__actions">
+              <button class="product-card__action-btn">❤️</button>
+              <button class="product-card__add-to-cart">Thêm Vào Giỏ</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Add 16 more similar products to reach 24 total -->
+        <div class="product-card">
+          <div class="product-card__image">
+            <img src="assets/images/shoe-1.jpg" alt="Nike Air Max">
+            <span class="product-card__badge">-25%</span>
+          </div>
+          <div class="product-card__body">
+            <p class="product-card__category">Nike</p>
+            <h3 class="product-card__name">Nike Air Max 90</h3>
+            <div class="product-card__rating">
+              <span class="product-card__stars">★★★★★</span>
+              <span class="product-card__reviews">(189)</span>
+            </div>
+            <div class="product-card__price">
+              <span class="product-card__price-current">1.299.000đ</span>
+              <span class="product-card__price-original">1.799.000đ</span>
+            </div>
+            <div class="product-card__actions">
+              <button class="product-card__action-btn">❤️</button>
+              <button class="product-card__add-to-cart">Thêm Vào Giỏ</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- PAGINATION -->
+      <div style="display: flex; justify-content: center; gap: var(--spacing-sm); margin-top: var(--spacing-xl); padding: var(--spacing-lg) 0;">
+        <button class="btn btn--outline" style="background: transparent; border: 1px solid var(--color-border); color: var(--color-text); width: auto;">← Trước</button>
+        <button class="btn" style="background: var(--color-accent); color: white; width: auto;">1</button>
+        <button class="btn" style="background: transparent; border: 1px solid var(--color-border); color: var(--color-text); width: auto;">2</button>
+        <button class="btn" style="background: transparent; border: 1px solid var(--color-border); color: var(--color-text); width: auto;">3</button>
+        <button class="btn" style="background: transparent; border: 1px solid var(--color-border); color: var(--color-text); width: auto;">Tiếp →</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer__content">
+      <div>
+        <h3 class="footer__section-title">Về SOLEKING</h3>
+        <ul class="footer__list">
+          <li><a href="#" class="footer__link">Về chúng tôi</a></li>
+          <li><a href="#" class="footer__link">Cơ hội việc làm</a></li>
+          <li><a href="#" class="footer__link">Tin tức</a></li>
+          <li><a href="#" class="footer__link">Blog</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h3 class="footer__section-title">Hỗ Trợ Khách Hàng</h3>
+        <ul class="footer__list">
+          <li><a href="#" class="footer__link">Liên hệ chúng tôi</a></li>
+          <li><a href="#" class="footer__link">Câu hỏi thường gặp</a></li>
+          <li><a href="#" class="footer__link">Chính sách trả hàng</a></li>
+          <li><a href="#" class="footer__link">Theo dõi đơn hàng</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h3 class="footer__section-title">Chính Sách</h3>
+        <ul class="footer__list">
+          <li><a href="#" class="footer__link">Điều khoản sử dụng</a></li>
+          <li><a href="#" class="footer__link">Chính sách bảo mật</a></li>
+          <li><a href="#" class="footer__link">Chính sách cookie</a></li>
+          <li><a href="#" class="footer__link">Bản đồ trang</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h3 class="footer__section-title">Kết Nối</h3>
+        <div class="footer__social">
+          <a href="#" class="footer__social-link" aria-label="Facebook">f</a>
+          <a href="#" class="footer__social-link" aria-label="Instagram">📷</a>
+          <a href="#" class="footer__social-link" aria-label="Twitter">𝕏</a>
+          <a href="#" class="footer__social-link" aria-label="YouTube">▶</a>
+        </div>
+        <div class="footer__newsletter">
+          <h4 class="footer__section-title" style="margin-bottom: var(--spacing-sm);">Bản tin</h4>
+          <form class="footer__newsletter-input">
+            <input type="email" placeholder="Email..." required>
+            <button type="submit">Gửi</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer__bottom">
+      <p>&copy; 2024 SOLEKING. All rights reserved.</p>
+      <div class="footer__bottom-payment">
+        <div class="footer__payment-icon">💳</div>
+        <div class="footer__payment-icon">🏦</div>
+        <div class="footer__payment-icon">📱</div>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
