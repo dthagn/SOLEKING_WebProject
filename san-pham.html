@@ -1,536 +1,333 @@
 <!DOCTYPE html>
 <html lang="vi">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Danh sách sản phẩm - SOLEKING">
   <title>Sản Phẩm - SOLEKING</title>
 
-  <!-- CSS -->
+  <!-- Liên kết các file CSS -->
   <link rel="stylesheet" href="css/base.css">
   <link rel="stylesheet" href="css/layout.css">
-  <link rel="stylesheet" href="css/home.css">
   <link rel="stylesheet" href="css/product.css">
-  <link rel="stylesheet" href="css/form.css">
   <link rel="stylesheet" href="css/responsive.css">
 </head>
+
 <body>
-  <!-- HEADER -->
-  <header class="header">
-    <div class="header__top">
-      <div class="header__top-content">
-        <div class="header__top-promo">
-          🎉 Miễn phí ship trên toàn quốc cho đơn hàng trên 500k
-        </div>
-        <div class="header__top-contact">
-          <a href="tel:0123456789">Hotline: 0123.456.789</a>
-          <a href="mailto:contact@soleking.com">Email: contact@soleking.com</a>
-        </div>
-      </div>
-    </div>
-
-    <nav class="header__main">
-      <div class="header__content">
-        <a href="index.html" class="header__logo">
-          <span>👟</span> SOLEKING
+  <!-- PHẦN ĐẦU TRANG (GLASSMORPHISM) -->
+  <div class="phan-dau">
+    <div class="phan-dau-chinh">
+      <div class="noi-dung-phan-dau">
+        <a href="index.html" class="logo">
+          SOLEKING
         </a>
-
-        <div class="header__nav">
-          <a href="index.html" class="header__nav-link">Trang Chủ</a>
-          <a href="san-pham.html" class="header__nav-link active">Sản Phẩm</a>
-          <a href="#" class="header__nav-link">Thương Hiệu</a>
-          <a href="#" class="header__nav-link">Khuyến Mại</a>
-          <a href="#" class="header__nav-link">Liên Hệ</a>
+        <nav class="thanh-dieu-huong" aria-label="Menu chính">
+          <a href="index.html" class="lien-ket-dieu-huong">Trang Chủ</a>
+          <a href="san-pham.html" class="lien-ket-dieu-huong">Shop</a>
+          <a href="gioi-thieu.html" class="lien-ket-dieu-huong">Giới Thiệu</a>
+          <a href="lien-he.html" class="lien-ket-dieu-huong">Liên Hệ</a>
+        </nav>
+        <div class="hanh-dong">
+          <a href="#" class="nut-hanh-dong" title="Tìm Kiếm" id="btn-tim-kiem">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="11" cy="11" r="8" />
+              <line x1="21" y1="21" x2="16.65" y2="16.65" />
+            </svg>
+          </a>
+          <a href="#" class="nut-hanh-dong" title="Tài Khoản" id="btn-tai-khoan">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
+              <circle cx="12" cy="7" r="4" />
+            </svg>
+          </a>
+          <a href="thanh-toan.html" class="nut-hanh-dong" title="Giỏ Hàng" id="btn-gio-hang"
+            style="position: relative;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z" />
+              <line x1="3" y1="6" x2="21" y2="6" />
+              <path d="M16 10a4 4 0 0 1-8 0" />
+            </svg>
+            <span class="thong-bao-nho">0</span>
+          </a>
         </div>
-
-        <div class="header__actions">
-          <input type="text" class="header__search" placeholder="Tìm kiếm...">
-          <button class="header__action-btn" aria-label="Tìm kiếm">🔍</button>
-          <button class="header__action-btn" aria-label="Yêu thích">❤️</button>
-          <button class="header__action-btn" aria-label="Giỏ hàng">
-            🛒
-            <span class="header__action-badge">0</span>
-          </button>
-        </div>
-      </div>
-    </nav>
-  </header>
-
-  <!-- BREADCRUMB -->
-  <nav class="breadcrumb">
-    <ul class="breadcrumb__list">
-      <li class="breadcrumb__item">
-        <a href="index.html" class="breadcrumb__link">Trang Chủ</a>
-      </li>
-      <li class="breadcrumb__item breadcrumb__current">Sản Phẩm</li>
-    </ul>
-  </nav>
-
-  <!-- PRODUCTS SECTION -->
-  <section class="products-section">
-    <!-- SIDEBAR FILTER -->
-    <aside class="sidebar">
-      <div class="sidebar__title">
-        <span>🔍 Bộ Lọc</span>
-        <button class="sidebar__toggle" aria-label="Toggle filters">☰</button>
-      </div>
-
-      <!-- Category Filter -->
-      <div class="filter-group">
-        <h3 class="filter-group__title">Danh Mục</h3>
-        <label class="filter-item">
-          <input type="checkbox" class="filter-item__checkbox" checked>
-          <div class="filter-item__label">
-            <span>Tất Cả</span>
-            <span class="filter-item__count">(180)</span>
-          </div>
-        </label>
-        <label class="filter-item">
-          <input type="checkbox" class="filter-item__checkbox">
-          <div class="filter-item__label">
-            <span>Giày Chạy Bộ</span>
-            <span class="filter-item__count">(45)</span>
-          </div>
-        </label>
-        <label class="filter-item">
-          <input type="checkbox" class="filter-item__checkbox">
-          <div class="filter-item__label">
-            <span>Giày Bóng Rổ</span>
-            <span class="filter-item__count">(38)</span>
-          </div>
-        </label>
-        <label class="filter-item">
-          <input type="checkbox" class="filter-item__checkbox">
-          <div class="filter-item__label">
-            <span>Giày Casual</span>
-            <span class="filter-item__count">(52)</span>
-          </div>
-        </label>
-        <label class="filter-item">
-          <input type="checkbox" class="filter-item__checkbox">
-          <div class="filter-item__label">
-            <span>Giày Lifestyle</span>
-            <span class="filter-item__count">(45)</span>
-          </div>
-        </label>
-      </div>
-
-      <!-- Brand Filter -->
-      <div class="filter-group">
-        <h3 class="filter-group__title">Thương Hiệu</h3>
-        <label class="filter-item">
-          <input type="checkbox" class="filter-item__checkbox">
-          <div class="filter-item__label">
-            <span>Nike</span>
-            <span class="filter-item__count">(42)</span>
-          </div>
-        </label>
-        <label class="filter-item">
-          <input type="checkbox" class="filter-item__checkbox">
-          <div class="filter-item__label">
-            <span>Adidas</span>
-            <span class="filter-item__count">(35)</span>
-          </div>
-        </label>
-        <label class="filter-item">
-          <input type="checkbox" class="filter-item__checkbox">
-          <div class="filter-item__label">
-            <span>Jordan</span>
-            <span class="filter-item__count">(28)</span>
-          </div>
-        </label>
-        <label class="filter-item">
-          <input type="checkbox" class="filter-item__checkbox">
-          <div class="filter-item__label">
-            <span>Puma</span>
-            <span class="filter-item__count">(20)</span>
-          </div>
-        </label>
-        <label class="filter-item">
-          <input type="checkbox" class="filter-item__checkbox">
-          <div class="filter-item__label">
-            <span>New Balance</span>
-            <span class="filter-item__count">(18)</span>
-          </div>
-        </label>
-        <label class="filter-item">
-          <input type="checkbox" class="filter-item__checkbox">
-          <div class="filter-item__label">
-            <span>Khác</span>
-            <span class="filter-item__count">(37)</span>
-          </div>
-        </label>
-      </div>
-
-      <!-- Price Filter -->
-      <div class="filter-group">
-        <h3 class="filter-group__title">Giá Tiền</h3>
-        <div class="price-filter">
-          <label>Từ</label>
-          <input type="number" class="price-filter__input" placeholder="0" min="0">
-          <label>Đến</label>
-          <input type="number" class="price-filter__input" placeholder="10.000.000" max="10000000">
-        </div>
-      </div>
-
-      <!-- Rating Filter -->
-      <div class="filter-group">
-        <h3 class="filter-group__title">Đánh Giá</h3>
-        <label class="filter-item">
-          <input type="radio" name="rating" class="filter-item__checkbox">
-          <div class="filter-item__label">★★★★★ (5 sao)</div>
-        </label>
-        <label class="filter-item">
-          <input type="radio" name="rating" class="filter-item__checkbox">
-          <div class="filter-item__label">★★★★☆ (4+ sao)</div>
-        </label>
-        <label class="filter-item">
-          <input type="radio" name="rating" class="filter-item__checkbox">
-          <div class="filter-item__label">★★★☆☆ (3+ sao)</div>
-        </label>
-      </div>
-
-      <!-- Color Filter -->
-      <div class="filter-group">
-        <h3 class="filter-group__title">Màu Sắc</h3>
-        <label class="filter-item">
-          <input type="checkbox" class="filter-item__checkbox">
-          <div class="filter-item__label">
-            <span>Đen</span>
-            <span class="filter-item__count">(45)</span>
-          </div>
-        </label>
-        <label class="filter-item">
-          <input type="checkbox" class="filter-item__checkbox">
-          <div class="filter-item__label">
-            <span>Trắng</span>
-            <span class="filter-item__count">(38)</span>
-          </div>
-        </label>
-        <label class="filter-item">
-          <input type="checkbox" class="filter-item__checkbox">
-          <div class="filter-item__label">
-            <span>Xám</span>
-            <span class="filter-item__count">(32)</span>
-          </div>
-        </label>
-        <label class="filter-item">
-          <input type="checkbox" class="filter-item__checkbox">
-          <div class="filter-item__label">
-            <span>Đỏ</span>
-            <span class="filter-item__count">(25)</span>
-          </div>
-        </label>
-        <label class="filter-item">
-          <input type="checkbox" class="filter-item__checkbox">
-          <div class="filter-item__label">
-            <span>Xanh</span>
-            <span class="filter-item__count">(28)</span>
-          </div>
-        </label>
-      </div>
-
-      <!-- Filter Actions -->
-      <button class="filter-button">Áp Dụng Bộ Lọc</button>
-      <button class="filter-reset">Xóa Bộ Lọc</button>
-    </aside>
-
-    <!-- MAIN CONTENT -->
-    <div class="products-main">
-      <!-- TOOLBAR -->
-      <div class="products-toolbar">
-        <div class="products-toolbar__count">
-          Hiển thị 1-24 của 180 sản phẩm
-        </div>
-        <div class="products-toolbar__sort">
-          <label class="products-toolbar__label" for="sort">Sắp xếp:</label>
-          <select id="sort" class="products-toolbar__select">
-            <option value="newest">Mới Nhất</option>
-            <option value="price-low">Giá: Thấp → Cao</option>
-            <option value="price-high">Giá: Cao → Thấp</option>
-            <option value="popular">Phổ Biến Nhất</option>
-            <option value="rating">Đánh Giá Cao</option>
-          </select>
-        </div>
-      </div>
-
-      <!-- PRODUCTS GRID -->
-      <div class="products-grid">
-        <!-- Product 1 -->
-        <div class="product-card">
-          <div class="product-card__image">
-            <img src="assets/images/shoe-1.jpg" alt="Nike Air Force 1">
-            <span class="product-card__badge">-50%</span>
-          </div>
-          <div class="product-card__body">
-            <p class="product-card__category">Nike</p>
-            <h3 class="product-card__name">Nike Air Force 1 '07</h3>
-            <div class="product-card__rating">
-              <span class="product-card__stars">★★★★★</span>
-              <span class="product-card__reviews">(245)</span>
-            </div>
-            <div class="product-card__price">
-              <span class="product-card__price-current">1.599.000đ</span>
-              <span class="product-card__price-original">3.199.000đ</span>
-            </div>
-            <div class="product-card__actions">
-              <button class="product-card__action-btn">❤️</button>
-              <button class="product-card__add-to-cart">Thêm Vào Giỏ</button>
-            </div>
-          </div>
-        </div>
-
-        <!-- Product 2 -->
-        <div class="product-card">
-          <div class="product-card__image">
-            <img src="assets/images/shoe-2.jpg" alt="Adidas Ultraboost">
-            <span class="product-card__badge">-40%</span>
-          </div>
-          <div class="product-card__body">
-            <p class="product-card__category">Adidas</p>
-            <h3 class="product-card__name">Adidas Ultraboost 22</h3>
-            <div class="product-card__rating">
-              <span class="product-card__stars">★★★★☆</span>
-              <span class="product-card__reviews">(189)</span>
-            </div>
-            <div class="product-card__price">
-              <span class="product-card__price-current">2.299.000đ</span>
-              <span class="product-card__price-original">3.899.000đ</span>
-            </div>
-            <div class="product-card__actions">
-              <button class="product-card__action-btn">❤️</button>
-              <button class="product-card__add-to-cart">Thêm Vào Giỏ</button>
-            </div>
-          </div>
-        </div>
-
-        <!-- Product 3 -->
-        <div class="product-card">
-          <div class="product-card__image">
-            <img src="assets/images/shoe-3.jpg" alt="Puma RS-X">
-            <span class="product-card__badge">-35%</span>
-          </div>
-          <div class="product-card__body">
-            <p class="product-card__category">Puma</p>
-            <h3 class="product-card__name">Puma RS-X Millennium</h3>
-            <div class="product-card__rating">
-              <span class="product-card__stars">★★★★★</span>
-              <span class="product-card__reviews">(156)</span>
-            </div>
-            <div class="product-card__price">
-              <span class="product-card__price-current">1.799.000đ</span>
-              <span class="product-card__price-original">2.799.000đ</span>
-            </div>
-            <div class="product-card__actions">
-              <button class="product-card__action-btn">❤️</button>
-              <button class="product-card__add-to-cart">Thêm Vào Giỏ</button>
-            </div>
-          </div>
-        </div>
-
-        <!-- Product 4 -->
-        <div class="product-card">
-          <div class="product-card__image">
-            <img src="assets/images/shoe-4.jpg" alt="New Balance 990v6">
-          </div>
-          <div class="product-card__body">
-            <p class="product-card__category">New Balance</p>
-            <h3 class="product-card__name">New Balance 990v6</h3>
-            <div class="product-card__rating">
-              <span class="product-card__stars">★★★★★</span>
-              <span class="product-card__reviews">(312)</span>
-            </div>
-            <div class="product-card__price">
-              <span class="product-card__price-current">2.899.000đ</span>
-            </div>
-            <div class="product-card__actions">
-              <button class="product-card__action-btn">❤️</button>
-              <button class="product-card__add-to-cart">Thêm Vào Giỏ</button>
-            </div>
-          </div>
-        </div>
-
-        <!-- Product 5 -->
-        <div class="product-card">
-          <div class="product-card__image">
-            <img src="assets/images/shoe-5.jpg" alt="Jordan 1 Retro">
-          </div>
-          <div class="product-card__body">
-            <p class="product-card__category">Jordan</p>
-            <h3 class="product-card__name">Air Jordan 1 Retro High OG</h3>
-            <div class="product-card__rating">
-              <span class="product-card__stars">★★★★★</span>
-              <span class="product-card__reviews">(523)</span>
-            </div>
-            <div class="product-card__price">
-              <span class="product-card__price-current">2.699.000đ</span>
-            </div>
-            <div class="product-card__actions">
-              <button class="product-card__action-btn">❤️</button>
-              <button class="product-card__add-to-cart">Thêm Vào Giỏ</button>
-            </div>
-          </div>
-        </div>
-
-        <!-- Product 6-24 -->
-        <div class="product-card">
-          <div class="product-card__image">
-            <img src="assets/images/shoe-6.jpg" alt="Converse Chuck Taylor">
-          </div>
-          <div class="product-card__body">
-            <p class="product-card__category">Converse</p>
-            <h3 class="product-card__name">Chuck Taylor All Star</h3>
-            <div class="product-card__rating">
-              <span class="product-card__stars">★★★★☆</span>
-              <span class="product-card__reviews">(278)</span>
-            </div>
-            <div class="product-card__price">
-              <span class="product-card__price-current">899.000đ</span>
-            </div>
-            <div class="product-card__actions">
-              <button class="product-card__action-btn">❤️</button>
-              <button class="product-card__add-to-cart">Thêm Vào Giỏ</button>
-            </div>
-          </div>
-        </div>
-
-        <div class="product-card">
-          <div class="product-card__image">
-            <img src="assets/images/shoe-7.jpg" alt="Vans Old Skool">
-          </div>
-          <div class="product-card__body">
-            <p class="product-card__category">Vans</p>
-            <h3 class="product-card__name">Vans Old Skool</h3>
-            <div class="product-card__rating">
-              <span class="product-card__stars">★★★★★</span>
-              <span class="product-card__reviews">(401)</span>
-            </div>
-            <div class="product-card__price">
-              <span class="product-card__price-current">1.199.000đ</span>
-            </div>
-            <div class="product-card__actions">
-              <button class="product-card__action-btn">❤️</button>
-              <button class="product-card__add-to-cart">Thêm Vào Giỏ</button>
-            </div>
-          </div>
-        </div>
-
-        <div class="product-card">
-          <div class="product-card__image">
-            <img src="assets/images/shoe-8.jpg" alt="Asics Gel-Lyte III">
-          </div>
-          <div class="product-card__body">
-            <p class="product-card__category">Asics</p>
-            <h3 class="product-card__name">Asics Gel-Lyte III OG</h3>
-            <div class="product-card__rating">
-              <span class="product-card__stars">★★★★★</span>
-              <span class="product-card__reviews">(234)</span>
-            </div>
-            <div class="product-card__price">
-              <span class="product-card__price-current">1.599.000đ</span>
-            </div>
-            <div class="product-card__actions">
-              <button class="product-card__action-btn">❤️</button>
-              <button class="product-card__add-to-cart">Thêm Vào Giỏ</button>
-            </div>
-          </div>
-        </div>
-
-        <!-- Add 16 more similar products to reach 24 total -->
-        <div class="product-card">
-          <div class="product-card__image">
-            <img src="assets/images/shoe-1.jpg" alt="Nike Air Max">
-            <span class="product-card__badge">-25%</span>
-          </div>
-          <div class="product-card__body">
-            <p class="product-card__category">Nike</p>
-            <h3 class="product-card__name">Nike Air Max 90</h3>
-            <div class="product-card__rating">
-              <span class="product-card__stars">★★★★★</span>
-              <span class="product-card__reviews">(189)</span>
-            </div>
-            <div class="product-card__price">
-              <span class="product-card__price-current">1.299.000đ</span>
-              <span class="product-card__price-original">1.799.000đ</span>
-            </div>
-            <div class="product-card__actions">
-              <button class="product-card__action-btn">❤️</button>
-              <button class="product-card__add-to-cart">Thêm Vào Giỏ</button>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- PAGINATION -->
-      <div style="display: flex; justify-content: center; gap: var(--spacing-sm); margin-top: var(--spacing-xl); padding: var(--spacing-lg) 0;">
-        <button class="btn btn--outline" style="background: transparent; border: 1px solid var(--color-border); color: var(--color-text); width: auto;">← Trước</button>
-        <button class="btn" style="background: var(--color-accent); color: white; width: auto;">1</button>
-        <button class="btn" style="background: transparent; border: 1px solid var(--color-border); color: var(--color-text); width: auto;">2</button>
-        <button class="btn" style="background: transparent; border: 1px solid var(--color-border); color: var(--color-text); width: auto;">3</button>
-        <button class="btn" style="background: transparent; border: 1px solid var(--color-border); color: var(--color-text); width: auto;">Tiếp →</button>
       </div>
     </div>
-  </section>
+  </div>
 
-  <!-- FOOTER -->
-  <footer class="footer">
-    <div class="footer__content">
-      <div>
-        <h3 class="footer__section-title">Về SOLEKING</h3>
-        <ul class="footer__list">
-          <li><a href="#" class="footer__link">Về chúng tôi</a></li>
-          <li><a href="#" class="footer__link">Cơ hội việc làm</a></li>
-          <li><a href="#" class="footer__link">Tin tức</a></li>
-          <li><a href="#" class="footer__link">Blog</a></li>
-        </ul>
-      </div>
+  <!-- KHU VỰC SẢN PHẨM TRẢI DÀI -->
+  <div class="danh-sach-san-pham">
 
-      <div>
-        <h3 class="footer__section-title">Hỗ Trợ Khách Hàng</h3>
-        <ul class="footer__list">
-          <li><a href="#" class="footer__link">Liên hệ chúng tôi</a></li>
-          <li><a href="#" class="footer__link">Câu hỏi thường gặp</a></li>
-          <li><a href="#" class="footer__link">Chính sách trả hàng</a></li>
-          <li><a href="#" class="footer__link">Theo dõi đơn hàng</a></li>
-        </ul>
-      </div>
+    <!-- NHÓM NIKE (THỂ THAO) -->
+    <div class="nhom-thuong-hieu" id="the-thao">
+      <h2 class="tieu-de-thuong-hieu">Gian Hàng Nike</h2>
 
-      <div>
-        <h3 class="footer__section-title">Chính Sách</h3>
-        <ul class="footer__list">
-          <li><a href="#" class="footer__link">Điều khoản sử dụng</a></li>
-          <li><a href="#" class="footer__link">Chính sách bảo mật</a></li>
-          <li><a href="#" class="footer__link">Chính sách cookie</a></li>
-          <li><a href="#" class="footer__link">Bản đồ trang</a></li>
-        </ul>
-      </div>
-
-      <div>
-        <h3 class="footer__section-title">Kết Nối</h3>
-        <div class="footer__social">
-          <a href="#" class="footer__social-link" aria-label="Facebook">f</a>
-          <a href="#" class="footer__social-link" aria-label="Instagram">📷</a>
-          <a href="#" class="footer__social-link" aria-label="Twitter">𝕏</a>
-          <a href="#" class="footer__social-link" aria-label="YouTube">▶</a>
+      <div class="luoi-san-pham-nhom">
+        <!-- Thẻ sản phẩm -->
+        <div class="the-sp-premium">
+          <span class="nhan-san-pham-hot">HOT</span>
+          <div class="khung-anh-sp">
+            <img src="assets/images/AIR+FORCE+1+'07.png" alt="Nike 1">
+            <!-- Overlay khi hover -->
+            <div class="lop-phu-hanh-dong">
+              <a href="thanh-toan.html" class="nut-overlay chinh">Mua Ngay</a>
+              <a href="chi-tiet.html" class="nut-overlay">Xem Chi Tiết</a>
+            </div>
+          </div>
+          <div class="thong-tin-sp-premium">
+            <h3 class="ten-sp-premium">Nike Air Force 1 '07</h3>
+            <p class="mo-ta-sp-ngan">Sự tỏa sáng tồn tại trong mẫu giày bóng rổ nguyên bản, kết hợp độ bền chắc và phong
+              cách.</p>
+            <div class="gia-sp-premium">1.599.000đ</div>
+          </div>
         </div>
-        <div class="footer__newsletter">
-          <h4 class="footer__section-title" style="margin-bottom: var(--spacing-sm);">Bản tin</h4>
-          <form class="footer__newsletter-input">
-            <input type="email" placeholder="Email..." required>
-            <button type="submit">Gửi</button>
-          </form>
+
+        <!-- Thẻ sản phẩm -->
+        <div class="the-sp-premium">
+          <span class="nhan-san-pham-moi">NEW</span>
+          <div class="khung-anh-sp">
+            <img src="assets/images/NIKE+AIR+MAX+90.png" alt="Nike 2">
+            <!-- Overlay khi hover -->
+            <div class="lop-phu-hanh-dong">
+              <a href="thanh-toan.html" class="nut-overlay chinh">Mua Ngay</a>
+              <a href="chi-tiet.html" class="nut-overlay">Xem Chi Tiết</a>
+            </div>
+          </div>
+          <div class="thong-tin-sp-premium">
+            <h3 class="ten-sp-premium">Nike Air Max 2024</h3>
+            <p class="mo-ta-sp-ngan">Trải nghiệm đệm khí Air tối đa cho mỗi bước chạy êm ái hơn bao giờ hết.</p>
+            <div class="gia-sp-premium">3.499.000đ</div>
+          </div>
+        </div>
+
+        <!-- Thẻ sản phẩm -->
+        <div class="the-sp-premium">
+          <div class="khung-anh-sp">
+            <img src="assets/images/NIKE+VOMERO+PLUS.png" alt="Nike 3">
+            <!-- Overlay khi hover -->
+            <div class="lop-phu-hanh-dong">
+              <a href="thanh-toan.html" class="nut-overlay chinh">Mua Ngay</a>
+              <a href="chi-tiet.html" class="nut-overlay">Xem Chi Tiết</a>
+            </div>
+          </div>
+          <div class="thong-tin-sp-premium">
+            <h3 class="ten-sp-premium">Nike ZoomX Invincible</h3>
+            <p class="mo-ta-sp-ngan">Giày chạy bộ chuyên nghiệp với độ nảy và đàn hồi tốt nhất từ công nghệ ZoomX.</p>
+            <div class="gia-sp-premium">4.299.000đ</div>
+          </div>
         </div>
       </div>
     </div>
 
-    <div class="footer__bottom">
-      <p>&copy; 2024 SOLEKING. All rights reserved.</p>
-      <div class="footer__bottom-payment">
-        <div class="footer__payment-icon">💳</div>
-        <div class="footer__payment-icon">🏦</div>
-        <div class="footer__payment-icon">📱</div>
+    <!-- NHÓM ADIDAS -->
+    <div class="nhom-thuong-hieu">
+      <h2 class="tieu-de-thuong-hieu">Gian Hàng Adidas</h2>
+
+      <div class="luoi-san-pham-nhom">
+        <!-- Thẻ sản phẩm -->
+        <div class="the-sp-premium">
+          <div class="khung-anh-sp">
+            <img src="assets/images/Giay_Pureboost_22.png" alt="Adidas 1">
+            <div class="lop-phu-hanh-dong">
+              <a href="thanh-toan.html" class="nut-overlay chinh">Mua Ngay</a>
+              <a href="chi-tiet.html" class="nut-overlay">Xem Chi Tiết</a>
+            </div>
+          </div>
+          <div class="thong-tin-sp-premium">
+            <h3 class="ten-sp-premium">Adidas Ultraboost 22</h3>
+            <p class="mo-ta-sp-ngan">Sự hoàn hảo cho đôi chân, ôm sát như tất cùng công nghệ đệm Boost trứ danh.</p>
+            <div class="gia-sp-premium">2.299.000đ</div>
+          </div>
+        </div>
+
+        <!-- Thẻ sản phẩm -->
+        <div class="the-sp-premium">
+          <div class="khung-anh-sp">
+            <img src="assets/images/Giay_Adizero_EVO.png" alt="Adidas 2">
+            <div class="lop-phu-hanh-dong">
+              <a href="thanh-toan.html" class="nut-overlay chinh">Mua Ngay</a>
+              <a href="chi-tiet.html" class="nut-overlay">Xem Chi Tiết</a>
+            </div>
+          </div>
+          <div class="thong-tin-sp-premium">
+            <h3 class="ten-sp-premium">Adidas NMD R1 V2</h3>
+            <p class="mo-ta-sp-ngan">Phong cách đường phố táo bạo với các điểm nhấn đặc trưng không thể nhầm lẫn.</p>
+            <div class="gia-sp-premium">2.599.000đ</div>
+          </div>
+        </div>
       </div>
+    </div>
+
+    <!-- NHÓM PUMA (BÓNG RỔ) -->
+    <div class="nhom-thuong-hieu" id="bong-ro">
+      <h2 class="tieu-de-thuong-hieu">Gian Hàng Puma</h2>
+
+      <div class="luoi-san-pham-nhom">
+        <!-- Thẻ sản phẩm -->
+        <div class="the-sp-premium">
+          <div class="khung-anh-sp">
+            <img src="assets/images/Puma MB.02 Phenom.png" alt="Puma 1">
+            <div class="lop-phu-hanh-dong">
+              <a href="thanh-toan.html" class="nut-overlay chinh">Mua Ngay</a>
+              <a href="chi-tiet.html" class="nut-overlay">Xem Chi Tiết</a>
+            </div>
+          </div>
+          <div class="thong-tin-sp-premium">
+            <h3 class="ten-sp-premium">Puma MB.02 Phenom</h3>
+            <p class="mo-ta-sp-ngan">Phủ sóng sàn đấu với bản phối màu nổi bật từ chữ ký của LaMelo Ball.</p>
+            <div class="gia-sp-premium">3.199.000đ</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- NHÓM THỜI TRANG & PHỤ KIỆN -->
+    <div class="nhom-thuong-hieu" id="thoi-trang">
+      <h2 class="tieu-de-thuong-hieu">Thời Trang & Phụ Kiện</h2>
+
+      <div class="luoi-san-pham-nhom">
+
+        <!-- Áo Thể Thao -->
+        <div class="the-sp-premium">
+          <div class="khung-anh-sp">
+            <img src="assets/images/Trang_chu_1.png" alt="Áo Thể Thao">
+            <div class="lop-phu-hanh-dong">
+              <a href="thanh-toan.html" class="nut-overlay chinh">Mua Ngay</a>
+              <a href="chi-tiet.html" class="nut-overlay">Xem Chi Tiết</a>
+            </div>
+          </div>
+          <div class="thong-tin-sp-premium">
+            <h3 class="ten-sp-premium">Áo Thể Thao</h3>
+            <p class="mo-ta-sp-ngan">Bộ sưu tập áo thể thao hiện đại, thoáng mát, phù hợp mọi hoạt động.</p>
+            <div class="gia-sp-premium">299.000đ</div>
+          </div>
+        </div>
+
+        <!-- Quần Short -->
+        <div class="the-sp-premium">
+          <div class="khung-anh-sp">
+            <img src="assets/images/Trang_chu_2.png" alt="Quần Short">
+            <div class="lop-phu-hanh-dong">
+              <a href="thanh-toan.html" class="nut-overlay chinh">Mua Ngay</a>
+              <a href="chi-tiet.html" class="nut-overlay">Xem Chi Tiết</a>
+            </div>
+          </div>
+          <div class="thong-tin-sp-premium">
+            <h3 class="ten-sp-premium">Quần Short</h3>
+            <p class="mo-ta-sp-ngan">Thoải mái vận động mọi ngày, chất liệu co giãn 4 chiều.</p>
+            <div class="gia-sp-premium">249.000đ</div>
+          </div>
+        </div>
+
+        <!-- Mũ & Nón -->
+        <div class="the-sp-premium">
+          <div class="khung-anh-sp">
+            <img src="assets/images/Trang_chu_3.png" alt="Mũ & Nón">
+            <div class="lop-phu-hanh-dong">
+              <a href="thanh-toan.html" class="nut-overlay chinh">Mua Ngay</a>
+              <a href="chi-tiet.html" class="nut-overlay">Xem Chi Tiết</a>
+            </div>
+          </div>
+          <div class="thong-tin-sp-premium">
+            <h3 class="ten-sp-premium">Mũ & Nón</h3>
+            <p class="mo-ta-sp-ngan">Style đường phố đỉnh cao với các thiết kế snapback và dad hat.</p>
+            <div class="gia-sp-premium">199.000đ</div>
+          </div>
+        </div>
+
+        <!-- Túi & Ba Lô -->
+        <div class="the-sp-premium">
+          <div class="khung-anh-sp">
+            <img src="assets/images/Giay_Pureboost_22.png" alt="Túi & Ba Lô">
+            <div class="lop-phu-hanh-dong">
+              <a href="thanh-toan.html" class="nut-overlay chinh">Mua Ngay</a>
+              <a href="chi-tiet.html" class="nut-overlay">Xem Chi Tiết</a>
+            </div>
+          </div>
+          <div class="thong-tin-sp-premium">
+            <h3 class="ten-sp-premium">Túi & Ba Lô</h3>
+            <p class="mo-ta-sp-ngan">Linh động và thời trang, dung tích lớn phù hợp đi học và đi làm.</p>
+            <div class="gia-sp-premium">499.000đ</div>
+          </div>
+        </div>
+
+        <!-- Vớ Thể Thao -->
+        <div class="the-sp-premium">
+          <div class="khung-anh-sp">
+            <img src="assets/images/Giay_Adizero_EVO.png" alt="Vớ Thể Thao">
+            <div class="lop-phu-hanh-dong">
+              <a href="thanh-toan.html" class="nut-overlay chinh">Mua Ngay</a>
+              <a href="chi-tiet.html" class="nut-overlay">Xem Chi Tiết</a>
+            </div>
+          </div>
+          <div class="thong-tin-sp-premium">
+            <h3 class="ten-sp-premium">Vớ Thể Thao</h3>
+            <p class="mo-ta-sp-ngan">Chất liệu cao cấp, kháng khuẩn, khử mùi, bảo vệ gót chân tối ưu.</p>
+            <div class="gia-sp-premium">89.000đ</div>
+          </div>
+        </div>
+
+        <!-- Phụ Kiện Giày -->
+        <div class="the-sp-premium">
+          <div class="khung-anh-sp">
+            <img src="assets/images/Puma MB.02 Phenom.png" alt="Phụ Kiện Giày">
+            <div class="lop-phu-hanh-dong">
+              <a href="thanh-toan.html" class="nut-overlay chinh">Mua Ngay</a>
+              <a href="chi-tiet.html" class="nut-overlay">Xem Chi Tiết</a>
+            </div>
+          </div>
+          <div class="thong-tin-sp-premium">
+            <h3 class="ten-sp-premium">Phụ Kiện Giày</h3>
+            <p class="mo-ta-sp-ngan">Dây giày, siết dây thông minh, lót giày cao cấp đủ loại kích cỡ.</p>
+            <div class="gia-sp-premium">59.000đ</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+
+  <!-- PHẦN CUỐI TRANG -->
+  <footer class="phan-cuoi" aria-label="Phần cuối trang">
+    <div class="noi-dung-phan-cuoi">
+      <div class="cot-phan-cuoi">
+        <h3 class="tieu-de-phan-cuoi">SOLEKING</h3>
+        <p style="color:#888; font-size:14px; line-height:1.8;">Chuyên cung cấp giày thể thao chính hãng các thương hiệu
+          Nike, Adidas, Puma. Chất lượng đảm bảo, uy tín hàng đầu.</p>
+      </div>
+      <div class="cot-phan-cuoi">
+        <h3 class="tieu-de-phan-cuoi">KHÁM PHÁ</h3>
+        <div class="danh-sach-phan-cuoi">
+          <a href="index.html" class="lien-ket-phan-cuoi">Trang Chủ</a>
+          <a href="san-pham.html" class="lien-ket-phan-cuoi">Shop</a>
+          <a href="gioi-thieu.html" class="lien-ket-phan-cuoi">Giới Thiệu</a>
+          <a href="lien-he.html" class="lien-ket-phan-cuoi">Liên Hệ</a>
+        </div>
+      </div>
+      <div class="cot-phan-cuoi">
+        <h3 class="tieu-de-phan-cuoi">HỔ TRỢ</h3>
+        <div class="danh-sach-phan-cuoi">
+          <a href="thanh-toan.html" class="lien-ket-phan-cuoi">Hướng dẫn mua hàng</a>
+          <a href="lien-he.html" class="lien-ket-phan-cuoi">Chính sách đổi trả</a>
+          <a href="lien-he.html" class="lien-ket-phan-cuoi">Hỏi đáp (FAQ)</a>
+        </div>
+      </div>
+      <div class="cot-phan-cuoi">
+        <h3 class="tieu-de-phan-cuoi">LIÊN HỆ</h3>
+        <div class="danh-sach-phan-cuoi">
+          <a href="tel:0123456789" class="lien-ket-phan-cuoi">Hotline: 0123.456.789</a>
+          <a href="mailto:contact@soleking.com" class="lien-ket-phan-cuoi">contact@soleking.com</a>
+          <a href="lien-he.html" class="lien-ket-phan-cuoi">234 Hoàng Quốc Việt,Cầu Giấy,Hà Nội</a>
+        </div>
+      </div>
+    </div>
+    <div class="phan-cuoi-duoi">
+      <p>&copy; 2026 SOLEKING. Thiết kế đẳng cấp.</p>
     </div>
   </footer>
 </body>
+
 </html>

@@ -1,533 +1,237 @@
 /* ========================================
-   RESPONSIVE.CSS - Mobile-First Breakpoints
+   RESPONSIVE.CSS - Tương thích thiết bị di động
    ======================================== */
 
-/* Mobile: 320px - 639px */
-/* Tablet: 640px - 1023px */
-/* Desktop: 1024px+ */
-
-/* ========================================
-   TABLET (640px+)
-   ======================================== */
-
-@media (min-width: 640px) {
-  .header__search {
-    display: flex;
-    flex: 1;
-    margin: 0 var(--spacing-lg);
-  }
-
-  .products-section {
-    grid-template-columns: 200px 1fr;
-    gap: var(--spacing-md);
-  }
-
-  .hero {
-    height: 500px;
-  }
-
-  .hero__content {
-    grid-template-columns: 1fr 1fr;
-  }
-
-  .categories__grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .products-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .cart {
-    grid-template-columns: 1fr 280px;
-  }
-
-  .products-detail {
-    grid-template-columns: 1fr 1fr;
-  }
-
-  .checkout__sections {
-    grid-template-columns: 1fr 280px;
-  }
-}
-
-/* ========================================
-   DESKTOP (1024px+)
-   ======================================== */
-
-@media (min-width: 1024px) {
-  .header__search {
-    max-width: 400px;
-  }
-
-  .products-section {
-    grid-template-columns: 250px 1fr;
-  }
-
-  .sidebar {
-    top: 100px;
-  }
-
-  .products-toolbar {
-    gap: var(--spacing-xl);
-  }
-
-  .hero {
-    height: 600px;
-  }
-
-  .hero__content {
-    grid-template-columns: 1fr 1fr;
-  }
-
-  .categories__grid {
-    grid-template-columns: repeat(4, 1fr);
-  }
-
-  .products-grid {
-    grid-template-columns: repeat(4, 1fr);
-  }
-
-  .product-detail {
-    grid-template-columns: 1fr 1fr;
-    gap: var(--spacing-xl);
-  }
-
-  .footer__content {
-    grid-template-columns: repeat(4, 1fr);
-  }
-
-  .cart {
-    grid-template-columns: 1fr 300px;
-  }
-
-  .cart-summary {
-    top: 100px;
-  }
-
-  .checkout__sections {
-    grid-template-columns: 1fr 300px;
-  }
-
-  .checkout-order-review {
-    top: 100px;
-  }
-}
-
-/* ========================================
-   MOBILE OPTIMIZATIONS (< 640px)
-   ======================================== */
-
-@media (max-width: 639px) {
-  /* Header adjustments */
-  .header__main {
-    padding: var(--spacing-sm) 0;
-  }
-
-  .header__content {
-    padding: 0 var(--spacing-sm);
-    gap: var(--spacing-sm);
-  }
-
-  .header__logo {
-    min-width: 120px;
-    font-size: var(--font-size-lg);
-  }
-
-  .header__logo img {
-    width: 32px;
-    height: 32px;
-  }
-
-  .header__nav {
-    display: none;
-  }
-
-  .header__actions {
-    gap: var(--spacing-md);
-    min-width: auto;
-  }
-
-  .header__action-btn {
-    width: 36px;
-    height: 36px;
-    font-size: 1.125rem;
-  }
-
-  /* Hero section */
-  .hero {
-    height: 400px;
-    padding: var(--spacing-lg) var(--spacing-sm);
-  }
-
-  .hero__content {
-    grid-template-columns: 1fr;
-    gap: var(--spacing-lg);
-  }
-
-  .hero__image {
-    display: none;
-  }
-
-  .hero__title {
-    font-size: 2rem;
-  }
-
-  .hero__description {
-    font-size: var(--font-size-base);
-  }
-
-  .hero__cta-group {
+/* Máy tính bảng (Tablet) */
+@media (max-width: 1023px) {
+  .noi-dung-anh-bia {
     flex-direction: column;
-  }
-
-  .btn {
-    width: 100%;
-    justify-content: center;
-  }
-
-  /* Categories */
-  .categories {
-    padding: var(--spacing-lg) 0;
-  }
-
-  .categories__grid {
-    grid-template-columns: 1fr;
-    gap: var(--spacing-md);
-    padding: 0 var(--spacing-sm);
-  }
-
-  /* Products grid */
-  .products-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: var(--spacing-md);
-    padding: 0 var(--spacing-sm);
-  }
-
-  .product-card__image {
-    height: 180px;
-  }
-
-  .product-card__name {
-    font-size: var(--font-size-sm);
-  }
-
-  /* Products section */
-  .products-section {
-    grid-template-columns: 1fr;
-    gap: var(--spacing-md);
-    padding: var(--spacing-md) var(--spacing-sm);
-  }
-
-  .sidebar {
-    position: relative;
-    top: auto;
-    background-color: var(--color-bg);
-    padding: var(--spacing-md);
-    margin-bottom: var(--spacing-lg);
-  }
-
-  .sidebar__toggle {
-    display: block;
-  }
-
-  /* Product detail */
-  .product-detail {
-    grid-template-columns: 1fr;
-    gap: var(--spacing-md);
-    padding: var(--spacing-md) var(--spacing-sm);
-  }
-
-  .product-detail__main-image {
-    height: 300px;
-  }
-
-  .product-detail__title {
-    font-size: 1.75rem;
-  }
-
-  .product-detail__thumbnails {
-    grid-template-columns: repeat(4, 1fr);
-  }
-
-  /* Size options */
-  .size-options {
-    grid-template-columns: repeat(3, 1fr);
-  }
-
-  /* Cart */
-  .cart {
-    grid-template-columns: 1fr;
-    gap: var(--spacing-md);
-    padding: var(--spacing-md) var(--spacing-sm);
-  }
-
-  .cart-summary {
-    position: relative;
-    top: auto;
-    order: 3;
-  }
-
-  .cart-table__th {
-    font-size: var(--font-size-xs);
-    padding: var(--spacing-sm);
-  }
-
-  .cart-table__td {
-    padding: var(--spacing-sm);
-  }
-
-  .cart-item {
-    flex-wrap: wrap;
-  }
-
-  .cart-item__image {
-    width: 60px;
-    height: 60px;
-  }
-
-  /* Checkout */
-  .checkout {
-    padding: var(--spacing-md) var(--spacing-sm);
-  }
-
-  .checkout__sections {
-    grid-template-columns: 1fr;
-    gap: var(--spacing-md);
-  }
-
-  .checkout-order-review {
-    position: relative;
-    top: auto;
-    order: 3;
-  }
-
-  .form-row {
-    grid-template-columns: 1fr;
-  }
-
-  /* Footer */
-  .footer__content {
-    grid-template-columns: 1fr;
-    gap: var(--spacing-lg);
-  }
-
-  .footer__bottom {
-    flex-direction: column;
-    gap: var(--spacing-md);
     text-align: center;
   }
+  
+  .chu-anh-bia {
+    padding-right: 0;
+  }
+  
+  .luoi-danh-muc,
+  .luoi-san-pham {
+    justify-content: center;
+  }
+  
+  .noi-dung-phan-cuoi {
+    flex-wrap: wrap;
+  }
+  
+  .cot-phan-cuoi {
+    min-width: 45%;
+    margin-bottom: 24px;
+  }
+  
+  .chi-tiet-san-pham {
+    flex-direction: column;
+  }
+  
+  .bo-suu-tap-anh {
+    margin-right: 0;
+    margin-bottom: 32px;
+  }
+  
+  .phan-san-pham {
+    flex-direction: column;
+  }
+  
+  .thanh-ben {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 24px;
+  }
 
-  .footer__bottom-payment {
+  /* Responsive cho product grid */
+  .luoi-san-pham-grid {
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 24px;
+  }
+
+  .tieu-de-phan-san-pham h2 {
+    font-size: 40px;
+  }
+
+  .icon-danh-muc {
+    width: 64px;
+    height: 64px;
+  }
+
+  .icon-symbol {
+    font-size: 36px;
+  }
+
+  .nhom-nut-danh-muc {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .nut-phu-danh-muc {
     width: 100%;
     justify-content: center;
   }
+}
 
-  /* Newsletter */
-  .newsletter__form {
+/* Điện thoại di động (Mobile) */
+@media (max-width: 639px) {
+  .thanh-dieu-huong {
+    display: none; /* Ẩn menu trên mobile cho đơn giản */
+  }
+  
+  .anh-bia {
+    height: auto;
+    padding: 32px 0;
+  }
+  
+  .tieu-de-anh-bia {
+    font-size: 32px;
+  }
+  
+  .hinh-anh-bia {
+    display: none; /* Ẩn hình ảnh lớn trên điện thoại */
+  }
+  
+  .nhom-nut-anh-bia {
     flex-direction: column;
   }
-
-  .newsletter__input,
-  .newsletter__submit {
+  
+  .nut {
+    width: 100%;
+  }
+  
+  .phan-dau-giam-gia {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .dem-nguoc-giam-gia {
+    margin-left: 0;
+    margin-top: 16px;
+    display: block;
+  }
+  
+  .the-danh-muc,
+  .the-san-pham {
+    min-width: 100%;
+  }
+  
+  .cot-phan-cuoi {
+    min-width: 100%;
+    margin-right: 0;
+  }
+  
+  .phan-cuoi-duoi {
+    flex-direction: column;
+    gap: 16px;
+  }
+  
+  .gio-hang {
+    flex-direction: column;
+  }
+  
+  .danh-sach-gio-hang {
+    margin-right: 0;
+    margin-bottom: 24px;
+  }
+  
+  .tong-ket-gio-hang {
     width: 100%;
   }
 
-  /* Breadcrumb */
-  .breadcrumb {
-    padding: var(--spacing-md) var(--spacing-sm);
-    font-size: var(--font-size-xs);
-  }
-
-  .breadcrumb__list {
-    gap: var(--spacing-xs);
-  }
-
-  /* Header top */
-  .header__top {
-    padding: var(--spacing-xs) 0;
-  }
-
-  .header__top-content {
-    flex-direction: column;
-    gap: var(--spacing-sm);
-    padding: var(--spacing-xs) var(--spacing-sm);
-  }
-
-  .header__top-contact {
-    gap: var(--spacing-sm);
-    font-size: var(--font-size-xs);
-  }
-
-  /* Form */
-  .form {
-    padding: var(--spacing-md) var(--spacing-sm);
-  }
-
-  /* Flash sale */
-  .flash-sale {
-    padding: var(--spacing-lg) 0;
-    margin: var(--spacing-lg) 0;
-  }
-
-  .flash-sale__header {
-    flex-direction: column;
-    gap: var(--spacing-md);
-    padding: 0 var(--spacing-sm);
-  }
-
-  .flash-sale__title {
-    font-size: var(--font-size-lg);
-  }
-}
-
-/* ========================================
-   EXTRA SMALL DEVICES (< 380px)
-   ======================================== */
-
-@media (max-width: 379px) {
-  :root {
-    --font-size-xl: 1.75rem;
-    --font-size-lg: 1.25rem;
-  }
-
-  .hero__title {
-    font-size: 1.5rem;
-  }
-
-  .product-detail__title {
-    font-size: 1.25rem;
-  }
-
-  .products-grid {
+  /* Mobile responsive cho product grid */
+  .luoi-san-pham-grid {
     grid-template-columns: 1fr;
+    gap: 20px;
   }
 
-  .size-options {
-    grid-template-columns: repeat(2, 1fr);
+  .tieu-de-phan-san-pham h2 {
+    font-size: 28px;
+    margin-bottom: 12px;
   }
 
-  .color-options {
-    gap: var(--spacing-sm);
+  .tieu-de-phan-san-pham p {
+    font-size: 14px;
   }
 
-  .color-option {
-    width: 40px;
-    height: 40px;
-  }
-
-  .category-card {
+  .hinh-san-pham {
     height: 200px;
   }
 
-  .header__logo {
-    min-width: 100px;
-    font-size: var(--font-size-base);
+  .placeholder-anh {
+    font-size: 80px;
   }
 
-  .hero__cta-group {
-    gap: var(--spacing-sm);
+  .ten-sp {
+    font-size: 16px;
   }
 
-  .btn {
-    padding: var(--spacing-sm) var(--spacing-md);
-    font-size: var(--font-size-sm);
-  }
-}
-
-/* ========================================
-   PRINT STYLES
-   ======================================== */
-
-@media print {
-  .header,
-  .footer,
-  .sidebar,
-  .header__actions,
-  .product-card__actions,
-  .btn {
-    display: none;
+  .gia-sp {
+    font-size: 18px;
   }
 
-  body {
-    background: white;
-    color: black;
+  .gia-va-nut {
+    flex-direction: column;
+    gap: 8px;
   }
 
-  .product-detail {
-    grid-template-columns: 1fr;
+  .nut-mua-sp {
+    width: 100%;
   }
 
-  .cart-summary__checkout,
-  .cart-summary__continue {
-    display: none;
+  .khung-anh-danh-muc {
+    height: 300px;
   }
 
-  a {
-    color: inherit;
-    text-decoration: underline;
-  }
-}
-
-/* ========================================
-   ACCESSIBILITY: PREFERS REDUCED MOTION
-   ======================================== */
-
-@media (prefers-reduced-motion: reduce) {
-  *,
-  *::before,
-  *::after {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
-    scroll-behavior: auto !important;
-  }
-}
-
-/* ========================================
-   DARK MODE (Optional)
-   ======================================== */
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --color-bg: #1a1a1a;
-    --color-bg-light: #2d2d2d;
-    --color-text: #e0e0e0;
-    --color-text-light: #b0b0b0;
-    --color-text-lighter: #808080;
-    --color-border: #404040;
+  .the-danh-muc {
+    gap: 24px;
   }
 
-  body {
-    background-color: var(--color-bg);
-    color: var(--color-text);
+  .tieu-de-the-danh-muc {
+    font-size: 28px;
   }
 
-  .header {
-    background-color: #252525;
+  .mo-ta-anh-bia {
+    font-size: 16px;
   }
 
-  .sidebar,
-  .cart-summary,
-  .checkout-section {
-    background-color: #252525;
-    border-color: var(--color-border);
+  .lien-ket-danh-muc {
+    font-size: 14px;
   }
 
-  .checkout-order-review {
-    background-color: #252525;
+  .icon-danh-muc {
+    width: 56px;
+    height: 56px;
+    margin-bottom: 16px;
   }
 
-  .form-group__input,
-  .form-group__textarea,
-  .form-group__select {
-    background-color: #2d2d2d;
-    color: var(--color-text);
-    border-color: var(--color-border);
+  .icon-symbol {
+    font-size: 32px;
   }
 
-  .payment-method {
-    border-color: var(--color-border);
-    background-color: #252525;
+  .nhom-nut-danh-muc {
+    flex-direction: column;
+  }
+
+  .nut-phu-danh-muc {
+    width: 100%;
+    padding: 10px 16px;
+    font-size: 11px;
+  }
+
+  .phan-san-pham-noi-bat {
+    padding: 60px 0;
+  }
+
+  .tieu-de-phan-san-pham {
+    margin-bottom: 40px;
+  }
+
+  .nut-xem-them {
+    padding: 14px 32px;
+    font-size: 12px;
   }
 }

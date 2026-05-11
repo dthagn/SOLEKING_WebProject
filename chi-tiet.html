@@ -1,494 +1,364 @@
 <!DOCTYPE html>
+
 <html lang="vi">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Nike Air Force 1 '07 - SOLEKING">
-  <title>Nike Air Force 1 '07 - SOLEKING</title>
+  <meta name="description"
+    content="Nike Air Force 1 '07 - Mẫu giày bóng rổ nguyên bản kết hợp độ bền chắc và phong cách hoàn hảo. Mua ngay tại SOLEKING với giá ưu đãi.">
+  <title>Nike Air Force 1 '07 - Chi Tiết Sản Phẩm | SOLEKING</title>
 
-  <!-- CSS -->
   <link rel="stylesheet" href="css/base.css">
   <link rel="stylesheet" href="css/layout.css">
-  <link rel="stylesheet" href="css/home.css">
   <link rel="stylesheet" href="css/product.css">
-  <link rel="stylesheet" href="css/form.css">
+  <link rel="stylesheet" href="css/detail.css">
   <link rel="stylesheet" href="css/responsive.css">
 </head>
+
 <body>
-  <!-- HEADER -->
-  <header class="header">
-    <div class="header__top">
-      <div class="header__top-content">
-        <div class="header__top-promo">
-          🎉 Miễn phí ship trên toàn quốc cho đơn hàng trên 500k
-        </div>
-        <div class="header__top-contact">
-          <a href="tel:0123456789">Hotline: 0123.456.789</a>
-          <a href="mailto:contact@soleking.com">Email: contact@soleking.com</a>
+
+  <!-- PHẦN ĐẦU TRANG (HEADER) -->
+  <header class="phan-dau" aria-label="Phần đầu trang">
+    <div class="phan-dau-chinh">
+      <div class="noi-dung-phan-dau">
+        <a href="index.html" class="logo" aria-label="SOLEKING - Về trang chủ">SOLEKING</a>
+        <nav class="thanh-dieu-huong" aria-label="Menu chính">
+          <a href="index.html" class="lien-ket-dieu-huong">Trang Chủ</a>
+          <a href="san-pham.html" class="lien-ket-dieu-huong">Shop</a>
+          <a href="gioi-thieu.html" class="lien-ket-dieu-huong">Giới Thiệu</a>
+          <a href="lien-he.html" class="lien-ket-dieu-huong">Liên Hệ</a>
+        </nav>
+        <div class="hanh-dong">
+          <a href="#" class="nut-hanh-dong" title="Tìm Kiếm" id="btn-tim-kiem">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="11" cy="11" r="8" />
+              <line x1="21" y1="21" x2="16.65" y2="16.65" />
+            </svg>
+          </a>
+          <a href="#" class="nut-hanh-dong" title="Tài Khoản" id="btn-tai-khoan">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
+              <circle cx="12" cy="7" r="4" />
+            </svg>
+          </a>
+          <a href="thanh-toan.html" class="nut-hanh-dong" title="Giỏ Hàng" id="btn-gio-hang"
+            style="position: relative;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z" />
+              <line x1="3" y1="6" x2="21" y2="6" />
+              <path d="M16 10a4 4 0 0 1-8 0" />
+            </svg>
+            <span class="thong-bao-nho">0</span>
+          </a>
         </div>
       </div>
     </div>
-
-    <nav class="header__main">
-      <div class="header__content">
-        <a href="index.html" class="header__logo">
-          <span>👟</span> SOLEKING
-        </a>
-
-        <div class="header__nav">
-          <a href="index.html" class="header__nav-link">Trang Chủ</a>
-          <a href="san-pham.html" class="header__nav-link active">Sản Phẩm</a>
-          <a href="#" class="header__nav-link">Thương Hiệu</a>
-          <a href="#" class="header__nav-link">Khuyến Mại</a>
-          <a href="#" class="header__nav-link">Liên Hệ</a>
-        </div>
-
-        <div class="header__actions">
-          <input type="text" class="header__search" placeholder="Tìm kiếm...">
-          <button class="header__action-btn" aria-label="Tìm kiếm">🔍</button>
-          <button class="header__action-btn" aria-label="Yêu thích">❤️</button>
-          <button class="header__action-btn" aria-label="Giỏ hàng">
-            🛒
-            <span class="header__action-badge">0</span>
-          </button>
-        </div>
-      </div>
-    </nav>
   </header>
 
-  <!-- BREADCRUMB -->
-  <nav class="breadcrumb">
-    <ul class="breadcrumb__list">
-      <li class="breadcrumb__item">
-        <a href="index.html" class="breadcrumb__link">Trang Chủ</a>
-      </li>
-      <li class="breadcrumb__item">
-        <a href="san-pham.html" class="breadcrumb__link">Sản Phẩm</a>
-      </li>
-      <li class="breadcrumb__item">
-        <a href="san-pham.html?category=casual" class="breadcrumb__link">Giày Casual</a>
-      </li>
-      <li class="breadcrumb__item breadcrumb__current">Nike Air Force 1</li>
-    </ul>
+  <!-- THANH ĐƯỜNG DẪN (BREADCRUMB) -->
+  <nav class="duong-dan" aria-label="Đường dẫn trang">
+    <ol class="danh-sach-duong-dan">
+      <li class="muc-duong-dan"><a href="index.html" class="lien-ket-duong-dan">Trang Chủ</a></li>
+      <li class="muc-duong-dan"><a href="san-pham.html" class="lien-ket-duong-dan">Sản Phẩm</a></li>
+      <li class="muc-duong-dan duong-dan-hien-tai" aria-current="page">Chi Tiết Sản Phẩm</li>
+    </ol>
   </nav>
 
-  <!-- PRODUCT DETAIL -->
-  <main class="product-detail">
-    <!-- PRODUCT GALLERY -->
-    <section class="product-detail__gallery">
-      <div class="product-detail__thumbnails">
-        <div class="product-detail__thumbnail active">
-          <img src="assets/images/shoe-1-1.jpg" alt="Hình 1">
+  <main>
+    <!-- CHI TIẾT SẢN PHẨM CHÍNH -->
+    <article class="chi-tiet-san-pham" aria-label="Chi tiết sản phẩm Nike Air Force 1 '07">
+
+      <!-- KHỐI BÊN TRÁI: BỘ SƯU TẬP ẢNH -->
+      <div class="bo-suu-tap-anh">
+        <div class="anh-chinh" id="anh-chinh-lon">
+          <img id="img-chinh" src="assets/images/AIR+FORCE+1+'07.png" alt="Nike Air Force 1 '07 - Ảnh chính">
         </div>
-        <div class="product-detail__thumbnail">
-          <img src="assets/images/shoe-1-2.jpg" alt="Hình 2">
-        </div>
-        <div class="product-detail__thumbnail">
-          <img src="assets/images/shoe-1-3.jpg" alt="Hình 3">
-        </div>
-        <div class="product-detail__thumbnail">
-          <img src="assets/images/shoe-1-4.jpg" alt="Hình 4">
-        </div>
-        <div class="product-detail__thumbnail">
-          <img src="assets/images/shoe-1-5.jpg" alt="Hình 5">
+        <div class="anh-thu-nho-nhom" aria-label="Ảnh thu nhỏ sản phẩm">
+          <div class="anh-thu-nho active" onclick="doiAnh(this, 'assets/images/AIR+FORCE+1+\'07.png', 'Góc nhìn 1')">
+            <img src="assets/images/AIR+FORCE+1+'07.png" alt="Góc nhìn 1">
+          </div>
+          <div class="anh-thu-nho" onclick="doiAnh(this, 'assets/images/NIKE+AIR+MAX+90.png', 'Góc nhìn 2')">
+            <img src="assets/images/NIKE+AIR+MAX+90.png" alt="Góc nhìn 2">
+          </div>
+          <div class="anh-thu-nho" onclick="doiAnh(this, 'assets/images/NIKE+VOMERO+PLUS.png', 'Góc nhìn 3')">
+            <img src="assets/images/NIKE+VOMERO+PLUS.png" alt="Góc nhìn 3">
+          </div>
         </div>
       </div>
 
-      <div class="product-detail__main-image">
-        <img src="assets/images/shoe-1.jpg" alt="Nike Air Force 1 '07" id="mainImage">
-      </div>
-    </section>
+      <!-- KHỐI BÊN PHẢI: THÔNG TIN VÀ CHỌN LỰA -->
+      <div class="thong-tin-san-pham">
+        <p class="danh-muc-chi-tiet">Nike — Nam</p>
+        <h1 class="tieu-de-chi-tiet">Nike Air Force 1 '07</h1>
 
-    <!-- PRODUCT INFO -->
-    <section class="product-detail__info">
-      <p class="product-detail__category">Nike</p>
-      <h1 class="product-detail__title">Nike Air Force 1 '07</h1>
-
-      <div class="product-detail__rating">
-        <div class="product-detail__stars">★★★★★</div>
-        <a href="#reviews" class="product-detail__reviews-link">(245 nhận xét)</a>
-      </div>
-
-      <div class="product-detail__price">
-        <div class="product-detail__price-current">1.599.000đ</div>
-        <div class="product-detail__price-original">3.199.000đ</div>
-        <span class="product-detail__discount">-50% OFF</span>
-      </div>
-
-      <p class="product-detail__description">
-        Nike Air Force 1 '07 là biểu tượng bóng rổ trở thành huyền thoại của đường phố. Có một lịch sử thể thao phong phú, độc lập lái xe và những chi tiết mạnh mẽ làm cho nó an toàn không. Nó bắt đầu như một chiến thắng trên sân của bóng rổ. Bây giờ nó's an trong việc cắn công việc trên bất cứ nơi nào.
-      </p>
-
-      <div class="product-detail__features">
-        <div class="product-detail__feature">
-          <span class="product-detail__feature-icon">✓</span>
-          <span>Công nghệ Air Cushioning cho sự thoải mái cả ngày</span>
+        <div class="danh-gia-chi-tiet" aria-label="Đánh giá sản phẩm">
+          <span class="sao-chi-tiet" aria-label="5 sao">★★★★★</span>
+          <a href="#danh-gia" class="lien-ket-danh-gia">Đọc 245 đánh giá</a>
         </div>
-        <div class="product-detail__feature">
-          <span class="product-detail__feature-icon">✓</span>
-          <span>Chất liệu da cao cấp, bền và dễ vệ sinh</span>
-        </div>
-        <div class="product-detail__feature">
-          <span class="product-detail__feature-icon">✓</span>
-          <span>Thiết kế cổ điển, phù hợp với nhiều style</span>
-        </div>
-        <div class="product-detail__feature">
-          <span class="product-detail__feature-icon">✓</span>
-          <span>Bảo hành chính hãng 12 tháng</span>
-        </div>
-      </div>
 
-      <!-- PRODUCT OPTIONS -->
-      <form class="product-options" id="productForm">
-        <!-- SIZE SELECTOR -->
-        <div class="option-group">
-          <label class="option-group__label">Kích Cỡ (Size) *</label>
-          <div class="size-options">
-            <label class="size-option">
-              <input type="radio" name="size" value="36" class="visually-hidden">
-              36
-            </label>
-            <label class="size-option">
-              <input type="radio" name="size" value="37" class="visually-hidden">
-              37
-            </label>
-            <label class="size-option">
-              <input type="radio" name="size" value="38" class="visually-hidden">
-              38
-            </label>
-            <label class="size-option">
-              <input type="radio" name="size" value="39" class="visually-hidden">
-              39
-            </label>
-            <label class="size-option">
-              <input type="radio" name="size" value="40" class="visually-hidden">
-              40
-            </label>
-            <label class="size-option">
-              <input type="radio" name="size" value="41" class="visually-hidden">
-              41
-            </label>
-            <label class="size-option">
-              <input type="radio" name="size" value="42" class="visually-hidden">
-              42
-            </label>
-            <label class="size-option">
-              <input type="radio" name="size" value="43" class="visually-hidden">
-              43
-            </label>
+        <div class="gia-chi-tiet" aria-label="Thông tin giá">
+          <span class="gia-hien-tai-chi-tiet">1.599.000đ</span>
+          <span class="gia-cu-chi-tiet">3.199.000đ</span>
+          <span class="giam-gia-chi-tiet">-50%</span>
+        </div>
+
+        <p class="mo-ta-chi-tiet">
+          Sự tỏa sáng tồn tại trong Nike Air Force 1 '07. Mẫu giày bóng rổ nguyên bản kết hợp độ bền chắc và phong cách
+          hoàn hảo.
+        </p>
+
+        <!-- Tùy chọn Kích thước -->
+        <div class="tuy-chon-san-pham">
+          <div class="nhom-tuy-chon">
+            <span class="nhan-tuy-chon" id="nhan-kich-thuoc">
+              Kích thước (Size):
+              <span id="size-da-chon" style="color:#ff3366; margin-left:8px; font-weight:900;"></span>
+            </span>
+            <div class="tuy-chon-kich-thuoc" id="nhom-size" role="group" aria-labelledby="nhan-kich-thuoc">
+              <div class="kich-thuoc" role="button" tabindex="0" aria-label="Size 39" onclick="chonSize(this)">39</div>
+              <div class="kich-thuoc" role="button" tabindex="0" aria-label="Size 40" onclick="chonSize(this)">40</div>
+              <div class="kich-thuoc" role="button" tabindex="0" aria-label="Size 41" onclick="chonSize(this)">41</div>
+              <div class="kich-thuoc" role="button" tabindex="0" aria-label="Size 42" onclick="chonSize(this)">42</div>
+              <div class="kich-thuoc" role="button" tabindex="0" aria-label="Size 43" onclick="chonSize(this)">43</div>
+            </div>
+            <p id="canh-bao-size" style="display:none; color:#ff3366; font-size:13px; margin-top:8px; font-weight:600;">
+              ⚠ Vui lòng chọn kích thước trước khi mua!
+            </p>
+          </div>
+
+          <div class="nhom-tuy-chon">
+            <span class="nhan-tuy-chon" id="nhan-so-luong">Số lượng:</span>
+            <div class="chon-so-luong" role="group" aria-labelledby="nhan-so-luong">
+              <button class="nut-chon-so-luong" id="btn-giam" aria-label="Giảm số lượng"
+                onclick="thayDoiSoLuong(-1)">−</button>
+              <input type="number" id="o-so-luong" value="1" min="1" max="10" class="o-nhap-so-luong"
+                aria-label="Số lượng sản phẩm" readonly>
+              <button class="nut-chon-so-luong" id="btn-tang" aria-label="Tăng số lượng"
+                onclick="thayDoiSoLuong(1)">+</button>
+            </div>
           </div>
         </div>
 
-        <!-- COLOR SELECTOR -->
-        <div class="option-group">
-          <label class="option-group__label">Màu Sắc *</label>
-          <div class="color-options">
-            <label class="color-option selected" style="background-color: #000;" title="Đen">
-              <input type="radio" name="color" value="black" class="visually-hidden">
-            </label>
-            <label class="color-option" style="background-color: #fff; border: 2px solid #000;" title="Trắng">
-              <input type="radio" name="color" value="white" class="visually-hidden">
-            </label>
-            <label class="color-option" style="background-color: #dc2626;" title="Đỏ">
-              <input type="radio" name="color" value="red" class="visually-hidden">
-            </label>
-            <label class="color-option" style="background-color: #2563eb;" title="Xanh">
-              <input type="radio" name="color" value="blue" class="visually-hidden">
-            </label>
+        <!-- Hành động -->
+        <div class="hanh-dong-chi-tiet">
+          <button class="hanh-dong-chinh" id="btn-them-gio" onclick="themVaoGio()" aria-label="Thêm vào giỏ hàng">Thêm
+            Vào Giỏ Hàng</button>
+          <button class="hanh-dong-phu" id="btn-mua-ngay" onclick="muaNgay()" aria-label="Mua ngay">Mua Ngay</button>
+        </div>
+      </div>
+    </article>
+
+    <!-- SẢN PHẨM LIÊN QUAN -->
+    <section class="san-pham-lien-quan" aria-label="Sản phẩm tương tự">
+      <h2 class="tieu-de-san-pham-lq">Sản Phẩm Tương Tự</h2>
+      <div class="luoi-san-pham-nhom">
+
+        <div class="the-sp-premium">
+          <div class="khung-anh-sp">
+            <img src="assets/images/Giay_Pureboost_22.png" alt="Adidas Ultraboost 22">
+            <div class="lop-phu-hanh-dong">
+              <a href="thanh-toan.html" class="nut-overlay chinh">Mua Ngay</a>
+              <a href="chi-tiet.html" class="nut-overlay">Xem Chi Tiết</a>
+            </div>
+          </div>
+          <div class="thong-tin-sp-premium">
+            <h3 class="ten-sp-premium">Adidas Ultraboost 22</h3>
+            <p class="mo-ta-sp-ngan">Sự hoàn hảo cho đôi chân cùng công nghệ đệm Boost trứ danh.</p>
+            <div class="gia-sp-premium">2.299.000đ</div>
           </div>
         </div>
 
-        <!-- QUANTITY SELECTOR -->
-        <div class="option-group">
-          <label class="option-group__label">Số Lượng *</label>
-          <div class="quantity-selector">
-            <button type="button" class="quantity-selector__btn">−</button>
-            <input type="number" class="quantity-selector__input" value="1" min="1" max="10">
-            <button type="button" class="quantity-selector__btn">+</button>
+        <div class="the-sp-premium">
+          <div class="khung-anh-sp">
+            <img src="assets/images/Puma MB.02 Phenom.png" alt="Puma MB.02 Phenom">
+            <div class="lop-phu-hanh-dong">
+              <a href="thanh-toan.html" class="nut-overlay chinh">Mua Ngay</a>
+              <a href="chi-tiet.html" class="nut-overlay">Xem Chi Tiết</a>
+            </div>
+          </div>
+          <div class="thong-tin-sp-premium">
+            <h3 class="ten-sp-premium">Puma MB.02 Phenom</h3>
+            <p class="mo-ta-sp-ngan">Phủ sóng sàn đấu với bản phối màu nổi bật từ LaMelo Ball.</p>
+            <div class="gia-sp-premium">3.199.000đ</div>
           </div>
         </div>
 
-        <!-- STOCK STATUS -->
-        <div style="padding: var(--spacing-sm); background-color: rgba(46, 204, 113, 0.1); border-radius: var(--radius-md);">
-          <p style="margin: 0; color: var(--color-success); font-weight: var(--font-weight-semibold);">✓ Còn 8 sản phẩm</p>
+        <div class="the-sp-premium">
+          <div class="khung-anh-sp">
+            <img src="assets/images/NIKE+VOMERO+PLUS.png" alt="Nike ZoomX Invincible">
+            <div class="lop-phu-hanh-dong">
+              <a href="thanh-toan.html" class="nut-overlay chinh">Mua Ngay</a>
+              <a href="chi-tiet.html" class="nut-overlay">Xem Chi Tiết</a>
+            </div>
+          </div>
+          <div class="thong-tin-sp-premium">
+            <h3 class="ten-sp-premium">Nike ZoomX Invincible</h3>
+            <p class="mo-ta-sp-ngan">Độ nảy và đàn hồi cực tốt từ công nghệ bọt ZoomX mới.</p>
+            <div class="gia-sp-premium">4.299.000đ</div>
+          </div>
         </div>
 
-        <!-- ACTION BUTTONS -->
-        <div class="product-actions">
-          <button type="submit" class="product-actions__primary">🛒 Thêm Vào Giỏ Hàng</button>
-          <button type="button" class="product-actions__secondary">❤️ Thêm Vào Danh Sách Yêu Thích</button>
-        </div>
-      </form>
-
-      <!-- ADDITIONAL INFO -->
-      <div style="padding: var(--spacing-lg); background-color: var(--color-bg-light); border-radius: var(--radius-lg); font-size: var(--font-size-sm);">
-        <div style="margin-bottom: var(--spacing-md); padding-bottom: var(--spacing-md); border-bottom: 1px solid var(--color-border);">
-          <strong>Mã Sản Phẩm:</strong> AF1-BLK-W
-        </div>
-        <div style="margin-bottom: var(--spacing-md); padding-bottom: var(--spacing-md); border-bottom: 1px solid var(--color-border);">
-          <strong>Xuất Xứ:</strong> Việt Nam (Sản xuất cho Nike)
-        </div>
-        <div style="margin-bottom: var(--spacing-md); padding-bottom: var(--spacing-md); border-bottom: 1px solid var(--color-border);">
-          <strong>Bảo Hành:</strong> 12 tháng
-        </div>
-        <div>
-          <strong>Chính Sách Đổi Trả:</strong> 30 ngày, miễn phí ship
-        </div>
       </div>
     </section>
   </main>
 
-  <!-- PRODUCT TABS -->
-  <section style="max-width: 1200px; margin: var(--spacing-xxl) auto 0; padding: var(--spacing-lg) var(--spacing-md); border-top: 1px solid var(--color-border);">
-    <div style="display: flex; gap: var(--spacing-lg); margin-bottom: var(--spacing-lg); border-bottom: 1px solid var(--color-border);">
-      <button style="padding: var(--spacing-md); border: none; background: none; border-bottom: 3px solid var(--color-accent); cursor: pointer; font-weight: var(--font-weight-semibold);">📋 Thông Tin Chi Tiết</button>
-      <button style="padding: var(--spacing-md); border: none; background: none; cursor: pointer; color: var(--color-text-light);">⭐ Nhận Xét (245)</button>
-      <button style="padding: var(--spacing-md); border: none; background: none; cursor: pointer; color: var(--color-text-light);">❓ Hỏi Đáp</button>
-    </div>
-
-    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--spacing-xl);">
-      <div>
-        <h3 style="font-size: var(--font-size-lg); font-weight: var(--font-weight-bold); margin-bottom: var(--spacing-md);">Thông Số Kỹ Thuật</h3>
-        <table style="width: 100%; border-collapse: collapse;">
-          <tr style="border-bottom: 1px solid var(--color-border);">
-            <td style="padding: var(--spacing-sm); font-weight: var(--font-weight-semibold);">Thương Hiệu</td>
-            <td style="padding: var(--spacing-sm);">Nike</td>
-          </tr>
-          <tr style="border-bottom: 1px solid var(--color-border);">
-            <td style="padding: var(--spacing-sm); font-weight: var(--font-weight-semibold);">Dòng Sản Phẩm</td>
-            <td style="padding: var(--spacing-sm);">Air Force 1</td>
-          </tr>
-          <tr style="border-bottom: 1px solid var(--color-border);">
-            <td style="padding: var(--spacing-sm); font-weight: var(--font-weight-semibold);">Giới Tính</td>
-            <td style="padding: var(--spacing-sm);">Unisex</td>
-          </tr>
-          <tr style="border-bottom: 1px solid var(--color-border);">
-            <td style="padding: var(--spacing-sm); font-weight: var(--font-weight-semibold);">Chất Liệu</td>
-            <td style="padding: var(--spacing-sm);">Da tự nhiên 100%</td>
-          </tr>
-          <tr style="border-bottom: 1px solid var(--color-border);">
-            <td style="padding: var(--spacing-sm); font-weight: var(--font-weight-semibold);">Độ Cao</td>
-            <td style="padding: var(--spacing-sm);">Cao (High)</td>
-          </tr>
-          <tr>
-            <td style="padding: var(--spacing-sm); font-weight: var(--font-weight-semibold);">Phong Cách</td>
-            <td style="padding: var(--spacing-sm);">Casual, Bóng Rổ</td>
-          </tr>
-        </table>
+  <!-- PHẦN CUỐI TRANG -->
+  <footer class="phan-cuoi" aria-label="Phần cuối trang">
+    <div class="noi-dung-phan-cuoi">
+      <div class="cot-phan-cuoi">
+        <h3 class="tieu-de-phan-cuoi">SOLEKING</h3>
+        <p style="color:#888; font-size:14px; line-height:1.8;">Chuyên cung cấp giày thể thao chính hãng các thương hiệu
+          Nike, Adidas, Puma. Chất lượng đảm bảo, uy tín hàng đầu.</p>
       </div>
-
-      <div>
-        <h3 style="font-size: var(--font-size-lg); font-weight: var(--font-weight-bold); margin-bottom: var(--spacing-md);">Mô Tả Chi Tiết</h3>
-        <p style="line-height: var(--line-height-relaxed); color: var(--color-text-light); margin-bottom: var(--spacing-md);">
-          Nike Air Force 1 là một biểu tượng không thể thiếu trong giới thể thao và thời trang. Được tạo ra vào năm 1982, nó đã trở thành một trong những chiếc giày phổ biến nhất trong lịch sử.
-        </p>
-        <p style="line-height: var(--line-height-relaxed); color: var(--color-text-light);">
-          Phiên bản '07 này giữ nguyên thiết kế cổ điển với những cải tiến về thoải mái và độ bền. Công nghệ Air Cushioning cung cấp sự hỗ trợ vòm cung tuyệt vời, làm cho nó thích hợp cho cả việc mặc hàng ngày lẫn chơi thể thao.
-        </p>
-      </div>
-    </div>
-  </section>
-
-  <!-- RELATED PRODUCTS -->
-  <section class="related-products">
-    <h2 class="related-products__title">Sản Phẩm Liên Quan</h2>
-    <div class="products-grid">
-      <div class="product-card">
-        <div class="product-card__image">
-          <img src="assets/images/shoe-2.jpg" alt="Adidas Ultraboost">
+      <div class="cot-phan-cuoi">
+        <h3 class="tieu-de-phan-cuoi">KHÁM PHÁ</h3>
+        <div class="danh-sach-phan-cuoi">
+          <a href="index.html" class="lien-ket-phan-cuoi">Trang Chủ</a>
+          <a href="san-pham.html" class="lien-ket-phan-cuoi">Shop</a>
+          <a href="gioi-thieu.html" class="lien-ket-phan-cuoi">Giới Thiệu</a>
+          <a href="lien-he.html" class="lien-ket-phan-cuoi">Liên Hệ</a>
         </div>
-        <div class="product-card__body">
-          <p class="product-card__category">Adidas</p>
-          <h3 class="product-card__name">Adidas Ultraboost 22</h3>
-          <div class="product-card__rating">
-            <span class="product-card__stars">★★★★☆</span>
-            <span class="product-card__reviews">(189)</span>
-          </div>
-          <div class="product-card__price">
-            <span class="product-card__price-current">2.299.000đ</span>
-          </div>
-          <div class="product-card__actions">
-            <button class="product-card__action-btn">❤️</button>
-            <button class="product-card__add-to-cart">Thêm Vào Giỏ</button>
+      </div>
+      <div class="cot-phan-cuoi">
+        <h3 class="tieu-de-phan-cuoi">HỖ TRỢ</h3>
+        <div class="danh-sach-phan-cuoi">
+          <a href="thanh-toan.html" class="lien-ket-phan-cuoi">Hướng dẫn mua hàng</a>
+          <a href="lien-he.html" class="lien-ket-phan-cuoi">Chính sách đổi trả</a>
+          <a href="lien-he.html" class="lien-ket-phan-cuoi">Hỏi đáp (FAQ)</a>
+        </div>
+      </div>
+      <div class="cot-phan-cuoi">
+        <h3 class="tieu-de-phan-cuoi">LIÊN HỆ</h3>
+        <div class="cot-phan-cuoi">
+          <h3 class="tieu-de-phan-cuoi">LIÊN HỆ</h3>
+          <div class="danh-sach-phan-cuoi">
+            <a href="tel:0123456789" class="lien-ket-phan-cuoi">Hotline: 0123.456.789</a>
+            <a href="mailto:contact@soleking.com" class="lien-ket-phan-cuoi">contact@soleking.com</a>
+            <a href="lien-he.html" class="lien-ket-phan-cuoi">234 Hoàng Quốc Việt,Cầu Giấy,Hà Nội</a>
           </div>
         </div>
       </div>
-
-      <div class="product-card">
-        <div class="product-card__image">
-          <img src="assets/images/shoe-5.jpg" alt="Jordan 1 Retro">
-        </div>
-        <div class="product-card__body">
-          <p class="product-card__category">Jordan</p>
-          <h3 class="product-card__name">Air Jordan 1 Retro High OG</h3>
-          <div class="product-card__rating">
-            <span class="product-card__stars">★★★★★</span>
-            <span class="product-card__reviews">(523)</span>
-          </div>
-          <div class="product-card__price">
-            <span class="product-card__price-current">2.699.000đ</span>
-          </div>
-          <div class="product-card__actions">
-            <button class="product-card__action-btn">❤️</button>
-            <button class="product-card__add-to-cart">Thêm Vào Giỏ</button>
-          </div>
-        </div>
+      <div class="phan-cuoi-duoi">
+        <p>&copy; 2026 SOLEKING. Thiết kế đẳng cấp.</p>
       </div>
-
-      <div class="product-card">
-        <div class="product-card__image">
-          <img src="assets/images/shoe-6.jpg" alt="Converse Chuck Taylor">
-        </div>
-        <div class="product-card__body">
-          <p class="product-card__category">Converse</p>
-          <h3 class="product-card__name">Chuck Taylor All Star</h3>
-          <div class="product-card__rating">
-            <span class="product-card__stars">★★★★☆</span>
-            <span class="product-card__reviews">(278)</span>
-          </div>
-          <div class="product-card__price">
-            <span class="product-card__price-current">899.000đ</span>
-          </div>
-          <div class="product-card__actions">
-            <button class="product-card__action-btn">❤️</button>
-            <button class="product-card__add-to-cart">Thêm Vào Giỏ</button>
-          </div>
-        </div>
-      </div>
-
-      <div class="product-card">
-        <div class="product-card__image">
-          <img src="assets/images/shoe-7.jpg" alt="Vans Old Skool">
-        </div>
-        <div class="product-card__body">
-          <p class="product-card__category">Vans</p>
-          <h3 class="product-card__name">Vans Old Skool</h3>
-          <div class="product-card__rating">
-            <span class="product-card__stars">★★★★★</span>
-            <span class="product-card__reviews">(401)</span>
-          </div>
-          <div class="product-card__price">
-            <span class="product-card__price-current">1.199.000đ</span>
-          </div>
-          <div class="product-card__actions">
-            <button class="product-card__action-btn">❤️</button>
-            <button class="product-card__add-to-cart">Thêm Vào Giỏ</button>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- FOOTER -->
-  <footer class="footer">
-    <div class="footer__content">
-      <div>
-        <h3 class="footer__section-title">Về SOLEKING</h3>
-        <ul class="footer__list">
-          <li><a href="#" class="footer__link">Về chúng tôi</a></li>
-          <li><a href="#" class="footer__link">Cơ hội việc làm</a></li>
-          <li><a href="#" class="footer__link">Tin tức</a></li>
-          <li><a href="#" class="footer__link">Blog</a></li>
-        </ul>
-      </div>
-
-      <div>
-        <h3 class="footer__section-title">Hỗ Trợ Khách Hàng</h3>
-        <ul class="footer__list">
-          <li><a href="#" class="footer__link">Liên hệ chúng tôi</a></li>
-          <li><a href="#" class="footer__link">Câu hỏi thường gặp</a></li>
-          <li><a href="#" class="footer__link">Chính sách trả hàng</a></li>
-          <li><a href="#" class="footer__link">Theo dõi đơn hàng</a></li>
-        </ul>
-      </div>
-
-      <div>
-        <h3 class="footer__section-title">Chính Sách</h3>
-        <ul class="footer__list">
-          <li><a href="#" class="footer__link">Điều khoản sử dụng</a></li>
-          <li><a href="#" class="footer__link">Chính sách bảo mật</a></li>
-          <li><a href="#" class="footer__link">Chính sách cookie</a></li>
-          <li><a href="#" class="footer__link">Bản đồ trang</a></li>
-        </ul>
-      </div>
-
-      <div>
-        <h3 class="footer__section-title">Kết Nối</h3>
-        <div class="footer__social">
-          <a href="#" class="footer__social-link" aria-label="Facebook">f</a>
-          <a href="#" class="footer__social-link" aria-label="Instagram">📷</a>
-          <a href="#" class="footer__social-link" aria-label="Twitter">𝕏</a>
-          <a href="#" class="footer__social-link" aria-label="YouTube">▶</a>
-        </div>
-        <div class="footer__newsletter">
-          <h4 class="footer__section-title" style="margin-bottom: var(--spacing-sm);">Bản tin</h4>
-          <form class="footer__newsletter-input">
-            <input type="email" placeholder="Email..." required>
-            <button type="submit">Gửi</button>
-          </form>
-        </div>
-      </div>
-    </div>
-
-    <div class="footer__bottom">
-      <p>&copy; 2024 SOLEKING. All rights reserved.</p>
-      <div class="footer__bottom-payment">
-        <div class="footer__payment-icon">💳</div>
-        <div class="footer__payment-icon">🏦</div>
-        <div class="footer__payment-icon">📱</div>
-      </div>
-    </div>
   </footer>
 
   <script>
-    // Simple image gallery functionality
-    document.querySelectorAll('.product-detail__thumbnail').forEach(thumb => {
-      thumb.addEventListener('click', function() {
-        document.querySelectorAll('.product-detail__thumbnail').forEach(t => t.classList.remove('active'));
-        this.classList.add('active');
-        document.getElementById('mainImage').src = this.querySelector('img').src;
+    // ===== ĐỔI ẢNH CHÍNH KHI CLICK THUMBNAIL =====
+    function doiAnh(thumb, src, alt) {
+      document.getElementById('img-chinh').src = src;
+      document.getElementById('img-chinh').alt = alt;
+      document.querySelectorAll('.anh-thu-nho').forEach(el => el.classList.remove('active'));
+      thumb.classList.add('active');
+    }
+
+    // ===== CHỌN SIZE =====
+    var sizeChon = null;
+
+    function chonSize(el) {
+      document.querySelectorAll('.kich-thuoc').forEach(function (item) {
+        item.classList.remove('active');
+        item.setAttribute('aria-pressed', 'false');
       });
-    });
+      el.classList.add('active');
+      el.setAttribute('aria-pressed', 'true');
+      sizeChon = el.textContent.trim();
+      document.getElementById('size-da-chon').textContent = '— ' + sizeChon;
+      document.getElementById('canh-bao-size').style.display = 'none';
+      // Xóa viền đỏ cảnh báo khỏi nhóm size
+      document.getElementById('nhom-size').style.outline = 'none';
+    }
 
-    // Color and size selection
-    document.querySelectorAll('input[name="color"], input[name="size"]').forEach(input => {
-      input.addEventListener('change', function() {
-        const type = this.name;
-        document.querySelectorAll(`input[name="${type}"]`).forEach(i => {
-          i.parentElement.classList.remove('selected');
-        });
-        this.parentElement.classList.add('selected');
-      });
-    });
+    // ===== TĂNG / GIẢM SỐ LƯỢNG =====
+    function thayDoiSoLuong(delta) {
+      var input = document.getElementById('o-so-luong');
+      var giaTri = parseInt(input.value) + delta;
+      if (giaTri < 1) giaTri = 1;
+      if (giaTri > 10) giaTri = 10;
+      input.value = giaTri;
+      // Disable nút nếu đạt giới hạn
+      document.getElementById('btn-giam').disabled = (giaTri <= 1);
+      document.getElementById('btn-tang').disabled = (giaTri >= 10);
+    }
 
-    // Quantity selector
-    document.querySelectorAll('.quantity-selector__btn').forEach(btn => {
-      btn.addEventListener('click', function(e) {
-        e.preventDefault();
-        const input = this.parentElement.querySelector('.quantity-selector__input');
-        const value = parseInt(input.value);
-        if (this.textContent === '−' && value > 1) {
-          input.value = value - 1;
-        } else if (this.textContent === '+' && value < 10) {
-          input.value = value + 1;
-        }
-      });
-    });
+    // ===== THÊM VÀO GIỎ HÀNG (localStorage) =====
+    var GIO_KEY = 'soleking_cart';
 
-    // Form submission
-    document.getElementById('productForm').addEventListener('submit', function(e) {
-      e.preventDefault();
-      const size = document.querySelector('input[name="size"]:checked');
-      const color = document.querySelector('input[name="color"]:checked');
-      const quantity = document.querySelector('.quantity-selector__input').value;
+    function layGio() {
+      try { return JSON.parse(localStorage.getItem(GIO_KEY)) || []; }
+      catch (e) { return []; }
+    }
 
-      if (!size) {
-        alert('Vui lòng chọn kích cỡ');
+    function luuGio(gio) {
+      localStorage.setItem(GIO_KEY, JSON.stringify(gio));
+    }
+
+    function capNhatBadge() {
+      var gio = layGio();
+      var tong = gio.reduce(function (t, sp) { return t + sp.soLuong; }, 0);
+      var badge = document.getElementById('btn-gio-hang');
+      if (badge) {
+        var badgeEl = badge.querySelector('.thong-bao-nho');
+        if (badgeEl) badgeEl.textContent = tong;
+      }
+    }
+
+    function themVaoGio() {
+      if (!sizeChon) {
+        document.getElementById('canh-bao-size').style.display = 'block';
+        document.getElementById('nhom-size').style.outline = '2px solid #ff3366';
+        document.getElementById('nhom-size').scrollIntoView({ behavior: 'smooth', block: 'center' });
         return;
       }
+      var soLuong = parseInt(document.getElementById('o-so-luong').value) || 1;
+      var tenSP = document.querySelector('.tieu-de-chi-tiet') ? document.querySelector('.tieu-de-chi-tiet').textContent.trim() : 'Sản phẩm';
+      var giaSP = document.querySelector('.gia-hien-tai-chi-tiet') ? document.querySelector('.gia-hien-tai-chi-tiet').textContent.trim() : '0đ';
+      var anhSP = document.getElementById('img-chinh') ? document.getElementById('img-chinh').src : '';
 
-      alert(`Đã thêm ${quantity} sản phẩm vào giỏ hàng!\nKích cỡ: ${size.value}\nMàu: ${color.value}`);
-    });
+      var gio = layGio();
+      // Tìm sản phẩm trùng (cùng tên + size)
+      var timThay = -1;
+      gio.forEach(function (sp, i) {
+        if (sp.ten === tenSP && sp.size === sizeChon) timThay = i;
+      });
+
+      if (timThay >= 0) {
+        gio[timThay].soLuong += soLuong;
+      } else {
+        gio.push({ ten: tenSP, gia: giaSP, size: sizeChon, soLuong: soLuong, anh: anhSP });
+      }
+      luuGio(gio);
+      capNhatBadge();
+
+      var btn = document.getElementById('btn-them-gio');
+      btn.textContent = '✓ Đã Thêm Vào Giỏ!';
+      btn.style.backgroundColor = '#22c55e';
+      setTimeout(function () {
+        btn.textContent = 'Thêm Vào Giỏ Hàng';
+        btn.style.backgroundColor = '';
+      }, 2000);
+    }
+
+
+    // ===== MUA NGAY =====
+    function muaNgay() {
+      if (!sizeChon) {
+        document.getElementById('canh-bao-size').style.display = 'block';
+        document.getElementById('nhom-size').style.outline = '2px solid #ff3366';
+        document.getElementById('nhom-size').scrollIntoView({ behavior: 'smooth', block: 'center' });
+        return;
+      }
+      location.href = 'thanh-toan.html';
+    }
+
+    // Khởi tạo trạng thái nút giảm
+    document.getElementById('btn-giam').disabled = true;
   </script>
+
 </body>
+
 </html>

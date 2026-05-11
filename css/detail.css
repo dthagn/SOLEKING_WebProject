@@ -1,0 +1,351 @@
+/* ========================================
+   DETAIL.CSS - Trang Chi Tiết Sản Phẩm
+   ======================================== */
+
+/* ========================================
+   THANH ĐƯỜNG DẪN (BREADCRUMB)
+   ======================================== */
+
+.duong-dan {
+  padding: 100px 24px 0;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: block;
+}
+
+.danh-sach-duong-dan {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  list-style: none;
+  font-size: 13px;
+  color: #888888;
+}
+
+.muc-duong-dan + .muc-duong-dan::before {
+  content: '/';
+  color: #444444;
+  margin-right: 8px;
+}
+
+.lien-ket-duong-dan {
+  color: #888888;
+  transition: color 0.3s;
+}
+
+.lien-ket-duong-dan:hover {
+  color: #ff3366;
+}
+
+.duong-dan-hien-tai {
+  color: #ffffff;
+  font-weight: 600;
+}
+
+/* ========================================
+   CHI TIẾT SẢN PHẨM CHÍNH
+   ======================================== */
+
+.chi-tiet-san-pham {
+  display: flex;
+  max-width: 1200px;
+  margin: 40px auto 80px;
+  padding: 0 24px;
+  gap: 64px;
+}
+
+/* Bộ sưu tập ảnh bên trái */
+.bo-suu-tap-anh {
+  flex: 1;
+}
+
+.anh-chinh {
+  width: 100%;
+  height: 560px;
+  background-color: #111111;
+  border: 1px solid #222222;
+  overflow: hidden;
+  margin-bottom: 16px;
+}
+
+.anh-chinh img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.anh-chinh img:hover {
+  transform: scale(1.05);
+}
+
+.anh-thu-nho-nhom {
+  display: flex;
+  gap: 12px;
+}
+
+.anh-thu-nho {
+  flex: 1;
+  border: 2px solid #222222;
+  overflow: hidden;
+  cursor: pointer;
+  height: 100px;
+  transition: border-color 0.3s;
+}
+
+.anh-thu-nho:hover {
+  border-color: #ff3366;
+}
+
+.anh-thu-nho img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.anh-thu-nho:hover img {
+  transform: scale(1.1);
+}
+
+/* Thông tin sản phẩm bên phải */
+.thong-tin-san-pham {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding-top: 8px;
+}
+
+.danh-muc-chi-tiet {
+  font-size: 13px;
+  color: #ff3366;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.tieu-de-chi-tiet {
+  font-size: 48px;
+  font-weight: 900;
+  line-height: 1.1;
+  margin-bottom: 16px;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+
+/* Đánh giá sao */
+.danh-gia-chi-tiet {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.sao-chi-tiet {
+  color: #ffaa00;
+  font-size: 18px;
+  letter-spacing: 2px;
+}
+
+.lien-ket-danh-gia {
+  font-size: 13px;
+  color: #888888;
+  text-decoration: underline;
+}
+
+.lien-ket-danh-gia:hover {
+  color: #ff3366;
+}
+
+/* Giá */
+.gia-chi-tiet {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 20px 0;
+  margin-bottom: 20px;
+  border-top: 1px solid #1f1f1f;
+  border-bottom: 1px solid #1f1f1f;
+}
+
+.gia-hien-tai-chi-tiet {
+  font-size: 36px;
+  font-weight: 900;
+  color: #ff3366;
+}
+
+.gia-cu-chi-tiet {
+  font-size: 20px;
+  color: #555555;
+  text-decoration: line-through;
+}
+
+.giam-gia-chi-tiet {
+  background-color: #ff3366;
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: 800;
+  padding: 4px 10px;
+  border-radius: 2px;
+}
+
+.mo-ta-chi-tiet {
+  color: #cccccc;
+  line-height: 1.8;
+  margin-bottom: 28px;
+  font-size: 16px;
+}
+
+/* ========================================
+   TÙY CHỌN SẢN PHẨM
+   ======================================== */
+
+.tuy-chon-san-pham {
+  margin-bottom: 32px;
+}
+
+.nhom-tuy-chon {
+  margin-bottom: 24px;
+}
+
+.nhan-tuy-chon {
+  font-weight: 800;
+  font-size: 13px;
+  margin-bottom: 12px;
+  display: block;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #ffffff;
+}
+
+.tuy-chon-kich-thuoc {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.kich-thuoc {
+  padding: 12px 18px;
+  border: 2px solid #222222;
+  text-align: center;
+  cursor: pointer;
+  background-color: transparent;
+  font-weight: 800;
+  min-width: 56px;
+  color: #ffffff;
+  font-size: 14px;
+  transition: all 0.3s;
+  user-select: none;
+}
+
+.kich-thuoc:hover,
+.kich-thuoc.active {
+  border-color: #ff3366;
+  background-color: #ff3366;
+  color: #ffffff;
+}
+
+.chon-so-luong {
+  display: flex;
+  align-items: center;
+  border: 2px solid #222222;
+  width: 140px;
+  background-color: transparent;
+}
+
+.nut-chon-so-luong {
+  width: 44px;
+  height: 44px;
+  border: none;
+  background-color: transparent;
+  font-weight: bold;
+  font-size: 20px;
+  cursor: pointer;
+  color: #ffffff;
+  transition: color 0.3s;
+}
+
+.nut-chon-so-luong:hover {
+  color: #ff3366;
+}
+
+.o-nhap-so-luong {
+  flex: 1;
+  text-align: center;
+  border: none;
+  background-color: transparent;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+/* ========================================
+   HÀNH ĐỘNG CHI TIẾT
+   ======================================== */
+
+.hanh-dong-chi-tiet {
+  display: flex;
+  gap: 16px;
+}
+
+.hanh-dong-chinh {
+  flex: 1;
+  padding: 20px;
+  background-color: #ff3366;
+  color: #ffffff;
+  border: none;
+  font-weight: 900;
+  font-size: 16px;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  transition: all 0.3s;
+}
+
+.hanh-dong-chinh:hover {
+  background-color: #e62e5c;
+  transform: translateY(-4px);
+}
+
+.hanh-dong-phu {
+  flex: 1;
+  padding: 20px;
+  background-color: transparent;
+  color: #ffffff;
+  border: 2px solid #ffffff;
+  font-weight: 900;
+  font-size: 16px;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  transition: all 0.3s;
+}
+
+.hanh-dong-phu:hover {
+  background-color: #ffffff;
+  color: #0a0a0a;
+  transform: translateY(-4px);
+}
+
+/* ========================================
+   SẢN PHẨM LIÊN QUAN
+   ======================================== */
+
+.san-pham-lien-quan {
+  max-width: 1200px;
+  margin: 0 auto 80px;
+  padding: 0 24px;
+}
+
+.tieu-de-san-pham-lq {
+  font-size: 32px;
+  font-weight: 900;
+  color: #ffffff;
+  text-transform: uppercase;
+  margin-bottom: 32px;
+  padding-bottom: 16px;
+  border-bottom: 2px solid #ff3366;
+  display: inline-block;
+}

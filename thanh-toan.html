@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Thanh toán đơn hàng tại SOLEKING - Giày thể thao chính hãng Nike, Adidas, Puma.">
+  <title>Thanh Toán | SOLEKING</title>
+
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/contact.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <link rel="stylesheet" href="css/payment.css">
+</head>
+
+<body>
+
+  <!-- PHẦN ĐẦU TRANG -->
+  <header class="phan-dau" aria-label="Phần đầu trang">
+    <div class="phan-dau-chinh">
+      <div class="noi-dung-phan-dau">
+        <a href="index.html" class="logo">SOLEKING</a>
+        <nav class="thanh-dieu-huong" aria-label="Menu chính">
+          <a href="index.html" class="lien-ket-dieu-huong">Trang Chủ</a>
+          <a href="san-pham.html" class="lien-ket-dieu-huong">Shop</a>
+          <a href="gioi-thieu.html" class="lien-ket-dieu-huong">Giới Thiệu</a>
+          <a href="lien-he.html" class="lien-ket-dieu-huong">Liên Hệ</a>
+        </nav>
+        <div class="hanh-dong">
+          <a href="#" class="nut-hanh-dong" title="Tìm Kiếm" id="btn-tim-kiem">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="11" cy="11" r="8" />
+              <line x1="21" y1="21" x2="16.65" y2="16.65" />
+            </svg>
+          </a>
+          <a href="#" class="nut-hanh-dong" title="Tài Khoản" id="btn-tai-khoan">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
+              <circle cx="12" cy="7" r="4" />
+            </svg>
+          </a>
+          <a href="thanh-toan.html" class="nut-hanh-dong" title="Giỏ Hàng" id="btn-gio-hang"
+            style="position: relative;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z" />
+              <line x1="3" y1="6" x2="21" y2="6" />
+              <path d="M16 10a4 4 0 0 1-8 0" />
+            </svg>
+            <span class="thong-bao-nho" id="badge-gio-hang">0</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- TRANG THANH TOÁN -->
+  <div class="trang-thanh-toan">
+
+    <!-- CỘT TRÁI: FORM THÔNG TIN -->
+    <div>
+      <p class="tieu-de-trang-tt">Hoàn tất mua hàng</p>
+      <h1 class="tieu-de-chinh-tt">Thanh Toán</h1>
+
+      <div class="khung-form-tt">
+        <form id="form-thanh-toan" onsubmit="xacNhanDonHang(event)">
+
+          <p class="tieu-de-phan-form">Thông Tin Người Nhận</p>
+
+          <div class="nhom-form-tt">
+            <label class="nhan-form-tt" for="ho-ten">Họ và tên *</label>
+            <input type="text" id="ho-ten" class="o-form-tt" placeholder="Nguyễn Văn A" required>
+          </div>
+
+          <div class="hang-form-tt">
+            <div class="nhom-form-tt">
+              <label class="nhan-form-tt" for="sdt">Số điện thoại *</label>
+              <input type="tel" id="sdt" class="o-form-tt" placeholder="0912 345 678" required>
+            </div>
+            <div class="nhom-form-tt">
+              <label class="nhan-form-tt" for="email-tt">Email</label>
+              <input type="email" id="email-tt" class="o-form-tt" placeholder="email@example.com">
+            </div>
+          </div>
+
+          <p class="tieu-de-phan-form">Địa Chỉ Giao Hàng</p>
+
+          <div class="nhom-form-tt">
+            <label class="nhan-form-tt" for="dia-chi">Địa chỉ *</label>
+            <input type="text" id="dia-chi" class="o-form-tt" placeholder="Số nhà, Tên đường..." required>
+          </div>
+
+          <div class="hang-form-tt">
+            <div class="nhom-form-tt">
+              <label class="nhan-form-tt" for="quan-huyen">Quận / Huyện</label>
+              <input type="text" id="quan-huyen" class="o-form-tt" placeholder="Quận/Huyện">
+            </div>
+            <div class="nhom-form-tt">
+              <label class="nhan-form-tt" for="tinh-tp">Tỉnh / Thành phố</label>
+              <input type="text" id="tinh-tp" class="o-form-tt" placeholder="TP. Hồ Chí Minh">
+            </div>
+          </div>
+
+          <p class="tieu-de-phan-form">Phương Thức Thanh Toán</p>
+
+          <div class="phuong-thuc-tt">
+            <label class="tuy-chon-tt">
+              <input type="radio" name="thanh-toan" value="cod" checked>
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                stroke="#ff3366" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect width="20" height="14" x="2" y="5" rx="2" />
+                <line x1="2" y1="10" x2="22" y2="10" />
+              </svg>
+              <span>Thanh toán khi nhận hàng (COD)</span>
+            </label>
+            <label class="tuy-chon-tt">
+              <input type="radio" name="thanh-toan" value="bank">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                stroke="#ff3366" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+                <polyline points="9 22 9 12 15 12 15 22" />
+              </svg>
+              <span>Chuyển khoản ngân hàng</span>
+            </label>
+            <label class="tuy-chon-tt">
+              <input type="radio" name="thanh-toan" value="momo">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                stroke="#ff3366" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect width="14" height="20" x="5" y="2" rx="2" ry="2" />
+                <path d="M12 18h.01" />
+              </svg>
+              <span>Ví điện tử (MoMo, ZaloPay)</span>
+            </label>
+          </div>
+
+          <button type="submit" class="nut-xac-nhan-tt">
+            Xác Nhận Đặt Hàng →
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <!-- CỘT PHẢI: GIỎ HÀNG -->
+    <div class="khung-gio-hang-tt">
+      <div class="tieu-de-gio-tt">
+        <span>Đơn Hàng</span>
+        <span class="so-sp-gio" id="so-sp-text">0 sản phẩm</span>
+      </div>
+
+      <!-- Danh sách sản phẩm động -->
+      <div id="danh-sach-gio">
+        <!-- Render bằng JS -->
+      </div>
+
+      <!-- Tổng kết -->
+      <div class="tong-ket-gio">
+        <div class="dong-tong-ket">
+          <span>Tạm tính</span>
+          <span id="tam-tinh">0đ</span>
+        </div>
+        <div class="dong-tong-ket">
+          <span>Phí vận chuyển</span>
+          <span class="mien-phi-tag" id="phi-ship">Miễn phí</span>
+        </div>
+        <div class="dong-tong-ket">
+          <span>Giảm giá</span>
+          <span id="giam-gia">—</span>
+        </div>
+        <div class="dong-tong-ket tong-cuoi">
+          <span>Tổng cộng</span>
+          <span id="tong-cong">0đ</span>
+        </div>
+      </div>
+
+      <a href="san-pham.html" class="nut-ve-shop">← Tiếp tục mua sắm</a>
+    </div>
+
+  </div>
+
+  <!-- PHẦN CUỐI TRANG -->
+  <footer class="phan-cuoi" aria-label="Phần cuối trang">
+    <div class="noi-dung-phan-cuoi">
+      <div class="cot-phan-cuoi">
+        <h3 class="tieu-de-phan-cuoi">SOLEKING</h3>
+        <p style="color:#888; font-size:14px; line-height:1.8;">Chuyên cung cấp giày thể thao chính hãng các thương hiệu
+          Nike, Adidas, Puma.</p>
+      </div>
+      <div class="cot-phan-cuoi">
+        <h3 class="tieu-de-phan-cuoi">KHÁM PHÁ</h3>
+        <div class="danh-sach-phan-cuoi">
+          <a href="index.html" class="lien-ket-phan-cuoi">Trang Chủ</a>
+          <a href="san-pham.html" class="lien-ket-phan-cuoi">Shop</a>
+          <a href="gioi-thieu.html" class="lien-ket-phan-cuoi">Giới Thiệu</a>
+          <a href="lien-he.html" class="lien-ket-phan-cuoi">Liên Hệ</a>
+        </div>
+      </div>
+      <div class="cot-phan-cuoi">
+        <h3 class="tieu-de-phan-cuoi">HỖ TRỢ</h3>
+        <div class="danh-sach-phan-cuoi">
+          <a href="thanh-toan.html" class="lien-ket-phan-cuoi">Hướng dẫn mua hàng</a>
+          <a href="lien-he.html" class="lien-ket-phan-cuoi">Chính sách đổi trả</a>
+          <a href="lien-he.html" class="lien-ket-phan-cuoi">Hỏi đáp (FAQ)</a>
+        </div>
+      </div>
+      <div class="cot-phan-cuoi">
+        <h3 class="tieu-de-phan-cuoi">LIÊN HỆ</h3>
+        <div class="cot-phan-cuoi">
+          <h3 class="tieu-de-phan-cuoi">LIÊN HỆ</h3>
+          <div class="danh-sach-phan-cuoi">
+            <a href="tel:0123456789" class="lien-ket-phan-cuoi">Hotline: 0123.456.789</a>
+            <a href="mailto:contact@soleking.com" class="lien-ket-phan-cuoi">contact@soleking.com</a>
+            <a href="lien-he.html" class="lien-ket-phan-cuoi">234 Hoàng Quốc Việt,Cầu Giấy,Hà Nội</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="phan-cuoi-duoi">
+      <p>&copy; 2026 SOLEKING. Thiết kế đẳng cấp.</p>
+    </div>
+  </footer>
+
+  <script>
+    /* ============================================================
+       GIỎ HÀNG - localStorage
+    ============================================================ */
+
+    var GIO_KEY = 'soleking_cart';
+
+    function layGio() {
+      try { return JSON.parse(localStorage.getItem(GIO_KEY)) || []; }
+      catch (e) { return []; }
+    }
+
+    function luuGio(gio) {
+      localStorage.setItem(GIO_KEY, JSON.stringify(gio));
+    }
+
+    function xoaSanPham(index) {
+      var gio = layGio();
+      gio.splice(index, 1);
+      luuGio(gio);
+      hienThiGio();
+    }
+
+    function formatGia(so) {
+      return so.toLocaleString('vi-VN') + 'đ';
+    }
+
+    function hienThiGio() {
+      var gio = layGio();
+      var container = document.getElementById('danh-sach-gio');
+      var soSpText = document.getElementById('so-sp-text');
+      var badge = document.getElementById('badge-gio-hang');
+
+      var tongSp = gio.reduce(function (t, sp) { return t + sp.soLuong; }, 0);
+      soSpText.textContent = tongSp + ' sản phẩm';
+      if (badge) badge.textContent = tongSp;
+
+      if (gio.length === 0) {
+        container.innerHTML = '<div class="gio-trong">'
+          + '<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#555" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>'
+          + '<p>Giỏ hàng của bạn đang trống</p>'
+          + '<p style="margin-top:4px;"><a href="san-pham.html" style="color:#ff3366;">Mua sắm ngay →</a></p>'
+          + '</div>';
+        document.getElementById('tam-tinh').textContent = '0đ';
+        document.getElementById('tong-cong').textContent = '0đ';
+        document.getElementById('phi-ship').textContent = 'Miễn phí';
+        return;
+      }
+
+      var html = '';
+      var tongTien = 0;
+
+      gio.forEach(function (sp, i) {
+        var giaNum = parseInt((sp.gia || '0').replace(/\./g, '').replace('đ', ''));
+        tongTien += giaNum * sp.soLuong;
+        html += '<div class="dong-sp-gio">'
+          + '<img class="anh-sp-gio" src="' + (sp.anh || 'assets/images/AIR+FORCE+1+\'07.png') + '" alt="' + sp.ten + '" onerror="this.src=\'assets/images/AIR+FORCE+1+\'07.png\'">'
+          + '<div class="thong-tin-sp-gio">'
+          + '<div class="ten-sp-gio">' + sp.ten + '</div>'
+          + '<div class="meta-sp-gio">Size: ' + (sp.size || '?') + ' &nbsp;|&nbsp; SL: ' + sp.soLuong + '</div>'
+          + '</div>'
+          + '<div class="gia-sp-gio">' + sp.gia + '</div>'
+          + '<button class="nut-xoa-gio" onclick="xoaSanPham(' + i + ')" title="Xóa">✕</button>'
+          + '</div>';
+      });
+
+      container.innerHTML = html;
+      document.getElementById('tam-tinh').textContent = formatGia(tongTien);
+      document.getElementById('tong-cong').textContent = formatGia(tongTien);
+      document.getElementById('phi-ship').textContent = 'Miễn phí';
+    }
+
+    function xacNhanDonHang(e) {
+      e.preventDefault();
+      var gio = layGio();
+      if (gio.length === 0) {
+        alert('Giỏ hàng của bạn đang trống! Hãy thêm sản phẩm trước khi đặt hàng.');
+        return;
+      }
+      // Xóa giỏ sau khi đặt hàng thành công
+      luuGio([]);
+      alert('🎉 Đặt hàng thành công!\nCảm ơn bạn đã mua sắm tại SOLEKING.\nChúng tôi sẽ liên hệ xác nhận trong thời gian sớm nhất!');
+      location.href = 'index.html';
+    }
+
+    // Khởi tạo
+    hienThiGio();
+  </script>
+
+</body>
+
+</html>
