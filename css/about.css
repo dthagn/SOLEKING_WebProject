@@ -1,0 +1,131 @@
+/* ========================================
+   ABOUT.CSS - Trang Giới Thiệu
+   ======================================== */
+
+/* Phần bìa trang Giới Thiệu */
+.bia-gioi-thieu {
+  padding: 180px 24px 100px;
+  text-align: center;
+  background-color: #0a0a0a;
+  border-bottom: 1px solid #1f1f1f;
+}
+
+.phu-de-gioi-thieu {
+  font-size: 14px;
+  color: #ff3366;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  font-weight: 800;
+  margin-bottom: 24px;
+}
+
+.tieu-de-gioi-thieu {
+  font-size: 72px;
+  font-weight: 900;
+  color: #ffffff;
+  text-transform: uppercase;
+  line-height: 1;
+  margin-bottom: 32px;
+}
+
+.mo-ta-gioi-thieu {
+  max-width: 600px;
+  margin: 0 auto;
+  font-size: 18px;
+  color: #aaaaaa;
+  line-height: 1.8;
+}
+
+/* Phần câu chuyện */
+.cau-chuyen {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 120px 24px;
+}
+
+.khoi-cau-chuyen {
+  display: flex;
+  align-items: center;
+  gap: 80px;
+  margin-bottom: 120px;
+}
+
+/* Đảo chiều zig-zag ở mục chẵn */
+.khoi-cau-chuyen:nth-child(even) {
+  flex-direction: row-reverse;
+}
+
+.anh-cau-chuyen {
+  flex: 1;
+  height: 500px;
+  overflow: hidden;
+  background-color: #111111;
+  border: 1px solid #1f1f1f;
+}
+
+.anh-cau-chuyen img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.chu-cau-chuyen {
+  flex: 1;
+}
+
+.so-thu-tu {
+  font-size: 80px;
+  font-weight: 900;
+  color: #1f1f1f;
+  line-height: 1;
+  margin-bottom: -20px;
+}
+
+.tieu-de-khoi-ct {
+  font-size: 40px;
+  font-weight: 900;
+  color: #ffffff;
+  text-transform: uppercase;
+  margin-bottom: 24px;
+}
+
+.noi-dung-khoi-ct {
+  font-size: 16px;
+  color: #aaaaaa;
+  line-height: 1.9;
+}
+
+/* Phần số liệu thống kê */
+.so-lieu {
+  background-color: #111111;
+  border-top: 1px solid #1f1f1f;
+  border-bottom: 1px solid #1f1f1f;
+  padding: 80px 24px;
+}
+
+.danh-sach-so-lieu {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+}
+
+.muc-so-lieu {
+  padding: 24px;
+}
+
+.con-so {
+  font-size: 64px;
+  font-weight: 900;
+  color: #ff3366;
+  line-height: 1;
+  margin-bottom: 8px;
+}
+
+.nhan-so-lieu {
+  font-size: 14px;
+  color: #888888;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}

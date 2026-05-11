@@ -1,0 +1,307 @@
+/* === TRANG THANH TOÁN === */
+.trang-thanh-toan {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 120px 24px 80px;
+    display: grid;
+    grid-template-columns: 1fr 420px;
+    gap: 48px;
+    align-items: start;
+}
+
+.tieu-de-trang-tt {
+    font-size: 14px;
+    color: #ff3366;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-weight: 800;
+    margin-bottom: 8px;
+}
+
+.tieu-de-chinh-tt {
+    font-size: 48px;
+    font-weight: 900;
+    color: #ffffff;
+    text-transform: uppercase;
+    margin-bottom: 40px;
+    line-height: 1;
+}
+
+/* Cột trái: Form */
+.khung-form-tt {
+    background-color: #111111;
+    border: 1px solid #222222;
+    padding: 40px;
+}
+
+.nhom-form-tt {
+    margin-bottom: 24px;
+}
+
+.nhan-form-tt {
+    display: block;
+    font-size: 11px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #ff3366;
+    margin-bottom: 8px;
+}
+
+.o-form-tt {
+    width: 100%;
+    padding: 14px 18px;
+    background-color: #1a1a1a;
+    border: 1px solid #333333;
+    color: #ffffff;
+    font-size: 15px;
+    font-family: inherit;
+    transition: border-color 0.3s;
+    display: block;
+}
+
+.o-form-tt:focus {
+    outline: none;
+    border-color: #ff3366;
+    background-color: #0d0d0d;
+}
+
+.o-form-tt::placeholder {
+    color: #555;
+}
+
+.hang-form-tt {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+}
+
+.tieu-de-phan-form {
+    font-size: 16px;
+    font-weight: 800;
+    color: #ffffff;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin: 32px 0 20px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid #222;
+}
+
+.phuong-thuc-tt {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.tuy-chon-tt {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 14px 18px;
+    border: 1px solid #333;
+    cursor: pointer;
+    transition: border-color 0.3s;
+}
+
+.tuy-chon-tt:has(input:checked) {
+    border-color: #ff3366;
+    background-color: rgba(255, 51, 102, 0.05);
+}
+
+.tuy-chon-tt input[type="radio"] {
+    accent-color: #ff3366;
+    width: 16px;
+    height: 16px;
+}
+
+.nut-xac-nhan-tt {
+    width: 100%;
+    padding: 20px;
+    background-color: #ff3366;
+    color: #ffffff;
+    border: none;
+    font-size: 16px;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    cursor: pointer;
+    margin-top: 32px;
+    transition: all 0.3s;
+}
+
+.nut-xac-nhan-tt:hover {
+    background-color: #e62e5c;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 24px rgba(255, 51, 102, 0.3);
+}
+
+/* Cột phải: Giỏ hàng */
+.khung-gio-hang-tt {
+    position: sticky;
+    top: 100px;
+}
+
+.tieu-de-gio-tt {
+    font-size: 18px;
+    font-weight: 800;
+    color: #ffffff;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+    padding-bottom: 16px;
+    border-bottom: 2px solid #ff3366;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.so-sp-gio {
+    font-size: 13px;
+    color: #888;
+    font-weight: 600;
+    text-transform: none;
+    letter-spacing: 0;
+}
+
+/* Danh sách sản phẩm trong giỏ */
+#danh-sach-gio {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-bottom: 24px;
+    max-height: 360px;
+    overflow-y: auto;
+    padding-right: 4px;
+}
+
+#danh-sach-gio::-webkit-scrollbar {
+    width: 4px;
+}
+
+#danh-sach-gio::-webkit-scrollbar-track {
+    background: #1a1a1a;
+}
+
+#danh-sach-gio::-webkit-scrollbar-thumb {
+    background: #ff3366;
+    border-radius: 2px;
+}
+
+.dong-sp-gio {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    background-color: #111111;
+    border: 1px solid #222;
+    padding: 14px;
+}
+
+.anh-sp-gio {
+    width: 72px;
+    height: 72px;
+    object-fit: cover;
+    background-color: #1a1a1a;
+    flex-shrink: 0;
+}
+
+.thong-tin-sp-gio {
+    flex: 1;
+}
+
+.ten-sp-gio {
+    font-size: 14px;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 4px;
+}
+
+.meta-sp-gio {
+    font-size: 12px;
+    color: #888;
+}
+
+.gia-sp-gio {
+    font-size: 15px;
+    font-weight: 800;
+    color: #ff3366;
+    white-space: nowrap;
+}
+
+.nut-xoa-gio {
+    background: none;
+    border: none;
+    color: #555;
+    cursor: pointer;
+    font-size: 18px;
+    line-height: 1;
+    padding: 4px;
+    transition: color 0.2s;
+}
+
+.nut-xoa-gio:hover {
+    color: #ff3366;
+}
+
+/* Gio trong */
+.gio-trong {
+    text-align: center;
+    padding: 40px 20px;
+    color: #555;
+    font-size: 14px;
+    border: 1px dashed #333;
+}
+
+.gio-trong svg {
+    margin-bottom: 12px;
+    opacity: 0.4;
+}
+
+/* Tổng kết */
+.tong-ket-gio {
+    background-color: #111111;
+    border: 1px solid #222;
+    padding: 20px;
+}
+
+.dong-tong-ket {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 0;
+    font-size: 14px;
+    color: #aaa;
+}
+
+.dong-tong-ket.tong-cuoi {
+    border-top: 1px solid #333;
+    margin-top: 8px;
+    padding-top: 16px;
+    font-size: 20px;
+    font-weight: 900;
+    color: #ffffff;
+}
+
+.dong-tong-ket.tong-cuoi span:last-child {
+    color: #ff3366;
+}
+
+.mien-phi-tag {
+    color: #22c55e;
+    font-weight: 700;
+}
+
+.nut-ve-shop {
+    display: block;
+    text-align: center;
+    margin-top: 12px;
+    padding: 12px;
+    border: 1px solid #333;
+    color: #888;
+    font-size: 13px;
+    transition: all 0.3s;
+}
+
+.nut-ve-shop:hover {
+    border-color: #ff3366;
+    color: #ff3366;
+}

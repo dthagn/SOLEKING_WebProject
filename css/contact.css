@@ -1,0 +1,205 @@
+/* ========================================
+   CONTACT.CSS - Trang Liên Hệ
+   ======================================== */
+
+.bia-lien-he {
+  padding: 180px 24px 80px;
+  text-align: center;
+  background-color: #0a0a0a;
+  border-bottom: 1px solid #1f1f1f;
+}
+
+.phu-de-lien-he {
+  font-size: 14px;
+  color: #ff3366;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  font-weight: 800;
+  margin-bottom: 24px;
+}
+
+.tieu-de-lien-he {
+  font-size: 72px;
+  font-weight: 900;
+  color: #ffffff;
+  text-transform: uppercase;
+  line-height: 1;
+  margin-bottom: 32px;
+}
+
+.mo-ta-lien-he {
+  max-width: 500px;
+  margin: 0 auto;
+  font-size: 18px;
+  color: #aaaaaa;
+  line-height: 1.8;
+}
+
+/* Khu vực nội dung liên hệ */
+.khu-vuc-lien-he {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 100px 24px;
+  display: flex;
+  gap: 80px;
+}
+
+/* Cột thông tin bên trái */
+.cot-thong-tin-lh {
+  flex: 1;
+}
+
+.tieu-de-cot-lh {
+  font-size: 32px;
+  font-weight: 900;
+  color: #ffffff;
+  text-transform: uppercase;
+  margin-bottom: 48px;
+  padding-bottom: 24px;
+  border-bottom: 2px solid #ff3366;
+  display: inline-block;
+}
+
+.muc-thong-tin-lh {
+  margin-bottom: 40px;
+}
+
+.nhan-thong-tin-lh {
+  font-size: 12px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #ff3366;
+  margin-bottom: 8px;
+  display: block;
+}
+
+.gia-tri-thong-tin-lh {
+  font-size: 18px;
+  color: #ffffff;
+  font-weight: 600;
+}
+
+.gia-tri-thong-tin-lh a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.gia-tri-thong-tin-lh a:hover {
+  color: #ff3366;
+}
+
+.gio-lam-viec {
+  font-size: 14px;
+  color: #888888;
+  margin-top: 4px;
+}
+
+/* Cột biểu mẫu bên phải */
+.cot-bieu-mau-lh {
+  flex: 1.5;
+}
+
+.khung-bieu-mau-lh {
+  background-color: #111111;
+  padding: 48px;
+  border: 1px solid #222222;
+}
+
+.tieu-de-bieu-mau-lh {
+  font-size: 28px;
+  font-weight: 900;
+  color: #ffffff;
+  text-transform: uppercase;
+  margin-bottom: 40px;
+}
+
+/* Ô nhập liệu */
+.nhom-nhap-lieu {
+  margin-bottom: 24px;
+  display: flex;
+  flex-direction: column;
+}
+
+.nhan-nhap-lieu {
+  font-weight: 800;
+  margin-bottom: 8px;
+  color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 12px;
+}
+
+.nhan-nhap-lieu span {
+  color: #ff3366;
+}
+
+.o-nhap-lieu {
+  padding: 16px 24px;
+  background-color: #1a1a1a;
+  border: 1px solid #333333;
+  color: #ffffff;
+  font-size: 16px;
+  transition: all 0.3s;
+}
+
+.o-nhap-lieu:focus {
+  outline: none;
+  border-color: #ff3366;
+  background-color: #000000;
+}
+
+.o-nhap-lieu::placeholder {
+  color: #555555;
+}
+
+.o-nhap-noi-dung {
+  padding: 16px 24px;
+  background-color: #1a1a1a;
+  border: 1px solid #333333;
+  color: #ffffff;
+  font-size: 16px;
+  min-height: 160px;
+  resize: vertical;
+  font-family: inherit;
+  transition: all 0.3s;
+}
+
+.o-nhap-noi-dung:focus {
+  outline: none;
+  border-color: #ff3366;
+  background-color: #000000;
+}
+
+.o-nhap-noi-dung::placeholder {
+  color: #555555;
+}
+
+.hang-nhap-lieu {
+  display: flex;
+  gap: 24px;
+}
+
+.hang-nhap-lieu .nhom-nhap-lieu {
+  flex: 1;
+}
+
+.nut-gui-lien-he {
+  width: 100%;
+  padding: 20px;
+  background-color: #ff3366;
+  color: #ffffff;
+  border: none;
+  font-size: 16px;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  cursor: pointer;
+  margin-top: 16px;
+  transition: all 0.3s;
+}
+
+.nut-gui-lien-he:hover {
+  background-color: #e62e5c;
+  transform: translateY(-4px);
+}
