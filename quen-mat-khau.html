@@ -5,8 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Quên Mật Khẩu | SOLEKING</title>
 
-  <link rel="stylesheet" href="css/style.css">
+  <!-- Liên kết các file CSS chuẩn -->
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
   <link rel="stylesheet" href="css/auth.css">
+  <link rel="stylesheet" href="css/responsive.css">
   
   <style>
     /* Chỉnh sửa layout để form Quên Mật Khẩu nằm giữa */
@@ -79,19 +82,33 @@
       
       <!-- BƯỚC 1: NHẬP EMAIL -->
       <form class="auth-form" id="form-step-1" onsubmit="xuLyBuoc1(event)" style="padding:0">
-        <h1 style="margin-bottom: 8px;">Quên Mật Khẩu</h1>
-        <p style="font-size:14px; color:#aaa; margin-bottom:24px;">Nhập email của bạn để lấy lại mật khẩu</p>
-        <input type="email" id="qm-email" placeholder="Nhập email của bạn" required />
+        <h1>Quên Mật Khẩu</h1>
+        <p>Nhập email của bạn để lấy lại mật khẩu</p>
+
+        <div class="nhom-nhap-lieu">
+          <label class="nhan-nhap-lieu" for="qm-email">Email <span>*</span></label>
+          <input type="email" id="qm-email" placeholder="Nhập email của bạn" required />
+        </div>
+
         <button type="submit" class="auth-btn">Tiếp Tục</button>
         <a href="tai-khoan.html" style="display:block; margin-top:20px; color:#aaa; text-decoration:none; font-size:14px;">← Quay lại đăng nhập</a>
       </form>
 
       <!-- BƯỚC 2: NHẬP MẬT KHẨU MỚI (Mặc định ẩn) -->
       <form class="auth-form" id="form-step-2" onsubmit="xuLyBuoc2(event)" style="display:none; padding:0">
-        <h1 style="margin-bottom: 8px;">Tạo Mật Khẩu Mới</h1>
-        <p style="font-size:14px; color:#aaa; margin-bottom:24px;">Nhập mật khẩu mới cho tài khoản <strong id="hien-thi-email"></strong></p>
-        <input type="password" id="qm-mat-khau-moi" placeholder="Mật khẩu mới" required minlength="6"/>
-        <input type="password" id="qm-xac-nhan" placeholder="Xác nhận mật khẩu mới" required minlength="6"/>
+        <h1>Tạo Mật Khẩu Mới</h1>
+        <p>Nhập mật khẩu mới cho tài khoản <strong id="hien-thi-email"></strong></p>
+
+        <div class="nhom-nhap-lieu">
+          <label class="nhan-nhap-lieu" for="qm-mat-khau-moi">Mật khẩu mới <span>*</span></label>
+          <input type="password" id="qm-mat-khau-moi" placeholder="••••••••" required minlength="6"/>
+        </div>
+
+        <div class="nhom-nhap-lieu">
+          <label class="nhan-nhap-lieu" for="qm-xac-nhan">Xác nhận mật khẩu <span>*</span></label>
+          <input type="password" id="qm-xac-nhan" placeholder="••••••••" required minlength="6"/>
+        </div>
+
         <button type="submit" class="auth-btn">Đổi Mật Khẩu</button>
         <a href="#" onclick="quayLaiBuoc1(event)" style="display:block; margin-top:20px; color:#aaa; text-decoration:none; font-size:14px;">← Đổi email khác</a>
       </form>
