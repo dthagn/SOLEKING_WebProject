@@ -65,25 +65,27 @@
     <div class="auth-container" id="auth-container">
       <!-- FORM ĐĂNG KÝ -->
       <div class="form-container sign-up-container">
-        <form action="#" id="form-dang-ky">
+        <form action="#" id="form-dang-ky" class="auth-form">
           <h1>Tạo Tài Khoản</h1>
           <p>Chào mừng bạn gia nhập cộng đồng SOLEKING</p>
           <input type="text" placeholder="Họ và tên" required />
           <input type="email" placeholder="Email" required />
           <input type="password" placeholder="Mật khẩu" required />
           <button type="submit" class="auth-btn">Đăng Ký</button>
+          <div class="mobile-toggle">Đã có tài khoản? <span onclick="document.getElementById('signIn').click()">Đăng nhập ngay</span></div>
         </form>
       </div>
 
       <!-- FORM ĐĂNG NHẬP -->
       <div class="form-container sign-in-container">
-        <form action="#" id="form-dang-nhap">
+        <form action="#" id="form-dang-nhap" class="auth-form">
           <h1>Đăng Nhập</h1>
           <p>Chào mừng bạn quay trở lại</p>
           <input type="email" placeholder="Email" required />
           <input type="password" placeholder="Mật khẩu" required />
           <a href="#" class="quen-mk">Quên mật khẩu?</a>
           <button type="submit" class="auth-btn">Đăng Nhập</button>
+          <div class="mobile-toggle">Chưa có tài khoản? <span onclick="document.getElementById('signUp').click()">Đăng ký ngay</span></div>
         </form>
       </div>
 
@@ -93,12 +95,12 @@
           <div class="overlay-panel overlay-left">
             <h1>Chào Bạn Mới!</h1>
             <p>Đã có tài khoản? Hãy đăng nhập ngay để khám phá bộ sưu tập mới.</p>
-            <button class="ghost-btn" id="signIn">Đăng Nhập</button>
+            <button class="auth-btn ghost" id="signIn">Đăng Nhập</button>
           </div>
           <div class="overlay-panel overlay-right">
             <h1>Chào Mừng!</h1>
             <p>Chưa có tài khoản? Hãy đăng ký ngay để nhận nhiều ưu đãi từ SOLEKING.</p>
-            <button class="ghost-btn" id="signUp">Đăng Ký</button>
+            <button class="auth-btn ghost" id="signUp">Đăng Ký</button>
           </div>
         </div>
       </div>
