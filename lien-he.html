@@ -8,18 +8,21 @@
     content="Liên hệ với SOLEKING - Hotline, email, địa chỉ cửa hàng và gửi yêu cầu hỗ trợ trực tuyến.">
   <title>Liên Hệ | SOLEKING</title>
 
-  <link rel="stylesheet" href="css/style.css">
+  <!-- Liên kết các file CSS chuẩn -->
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
   <link rel="stylesheet" href="css/contact.css">
+  <link rel="stylesheet" href="css/responsive.css">
 </head>
 
 <body>
 
-  <!-- PHẦN ĐẦU TRANG -->
-  <div class="phan-dau">
+  <!-- PHẦN ĐẦU TRANG (HEADER) -->
+  <header class="phan-dau" aria-label="Phần đầu trang">
     <div class="phan-dau-chinh">
       <div class="noi-dung-phan-dau">
-        <a href="index.html" class="logo">SOLEKING</a>
-        <nav class="thanh-dieu-huong">
+        <a href="index.html" class="logo" aria-label="SOLEKING - Về trang chủ">SOLEKING</a>
+        <nav class="thanh-dieu-huong" aria-label="Menu chính">
           <a href="index.html" class="lien-ket-dieu-huong">Trang Chủ</a>
           <a href="san-pham.html" class="lien-ket-dieu-huong">Shop</a>
           <a href="gioi-thieu.html" class="lien-ket-dieu-huong">Giới Thiệu</a>
@@ -41,9 +44,7 @@
                 <circle cx="12" cy="7" r="4" />
               </svg>
             </a>
-            <div class="dropdown-tai-khoan" id="dropdown-tai-khoan">
-              <!-- Render by auth.js -->
-            </div>
+            <div class="dropdown-tai-khoan" id="dropdown-tai-khoan"></div>
           </div>
           <a href="thanh-toan.html" class="nut-hanh-dong" title="Giỏ Hàng" id="btn-gio-hang"
             style="position: relative;">
@@ -58,7 +59,7 @@
         </div>
       </div>
     </div>
-  </div>
+  </header>
 
   <main>
     <!-- BÌA TRANG LIÊN HỆ -->
@@ -71,79 +72,33 @@
 
     <!-- KHU VỰC NỘI DUNG LIÊN HỆ -->
     <section class="khu-vuc-lien-he">
-
-      <!-- Cột trái: Thông tin liên hệ -->
       <div class="cot-thong-tin-lh">
         <h2 class="tieu-de-cot-lh">Thông Điệp</h2>
-
         <div class="muc-thong-tin-lh">
-          <span class="nhan-thong-tin-lh">
-            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none"
-              stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"
-              style="display:inline; vertical-align:middle; margin-right:6px;">
-              <path
-                d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.21 3.32 2 2 0 0 1 3.22 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.09 8.91a16 16 0 0 0 5.99 5.99l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21 16z" />
-            </svg>
-            Hotline
-          </span>
+          <span class="nhan-thong-tin-lh">Hotline</span>
           <div class="gia-tri-thong-tin-lh"><a href="tel:0123456789">0123.456.789</a></div>
           <div class="gio-lam-viec">Thứ 2 - Chủ Nhật, 8:00 - 21:00</div>
         </div>
-
         <div class="muc-thong-tin-lh">
-          <span class="nhan-thong-tin-lh">
-            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none"
-              stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"
-              style="display:inline; vertical-align:middle; margin-right:6px;">
-              <rect width="20" height="16" x="2" y="4" rx="2" />
-              <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
-            </svg>
-            Email
-          </span>
+          <span class="nhan-thong-tin-lh">Email</span>
           <div class="gia-tri-thong-tin-lh"><a href="mailto:shoesshop@soleking.com">shoesshop@soleking.com</a></div>
           <div class="gio-lam-viec">Phản hồi trong vòng 24 giờ</div>
         </div>
-
         <div class="muc-thong-tin-lh">
-          <span class="nhan-thong-tin-lh">
-            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none"
-              stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"
-              style="display:inline; vertical-align:middle; margin-right:6px;">
-              <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z" />
-              <circle cx="12" cy="10" r="3" />
-            </svg>
-            Địa Chỉ
-          </span>
+          <span class="nhan-thong-tin-lh">Địa Chỉ</span>
           <div class="gia-tri-thong-tin-lh">234 Đường Hoàng Quốc Việt<br>Quận Cầu Giấy, TP. Hà Nội</div>
           <div class="gio-lam-viec">Cửa hàng mở cửa 8:00 - 22:00 mỗi ngày</div>
         </div>
-
-        <div class="muc-thong-tin-lh">
-          <span class="nhan-thong-tin-lh">
-            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none"
-              stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"
-              style="display:inline; vertical-align:middle; margin-right:6px;">
-              <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
-            </svg>
-            Mạng Xã Hội
-          </span>
-          <div class="gia-tri-thong-tin-lh">
-            <a href="#">Facebook</a> &nbsp;·&nbsp;
-            <a href="#">Instagram</a> &nbsp;·&nbsp;
-            <a href="#">TikTok</a>
-          </div>
-        </div>
       </div>
 
-      <!-- Cột phải: Biểu mẫu gửi tin nhắn -->
       <div class="cot-bieu-mau-lh">
         <div class="khung-bieu-mau-lh">
           <h2 class="tieu-de-bieu-mau-lh">Gửi Tin Nhắn</h2>
-          <form action="index.html" method="get">
-
+          <form
+            onsubmit="event.preventDefault(); alert('Gửi tin nhắn thành công! Chúng tôi sẽ liên hệ lại sớm nhất.');">
             <div class="hang-nhap-lieu">
               <div class="nhom-nhap-lieu">
-                <label class="nhan-nhap-lieu" for="ho-ten">Họ và tên <span>*</span></label>
+                <label class="nhan-nhap-lieu" for="ho-ten">Họ và tên *</label>
                 <input type="text" id="ho-ten" class="o-nhap-lieu" placeholder="Nguyễn Văn A" required>
               </div>
               <div class="nhom-nhap-lieu">
@@ -151,31 +106,19 @@
                 <input type="tel" id="so-dien-thoai" class="o-nhap-lieu" placeholder="0912 345 678">
               </div>
             </div>
-
             <div class="nhom-nhap-lieu">
-              <label class="nhan-nhap-lieu" for="email">Email <span>*</span></label>
+              <label class="nhan-nhap-lieu" for="email">Email *</label>
               <input type="email" id="email" class="o-nhap-lieu" placeholder="example@email.com" required>
             </div>
-
             <div class="nhom-nhap-lieu">
-              <label class="nhan-nhap-lieu" for="chu-de">Chủ đề</label>
-              <input type="text" id="chu-de" class="o-nhap-lieu" placeholder="Hỏi về sản phẩm / Đơn hàng / Hợp tác...">
-            </div>
-
-            <div class="nhom-nhap-lieu">
-              <label class="nhan-nhap-lieu" for="noi-dung">Nội dung tin nhắn <span>*</span></label>
+              <label class="nhan-nhap-lieu" for="noi-dung">Nội dung tin nhắn *</label>
               <textarea id="noi-dung" class="o-nhap-noi-dung" placeholder="Nhập nội dung bạn muốn liên hệ..."
                 required></textarea>
             </div>
-
-            <button type="submit" class="nut-gui-lien-he"
-              onclick="alert('Gửi tin nhắn thành công! Chúng tôi sẽ liên hệ lại với bạn trong thời gian sớm nhất.')">
-              Gửi Tin Nhắn
-            </button>
+            <button type="submit" class="nut-gui-lien-he">Gửi Tin Nhắn</button>
           </form>
         </div>
       </div>
-
     </section>
   </main>
 
@@ -184,7 +127,8 @@
     <div class="noi-dung-phan-cuoi">
       <div class="cot-phan-cuoi">
         <h3 class="tieu-de-phan-cuoi">SOLEKING</h3>
-        <p style="color:#888; font-size:14px; line-height:1.8;">Chuyên cung cấp giày thể thao chính hãng Nike, Adidas, Puma.</p>
+        <p style="color:#888; font-size:14px; line-height:1.8;">Chuyên cung cấp giày thể thao chính hãng Nike, Adidas,
+          Puma.</p>
       </div>
       <div class="cot-phan-cuoi">
         <h3 class="tieu-de-phan-cuoi">KHÁM PHÁ</h3>
@@ -202,12 +146,26 @@
           <a href="lien-he.html">Chính sách đổi trả</a>
         </div>
       </div>
+      <div class="cot-phan-cuoi">
+        <h3 class="tieu-de-phan-cuoi">KẾT NỐI</h3>
+        <div style="display: flex; gap: 20px; margin-top: 15px;">
+          <a href="https://www.facebook.com/thang.nguyen.118650" title="Facebook">
+            <img src="assets/icons/facebook.svg" alt="Facebook" width="24" height="24" style="filter: invert(1);">
+          </a>
+          <a href="https://www.instagram.com/thagn.duc/" title="Instagram">
+            <img src="assets/icons/instagram.svg" alt="Instagram" width="24" height="24" style="filter: invert(1);">
+          </a>
+          <a href="https://www.tiktok.com/@reviewvivu201005" title="TikTok">
+            <img src="assets/icons/tiktok.svg" alt="TikTok" width="24" height="24" style="filter: invert(1);">
+          </a>
+        </div>
+      </div>
     </div>
     <div class="phan-cuoi-duoi">
-      <p>&copy; 2026 SOLEKING.</p>
+      <p>&copy; 2026 SOLEKING. Đẳng cấp từng bước chân.</p>
     </div>
   </footer>
-  
+
   <!-- SEARCH OVERLAY -->
   <div class="overlay-tim-kiem" id="overlay-tim-kiem">
     <div class="hop-tim-kiem">
@@ -220,4 +178,5 @@
   <script src="js/cart.js"></script>
   <script src="js/main.js"></script>
 </body>
+
 </html>

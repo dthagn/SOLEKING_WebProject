@@ -47,11 +47,6 @@ SOLEKING_WebProject/
 - Đặt hàng và lưu lịch sử đơn hàng.
 - Hủy đơn hàng và ghi nhận lý do hủy đơn.
 
-## 🚀 Hướng Dẫn Triển Khai (Deploy) Lên Netlify
-1. Truy cập [Netlify Drop](https://app.netlify.com/drop).
-2. Kéo thả toàn bộ thư mục `SOLEKING_WebProject` vào khu vực yêu cầu.
-3. Chờ Netlify upload và khởi tạo link.
-4. Có thể đổi tên miền miễn phí dạng `*.netlify.app` trong phần Site Settings.
 
 ## 💡 Lưu Ý Khi Bảo Vệ Đồ Án
 - Mọi dữ liệu (tài khoản, giỏ hàng, lịch sử đơn) chỉ lưu trữ tại bộ nhớ trình duyệt `localStorage`.

@@ -20,11 +20,11 @@
 }
 
 .tieu-de-gioi-thieu {
-  font-size: 72px;
+  font-size: clamp(32px, 8vw, 72px);
   font-weight: 900;
   color: #ffffff;
   text-transform: uppercase;
-  line-height: 1;
+  line-height: 1.1;
   margin-bottom: 32px;
 }
 
@@ -36,7 +36,7 @@
   line-height: 1.8;
 }
 
-/* Phần câu chuyện */
+/* Phần câu chuyện (ZIG-ZAG) */
 .cau-chuyen {
   max-width: 1200px;
   margin: 0 auto;
@@ -46,8 +46,8 @@
 .khoi-cau-chuyen {
   display: flex;
   align-items: center;
-  gap: 80px;
-  margin-bottom: 120px;
+  gap: 60px; /* Giảm gap để dành chỗ cho ảnh to */
+  margin-bottom: 150px; /* Tăng khoảng cách giữa các khối */
 }
 
 /* Đảo chiều zig-zag ở mục chẵn */
@@ -56,8 +56,9 @@
 }
 
 .anh-cau-chuyen {
-  flex: 1;
-  height: 500px;
+  flex: 1.6; /* Tăng mạnh diện tích ảnh */
+  width: 100%;
+  aspect-ratio: 3/2; /* Ảnh to và cao hơn */
   overflow: hidden;
   background-color: #111111;
   border: 1px solid #1f1f1f;
@@ -71,18 +72,19 @@
 
 .chu-cau-chuyen {
   flex: 1;
+  padding: 0; /* Loại bỏ padding dư thừa */
 }
 
 .so-thu-tu {
-  font-size: 80px;
+  font-size: 60px;
   font-weight: 900;
   color: #1f1f1f;
   line-height: 1;
-  margin-bottom: -20px;
+  margin-bottom: -15px;
 }
 
 .tieu-de-khoi-ct {
-  font-size: 40px;
+  font-size: 32px;
   font-weight: 900;
   color: #ffffff;
   text-transform: uppercase;
@@ -101,6 +103,7 @@
   border-top: 1px solid #1f1f1f;
   border-bottom: 1px solid #1f1f1f;
   padding: 80px 24px;
+  overflow: hidden;
 }
 
 .danh-sach-so-lieu {
@@ -108,15 +111,18 @@
   margin: 0 auto;
   display: flex;
   justify-content: space-around;
+  flex-wrap: wrap; /* Fix lỗi overflow */
+  gap: 30px;
   text-align: center;
 }
 
 .muc-so-lieu {
-  padding: 24px;
+  padding: 20px;
+  min-width: 200px;
 }
 
 .con-so {
-  font-size: 64px;
+  font-size: 48px;
   font-weight: 900;
   color: #ff3366;
   line-height: 1;

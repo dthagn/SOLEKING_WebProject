@@ -35,11 +35,14 @@
   border: 1px solid #333;
   transition: all 0.3s ease;
   position: relative;
+  display: flex;
+  flex-direction: column;
 }
 
 .the-sp-premium:hover {
   border-color: #ff3366;
   transform: translateY(-5px);
+  z-index: 10;
 }
 
 .khung-anh-sp {
@@ -48,6 +51,7 @@
   background-color: #1a1a1a;
   position: relative;
   overflow: hidden;
+  flex-shrink: 0;
 }
 
 .khung-anh-sp img {
@@ -66,6 +70,7 @@
   align-items: center;
   justify-content: center;
   gap: 10px;
+  z-index: 5;
 }
 
 .the-sp-premium:hover .lop-phu-hanh-dong {
@@ -82,6 +87,7 @@
   text-decoration: none;
   width: 150px;
   text-align: center;
+  transition: all 0.2s;
 }
 
 .nut-overlay.chinh {
@@ -100,26 +106,34 @@
 }
 
 .thong-tin-sp-premium {
-  padding: 15px;
+  padding: 20px 15px;
   text-align: center;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .ten-sp-premium {
   font-size: 18px;
   color: #fff;
-  margin-bottom: 5px;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
 }
 
 .mo-ta-sp-ngan {
   font-size: 13px;
   color: #888;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
+  line-height: 1.4;
 }
 
 .gia-sp-premium {
-  font-size: 16px;
+  font-size: 18px;
   color: #ff3366;
   font-weight: bold;
+  margin-top: auto;
 }
 
 /* Trang Chi Tiết */

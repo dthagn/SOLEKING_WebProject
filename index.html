@@ -4,23 +4,24 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="SOLEKING - Cửa hàng giày thể thao chính hãng Nike, Adidas, Puma. Thiết kế đẳng cấp, phong cách dẫn đầu.">
   <title>SOLEKING - Đỉnh Cao Thiết Kế</title>
 
-  <!-- Liên kết các file CSS -->
-  <link rel="stylesheet" href="css/style.css">
+  <!-- Liên kết các file CSS chuẩn (Modular System) -->
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
   <link rel="stylesheet" href="css/home.css">
+  <link rel="stylesheet" href="css/responsive.css">
 </head>
 
 <body id="dau-trang">
-  <!-- PHẦN ĐẦU TRANG -->
-  <div class="phan-dau" id="header-chinh">
+  <!-- PHẦN ĐẦU TRANG (GLASSMORPHISM) -->
+  <header class="phan-dau">
     <div class="phan-dau-chinh">
       <div class="noi-dung-phan-dau">
-        <a href="index.html" class="logo">
-          SOLEKING
-        </a>
+        <a href="index.html" class="logo">SOLEKING</a>
 
-        <nav class="thanh-dieu-huong">
+        <nav class="thanh-dieu-huong" aria-label="Menu chính">
           <a href="index.html" class="lien-ket-dieu-huong">Trang Chủ</a>
           <a href="san-pham.html" class="lien-ket-dieu-huong">Shop</a>
           <a href="gioi-thieu.html" class="lien-ket-dieu-huong">Giới Thiệu</a>
@@ -36,7 +37,6 @@
             </svg>
           </a>
 
-          <!-- WRAPPER USER DROPDOWN -->
           <div id="wrapper-tai-khoan">
             <a href="#" class="nut-hanh-dong" title="Tài Khoản" id="btn-tai-khoan" onclick="toggleDropdownUser(event)">
               <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none"
@@ -45,13 +45,12 @@
                 <circle cx="12" cy="7" r="4" />
               </svg>
             </a>
-            <!-- Dropdown menu -->
             <div class="dropdown-tai-khoan" id="dropdown-tai-khoan">
               <!-- Rendered by auth.js -->
             </div>
           </div>
-          <a href="thanh-toan.html" class="nut-hanh-dong" title="Giỏ Hàng" id="btn-gio-hang"
-            style="position: relative;">
+
+          <a href="thanh-toan.html" class="nut-hanh-dong" title="Giỏ Hàng" id="btn-gio-hang" style="position: relative;">
             <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none"
               stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z" />
@@ -63,90 +62,134 @@
         </div>
       </div>
     </div>
-  </div>
+  </header>
 
-  <!-- BÌA TRANG CHỦ -->
-  <div class="anh-bia">
-    <div class="noi-dung-anh-bia">
-      <p class="phu-de-anh-bia">Phong Cách Sống</p>
-      <h2 class="tieu-de-anh-bia">Mỗi Bước Chân<br>Là Một Tuyên Ngôn</h2>
-      <p class="mo-ta-anh-bia">Khám phá bộ sưu tập mới nhất từ Nike, Adidas & Puma dành cho những người dám khác biệt.</p>
-      <div>
-        <a href="san-pham.html" class="nut">Khám Phá Ngay</a>
-        <a href="gioi-thieu.html" class="nut nut-vien">Câu Chuyện</a>
-      </div>
-    </div>
-  </div>
-
-  <!-- BĂNG CHẠY THƯƠNG HIỆU -->
-  <div class="bang-thuong-hieu">
-    <div class="bang-chay">
-      <span class="muc-bang">NIKE</span><span class="dau-phan-cach">✦</span>
-      <span class="muc-bang">ADIDAS</span><span class="dau-phan-cach">✦</span>
-      <span class="muc-bang">PUMA</span><span class="dau-phan-cach">✦</span>
-      <span class="muc-bang">CHÍNH HÃNG 100%</span><span class="dau-phan-cach">✦</span>
-      <span class="muc-bang">GIAO HÀNG TOÀN QUỐC</span><span class="dau-phan-cach">✦</span>
-      <span class="muc-bang">ĐỔI TRẢ MIỄN PHÍ</span><span class="dau-phan-cach">✦</span>
-      <span class="muc-bang">NIKE</span><span class="dau-phan-cach">✦</span>
-      <span class="muc-bang">ADIDAS</span><span class="dau-phan-cach">✦</span>
-      <span class="muc-bang">PUMA</span><span class="dau-phan-cach">✦</span>
-      <span class="muc-bang">CHÍNH HÃNG 100%</span><span class="dau-phan-cach">✦</span>
-      <span class="muc-bang">GIAO HÀNG TOÀN QUỐC</span><span class="dau-phan-cach">✦</span>
-      <span class="muc-bang">ĐỔI TRẢ MIỄN PHÍ</span>
-    </div>
-  </div>
-
-  <!-- DANH MỤC SẢN PHẨM -->
-  <div class="danh-muc">
-    <div class="luoi-danh-muc">
-      <!-- Khối 1 -->
-      <div class="the-danh-muc">
-        <div class="khung-anh-danh-muc">
-          <img src="assets/images/Trang_chu_1.png" alt="Chạy bộ" class="anh-danh-muc">
-        </div>
-        <div class="lop-phu-danh-muc">
-          <h3 class="tieu-de-the-danh-muc">Thống Lĩnh Đường Đua</h3>
-          <p class="mo-ta-anh-bia">Cảm nhận sự nảy bật ở mỗi bước chân với công nghệ đệm siêu nhẹ. Thiết kế khí động học
-            giúp bạn bứt phá mọi kỷ lục.</p>
-          <a href="san-pham.html" class="lien-ket-danh-muc">Mua Giày Chạy Bộ</a>
+  <main>
+    <!-- VIDEO HERO SECTION -->
+    <div class="video-hero">
+      <video class="video-nen" autoplay muted loop playsinline preload="auto">
+        <source src="assets/images/Sản Xuất Video 3D _ TVC Quảng Cáo Giày _ Radio Ad.mp4" type="video/mp4">
+      </video>
+      <div class="video-lop-phu"></div>
+      <div class="video-noi-dung">
+        <p class="video-sub">Phong Cách Sống</p>
+        <h2 class="video-title">Mỗi Bước Chân<br>Là Một Tuyên Ngôn</h2>
+        <p class="video-desc">Khám phá bộ sưu tập mới nhất từ Nike, Adidas &amp; Puma<br>dành cho những người dám khác biệt.</p>
+        <div class="video-nhom-nut">
+          <a href="san-pham.html" class="video-cta">Khám Phá Ngay</a>
+          <a href="gioi-thieu.html" class="video-cta-phu">Câu Chuyện Của Chúng Tôi</a>
         </div>
       </div>
+      <div class="video-scroll-hint">
+        <div class="scroll-arrow"></div>
+      </div>
+    </div>
 
-      <!-- Khối 2 -->
-      <div class="the-danh-muc">
-        <div class="khung-anh-danh-muc">
-          <img src="assets/images/Trang_chu_2.png" alt="Bóng rổ" class="anh-danh-muc">
+    <!-- BĂNG CHẠY THƯƠNG HIỆU -->
+    <div class="bang-thuong-hieu">
+      <div class="bang-chay">
+        <span class="muc-bang">NIKE</span><span class="dau-phan-cach">✦</span>
+        <span class="muc-bang">ADIDAS</span><span class="dau-phan-cach">✦</span>
+        <span class="muc-bang">PUMA</span><span class="dau-phan-cach">✦</span>
+        <span class="muc-bang">CHÍNH HÃNG 100%</span><span class="dau-phan-cach">✦</span>
+        <span class="muc-bang">GIAO HÀNG TOÀN QUỐC</span><span class="dau-phan-cach">✦</span>
+        <span class="muc-bang">ĐỔI TRẢ MIỄN PHÍ</span><span class="dau-phan-cach">✦</span>
+        <span class="muc-bang">NIKE</span><span class="dau-phan-cach">✦</span>
+        <span class="muc-bang">ADIDAS</span><span class="dau-phan-cach">✦</span>
+        <span class="muc-bang">PUMA</span><span class="dau-phan-cach">✦</span>
+        <span class="muc-bang">CHÍNH HÃNG 100%</span><span class="dau-phan-cach">✦</span>
+        <span class="muc-bang">GIAO HÀNG TOÀN QUỐC</span><span class="dau-phan-cach">✦</span>
+        <span class="muc-bang">ĐỔI TRẢ MIỄN PHÍ</span><span class="dau-phan-cach">✦</span>
+      </div>
+    </div>
+
+    <!-- DANH MỤC SẢN PHẨM (ZIG-ZAG) -->
+    <div class="danh-muc">
+      <div class="luoi-danh-muc">
+        <!-- Khối 1 -->
+        <div class="the-danh-muc">
+          <div class="khung-anh-danh-muc">
+            <img src="assets/images/Trang_chu_1.png" alt="Chạy bộ" class="anh-danh-muc">
+          </div>
+          <div class="lop-phu-danh-muc">
+            <h3 class="tieu-de-the-danh-muc">Thống Lĩnh Đường Đua</h3>
+            <p class="mo-ta-anh-bia">Cảm nhận sự nảy bật ở mỗi bước chân với công nghệ đệm siêu nhẹ. Thiết kế khí động học giúp bạn bứt phá mọi kỷ lục.</p>
+            <a href="san-pham.html" class="lien-ket-danh-muc">Mua Giày Chạy Bộ</a>
+          </div>
         </div>
-        <div class="lop-phu-danh-muc">
-          <h3 class="tieu-de-the-danh-muc">Làm Chủ Sàn Đấu</h3>
-          <p class="mo-ta-anh-bia">Khả năng bám sân tuyệt đối, hỗ trợ mắt cá chân tối đa. Làm chủ không trung và mọi pha
-            tiếp đất.</p>
-          <a href="san-pham.html" class="lien-ket-danh-muc">Mua Giày Bóng Rổ</a>
+
+        <!-- Khối 2 -->
+        <div class="the-danh-muc">
+          <div class="khung-anh-danh-muc">
+            <img src="assets/images/Trang_chu_2.png" alt="Bóng rổ" class="anh-danh-muc">
+          </div>
+          <div class="lop-phu-danh-muc">
+            <h3 class="tieu-de-the-danh-muc">Làm Chủ Sàn Đấu</h3>
+            <p class="mo-ta-anh-bia">Khả năng bám sân tuyệt đối, hỗ trợ mắt cá chân tối đa. Làm chủ không trung và mọi pha tiếp đất.</p>
+            <a href="san-pham.html" class="lien-ket-danh-muc">Mua Giày Bóng Rổ</a>
+          </div>
+        </div>
+
+        <!-- Khối 3 -->
+        <div class="the-danh-muc">
+          <div class="khung-anh-danh-muc">
+            <img src="assets/images/Trang_chu_3.png" alt="Lifestyle" class="anh-danh-muc">
+          </div>
+          <div class="lop-phu-danh-muc">
+            <h3 class="tieu-de-the-danh-muc">Khí Chất Đường Phố</h3>
+            <p class="mo-ta-anh-bia">Sự giao thoa hoàn hảo giữa thời trang và nghệ thuật đường phố. Khám phá phong cách riêng của bạn.</p>
+            <a href="san-pham.html" class="lien-ket-danh-muc">Xem Bộ Sưu Tập</a>
+          </div>
         </div>
       </div>
     </div>
-  </div>
 
-  <!-- GIẢM GIÁ SỐC -->
-  <div class="giam-gia-soc">
-    <h2 class="tieu-de-khoi">GIẢM GIÁ ĐẶC BIỆT</h2>
-    <div class="luoi-san-pham">
-      <div class="the-san-pham">
-        <div class="anh-san-pham">
-          <img src="assets/images/nike1.png" alt="Nike Air Force 1">
+    <!-- SẢN PHẨM NỔI BẬT -->
+    <div class="phan-san-pham-noi-bat">
+      <div class="noi-dung-phan-dau-sp">
+        <h2 class="tieu-de-khoi">Sản Phẩm Nổi Bật</h2>
+        <p style="text-align: center; color: #888; margin-bottom: 40px;">Những thiết kế được yêu thích nhất trong tuần qua</p>
+      </div>
+      <div class="luoi-san-pham-grid">
+        <div class="the-san-pham-fashion">
+          <div class="hinh-san-pham">
+            <img src="assets/images/nike1.png" alt="Nike AF1">
+          </div>
+          <div class="thong-tin-san-pham">
+            <h3 class="ten-sp">Nike Air Force 1 '07</h3>
+            <p class="gia-sp">2.300.000đ</p>
+            <a href="chi-tiet.html" class="nut-mua-sp">Xem Chi Tiết</a>
+          </div>
         </div>
-        <div class="noi-dung-san-pham">
-          <div class="danh-muc-san-pham">Giày Thể Thao</div>
-          <h3 class="ten-san-pham">Nike Air Force 1 '07</h3>
-          <div class="gia-san-pham">1.599.000đ</div>
-          <a href="chi-tiet.html?id=nike1" class="them-vao-gio">Mua Ngay</a>
+        <div class="the-san-pham-fashion">
+          <div class="hinh-san-pham">
+            <img src="assets/images/Giay_Adizero_EVO.png" alt="Adidas Adizero">
+          </div>
+          <div class="thong-tin-san-pham">
+            <h3 class="ten-sp">Adidas Adizero EVO</h3>
+            <p class="gia-sp">3.500.000đ</p>
+            <a href="chi-tiet.html" class="nut-mua-sp">Xem Chi Tiết</a>
+          </div>
+        </div>
+        <div class="the-san-pham-fashion">
+          <div class="hinh-san-pham">
+            <img src="assets/images/Puma MB.02 Phenom.png" alt="Puma MB.02">
+          </div>
+          <div class="thong-tin-san-pham">
+            <h3 class="ten-sp">Puma MB.02 Phenom</h3>
+            <p class="gia-sp">2.800.000đ</p>
+            <a href="chi-tiet.html" class="nut-mua-sp">Xem Chi Tiết</a>
+          </div>
         </div>
       </div>
+      <div class="phan-xem-them">
+        <a href="san-pham.html" class="nut-xem-them">Xem Tất Cả Sản Phẩm</a>
+      </div>
     </div>
-  </div>
+  </main>
 
   <!-- NÚT CUỘN LÊN ĐẦU TRANG -->
-  <a href="#dau-trang" class="nut-len-dau">
+  <a href="#dau-trang" class="nut-len-dau" title="Về đầu trang">
     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
       stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
       <polyline points="18 15 12 9 6 15"/>
@@ -158,7 +201,7 @@
     <div class="noi-dung-phan-cuoi">
       <div class="cot-phan-cuoi">
         <h3 class="tieu-de-phan-cuoi">SOLEKING</h3>
-        <p style="color:#888; font-size:14px; line-height:1.8;">Chuyên cung cấp giày thể thao chính hãng Nike, Adidas, Puma. Chất lượng đảm bảo.</p>
+        <p style="color:#888; font-size:14px; line-height:1.8;">Chuyên cung cấp giày thể thao chính hãng Nike, Adidas, Puma. Chất lượng đảm bảo, uy tín hàng đầu.</p>
       </div>
       <div class="cot-phan-cuoi">
         <h3 class="tieu-de-phan-cuoi">KHÁM PHÁ</h3>
@@ -173,12 +216,27 @@
         <h3 class="tieu-de-phan-cuoi">HỖ TRỢ</h3>
         <div class="danh-sach-phan-cuoi">
           <a href="thanh-toan.html">Hướng dẫn mua hàng</a>
+          <a href="don-hang.html">Theo dõi đơn hàng</a>
           <a href="lien-he.html">Chính sách đổi trả</a>
+        </div>
+      </div>
+      <div class="cot-phan-cuoi">
+        <h3 class="tieu-de-phan-cuoi">KẾT NỐI</h3>
+        <div style="display: flex; gap: 20px; margin-top: 15px;">
+          <a href="https://www.facebook.com/thang.nguyen.118650" title="Facebook">
+            <img src="assets/icons/facebook.svg" alt="Facebook" width="24" height="24" style="filter: invert(1);">
+          </a>
+          <a href="https://www.instagram.com/thagn.duc/" title="Instagram">
+            <img src="assets/icons/instagram.svg" alt="Instagram" width="24" height="24" style="filter: invert(1);">
+          </a>
+          <a href="https://www.tiktok.com/@reviewvivu201005" title="TikTok">
+            <img src="assets/icons/tiktok.svg" alt="TikTok" width="24" height="24" style="filter: invert(1);">
+          </a>
         </div>
       </div>
     </div>
     <div class="phan-cuoi-duoi">
-      <p>&copy; 2026 SOLEKING.</p>
+      <p>&copy; 2026 SOLEKING. Thiết kế đẳng cấp cho bước chân của bạn.</p>
     </div>
   </footer>
 
