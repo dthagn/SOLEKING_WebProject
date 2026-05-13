@@ -8,39 +8,33 @@
     content="Liên hệ với SOLEKING - Hotline, email, địa chỉ cửa hàng và gửi yêu cầu hỗ trợ trực tuyến.">
   <title>Liên Hệ | SOLEKING</title>
 
-  <link rel="stylesheet" href="css/base.css">
-  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/contact.css">
-  <link rel="stylesheet" href="css/responsive.css">
 </head>
 
 <body>
 
-  <!-- PHẦN ĐẦU TRANG (HEADER) -->
-  <header class="phan-dau" aria-label="Phần đầu trang">
+  <!-- PHẦN ĐẦU TRANG -->
+  <div class="phan-dau">
     <div class="phan-dau-chinh">
       <div class="noi-dung-phan-dau">
-        <a href="index.html" class="logo" aria-label="SOLEKING - Về trang chủ">
-          SOLEKING
-        </a>
-        <nav class="thanh-dieu-huong" aria-label="Menu chính">
+        <a href="index.html" class="logo">SOLEKING</a>
+        <nav class="thanh-dieu-huong">
           <a href="index.html" class="lien-ket-dieu-huong">Trang Chủ</a>
           <a href="san-pham.html" class="lien-ket-dieu-huong">Shop</a>
           <a href="gioi-thieu.html" class="lien-ket-dieu-huong">Giới Thiệu</a>
           <a href="lien-he.html" class="lien-ket-dieu-huong">Liên Hệ</a>
         </nav>
-        <nav class="hanh-dong" aria-label="Công cụ người dùng">
-          <a href="#" class="nut-hanh-dong" title="Tìm Kiếm" id="btn-tim-kiem" aria-label="Tìm kiếm sản phẩm" onclick="moTimKiem(event)">
+        <div class="hanh-dong">
+          <a href="#" class="nut-hanh-dong" title="Tìm Kiếm" id="btn-tim-kiem">
             <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none"
               stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <circle cx="11" cy="11" r="8" />
               <line x1="21" y1="21" x2="16.65" y2="16.65" />
             </svg>
           </a>
-
-          <!-- WRAPPER USER DROPDOWN -->
           <div id="wrapper-tai-khoan">
-            <a href="#" class="nut-hanh-dong" title="Tài Khoản" id="btn-tai-khoan" aria-label="Tài khoản của tôi" onclick="toggleDropdownUser(event)">
+            <a href="#" class="nut-hanh-dong" title="Tài Khoản" id="btn-tai-khoan" onclick="toggleDropdownUser(event)">
               <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none"
                 stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
@@ -48,22 +42,10 @@
               </svg>
             </a>
             <div class="dropdown-tai-khoan" id="dropdown-tai-khoan">
-              <a href="#" class="muc-dropdown">
-                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
-                Đăng Nhập
-              </a>
-              <a href="#" class="muc-dropdown">
-                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><line x1="19" y1="8" x2="19" y2="14"/><line x1="22" y1="11" x2="16" y2="11"/></svg>
-                Đăng Ký
-              </a>
-              <div class="ke-dropdown"></div>
-              <a href="#" class="muc-dropdown">
-                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="14" x="2" y="5" rx="2"/><line x1="2" y1="10" x2="22" y2="10"/></svg>
-                Đơn Hàng
-              </a>
+              <!-- Render by auth.js -->
             </div>
           </div>
-          <a href="thanh-toan.html" class="nut-hanh-dong" title="Giỏ Hàng" id="btn-gio-hang" aria-label="Xem giỏ hàng"
+          <a href="thanh-toan.html" class="nut-hanh-dong" title="Giỏ Hàng" id="btn-gio-hang"
             style="position: relative;">
             <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none"
               stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -73,10 +55,10 @@
             </svg>
             <span class="thong-bao-nho">0</span>
           </a>
-        </nav>
+        </div>
       </div>
     </div>
-  </header>
+  </div>
 
   <main>
     <!-- BÌA TRANG LIÊN HỆ -->
@@ -88,11 +70,11 @@
     </section>
 
     <!-- KHU VỰC NỘI DUNG LIÊN HỆ -->
-    <section class="khu-vuc-lien-he" aria-label="Thông tin liên hệ và biểu mẫu">
+    <section class="khu-vuc-lien-he">
 
       <!-- Cột trái: Thông tin liên hệ -->
       <div class="cot-thong-tin-lh">
-        <h2 class="tieu-de-cot-lh">Thông Tin</h2>
+        <h2 class="tieu-de-cot-lh">Thông Điệp</h2>
 
         <div class="muc-thong-tin-lh">
           <span class="nhan-thong-tin-lh">
@@ -146,9 +128,9 @@
             Mạng Xã Hội
           </span>
           <div class="gia-tri-thong-tin-lh">
-            <a href="https://www.facebook.com/thang.nguyen.118650">Facebook</a> &nbsp;·&nbsp;
-            <a href="https://www.instagram.com/thagn.duc/">Instagram</a> &nbsp;·&nbsp;
-            <a href="https://www.tiktok.com/@michael.jordan803?lang=vi-VN">TikTok</a>
+            <a href="#">Facebook</a> &nbsp;·&nbsp;
+            <a href="#">Instagram</a> &nbsp;·&nbsp;
+            <a href="#">TikTok</a>
           </div>
         </div>
       </div>
@@ -198,64 +180,44 @@
   </main>
 
   <!-- PHẦN CUỐI TRANG -->
-  <footer class="phan-cuoi" aria-label="Phần cuối trang">
+  <footer class="phan-cuoi">
     <div class="noi-dung-phan-cuoi">
       <div class="cot-phan-cuoi">
         <h3 class="tieu-de-phan-cuoi">SOLEKING</h3>
-        <p style="color:#888; font-size:14px; line-height:1.8;">Chuyên cung cấp giày thể thao chính hãng các thương hiệu
-          Nike, Adidas, Puma. Chất lượng đảm bảo, uy tín hàng đầu.</p>
+        <p style="color:#888; font-size:14px; line-height:1.8;">Chuyên cung cấp giày thể thao chính hãng Nike, Adidas, Puma.</p>
       </div>
       <div class="cot-phan-cuoi">
         <h3 class="tieu-de-phan-cuoi">KHÁM PHÁ</h3>
         <div class="danh-sach-phan-cuoi">
-          <a href="index.html" class="lien-ket-phan-cuoi">Trang Chủ</a>
-          <a href="san-pham.html" class="lien-ket-phan-cuoi">Shop</a>
-          <a href="gioi-thieu.html" class="lien-ket-phan-cuoi">Giới Thiệu</a>
-          <a href="lien-he.html" class="lien-ket-phan-cuoi">Liên Hệ</a>
+          <a href="index.html">Trang Chủ</a>
+          <a href="san-pham.html">Shop</a>
+          <a href="gioi-thieu.html">Giới Thiệu</a>
+          <a href="lien-he.html">Liên Hệ</a>
         </div>
       </div>
       <div class="cot-phan-cuoi">
         <h3 class="tieu-de-phan-cuoi">HỖ TRỢ</h3>
         <div class="danh-sach-phan-cuoi">
-          <a href="thanh-toan.html" class="lien-ket-phan-cuoi">Hướng dẫn mua hàng</a>
-          <a href="lien-he.html" class="lien-ket-phan-cuoi">Chính sách đổi trả</a>
-          <a href="lien-he.html" class="lien-ket-phan-cuoi">Hỏi đáp (FAQ)</a>
-        </div>
-      </div>
-      <div class="cot-phan-cuoi">
-        <h3 class="tieu-de-phan-cuoi">LIÊN HỆ</h3>
-        <div class="cot-phan-cuoi">
-          <h3 class="tieu-de-phan-cuoi">LIÊN HỆ</h3>
-          <div class="danh-sach-phan-cuoi">
-            <a href="tel:0123456789" class="lien-ket-phan-cuoi">Hotline: 0123.456.789</a>
-            <a href="mailto:contact@soleking.com" class="lien-ket-phan-cuoi">contact@soleking.com</a>
-            <a href="lien-he.html" class="lien-ket-phan-cuoi">234 Hoàng Quốc Việt,Cầu Giấy,Hà Nội</a>
-          </div>
+          <a href="thanh-toan.html">Hướng dẫn mua hàng</a>
+          <a href="lien-he.html">Chính sách đổi trả</a>
         </div>
       </div>
     </div>
     <div class="phan-cuoi-duoi">
-      <p>&copy; 2026 SOLEKING. Thiết kế đẳng cấp.</p>
+      <p>&copy; 2026 SOLEKING.</p>
     </div>
   </footer>
+  
   <!-- SEARCH OVERLAY -->
-  <div class="overlay-tim-kiem" id="overlay-tim-kiem" role="dialog" aria-label="Tìm kiếm">
+  <div class="overlay-tim-kiem" id="overlay-tim-kiem">
     <div class="hop-tim-kiem">
       <button class="dong-overlay-tk" onclick="dongTimKiem()">✕</button>
-      <span class="nhan-tim-kiem">Tìm Kiếm</span>
-      <input type="text" class="o-nhap-tim-kiem" id="input-tim-kiem"
-             placeholder="Nike, Adidas, Puma..." autocomplete="off">
-      <div class="goi-y-nhanh">
-        <span class="nhan-goi-y">Gợi ý:</span>
-        <a href="san-pham.html" class="the-goi-y">Air Force 1</a>
-        <a href="san-pham.html" class="the-goi-y">Ultraboost</a>
-        <a href="san-pham.html" class="the-goi-y">MB.02</a>
-      </div>
+      <input type="text" class="o-nhap-tim-kiem" id="input-tim-kiem" placeholder="Nhập tên giày..." autocomplete="off">
     </div>
   </div>
 
+  <script src="js/auth.js"></script>
+  <script src="js/cart.js"></script>
   <script src="js/main.js"></script>
-
 </body>
-
 </html>

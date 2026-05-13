@@ -7,21 +7,19 @@
   <title>Sản Phẩm - SOLEKING</title>
 
   <!-- Liên kết các file CSS -->
-  <link rel="stylesheet" href="css/base.css">
-  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/product.css">
-  <link rel="stylesheet" href="css/responsive.css">
 </head>
 
 <body>
-  <!-- PHẦN ĐẦU TRANG (GLASSMORPHISM) -->
+  <!-- PHẦN ĐẦU TRANG -->
   <div class="phan-dau">
     <div class="phan-dau-chinh">
       <div class="noi-dung-phan-dau">
         <a href="index.html" class="logo">
           SOLEKING
         </a>
-        <nav class="thanh-dieu-huong" aria-label="Menu chính">
+        <nav class="thanh-dieu-huong">
           <a href="index.html" class="lien-ket-dieu-huong">Trang Chủ</a>
           <a href="san-pham.html" class="lien-ket-dieu-huong">Shop</a>
           <a href="gioi-thieu.html" class="lien-ket-dieu-huong">Giới Thiệu</a>
@@ -35,13 +33,17 @@
               <line x1="21" y1="21" x2="16.65" y2="16.65" />
             </svg>
           </a>
-          <a href="dang-nhap.html" class="nut-hanh-dong" title="Tài Khoản" id="btn-tai-khoan">
-            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none"
-              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
-              <circle cx="12" cy="7" r="4" />
-            </svg>
-          </a>
+          <div id="wrapper-tai-khoan">
+            <a href="#" class="nut-hanh-dong" title="Tài Khoản" id="btn-tai-khoan" onclick="toggleDropdownUser(event)">
+              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
+                <circle cx="12" cy="7" r="4" />
+              </svg>
+            </a>
+            <div class="dropdown-tai-khoan" id="dropdown-tai-khoan">
+            </div>
+          </div>
           <a href="thanh-toan.html" class="nut-hanh-dong" title="Giỏ Hàng" id="btn-gio-hang"
             style="position: relative;">
             <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none"
@@ -67,10 +69,8 @@
       <div class="luoi-san-pham-nhom">
         <!-- Thẻ sản phẩm -->
         <div class="the-sp-premium">
-          <span class="nhan-san-pham-hot">HOT</span>
           <div class="khung-anh-sp">
             <img src="assets/images/nike1.png" alt="Nike 1">
-            <!-- Overlay khi hover -->
             <div class="lop-phu-hanh-dong">
               <a href="chi-tiet.html?id=nike1" class="nut-overlay chinh">Mua Ngay</a>
               <a href="chi-tiet.html?id=nike1" class="nut-overlay">Xem Chi Tiết</a>
@@ -78,18 +78,15 @@
           </div>
           <div class="thong-tin-sp-premium">
             <h3 class="ten-sp-premium">Nike Air Force 1 '07</h3>
-            <p class="mo-ta-sp-ngan">Sự tỏa sáng tồn tại trong mẫu giày bóng rổ nguyên bản, kết hợp độ bền chắc và phong
-              cách.</p>
+            <p class="mo-ta-sp-ngan">Sự tỏa sáng tồn tại trong mẫu giày bóng rổ nguyên bản, kết hợp độ bền chắc và phong cách.</p>
             <div class="gia-sp-premium">1.599.000đ</div>
           </div>
         </div>
 
         <!-- Thẻ sản phẩm -->
         <div class="the-sp-premium">
-          <span class="nhan-san-pham-moi">NEW</span>
           <div class="khung-anh-sp">
             <img src="assets/images/NIKE+AIR+MAX+90.png" alt="Nike 2">
-            <!-- Overlay khi hover -->
             <div class="lop-phu-hanh-dong">
               <a href="chi-tiet.html?id=nike2" class="nut-overlay chinh">Mua Ngay</a>
               <a href="chi-tiet.html?id=nike2" class="nut-overlay">Xem Chi Tiết</a>
@@ -106,7 +103,6 @@
         <div class="the-sp-premium">
           <div class="khung-anh-sp">
             <img src="assets/images/NIKE+VOMERO+PLUS.png" alt="Nike 3">
-            <!-- Overlay khi hover -->
             <div class="lop-phu-hanh-dong">
               <a href="chi-tiet.html?id=nike3" class="nut-overlay chinh">Mua Ngay</a>
               <a href="chi-tiet.html?id=nike3" class="nut-overlay">Xem Chi Tiết</a>
@@ -169,8 +165,7 @@
           </div>
           <div class="thong-tin-sp-premium">
             <h3 class="ten-sp-premium">Adidas Supernova Rise</h3>
-            <p class="mo-ta-sp-ngan">SThiết kế nhẹ, thoáng khí và êm ái cho chạy bộ hằng ngày, hỗ trợ tốt cho người yêu
-              thích vận động.</p>
+            <p class="mo-ta-sp-ngan">SThiết kế nhẹ, thoáng khí và êm ái cho chạy bộ hằng ngày.</p>
             <div class="gia-sp-premium">2.799.000đ</div>
           </div>
         </div>
@@ -341,43 +336,44 @@
   </div>
 
   <!-- PHẦN CUỐI TRANG -->
-  <footer class="phan-cuoi" aria-label="Phần cuối trang">
+  <footer class="phan-cuoi">
     <div class="noi-dung-phan-cuoi">
       <div class="cot-phan-cuoi">
         <h3 class="tieu-de-phan-cuoi">SOLEKING</h3>
-        <p style="color:#888; font-size:14px; line-height:1.8;">Chuyên cung cấp giày thể thao chính hãng các thương hiệu
-          Nike, Adidas, Puma. Chất lượng đảm bảo, uy tín hàng đầu.</p>
+        <p style="color:#888; font-size:14px; line-height:1.8;">Chuyên cung cấp giày thể thao chính hãng Nike, Adidas, Puma. Chất lượng đảm bảo.</p>
       </div>
       <div class="cot-phan-cuoi">
         <h3 class="tieu-de-phan-cuoi">KHÁM PHÁ</h3>
         <div class="danh-sach-phan-cuoi">
-          <a href="index.html" class="lien-ket-phan-cuoi">Trang Chủ</a>
-          <a href="san-pham.html" class="lien-ket-phan-cuoi">Shop</a>
-          <a href="gioi-thieu.html" class="lien-ket-phan-cuoi">Giới Thiệu</a>
-          <a href="lien-he.html" class="lien-ket-phan-cuoi">Liên Hệ</a>
+          <a href="index.html">Trang Chủ</a>
+          <a href="san-pham.html">Shop</a>
+          <a href="gioi-thieu.html">Giới Thiệu</a>
+          <a href="lien-he.html">Liên Hệ</a>
         </div>
       </div>
       <div class="cot-phan-cuoi">
-        <h3 class="tieu-de-phan-cuoi">HỔ TRỢ</h3>
+        <h3 class="tieu-de-phan-cuoi">HỖ TRỢ</h3>
         <div class="danh-sach-phan-cuoi">
-          <a href="thanh-toan.html" class="lien-ket-phan-cuoi">Hướng dẫn mua hàng</a>
-          <a href="lien-he.html" class="lien-ket-phan-cuoi">Chính sách đổi trả</a>
-          <a href="lien-he.html" class="lien-ket-phan-cuoi">Hỏi đáp (FAQ)</a>
-        </div>
-      </div>
-      <div class="cot-phan-cuoi">
-        <h3 class="tieu-de-phan-cuoi">LIÊN HỆ</h3>
-        <div class="danh-sach-phan-cuoi">
-          <a href="tel:0123456789" class="lien-ket-phan-cuoi">Hotline: 0123.456.789</a>
-          <a href="mailto:contact@soleking.com" class="lien-ket-phan-cuoi">contact@soleking.com</a>
-          <a href="lien-he.html" class="lien-ket-phan-cuoi">234 Hoàng Quốc Việt,Cầu Giấy,Hà Nội</a>
+          <a href="thanh-toan.html">Hướng dẫn mua hàng</a>
+          <a href="lien-he.html">Chính sách đổi trả</a>
         </div>
       </div>
     </div>
     <div class="phan-cuoi-duoi">
-      <p>&copy; 2026 SOLEKING. Thiết kế đẳng cấp.</p>
+      <p>&copy; 2026 SOLEKING.</p>
     </div>
   </footer>
-</body>
+
+  <!-- SEARCH OVERLAY -->
+  <div class="overlay-tim-kiem" id="overlay-tim-kiem">
+    <div class="hop-tim-kiem">
+      <button class="dong-overlay-tk" onclick="dongTimKiem()">✕</button>
+      <input type="text" class="o-nhap-tim-kiem" id="input-tim-kiem" placeholder="Nhập tên giày..." autocomplete="off">
+    </div>
+  </div>
+
+  <script src="js/auth.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/main.js"></script>
 
 </html>
