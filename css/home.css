@@ -827,6 +827,8 @@
   min-height: 600px;
   overflow: hidden;
   background-color: #000;
+  /* Không dùng z-index cao để tránh chặn header fixed z-index:1000 */
+  isolation: auto;
 }
 
 /* Video nền — trải full, giữ tỉ lệ */
@@ -854,6 +856,7 @@
     rgba(0,0,0,0.55) 100%
   );
   z-index: 1;
+  pointer-events: none; /* Không chặn click - giữ cho header nav hoạt động */
 }
 
 /* Nội dung chữ — căn giữa tuyệt đối */

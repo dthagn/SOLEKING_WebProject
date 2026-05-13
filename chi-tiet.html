@@ -72,21 +72,51 @@
     <!-- CHI TIẾT SẢN PHẨM CHÍNH -->
     <article class="chi-tiet-san-pham" aria-label="Chi tiết sản phẩm Nike Air Force 1 '07">
 
-      <!-- KHỐI BÊN TRÁI: BỘ SƯU TẬP ẢNH -->
+      <!-- KHỐI BÊN TRÁI: BỘ SƯU TẬP ẢNH SẢN PHẨM -->
       <div class="bo-suu-tap-anh">
+
+        <!-- ============================================================
+             ẢNH CHÍNH (lớn) — Thay đường dẫn src bên dưới
+             ============================================================ -->
         <div class="anh-chinh" id="anh-chinh-lon">
+          <!-- CHÈN ẢNH CHÍNH TẠI ĐÂY -->
           <img id="img-chinh" src="assets/images/AIR+FORCE+1+'07.png" alt="Nike Air Force 1 '07 - Ảnh chính">
         </div>
+
+        <!-- ============================================================
+             CÁC ẢNH THU NHỎ (thumbnail) — Mỗi khối là 1 góc nhìn
+             Cách dùng:
+               1. Thay src trong thẻ <img> bằng đường dẫn ảnh của bạn
+               2. Thay đường dẫn trong onclick="doiAnh(this, 'ĐƯỜNG_DẪN', 'MÔ_TẢ')"
+               3. Có thể thêm thêm khối <div class="anh-thu-nho"> nếu cần nhiều ảnh
+             ============================================================ -->
         <div class="anh-thu-nho-nhom" aria-label="Ảnh thu nhỏ sản phẩm">
-          <div class="anh-thu-nho active" onclick="doiAnh(this, 'assets/images/AIR+FORCE+1+\'07.png', 'Góc nhìn 1')">
-            <img src="assets/images/AIR+FORCE+1+'07.png" alt="Góc nhìn 1">
+
+          <!-- Thumbnail 1 — Góc chính diện -->
+          <div class="anh-thu-nho active"
+            onclick="doiAnh(this, 'assets/images/AIR+FORCE+1+\'07.png', 'Góc chính diện')">
+            <!-- CHÈN ẢNH 1 TẠI ĐÂY -->
+            <img src="assets/images/AIR+FORCE+1+'07.png" alt="Góc chính diện">
           </div>
+
+          <!-- Thumbnail 2 — Góc nhìn 2 -->
           <div class="anh-thu-nho" onclick="doiAnh(this, 'assets/images/NIKE+AIR+MAX+90.png', 'Góc nhìn 2')">
+            <!-- CHÈN ẢNH 2 TẠI ĐÂY -->
             <img src="assets/images/NIKE+AIR+MAX+90.png" alt="Góc nhìn 2">
           </div>
+
+          <!-- Thumbnail 3 — Góc nhìn 3 -->
           <div class="anh-thu-nho" onclick="doiAnh(this, 'assets/images/NIKE+VOMERO+PLUS.png', 'Góc nhìn 3')">
+            <!-- CHÈN ẢNH 3 TẠI ĐÂY -->
             <img src="assets/images/NIKE+VOMERO+PLUS.png" alt="Góc nhìn 3">
           </div>
+
+          <!-- Thumbnail 4 — Góc nhìn 4 (thêm mới) -->
+          <div class="anh-thu-nho" onclick="doiAnh(this, 'assets/images/AIR+FORCE+1+\'07.png', 'Góc nhìn 4')">
+            <!-- CHÈN ẢNH 4 TẠI ĐÂY -->
+            <img src="assets/images/AIR+FORCE+1+'07.png" alt="Góc nhìn 4">
+          </div>
+
         </div>
       </div>
 
