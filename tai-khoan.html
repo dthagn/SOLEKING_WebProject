@@ -3,28 +3,24 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tài Khoản | SOLEKING</title>
-
-  <link rel="stylesheet" href="css/base.css">
-  <link rel="stylesheet" href="css/layout.css">
+  <title>Tài Khoản | SOLEKING</title  <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/auth.css">
-  <link rel="stylesheet" href="css/responsive.css">
 </head>
 <body>
 
-  <!-- PHẦN ĐẦU TRANG (HEADER) -->
-  <header class="phan-dau" aria-label="Phần đầu trang" style="position: sticky; background: #050505;">
+  <!-- PHẦN ĐẦU TRANG -->
+  <div class="phan-dau" style="position: sticky; background: #050505;">
     <div class="phan-dau-chinh">
       <div class="noi-dung-phan-dau">
         <a href="index.html" class="logo">SOLEKING</a>
-        <nav class="thanh-dieu-huong" aria-label="Menu chính">
+        <nav class="thanh-dieu-huong">
           <a href="index.html" class="lien-ket-dieu-huong">Trang Chủ</a>
           <a href="san-pham.html" class="lien-ket-dieu-huong">Shop</a>
           <a href="gioi-thieu.html" class="lien-ket-dieu-huong">Giới Thiệu</a>
           <a href="lien-he.html" class="lien-ket-dieu-huong">Liên Hệ</a>
         </nav>
         <div class="hanh-dong">
-          <a href="#" class="nut-hanh-dong" title="Tìm Kiếm" id="btn-tim-kiem" onclick="moTimKiem(event)">
+          <a href="#" class="nut-hanh-dong" title="Tìm Kiếm" id="btn-tim-kiem">
             <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none"
               stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <circle cx="11" cy="11" r="8" />
@@ -40,7 +36,7 @@
               </svg>
             </a>
             <div class="dropdown-tai-khoan" id="dropdown-tai-khoan">
-              <!-- Render by main.js -->
+              <!-- Render by auth.js -->
             </div>
           </div>
           <a href="thanh-toan.html" class="nut-hanh-dong" title="Giỏ Hàng" id="btn-gio-hang" style="position: relative;">
@@ -55,7 +51,7 @@
         </div>
       </div>
     </div>
-  </header>
+  </div>
 
   <!-- AUTHENTICATION PAGE -->
   <main class="auth-page">
@@ -112,66 +108,18 @@
   </main>
 
   <!-- SEARCH OVERLAY -->
-  <div class="overlay-tim-kiem" id="overlay-tim-kiem" role="dialog" aria-label="Tìm kiếm">
+  <div class="overlay-tim-kiem" id="overlay-tim-kiem">
     <div class="hop-tim-kiem">
       <button class="dong-overlay-tk" onclick="dongTimKiem()">✕</button>
-      <span class="nhan-tim-kiem">Tìm Kiếm</span>
-      <input type="text" class="o-nhap-tim-kiem" id="input-tim-kiem"
-             placeholder="Nike, Adidas, Puma..." autocomplete="off">
-      <div class="goi-y-nhanh">
-        <span class="nhan-goi-y">Gợi ý:</span>
-        <a href="san-pham.html" class="the-goi-y">Air Force 1</a>
-        <a href="san-pham.html" class="the-goi-y">Ultraboost</a>
-      </div>
+      <input type="text" class="o-nhap-tim-kiem" id="input-tim-kiem" placeholder="Nhập tên giày..." autocomplete="off">
     </div>
   </div>
 
+  <script src="js/auth.js"></script>
+  <script src="js/account.js"></script>
   <script src="js/main.js"></script>
-  <script>
-    // JS for Slider effect
-    const signUpButton = document.getElementById('signUpBtn');
-    const signInButton = document.getElementById('signInBtn');
-    const container = document.getElementById('auth-container');
-
-    if(signUpButton && signInButton) {
-      signUpButton.addEventListener('click', () => {
-        container.classList.add("right-panel-active");
-      });
-      signInButton.addEventListener('click', () => {
-        container.classList.remove("right-panel-active");
-      });
-    }
-
-    // Logic Đăng Nhập
-    function xuLyDangNhap(e) {
-      e.preventDefault();
-      localStorage.setItem('isLoggedIn', 'true');
-      const email = document.getElementById('dn-email').value;
-      localStorage.setItem('userName', email.split('@')[0]);
-      alert('Đăng nhập thành công!');
-      
-      const redirectUrl = sessionStorage.getItem('redirectUrl');
-      if (redirectUrl) {
-        sessionStorage.removeItem('redirectUrl');
-        window.location.href = redirectUrl;
-      } else {
-        window.location.href = 'index.html';
-      }
-    }
-
-    // Logic Đăng Ký
-    function xuLyDangKy(e) {
-      e.preventDefault();
-      localStorage.setItem('isLoggedIn', 'true');
-      localStorage.setItem('userName', document.getElementById('dk-ten').value);
-      alert('Đăng ký thành công!');
-      
-      const redirectUrl = sessionStorage.getItem('redirectUrl');
-      if (redirectUrl) {
-        sessionStorage.removeItem('redirectUrl');
-        window.location.href = redirectUrl;
-      } else {
-        window.location.href = 'index.html';
+</body>
+</html>tml';
       }
     }
 

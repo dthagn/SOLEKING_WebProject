@@ -205,480 +205,112 @@
           </div>
         </div>
 
-        <div class="the-sp-premium">
-          <div class="khung-anh-sp">
-            <img src="assets/images/NIKE+VOMERO+PLUS.png" alt="Nike ZoomX Invincible">
-            <div class="lop-phu-hanh-dong">
-              <a href="chi-tiet.html?id=nike3" class="nut-overlay chinh">Mua Ngay</a>
-              <a href="chi-tiet.html?id=nike3" class="nut-overlay">Xem Chi Tiết</a>
-            </div>
-          </div>
-          <div class="thong-tin-sp-premium">
-            <h3 class="ten-sp-premium">Nike ZoomX Invincible</h3>
-            <p class="mo-ta-sp-ngan">Độ nảy và đàn hồi cực tốt từ công nghệ bọt ZoomX mới.</p>
-            <div class="gia-sp-premium">4.299.000đ</div>
+  </div>
+
+  <!-- CHI TIẾT SẢN PHẨM -->
+  <div class="chi-tiet-san-pham">
+    <!-- Bộ sưu tập ảnh (Trái) -->
+    <div class="bo-suu-tap-anh">
+      <div class="anh-chinh">
+        <!-- Thay đổi ID để JS dễ cập nhật -->
+        <img src="assets/images/nike1.png" alt="Ảnh chính" id="img-chinh">
+      </div>
+      <div class="anh-thu-nho-nhom" id="nhom-thumbnail">
+        <!-- Render from JS -->
+      </div>
+    </div>
+
+    <!-- Thông tin và thao tác (Phải) -->
+    <div class="thong-tin-san-pham-chi-tiet">
+      <div class="danh-muc-chi-tiet">Sản Phẩm Cao Cấp</div>
+      <h1 class="tieu-de-chi-tiet">Nike Air Force 1 '07</h1>
+
+      <!-- Đánh giá sao tĩnh -->
+      <div class="danh-gia">
+        <span class="sao-chi-tiet" style="color:#ff3366;font-size:20px;">★★★★☆</span>
+        <span class="lien-ket-danh-gia" style="color:#888;font-size:14px;margin-left:10px;">Đọc đánh giá</span>
+      </div>
+
+      <div class="gia-chi-tiet">
+        <span class="gia-hien-tai-chi-tiet">1.599.000đ</span>
+        <span class="gia-cu-chi-tiet" style="text-decoration:line-through;color:#666;margin-left:15px;display:none;"></span>
+        <span class="giam-gia-chi-tiet" style="background:#ff3366;color:#fff;padding:2px 8px;font-size:12px;margin-left:15px;display:none;"></span>
+      </div>
+
+      <p class="mo-ta-chi-tiet">Sự tỏa sáng tồn tại trong đôi giày bóng rổ nguyên bản.</p>
+
+      <div class="tuy-chon-san-pham">
+        <!-- Kích thước -->
+        <div class="nhom-tuy-chon">
+          <span class="nhan-tuy-chon">Chọn Size <span id="canh-bao-size" style="color:#ff3366;font-size:14px;font-weight:normal;display:none;">(Vui lòng chọn size)</span></span>
+          <div class="tuy-chon-kich-thuoc" id="nhom-size">
+            <button type="button" class="kich-thuoc" onclick="chonSize(this, '39')">39</button>
+            <button type="button" class="kich-thuoc" onclick="chonSize(this, '40')">40</button>
+            <button type="button" class="kich-thuoc" onclick="chonSize(this, '41')">41</button>
+            <button type="button" class="kich-thuoc" onclick="chonSize(this, '42')">42</button>
+            <button type="button" class="kich-thuoc" onclick="chonSize(this, '43')">43</button>
           </div>
         </div>
 
+        <!-- Số lượng -->
+        <div class="nhom-tuy-chon">
+          <span class="nhan-tuy-chon">Số Lượng</span>
+          <div class="chon-so-luong">
+            <button type="button" class="nut-chon-so-luong" id="btn-giam" onclick="doiSoLuong(-1)">-</button>
+            <input type="text" value="1" class="o-nhap-so-luong" id="o-so-luong" readonly>
+            <button type="button" class="nut-chon-so-luong" id="btn-tang" onclick="doiSoLuong(1)">+</button>
+          </div>
+        </div>
       </div>
-    </section>
-  </main>
+
+      <div class="hanh-dong-chi-tiet">
+        <button type="button" class="hanh-dong-chinh" onclick="muaNgay()">Mua Ngay</button>
+        <button type="button" class="hanh-dong-phu" id="btn-them-gio" onclick="themVaoGio()">Thêm Vào Giỏ Hàng</button>
+      </div>
+    </div>
+  </div>
 
   <!-- PHẦN CUỐI TRANG -->
-  <footer class="phan-cuoi" aria-label="Phần cuối trang">
+  <footer class="phan-cuoi">
     <div class="noi-dung-phan-cuoi">
       <div class="cot-phan-cuoi">
         <h3 class="tieu-de-phan-cuoi">SOLEKING</h3>
-        <p style="color:#888; font-size:14px; line-height:1.8;">Chuyên cung cấp giày thể thao chính hãng các thương hiệu
-          Nike, Adidas, Puma. Chất lượng đảm bảo, uy tín hàng đầu.</p>
+        <p style="color:#888; font-size:14px; line-height:1.8;">Chuyên cung cấp giày thể thao chính hãng Nike, Adidas, Puma.</p>
       </div>
       <div class="cot-phan-cuoi">
         <h3 class="tieu-de-phan-cuoi">KHÁM PHÁ</h3>
         <div class="danh-sach-phan-cuoi">
-          <a href="index.html" class="lien-ket-phan-cuoi">Trang Chủ</a>
-          <a href="san-pham.html" class="lien-ket-phan-cuoi">Shop</a>
-          <a href="gioi-thieu.html" class="lien-ket-phan-cuoi">Giới Thiệu</a>
-          <a href="lien-he.html" class="lien-ket-phan-cuoi">Liên Hệ</a>
+          <a href="index.html">Trang Chủ</a>
+          <a href="san-pham.html">Shop</a>
+          <a href="gioi-thieu.html">Giới Thiệu</a>
+          <a href="lien-he.html">Liên Hệ</a>
         </div>
       </div>
       <div class="cot-phan-cuoi">
         <h3 class="tieu-de-phan-cuoi">HỖ TRỢ</h3>
         <div class="danh-sach-phan-cuoi">
-          <a href="thanh-toan.html" class="lien-ket-phan-cuoi">Hướng dẫn mua hàng</a>
-          <a href="lien-he.html" class="lien-ket-phan-cuoi">Chính sách đổi trả</a>
-          <a href="lien-he.html" class="lien-ket-phan-cuoi">Hỏi đáp (FAQ)</a>
-        </div>
-      </div>
-      <div class="cot-phan-cuoi">
-        <h3 class="tieu-de-phan-cuoi">LIÊN HỆ</h3>
-        <div class="danh-sach-phan-cuoi">
-          <a href="tel:0123456789" class="lien-ket-phan-cuoi">Hotline: 0123.456.789</a>
-          <a href="mailto:contact@soleking.com" class="lien-ket-phan-cuoi">contact@soleking.com</a>
-          <a href="lien-he.html" class="lien-ket-phan-cuoi">234 Hoàng Quốc Việt,Cầu Giấy,Hà Nội</a>
+          <a href="thanh-toan.html">Hướng dẫn mua hàng</a>
+          <a href="lien-he.html">Chính sách đổi trả</a>
         </div>
       </div>
     </div>
     <div class="phan-cuoi-duoi">
-      <p>&copy; 2026 SOLEKING. Thiết kế đẳng cấp.</p>
+      <p>&copy; 2026 SOLEKING.</p>
     </div>
   </footer>
+  <!-- SEARCH OVERLAY -->
+  <div class="overlay-tim-kiem" id="overlay-tim-kiem">
+    <div class="hop-tim-kiem">
+      <button class="dong-overlay-tk" onclick="dongTimKiem()">✕</button>
+      <input type="text" class="o-nhap-tim-kiem" id="input-tim-kiem" placeholder="Nhập tên giày..." autocomplete="off">
+    </div>
+  </div>
 
-  <script>
-    // ===== ĐỔI ẢNH CHÍNH KHI CLICK THUMBNAIL =====
-    function doiAnh(thumb, src, alt) {
-      document.getElementById('img-chinh').src = src;
-      document.getElementById('img-chinh').alt = alt;
-      document.querySelectorAll('.anh-thu-nho').forEach(el => el.classList.remove('active'));
-      thumb.classList.add('active');
-    }
-
-    // ===== CHỌN SIZE =====
-    var sizeChon = null;
-
-    function chonSize(el) {
-      document.querySelectorAll('.kich-thuoc').forEach(function (item) {
-        item.classList.remove('active');
-        item.setAttribute('aria-pressed', 'false');
-      });
-      el.classList.add('active');
-      el.setAttribute('aria-pressed', 'true');
-      sizeChon = el.textContent.trim();
-      document.getElementById('size-da-chon').textContent = '— ' + sizeChon;
-      document.getElementById('canh-bao-size').style.display = 'none';
-      // Xóa viền đỏ cảnh báo khỏi nhóm size
-      document.getElementById('nhom-size').style.outline = 'none';
-    }
-
-    // ===== TĂNG / GIẢM SỐ LƯỢNG =====
-    function thayDoiSoLuong(delta) {
-      var input = document.getElementById('o-so-luong');
-      var giaTri = parseInt(input.value) + delta;
-      if (giaTri < 1) giaTri = 1;
-      if (giaTri > 10) giaTri = 10;
-      input.value = giaTri;
-      // Disable nút nếu đạt giới hạn
-      document.getElementById('btn-giam').disabled = (giaTri <= 1);
-      document.getElementById('btn-tang').disabled = (giaTri >= 10);
-    }
-
-    // ===== THÊM VÀO GIỎ HÀNG (localStorage) =====
-    var GIO_KEY = 'soleking_cart';
-
-    function layGio() {
-      try { return JSON.parse(localStorage.getItem(GIO_KEY)) || []; }
-      catch (e) { return []; }
-    }
-
-    function luuGio(gio) {
-      localStorage.setItem(GIO_KEY, JSON.stringify(gio));
-    }
-
-    function capNhatBadge() {
-      var gio = layGio();
-      var tong = gio.reduce(function (t, sp) { return t + sp.soLuong; }, 0);
-      var badge = document.getElementById('btn-gio-hang');
-      if (badge) {
-        var badgeEl = badge.querySelector('.thong-bao-nho');
-        if (badgeEl) badgeEl.textContent = tong;
-      }
-    }
-
-    function themVaoGio() {
-      if (!sizeChon) {
-        document.getElementById('canh-bao-size').style.display = 'block';
-        document.getElementById('nhom-size').style.outline = '2px solid #ff3366';
-        document.getElementById('nhom-size').scrollIntoView({ behavior: 'smooth', block: 'center' });
-        return;
-      }
-      var soLuong = parseInt(document.getElementById('o-so-luong').value) || 1;
-      var tenSP = document.querySelector('.tieu-de-chi-tiet') ? document.querySelector('.tieu-de-chi-tiet').textContent.trim() : 'Sản phẩm';
-      var giaSP = document.querySelector('.gia-hien-tai-chi-tiet') ? document.querySelector('.gia-hien-tai-chi-tiet').textContent.trim() : '0đ';
-      var anhSP = document.getElementById('img-chinh') ? document.getElementById('img-chinh').src : '';
-
-      var gio = layGio();
-      // Tìm sản phẩm trùng (cùng tên + size)
-      var timThay = -1;
-      gio.forEach(function (sp, i) {
-        if (sp.ten === tenSP && sp.size === sizeChon) timThay = i;
-      });
-
-      if (timThay >= 0) {
-        gio[timThay].soLuong += soLuong;
-      } else {
-        gio.push({ ten: tenSP, gia: giaSP, size: sizeChon, soLuong: soLuong, anh: anhSP });
-      }
-      luuGio(gio);
-      capNhatBadge();
-
-      var btn = document.getElementById('btn-them-gio');
-      btn.textContent = '✓ Đã Thêm Vào Giỏ!';
-      btn.style.backgroundColor = '#22c55e';
-      setTimeout(function () {
-        btn.textContent = 'Thêm Vào Giỏ Hàng';
-        btn.style.backgroundColor = '';
-      }, 2000);
-    }
-
-
-    // ===== MUA NGAY =====
-    function muaNgay() {
-      if (!sizeChon) {
-        document.getElementById('canh-bao-size').style.display = 'block';
-        document.getElementById('nhom-size').style.outline = '2px solid #ff3366';
-        document.getElementById('nhom-size').scrollIntoView({ behavior: 'smooth', block: 'center' });
-        return;
-      }
-
-      // Không gọi themVaoGio() để tránh đẩy vào giỏ hàng chung
-      var soLuong = parseInt(document.getElementById('o-so-luong').value) || 1;
-      var tenSP = document.querySelector('.tieu-de-chi-tiet') ? document.querySelector('.tieu-de-chi-tiet').textContent.trim() : 'Sản phẩm';
-      var giaSP = document.querySelector('.gia-hien-tai-chi-tiet') ? document.querySelector('.gia-hien-tai-chi-tiet').textContent.trim() : '0đ';
-      var anhSP = document.getElementById('img-chinh') ? document.getElementById('img-chinh').src : '';
-
-      var spMuaNgay = [{
-        ten: tenSP,
-        gia: giaSP,
-        size: sizeChon,
-        soLuong: soLuong,
-        anh: anhSP
-      }];
-
-      // Lưu tạm vào phiên mua ngay
-      sessionStorage.setItem('soleking_mua_ngay', JSON.stringify(spMuaNgay));
-      sessionStorage.setItem('isBuyNow', 'true');
-
-      // Chuyển sang thanh toán
-      location.href = 'thanh-toan.html';
-    }
-
-    // Khởi tạo trạng thái nút giảm
-    document.getElementById('btn-giam').disabled = true;
-
-    const sanPham = {
-      nike1: {
-        ten: "Nike Air Force 1 '07",
-        gia: "1.599.000đ",
-        giaCu: "3.199.000đ",
-        giamGia: "-50%",
-        moTa: "Sự tỏa sáng tồn tại trong Nike Air Force 1 '07.",
-        anh: "assets/images/nike1.png",
-        dsAnh: [
-          "assets/images/nike1.png",
-          "assets/images/nike2.jpg",
-          "assets/images/nike3.jpg",
-          "assets/images/nike4.jpg"
-        ],
-        danhGia: 245,
-        soSao: 4
-      },
-      nike2: {
-        ten: "Nike Air Max 2024",
-        gia: "3.499.000đ",
-        moTa: "Trải nghiệm đệm khí Air tối đa cho mỗi bước chạy.",
-        anh: "assets/images/NIKE+AIR+MAX+90.png",
-        dsAnh: [
-          "assets/images/NIKE+AIR+MAX+90.png",
-          "assets/images/NIKE+AIR+MAX+902.png",
-          "assets/images/NIKE+AIR+MAX+903.jpg",
-          "assets/images/NIKE+AIR+MAX+904.jpg"
-        ],
-        danhGia: 180,
-        soSao: 5,
-      },
-
-      nike3: {
-        ten: "Nike ZoomX Invincible",
-        gia: "4.299.000đ",
-        moTa: "Giày chạy bộ chuyên nghiệp với công nghệ ZoomX.",
-        anh: "assets/images/NIKE+VOMERO+PLUS.png",
-        dsAnh: [
-          "assets/images/NIKE+VOMERO+PLUS.png",
-          "assets/images/zoomx2.jpg",
-          "assets/images/zoomx3.jpg",
-          "assets/images/zoomx4.jpg"
-        ],
-        danhGia: 320,
-        soSao: 5,
-
-      },
-
-      adidas1: {
-        ten: "Adidas Ultraboost 22",
-        gia: "2.299.000đ",
-        moTa: "Sự hoàn hảo cho đôi chân cùng công nghệ Boost.",
-        anh: "assets/images/Giay_Pureboost_22.png",
-        dsAnh: [
-          "assets/images/ultra1.jpg",
-          "assets/images/ultra2.jpg",
-          "assets/images/ultra3.jpg",
-          "assets/images/ultra4.jpg"
-        ],
-        danhGia: 150,
-        soSao: 4
-      },
-
-      adidas2: {
-        ten: "Adidas NMD R1 V2",
-        gia: "2.599.000đ",
-        moTa: "Phong cách đường phố táo bạo và hiện đại.",
-        anh: "assets/images/NMD1.jpg",
-        dsAnh: [
-          "assets/images/NMD1.jpg",
-          "assets/images/NMD2.jpg",
-          "assets/images/NMD3.jpg",
-          "assets/images/NMD4.jpg"
-        ],
-        danhGia: 200,
-        soSao: 4
-      },
-
-      adidas3: {
-        ten: "Adidas Supernova Rise",
-        gia: "2.799.000đ",
-        moTa: "Thiết kế nhẹ, thoáng khí và êm ái cho chạy bộ.",
-        anh: "assets/images/adidassupernovarise2.jpg",
-        dsAnh: [
-          "assets/images/adidassupernovarise2.jpg",
-          "assets/images/adidassupernovarise22.png",
-          "assets/images/adidassupernovarise23.jpg",
-          "assets/images/adidassupernovarise234.jpg"
-        ],
-        danhGia: 120,
-        soSao: 4
-      },
-
-      puma1: {
-        ten: "Puma MB.02 Phenom",
-        gia: "3.199.000đ",
-        moTa: "Phủ sóng sàn đấu với bản phối màu nổi bật.",
-        anh: "assets/images/Puma MB.02 Phenom.jpg",
-        dsAnh: [
-          "assets/images/Puma MB.02 Phenom.jpg",
-          "assets/images/Puma MB.02 Phenom2.jpg",
-          "assets/images/Puma MB.02 Phenom3.jpg",
-          "assets/images/Puma MB.02 Phenom4.jpg"
-        ],
-        danhGia: 90,
-        soSao: 4
-      },
-
-      puma2: {
-        ten: "Puma Clyde All-Pro",
-        gia: "2.899.000đ",
-        moTa: "Thiết kế nhẹ, bám sân tốt cho thi đấu.",
-        anh: "assets/images/Clyde_all_pro.jpg",
-        dsAnh: [
-          "assets/images/Clyde_all_pro.jpg",
-          "assets/images/Clyde2.jpg",
-          "assets/images/Clyde3.jpg",
-          "assets/images/Clyde4.jpg"
-        ],
-        danhGia: 75,
-        soSao: 4
-      },
-
-      puma3: {
-        ten: "Puma RS-X Efekt",
-        gia: "2.699.000đ",
-        moTa: "Phong cách thể thao đường phố hầm hố.",
-        anh: "assets/images/RS_X_efekt.jpg",
-        dsAnh: [
-          "assets/images/RS_X_efekt.jpg",
-          "assets/images/RS2.jpg",
-          "assets/images/RS3.jpg",
-          "assets/images/RS4.avif"
-        ],
-        danhGia: 60,
-        soSao: 3
-      },
-
-      ao1: {
-        ten: "Áo Thể Thao",
-        gia: "299.000đ",
-        moTa: "Áo thể thao hiện đại, thoáng mát.",
-        anh: "assets/images/aott.jpg",
-        dsAnh: [
-          "assets/images/aott.jpg",
-          "assets/images/ao1.jpg",
-          "assets/images/ao2.jpg",
-          "assets/images/ao3.jpg"
-        ],
-        danhGia: 50,
-        soSao: 4
-      },
-
-      quan1: {
-        ten: "Quần Thể Thao",
-        gia: "249.000đ",
-        moTa: "Thoải mái vận động với chất liệu co giãn.",
-        anh: "assets/images/quantt.jpg",
-        dsAnh: [
-          "assets/images/quantt.jpg",
-          "assets/images/quan1.png",
-          "assets/images/quan2.png",
-          "assets/images/quan3.png"
-        ],
-        danhGia: 40,
-        soSao: 4
-      },
-
-      mu1: {
-        ten: "Mũ & Nón",
-        gia: "199.000đ",
-        moTa: "Style đường phố snapback và dad hat.",
-        anh: "assets/images/mu.jpg",
-        dsAnh: [
-          "assets/images/mu.jpg",
-          "assets/images/mu2.jpg",
-          "assets/images/mu3.jpg",
-          "assets/images/mu4.jpg"
-        ],
-        danhGia: 30,
-        soSao: 4
-      },
-
-      tui1: {
-        ten: "Túi & Ba Lô",
-        gia: "499.000đ",
-        moTa: "Dung tích lớn, phù hợp đi học và đi làm.",
-        anh: "assets/images/tui.jpg",
-        dsAnh: [
-          "assets/images/tui.jpg",
-          "assets/images/tui2.jpg",
-          "assets/images/tui3.jpg",
-          "assets/images/tui4.jpg"
-        ],
-        danhGia: 20,
-        soSao: 4
-      },
-
-      tat1: {
-        ten: "Vớ Thể Thao",
-        gia: "89.000đ",
-        moTa: "Kháng khuẩn, khử mùi, bảo vệ gót chân.",
-        anh: "assets/images/tat.avif",
-        dsAnh: [
-          "assets/images/tat.avif",
-          "assets/images/tat2.avif",
-          "assets/images/tat3.avif",
-          "assets/images/tat4.avif"
-        ],
-        danhGia: 10,
-        soSao: 4
-      },
-
-      phukien1: {
-        ten: "Phụ Kiện Giày",
-        gia: "59.000đ",
-        moTa: "Dây giày, lót giày và phụ kiện cao cấp.",
-        anh: "assets/images/lot.jpg",
-        dsAnh: [
-          "assets/images/lot.jpg",
-          "assets/images/lot.jpg",
-          "assets/images/lot.jpg",
-          "assets/images/lot.jpg"
-        ],
-        danhGia: 5,
-        soSao: 4
-      }
-    };
-    const params = new URLSearchParams(window.location.search);
-    const id = params.get("id");
-
-    if (id && sanPham[id]) {
-      const sp = sanPham[id];
-
-      document.querySelector(".tieu-de-chi-tiet").textContent = sp.ten;
-      document.querySelector(".gia-hien-tai-chi-tiet").textContent = sp.gia;
-      document.querySelector(".mo-ta-chi-tiet").textContent = sp.moTa;
-      document.getElementById("img-chinh").src = sp.anh;
-      // ===== CẬP NHẬT THUMBNAIL =====
-      const nhomThumb = document.getElementById("nhom-thumbnail");
-
-      nhomThumb.innerHTML = "";
-
-      sp.dsAnh.forEach((anh, index) => {
-        const thumb = document.createElement("div");
-        thumb.className = "anh-thu-nho";
-
-        if (index === 0) {
-          thumb.classList.add("active");
-        }
-
-        thumb.setAttribute(
-          "onclick",
-          `doiAnh(this, '${anh}', 'Ảnh ${index + 1}')`
-        );
-
-        thumb.innerHTML = `
-      <img src="${anh}" alt="Ảnh ${index + 1}">
-    `;
-
-        nhomThumb.appendChild(thumb);
-      });
-
-      document.querySelector(".lien-ket-danh-gia").textContent =
-        "Đọc " + sp.danhGia + " đánh giá";
-
-      const saoEl = document.querySelector(".sao-chi-tiet");
-      saoEl.textContent = "★".repeat(sp.soSao) + "☆".repeat(5 - sp.soSao);
-      saoEl.setAttribute("aria-label", sp.soSao + " sao");
-
-      const giaCu = document.querySelector(".gia-cu-chi-tiet");
-      const giamGia = document.querySelector(".giam-gia-chi-tiet");
-
-      if (sp.giaCu && sp.giamGia) {
-        giaCu.textContent = sp.giaCu;
-        giamGia.textContent = sp.giamGia;
-        giaCu.style.display = "inline";
-        giamGia.style.display = "inline";
-      } else {
-        giaCu.style.display = "none";
-        giamGia.style.display = "none";
-      }
-    }
-  </script>
-
+  <script src="js/auth.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/products.js"></script>
+  <script src="js/product-detail.js"></script>
+  <script src="js/main.js"></script>
 </body>
 
 </html>

@@ -6,27 +6,25 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Đơn Hàng Của Tôi | SOLEKING</title>
 
-  <link rel="stylesheet" href="css/base.css">
-  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/don-hang.css">
-  <link rel="stylesheet" href="css/responsive.css">
 </head>
 
 <body>
 
   <!-- PHẦN ĐẦU TRANG -->
-  <header class="phan-dau" aria-label="Phần đầu trang" style="position: sticky; background: #050505;">
+  <div class="phan-dau">
     <div class="phan-dau-chinh">
       <div class="noi-dung-phan-dau">
         <a href="index.html" class="logo">SOLEKING</a>
-        <nav class="thanh-dieu-huong" aria-label="Menu chính">
+        <nav class="thanh-dieu-huong">
           <a href="index.html" class="lien-ket-dieu-huong">Trang Chủ</a>
           <a href="san-pham.html" class="lien-ket-dieu-huong">Shop</a>
           <a href="gioi-thieu.html" class="lien-ket-dieu-huong">Giới Thiệu</a>
           <a href="lien-he.html" class="lien-ket-dieu-huong">Liên Hệ</a>
         </nav>
         <div class="hanh-dong">
-          <a href="#" class="nut-hanh-dong" title="Tìm Kiếm" id="btn-tim-kiem" onclick="moTimKiem(event)">
+          <a href="#" class="nut-hanh-dong" title="Tìm Kiếm" id="btn-tim-kiem">
             <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none"
               stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <circle cx="11" cy="11" r="8" />
@@ -34,8 +32,7 @@
             </svg>
           </a>
           <div id="wrapper-tai-khoan">
-            <a href="tai-khoan.html" class="nut-hanh-dong" title="Tài Khoản" id="btn-tai-khoan"
-              onclick="toggleDropdownUser(event)">
+            <a href="#" class="nut-hanh-dong" title="Tài Khoản" id="btn-tai-khoan" onclick="toggleDropdownUser(event)">
               <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none"
                 stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
@@ -59,34 +56,28 @@
         </div>
       </div>
     </div>
-  </header>
+  </div>
 
   <!-- NỘI DUNG ĐƠN HÀNG -->
-  <main class="khung-don-hang">
+  <div class="khung-don-hang">
     <h1 class="tieu-de-don-hang">Lịch Sử Đơn Hàng</h1>
     <div id="danh-sach-don-hang">
       <!-- JS Render -->
     </div>
-  </main>
+  </div>
 
   <!-- MODAL HỦY ĐƠN HÀNG -->
-  <div class="modal-overlay" id="modal-huy-don">
+  <div class="modal-overlay" id="modal-huy-don" style="display:none;">
     <div class="modal-box">
       <h2>Lý do hủy đơn hàng?</h2>
-      <p style="color:#aaa; font-size:14px; margin-bottom:20px;">Vui lòng cho SOLEKING biết lý do bạn muốn hủy đơn hàng
-        này nhé.</p>
+      <p style="color:#aaa; font-size:14px; margin-bottom:20px;">Vui lòng cho SOLEKING biết lý do bạn muốn hủy đơn hàng này nhé.</p>
 
       <div class="ly-do-huy">
-        <label><input type="radio" name="ly-do" value="Tôi muốn thay đổi địa chỉ nhận hàng"> Tôi muốn thay đổi địa chỉ
-          nhận hàng</label>
-        <label><input type="radio" name="ly-do" value="Tôi muốn thêm/bớt sản phẩm, đổi size"> Tôi muốn đổi size/màu hoặc
-          thêm sản phẩm</label>
-        <label><input type="radio" name="ly-do" value="Tôi tìm thấy chỗ khác giá tốt hơn"> Tôi tìm thấy chỗ khác giá tốt
-          hơn</label>
-        <label><input type="radio" name="ly-do" value="Tôi quên áp dụng mã giảm giá"> Tôi quên áp dụng mã giảm
-          giá</label>
-        <label><input type="radio" name="ly-do" value="Tôi không có nhu cầu mua nữa"> Tôi không có nhu cầu mua nữa (Đổi
-          ý)</label>
+        <label><input type="radio" name="ly-do" value="Tôi muốn thay đổi địa chỉ nhận hàng"> Tôi muốn thay đổi địa chỉ nhận hàng</label>
+        <label><input type="radio" name="ly-do" value="Tôi muốn thêm/bớt sản phẩm, đổi size"> Tôi muốn đổi size/màu hoặc thêm sản phẩm</label>
+        <label><input type="radio" name="ly-do" value="Tôi tìm thấy chỗ khác giá tốt hơn"> Tôi tìm thấy chỗ khác giá tốt hơn</label>
+        <label><input type="radio" name="ly-do" value="Tôi quên áp dụng mã giảm giá"> Tôi quên áp dụng mã giảm giá</label>
+        <label><input type="radio" name="ly-do" value="Tôi không có nhu cầu mua nữa"> Tôi không có nhu cầu mua nữa (Đổi ý)</label>
       </div>
 
       <div class="modal-actions">
@@ -96,21 +87,45 @@
     </div>
   </div>
 
+  <!-- PHẦN CUỐI TRANG -->
+  <footer class="phan-cuoi">
+    <div class="noi-dung-phan-cuoi">
+      <div class="cot-phan-cuoi">
+        <h3 class="tieu-de-phan-cuoi">SOLEKING</h3>
+        <p style="color:#888; font-size:14px; line-height:1.8;">Chuyên cung cấp giày thể thao chính hãng Nike, Adidas, Puma.</p>
+      </div>
+      <div class="cot-phan-cuoi">
+        <h3 class="tieu-de-phan-cuoi">KHÁM PHÁ</h3>
+        <div class="danh-sach-phan-cuoi">
+          <a href="index.html">Trang Chủ</a>
+          <a href="san-pham.html">Shop</a>
+          <a href="gioi-thieu.html">Giới Thiệu</a>
+          <a href="lien-he.html">Liên Hệ</a>
+        </div>
+      </div>
+      <div class="cot-phan-cuoi">
+        <h3 class="tieu-de-phan-cuoi">HỖ TRỢ</h3>
+        <div class="danh-sach-phan-cuoi">
+          <a href="thanh-toan.html">Hướng dẫn mua hàng</a>
+          <a href="lien-he.html">Chính sách đổi trả</a>
+        </div>
+      </div>
+    </div>
+    <div class="phan-cuoi-duoi">
+      <p>&copy; 2026 SOLEKING.</p>
+    </div>
+  </footer>
+
   <!-- SEARCH OVERLAY -->
-  <div class="overlay-tim-kiem" id="overlay-tim-kiem" role="dialog" aria-label="Tìm kiếm">
+  <div class="overlay-tim-kiem" id="overlay-tim-kiem">
     <div class="hop-tim-kiem">
       <button class="dong-overlay-tk" onclick="dongTimKiem()">✕</button>
-      <span class="nhan-tim-kiem">Tìm Kiếm</span>
-      <input type="text" class="o-nhap-tim-kiem" id="input-tim-kiem" placeholder="Nike, Adidas, Puma..."
-        autocomplete="off">
-      <div class="goi-y-nhanh">
-        <span class="nhan-goi-y">Gợi ý:</span>
-        <a href="san-pham.html" class="the-goi-y">Air Force 1</a>
-        <a href="san-pham.html" class="the-goi-y">Ultraboost</a>
-      </div>
+      <input type="text" class="o-nhap-tim-kiem" id="input-tim-kiem" placeholder="Nhập tên giày..." autocomplete="off">
     </div>
   </div>
 
+  <script src="js/auth.js"></script>
+  <script src="js/cart.js"></script>
   <script src="js/main.js"></script>
   <script>
     let idDonHuyDangChon = null;
@@ -144,7 +159,6 @@
         return;
       }
 
-      // Cập nhật mảng vào localStorage
       let dsDonHang = JSON.parse(localStorage.getItem('soleking_orders')) || [];
       const index = dsDonHang.findIndex(d => d.id === idDonHuyDangChon);
       if (index !== -1) {
@@ -164,20 +178,17 @@
       if (dsDonHang.length === 0) {
         container.innerHTML = `
           <div class="don-hang-trong">
-            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#555" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
             <p>Bạn chưa có đơn hàng nào.</p>
-            <p style="margin-top:4px;"><a href="san-pham.html" style="color:#ff3366;">Mua sắm ngay →</a></p>
+            <p style="margin-top:10px;"><a href="san-pham.html" style="color:#ff3366; text-decoration: underline;">Mua sắm ngay →</a></p>
           </div>
         `;
         return;
       }
 
-      // Đảo ngược mảng để đơn mới nhất lên đầu
       const sortedDonHang = [...dsDonHang].reverse();
       let html = '';
 
       sortedDonHang.forEach(don => {
-        // Tính toán trạng thái dựa vào thời gian
         const now = Date.now();
         const diffSeconds = Math.floor((now - don.thoiGian) / 1000);
 
@@ -187,35 +198,34 @@
         if (don.daHuy) {
           trangThaiClass = 'trang-thai-huy';
           trangThaiText = '❌ Đã hủy';
-        } else if (diffSeconds >= 90) { // Đã giao (sau 90s)
+        } else if (diffSeconds >= 90) { 
           trangThaiClass = 'trang-thai-hoan-thanh';
           trangThaiText = '✅ Đã nhận hàng';
-        } else if (diffSeconds >= 60) { // Đang giao (sau 60s)
+        } else if (diffSeconds >= 60) { 
           trangThaiClass = 'trang-thai-giao';
           trangThaiText = '🚚 Đang giao hàng';
         }
 
-        // Render sản phẩm trong đơn
         let spHtml = '';
         const sanPhams = Array.isArray(don.sanPham) ? don.sanPham : [];
 
         if (sanPhams.length === 0) {
-          spHtml = '<div style="color:#aaa; font-style:italic;">Chưa có thông tin sản phẩm hoặc dữ liệu cũ</div>';
+          spHtml = '<div style="color:#aaa; font-style:italic;">Chưa có thông tin sản phẩm</div>';
         } else {
           sanPhams.forEach(sp => {
-            const anhSP = sp.anh || "assets/images/AIR+FORCE+1+'07.png";
+            const anhSP = sp.anh || "assets/images/nike1.png";
             const tenSP = sp.ten || "Sản phẩm không xác định";
             const sizeSP = sp.size || "N/A";
             const slSP = sp.soLuong || 1;
             const giaSP = sp.gia || "?";
 
-            spHtml += '<div class="sp-don">' +
-              '<img src="' + anhSP + '" alt="' + tenSP + '" onerror="this.src=\'assets/images/AIR+FORCE+1+\\\'07.png\'">' +
-              '<div class="thong-tin-sp-don">' +
-              '<div class="ten-sp-don">' + tenSP + '</div>' +
-              '<div class="meta-sp-don">Size: ' + sizeSP + ' | Số lượng: ' + slSP + '</div>' +
+            spHtml += '<div class="sp-don" style="display:flex; margin-bottom: 10px; padding-bottom: 10px; border-bottom: 1px solid #333;">' +
+              '<img src="' + anhSP + '" alt="' + tenSP + '" style="width: 80px; height: 80px; object-fit: cover; margin-right: 15px; border-radius: 4px;">' +
+              '<div class="thong-tin-sp-don" style="flex:1;">' +
+              '<div class="ten-sp-don" style="font-weight:bold; margin-bottom: 5px;">' + tenSP + '</div>' +
+              '<div class="meta-sp-don" style="color:#888; font-size:14px;">Size: ' + sizeSP + ' | Số lượng: ' + slSP + '</div>' +
               '</div>' +
-              '<div class="gia-sp-don">' + giaSP + '</div>' +
+              '<div class="gia-sp-don" style="font-weight:bold; color:#ff3366;">' + giaSP + '</div>' +
               '</div>';
           });
         }
@@ -223,7 +233,7 @@
         const date = new Date(don.thoiGian);
         const timeString = date.toLocaleTimeString('vi-VN') + ' ' + date.toLocaleDateString('vi-VN');
 
-        const showCancelBtn = !don.daHuy && diffSeconds < 60; // Nút hủy hiển thị khi đang Chờ xác nhận (< 60s)
+        const showCancelBtn = !don.daHuy && diffSeconds < 60; 
 
         let lyDoHtml = '';
         if (don.daHuy) {
@@ -232,24 +242,24 @@
 
         let btnHuyHtml = '';
         if (showCancelBtn) {
-          btnHuyHtml = '<div style="text-align: right; margin-top: 15px;"><button class="nut-huy-don" onclick="moModalHuy(\'' + don.id + '\')">Hủy đơn hàng</button></div>';
+          btnHuyHtml = '<div style="text-align: right; margin-top: 15px;"><button class="nut-huy-don" onclick="moModalHuy(\'' + don.id + '\')" style="background:transparent; border:1px solid #ff3366; color:#ff3366; padding:8px 16px; cursor:pointer;">Hủy đơn hàng</button></div>';
         }
 
-        html += '<div class="the-don-hang">' +
-          '<div class="header-don-hang">' +
+        html += '<div class="the-don-hang" style="background:#111; border:1px solid #333; margin-bottom:20px; padding:20px; border-radius:8px;">' +
+          '<div class="header-don-hang" style="display:flex; justify-content:space-between; margin-bottom:20px; border-bottom:1px dashed #444; padding-bottom:10px;">' +
           '<div>' +
-          '<span class="id-don-hang">Mã đơn: #' + don.id + '</span>' +
+          '<span class="id-don-hang" style="font-weight:bold;">Mã đơn: #' + don.id + '</span>' +
           '<div style="color:#888; font-size:14px; margin-top:4px;">Đặt lúc: ' + timeString + '</div>' +
           lyDoHtml +
           '</div>' +
           '<div style="text-align: right;">' +
-          '<div class="trang-thai-badge ' + trangThaiClass + '">' + trangThaiText + '</div>' +
+          '<div class="trang-thai-badge ' + trangThaiClass + '" style="color:#fff; padding:5px 10px; border-radius:4px; font-weight:bold;">' + trangThaiText + '</div>' +
           '</div>' +
           '</div>' +
           '<div class="danh-sach-sp-don">' +
           spHtml +
           '</div>' +
-          '<div class="tong-tien-don">' +
+          '<div class="tong-tien-don" style="text-align:right; font-weight:bold; font-size:18px; margin-top:15px;">' +
           'Tổng thanh toán: ' + don.tongTien +
           btnHuyHtml +
           '</div>' +
@@ -259,12 +269,8 @@
       container.innerHTML = html;
     }
 
-    // Render ban đầu
     renderDonHang();
-
-    // Cập nhật trạng thái liên tục mỗi 1 giây để demo cho nhanh
     setInterval(renderDonHang, 1000);
-
   </script>
 </body>
 

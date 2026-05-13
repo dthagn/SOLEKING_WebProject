@@ -7,17 +7,12 @@
   <title>SOLEKING - Đỉnh Cao Thiết Kế</title>
 
   <!-- Liên kết các file CSS -->
-  <link rel="stylesheet" href="css/base.css">
-  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/home.css">
-  <link rel="stylesheet" href="css/responsive.css">
 </head>
 
-<body>
-  <!-- Anchor vô hình để nút 'Lên đầu trang' hoạt động đúng -->
-  <span id="dau-trang" style="position:absolute;top:0;left:0;"></span>
-
-  <!-- PHẦN ĐẦU TRANG (GLASSMORPHISM) -->
+<body id="dau-trang">
+  <!-- PHẦN ĐẦU TRANG -->
   <div class="phan-dau" id="header-chinh">
     <div class="phan-dau-chinh">
       <div class="noi-dung-phan-dau">
@@ -25,7 +20,7 @@
           SOLEKING
         </a>
 
-        <nav class="thanh-dieu-huong" aria-label="Menu chính">
+        <nav class="thanh-dieu-huong">
           <a href="index.html" class="lien-ket-dieu-huong">Trang Chủ</a>
           <a href="san-pham.html" class="lien-ket-dieu-huong">Shop</a>
           <a href="gioi-thieu.html" class="lien-ket-dieu-huong">Giới Thiệu</a>
@@ -33,7 +28,7 @@
         </nav>
 
         <div class="hanh-dong">
-          <a href="#" class="nut-hanh-dong" title="Tìm Kiếm" id="btn-tim-kiem" onclick="moTimKiem(event)">
+          <a href="#" class="nut-hanh-dong" title="Tìm Kiếm" id="btn-tim-kiem">
             <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none"
               stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <circle cx="11" cy="11" r="8" />
@@ -52,19 +47,7 @@
             </a>
             <!-- Dropdown menu -->
             <div class="dropdown-tai-khoan" id="dropdown-tai-khoan">
-              <a href="#" class="muc-dropdown">
-                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
-                Đăng Nhập
-              </a>
-              <a href="#" class="muc-dropdown">
-                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><line x1="19" y1="8" x2="19" y2="14"/><line x1="22" y1="11" x2="16" y2="11"/></svg>
-                Đăng Ký
-              </a>
-              <div class="ke-dropdown"></div>
-              <a href="#" class="muc-dropdown">
-                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="14" x="2" y="5" rx="2"/><line x1="2" y1="10" x2="22" y2="10"/></svg>
-                Đơn Hàng
-              </a>
+              <!-- Rendered by auth.js -->
             </div>
           </div>
           <a href="thanh-toan.html" class="nut-hanh-dong" title="Giỏ Hàng" id="btn-gio-hang"
@@ -82,88 +65,54 @@
     </div>
   </div>
 
-
-  <!-- VIDEO HERO FULLSCREEN -->
-  <div class="video-hero">
-
-    <!-- Video nền fullscreen -->
-    <video class="video-nen" autoplay muted loop playsinline preload="auto">
-      <source src="assets/images/Sản Xuất Video 3D _ TVC Quảng Cáo Giày _ Radio Ad.mp4" type="video/mp4">
-    </video>
-
-    <!-- Lớp phủ tối để chữ nổi bật, video vẫn nhìn rõ -->
-    <div class="video-lop-phu"></div>
-
-    <!-- Chữ overlay ở giữa màn hình -->
-    <div class="video-noi-dung">
-      <p class="video-sub">Phong Cách Sống</p>
-      <h2 class="video-title">Mỗi Bước Chân<br>Là Một Tuyên Ngôn</h2>
-      <p class="video-desc">Khám phá bộ sưu tập mới nhất từ Nike, Adidas &amp; Puma<br>dành cho những người dám khác
-        biệt.</p>
-      <div class="video-nhom-nut">
-        <a href="san-pham.html" class="video-cta">Khám Phá Ngay</a>
-        <a href="gioi-thieu.html" class="video-cta-phu">Câu Chuyện Của Chúng Tôi</a>
+  <!-- BÌA TRANG CHỦ -->
+  <div class="anh-bia">
+    <div class="noi-dung-anh-bia">
+      <p class="phu-de-anh-bia">Phong Cách Sống</p>
+      <h2 class="tieu-de-anh-bia">Mỗi Bước Chân<br>Là Một Tuyên Ngôn</h2>
+      <p class="mo-ta-anh-bia">Khám phá bộ sưu tập mới nhất từ Nike, Adidas & Puma dành cho những người dám khác biệt.</p>
+      <div>
+        <a href="san-pham.html" class="nut">Khám Phá Ngay</a>
+        <a href="gioi-thieu.html" class="nut nut-vien">Câu Chuyện</a>
       </div>
     </div>
-
-    <!-- Mũi tên cuộn xuống -->
-    <div class="video-scroll-hint">
-      <div class="scroll-arrow"></div>
-    </div>
-
   </div>
 
   <!-- BĂNG CHẠY THƯƠNG HIỆU -->
   <div class="bang-thuong-hieu">
     <div class="bang-chay">
-      <!-- Lặp 2 lần để tạo hiệu ứng cuộn vô tận -->
-      <span class="muc-bang">NIKE</span>
-      <span class="dau-phan-cach">✦</span>
-      <span class="muc-bang">ADIDAS</span>
-      <span class="dau-phan-cach">✦</span>
-      <span class="muc-bang">PUMA</span>
-      <span class="dau-phan-cach">✦</span>
-      <span class="muc-bang">CHÍNH HÃNG 100%</span>
-      <span class="dau-phan-cach">✦</span>
-      <span class="muc-bang">GIAO HÀNG TOÀN QUỐC</span>
-      <span class="dau-phan-cach">✦</span>
+      <span class="muc-bang">NIKE</span><span class="dau-phan-cach">✦</span>
+      <span class="muc-bang">ADIDAS</span><span class="dau-phan-cach">✦</span>
+      <span class="muc-bang">PUMA</span><span class="dau-phan-cach">✦</span>
+      <span class="muc-bang">CHÍNH HÃNG 100%</span><span class="dau-phan-cach">✦</span>
+      <span class="muc-bang">GIAO HÀNG TOÀN QUỐC</span><span class="dau-phan-cach">✦</span>
+      <span class="muc-bang">ĐỔI TRẢ MIỄN PHÍ</span><span class="dau-phan-cach">✦</span>
+      <span class="muc-bang">NIKE</span><span class="dau-phan-cach">✦</span>
+      <span class="muc-bang">ADIDAS</span><span class="dau-phan-cach">✦</span>
+      <span class="muc-bang">PUMA</span><span class="dau-phan-cach">✦</span>
+      <span class="muc-bang">CHÍNH HÃNG 100%</span><span class="dau-phan-cach">✦</span>
+      <span class="muc-bang">GIAO HÀNG TOÀN QUỐC</span><span class="dau-phan-cach">✦</span>
       <span class="muc-bang">ĐỔI TRẢ MIỄN PHÍ</span>
-      <span class="dau-phan-cach">✦</span>
-      <!-- Bản sao để cuộn liền mạch -->
-      <span class="muc-bang">NIKE</span>
-      <span class="dau-phan-cach">✦</span>
-      <span class="muc-bang">ADIDAS</span>
-      <span class="dau-phan-cach">✦</span>
-      <span class="muc-bang">PUMA</span>
-      <span class="dau-phan-cach">✦</span>
-      <span class="muc-bang">CHÍNH HÃNG 100%</span>
-      <span class="dau-phan-cach">✦</span>
-      <span class="muc-bang">GIAO HÀNG TOÀN QUỐC</span>
-      <span class="dau-phan-cach">✦</span>
-      <span class="muc-bang">ĐỔI TRẢ MIỄN PHÍ</span>
-      <span class="dau-phan-cach">✦</span>
     </div>
   </div>
 
-  <!-- DANH MỤC SẢN PHẨM (ZIG-ZAG LAYOUT) -->
-
+  <!-- DANH MỤC SẢN PHẨM -->
   <div class="danh-muc">
     <div class="luoi-danh-muc">
-      <!-- Khối 1: Ảnh trái, chữ phải -->
+      <!-- Khối 1 -->
       <div class="the-danh-muc">
         <div class="khung-anh-danh-muc">
-          <!-- Hãy thay đổi đường dẫn ảnh của bạn tại đây -->
           <img src="assets/images/Trang_chu_1.png" alt="Chạy bộ" class="anh-danh-muc">
         </div>
         <div class="lop-phu-danh-muc">
           <h3 class="tieu-de-the-danh-muc">Thống Lĩnh Đường Đua</h3>
           <p class="mo-ta-anh-bia">Cảm nhận sự nảy bật ở mỗi bước chân với công nghệ đệm siêu nhẹ. Thiết kế khí động học
             giúp bạn bứt phá mọi kỷ lục.</p>
-          <a href="san-pham.html#the-thao" class="lien-ket-danh-muc">Mua Giày Chạy Bộ</a>
+          <a href="san-pham.html" class="lien-ket-danh-muc">Mua Giày Chạy Bộ</a>
         </div>
       </div>
 
-      <!-- Khối 2: Chữ trái, ảnh phải (Tự đảo chiều bằng CSS nth-child) -->
+      <!-- Khối 2 -->
       <div class="the-danh-muc">
         <div class="khung-anh-danh-muc">
           <img src="assets/images/Trang_chu_2.png" alt="Bóng rổ" class="anh-danh-muc">
@@ -172,29 +121,32 @@
           <h3 class="tieu-de-the-danh-muc">Làm Chủ Sàn Đấu</h3>
           <p class="mo-ta-anh-bia">Khả năng bám sân tuyệt đối, hỗ trợ mắt cá chân tối đa. Làm chủ không trung và mọi pha
             tiếp đất.</p>
-          <a href="san-pham.html#bong-ro" class="lien-ket-danh-muc">Mua Giày Bóng Rổ</a>
-        </div>
-      </div>
-
-      <!-- Khối 3: Ảnh trái, chữ phải -->
-      <div class="the-danh-muc">
-        <div class="khung-anh-danh-muc">
-          <img src="assets/images/Trang_chu_3.png" alt="Casual" class="anh-danh-muc">
-        </div>
-        <div class="lop-phu-danh-muc">
-          <h3 class="tieu-de-the-danh-muc">Khí Chất Đường Phố</h3>
-          <p class="mo-ta-anh-bia">Không chỉ là đôi giày, đây là biểu tượng phong cách. Sự giao thoa hoàn hảo giữa thời
-            trang và nghệ thuật đường phố.</p>
-          <a href="san-pham.html#thoi-trang" class="lien-ket-danh-muc">Xem Phụ Kiện & Thời Trang</a>
+          <a href="san-pham.html" class="lien-ket-danh-muc">Mua Giày Bóng Rổ</a>
         </div>
       </div>
     </div>
   </div>
 
-
+  <!-- GIẢM GIÁ SỐC -->
+  <div class="giam-gia-soc">
+    <h2 class="tieu-de-khoi">GIẢM GIÁ ĐẶC BIỆT</h2>
+    <div class="luoi-san-pham">
+      <div class="the-san-pham">
+        <div class="anh-san-pham">
+          <img src="assets/images/nike1.png" alt="Nike Air Force 1">
+        </div>
+        <div class="noi-dung-san-pham">
+          <div class="danh-muc-san-pham">Giày Thể Thao</div>
+          <h3 class="ten-san-pham">Nike Air Force 1 '07</h3>
+          <div class="gia-san-pham">1.599.000đ</div>
+          <a href="chi-tiet.html?id=nike1" class="them-vao-gio">Mua Ngay</a>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <!-- NÚT CUỘN LÊN ĐẦU TRANG -->
-  <a href="#dau-trang" class="nut-len-dau" title="Về đầu trang" aria-label="Cuộn lên đầu trang">
+  <a href="#dau-trang" class="nut-len-dau">
     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
       stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
       <polyline points="18 15 12 9 6 15"/>
@@ -202,69 +154,44 @@
   </a>
 
   <!-- PHẦN CUỐI TRANG -->
-  <footer class="phan-cuoi" aria-label="Phần cuối trang">
+  <footer class="phan-cuoi">
     <div class="noi-dung-phan-cuoi">
-
-      <!-- Cột 1: Giới thiệu thương hiệu -->
       <div class="cot-phan-cuoi">
         <h3 class="tieu-de-phan-cuoi">SOLEKING</h3>
-        <p style="color:#888; font-size:14px; line-height:1.8;">Chuyên cung cấp giày thể thao chính hãng các thương hiệu
-          Nike, Adidas, Puma. Chất lượng đảm bảo, uy tín hàng đầu.</p>
+        <p style="color:#888; font-size:14px; line-height:1.8;">Chuyên cung cấp giày thể thao chính hãng Nike, Adidas, Puma. Chất lượng đảm bảo.</p>
       </div>
-
-      <!-- Cột 2: Khám phá -->
       <div class="cot-phan-cuoi">
         <h3 class="tieu-de-phan-cuoi">KHÁM PHÁ</h3>
         <div class="danh-sach-phan-cuoi">
-          <a href="index.html" class="lien-ket-phan-cuoi">Trang Chủ</a>
-          <a href="san-pham.html" class="lien-ket-phan-cuoi">Shop</a>
-          <a href="gioi-thieu.html" class="lien-ket-phan-cuoi">Giới Thiệu</a>
-          <a href="lien-he.html" class="lien-ket-phan-cuoi">Liên Hệ</a>
+          <a href="index.html">Trang Chủ</a>
+          <a href="san-pham.html">Shop</a>
+          <a href="gioi-thieu.html">Giới Thiệu</a>
+          <a href="lien-he.html">Liên Hệ</a>
         </div>
       </div>
-
-      <!-- Cột 3: Hỗ trợ -->
       <div class="cot-phan-cuoi">
-        <h3 class="tieu-de-phan-cuoi">HỔ TRỢ</h3>
+        <h3 class="tieu-de-phan-cuoi">HỖ TRỢ</h3>
         <div class="danh-sach-phan-cuoi">
-          <a href="thanh-toan.html" class="lien-ket-phan-cuoi">Hướng dẫn mua hàng</a>
-          <a href="lien-he.html" class="lien-ket-phan-cuoi">Chính sách đổi trả</a>
-          <a href="lien-he.html" class="lien-ket-phan-cuoi">Chính sách bảo mật</a>
-          <a href="lien-he.html" class="lien-ket-phan-cuoi">Hỏi đáp (FAQ)</a>
-        </div>
-      </div>
-
-      <!-- Cột 4: Liên hệ -->
-      <div class="cot-phan-cuoi">
-        <h3 class="tieu-de-phan-cuoi">LIÊN HỆ</h3>
-        <div class="danh-sach-phan-cuoi">
-          <a href="tel:0123456789" class="lien-ket-phan-cuoi">Hotline: 0123.456.789</a>
-          <a href="mailto:contact@soleking.com" class="lien-ket-phan-cuoi">contact@soleking.com</a>
-          <a href="lien-he.html" class="lien-ket-phan-cuoi">234 Hoàng Quốc Việt,Cầu Giấy,Hà Nội</a>
+          <a href="thanh-toan.html">Hướng dẫn mua hàng</a>
+          <a href="lien-he.html">Chính sách đổi trả</a>
         </div>
       </div>
     </div>
     <div class="phan-cuoi-duoi">
-      <p>&copy; 2026 SOLEKING. Thiết kế đẳng cấp.</p>
+      <p>&copy; 2026 SOLEKING.</p>
     </div>
   </footer>
+
   <!-- SEARCH OVERLAY -->
-  <div class="overlay-tim-kiem" id="overlay-tim-kiem" role="dialog" aria-label="Tìm kiếm">
+  <div class="overlay-tim-kiem" id="overlay-tim-kiem">
     <div class="hop-tim-kiem">
-      <button class="dong-overlay-tk" onclick="dongTimKiem()" aria-label="Đóng tìm kiếm">✕</button>
-      <span class="nhan-tim-kiem">Tìm Kiếm</span>
-      <input type="text" class="o-nhap-tim-kiem" id="input-tim-kiem"
-             placeholder="Nike, Adidas, Puma..." autocomplete="off">
-      <div class="goi-y-nhanh">
-        <span class="nhan-goi-y">Gợi ý:</span>
-        <a href="san-pham.html" class="the-goi-y">Air Force 1</a>
-        <a href="san-pham.html" class="the-goi-y">Ultraboost</a>
-        <a href="san-pham.html" class="the-goi-y">MB.02</a>
-        <a href="san-pham.html" class="the-goi-y">ZoomX</a>
-      </div>
+      <button class="dong-overlay-tk" onclick="dongTimKiem()">✕</button>
+      <input type="text" class="o-nhap-tim-kiem" id="input-tim-kiem" placeholder="Nhập tên giày..." autocomplete="off">
     </div>
   </div>
 
+  <script src="js/auth.js"></script>
+  <script src="js/cart.js"></script>
   <script src="js/main.js"></script>
 </body>
 

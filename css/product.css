@@ -1,27 +1,22 @@
 /* ========================================
-   PRODUCT.CSS - Trang danh sách & chi tiết
-   ======================================== */
-
-/* ========================================
-   TRANG DANH SÁCH SẢN PHẨM (MỚI)
+   PRODUCT.CSS - DANH SÁCH & CHI TIẾT
    ======================================== */
 
 .danh-sach-san-pham {
-  padding: 120px 0 40px;
+  padding: 80px 0 40px;
   background-color: #0a0a0a;
 }
 
 .nhom-thuong-hieu {
   max-width: 1200px;
-  margin: 0 auto 80px;
-  padding: 0 24px;
+  margin: 0 auto 60px;
+  padding: 0 20px;
 }
 
 .tieu-de-thuong-hieu {
-  font-size: 64px;
-  font-weight: 900;
-  color: #ffffff;
-  margin-bottom: 40px;
+  font-size: 32px;
+  color: #fff;
+  margin-bottom: 30px;
   border-bottom: 2px solid #ff3366;
   display: inline-block;
   text-transform: uppercase;
@@ -30,74 +25,62 @@
 .luoi-san-pham-nhom {
   display: flex;
   flex-wrap: wrap;
-  gap: 24px;
+  gap: 20px;
 }
 
-/* Thẻ sản phẩm cao cấp */
+/* Thẻ sản phẩm */
 .the-sp-premium {
-  width: calc(33.333% - 16px);
-  background-color: #111111;
+  width: calc(33.333% - 14px);
+  background-color: #111;
+  border: 1px solid #333;
+  transition: all 0.3s ease;
   position: relative;
-  overflow: hidden;
-  border: 1px solid #222222;
-  transition: all 0.4s ease;
 }
 
 .the-sp-premium:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 20px 40px rgba(0,0,0,0.8);
   border-color: #ff3366;
+  transform: translateY(-5px);
 }
 
 .khung-anh-sp {
-  position: relative;
   width: 100%;
-  height: 350px;
-  overflow: hidden;
+  height: 250px;
   background-color: #1a1a1a;
+  position: relative;
+  overflow: hidden;
 }
 
 .khung-anh-sp img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform 0.6s ease;
 }
 
-/* Hoạt ảnh phóng to ảnh khi di chuột */
-.the-sp-premium:hover .khung-anh-sp img {
-  transform: scale(1.15); 
-}
-
-/* Hiệu ứng lớp phủ mờ khi di chuột (chứa các nút Mua) */
+/* Overlay hiển thị khi hover */
 .lop-phu-hanh-dong {
   position: absolute;
   top: 0; left: 0; width: 100%; height: 100%;
-  background-color: rgba(10, 10, 10, 0.7);
-  display: flex;
+  background: rgba(0,0,0,0.7);
+  display: none;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 16px;
-  opacity: 0;
-  transition: opacity 0.4s ease;
+  gap: 10px;
 }
 
 .the-sp-premium:hover .lop-phu-hanh-dong {
-  opacity: 1; /* Hiện các icon thao tác */
+  display: flex;
 }
 
 .nut-overlay {
-  padding: 12px 24px;
+  padding: 10px 20px;
   background-color: transparent;
-  color: #ffffff;
-  border: 2px solid #ffffff;
-  font-weight: 800;
+  color: #fff;
+  border: 1px solid #fff;
   text-transform: uppercase;
-  letter-spacing: 1px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  width: 200px;
+  font-weight: bold;
+  text-decoration: none;
+  width: 150px;
   text-align: center;
 }
 
@@ -107,63 +90,57 @@
 }
 
 .nut-overlay:hover {
-  background-color: #ffffff;
-  color: #000000;
+  background-color: #fff;
+  color: #000;
 }
 
 .nut-overlay.chinh:hover {
-  background-color: #e62e5c;
-  color: #ffffff;
+  background-color: #fff;
+  color: #ff3366;
 }
 
 .thong-tin-sp-premium {
-  padding: 24px;
+  padding: 15px;
   text-align: center;
 }
 
 .ten-sp-premium {
-  font-size: 20px;
-  font-weight: 800;
-  color: #ffffff;
-  margin-bottom: 8px;
+  font-size: 18px;
+  color: #fff;
+  margin-bottom: 5px;
 }
 
 .mo-ta-sp-ngan {
-  font-size: 14px;
-  color: #aaaaaa;
-  margin-bottom: 12px;
-  line-height: 1.5;
+  font-size: 13px;
+  color: #888;
+  margin-bottom: 10px;
 }
 
 .gia-sp-premium {
-  font-size: 18px;
+  font-size: 16px;
   color: #ff3366;
   font-weight: bold;
 }
 
-/* ========================================
-   TRANG CHI TIẾT SẢN PHẨM
-   ======================================== */
-
+/* Trang Chi Tiết */
 .chi-tiet-san-pham {
-  display: flex; 
+  display: flex;
   max-width: 1200px;
-  margin: 120px auto 40px;
-  padding: 0 24px;
+  margin: 100px auto 40px;
+  padding: 0 20px;
+  gap: 40px;
 }
 
 .bo-suu-tap-anh {
   flex: 1;
-  margin-right: 48px;
 }
 
 .anh-chinh {
   width: 100%;
-  height: 600px;
-  background-color: #111111;
-  border: 1px solid #222222;
-  overflow: hidden;
-  margin-bottom: 24px;
+  height: 400px;
+  background-color: #111;
+  border: 1px solid #333;
+  margin-bottom: 15px;
 }
 
 .anh-chinh img {
@@ -174,15 +151,14 @@
 
 .anh-thu-nho-nhom {
   display: flex;
-  justify-content: space-between;
+  gap: 10px;
 }
 
 .anh-thu-nho {
-  width: 18%; 
-  border: 2px solid #222222;
-  overflow: hidden;
+  width: calc(25% - 7.5px);
+  height: 80px;
+  border: 1px solid #333;
   cursor: pointer;
-  height: 100px;
 }
 
 .anh-thu-nho:hover {
@@ -195,88 +171,54 @@
   object-fit: cover;
 }
 
-.thong-tin-san-pham {
+.thong-tin-san-pham-chi-tiet {
   flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.danh-muc-chi-tiet {
-  font-size: 16px;
-  color: #ff3366;
-  text-transform: uppercase;
-  margin-bottom: 16px;
-  font-weight: bold;
-  letter-spacing: 2px;
 }
 
 .tieu-de-chi-tiet {
-  font-size: 56px;
-  font-weight: 900;
-  line-height: 1.1;
-  margin-bottom: 24px;
-  color: #ffffff;
+  font-size: 32px;
+  color: #fff;
+  margin-bottom: 15px;
   text-transform: uppercase;
-}
-
-.gia-chi-tiet {
-  display: flex;
-  align-items: center;
-  padding: 24px 0;
-  margin-bottom: 24px;
-  border-bottom: 1px solid #222222;
 }
 
 .gia-hien-tai-chi-tiet {
-  font-size: 40px;
-  font-weight: 900;
+  font-size: 28px;
   color: #ff3366;
+  font-weight: bold;
+  margin-bottom: 20px;
 }
 
 .mo-ta-chi-tiet {
-  color: #cccccc;
-  line-height: 1.8;
-  margin-bottom: 32px;
-  font-size: 18px;
+  color: #ccc;
+  line-height: 1.6;
+  margin-bottom: 30px;
 }
 
-/* ========================================
-   TÙY CHỌN SẢN PHẨM
-   ======================================== */
-
-.tuy-chon-san-pham {
-  margin-bottom: 40px;
-}
-
+/* Tùy chọn */
 .nhom-tuy-chon {
-  margin-bottom: 32px;
+  margin-bottom: 20px;
 }
 
 .nhan-tuy-chon {
-  font-weight: 800;
-  font-size: 18px;
-  margin-bottom: 16px;
   display: block;
-  text-transform: uppercase;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #fff;
 }
 
 .tuy-chon-kich-thuoc {
   display: flex;
+  gap: 10px;
   flex-wrap: wrap;
-  gap: 16px;
 }
 
 .kich-thuoc {
-  padding: 16px;
-  border: 2px solid #222222;
-  text-align: center;
+  padding: 10px 15px;
+  border: 1px solid #555;
+  background: transparent;
+  color: #fff;
   cursor: pointer;
-  background-color: transparent;
-  font-weight: 800;
-  min-width: 70px;
-  color: #ffffff;
-  transition: all 0.3s;
 }
 
 .kich-thuoc:hover {
@@ -286,170 +228,76 @@
 
 .chon-so-luong {
   display: flex;
-  align-items: center;
-  border: 2px solid #222222;
-  width: 150px;
-  background-color: transparent;
+  width: 120px;
+  border: 1px solid #555;
 }
 
 .nut-chon-so-luong {
   width: 40px;
   height: 40px;
+  background: transparent;
+  color: #fff;
   border: none;
-  background-color: transparent;
-  font-weight: bold;
-  font-size: 20px;
   cursor: pointer;
-  color: #ffffff;
 }
 
 .o-nhap-so-luong {
-  flex: 1;
+  width: 40px;
   text-align: center;
+  background: transparent;
+  color: #fff;
   border: none;
-  background-color: transparent;
-  color: #ffffff;
-  font-size: 18px;
-  font-weight: bold;
 }
-
-/* ========================================
-   HÀNH ĐỘNG CHI TIẾT
-   ======================================== */
 
 .hanh-dong-chi-tiet {
   display: flex;
-  gap: 16px;
+  gap: 15px;
+  margin-top: 30px;
 }
 
 .hanh-dong-chinh {
   flex: 1;
-  padding: 24px;
   background-color: #ff3366;
-  color: #ffffff;
+  color: #fff;
   border: none;
-  font-weight: 900;
-  font-size: 18px;
-  cursor: pointer;
+  padding: 15px;
+  font-weight: bold;
   text-transform: uppercase;
-  letter-spacing: 2px;
-  transition: all 0.3s;
+  cursor: pointer;
 }
 
 .hanh-dong-chinh:hover {
   background-color: #e62e5c;
-  transform: translateY(-4px);
 }
 
 .hanh-dong-phu {
   flex: 1;
-  padding: 24px;
   background-color: transparent;
-  color: #ffffff;
-  border: 2px solid #ffffff;
-  font-weight: 900;
-  font-size: 18px;
-  cursor: pointer;
+  color: #fff;
+  border: 1px solid #fff;
+  padding: 15px;
+  font-weight: bold;
   text-transform: uppercase;
-  letter-spacing: 2px;
-  transition: all 0.3s;
+  cursor: pointer;
 }
 
 .hanh-dong-phu:hover {
-  background-color: #ffffff;
-  color: #0a0a0a;
-  transform: translateY(-4px);
+  background-color: #fff;
+  color: #000;
 }
 
-/* ========================================
-   DANH MỤC THỜI TRANG & PHỤ KIỆN
-   ======================================== */
-
-.luoi-danh-muc-thoi-trang {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 24px;
+/* Responsive */
+@media (max-width: 768px) {
+  .the-sp-premium {
+    width: calc(50% - 10px);
+  }
+  .chi-tiet-san-pham {
+    flex-direction: column;
+  }
 }
 
-.the-danh-muc-tt {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  padding: 40px 28px;
-  background: linear-gradient(135deg, #111111 0%, #1a1a1a 100%);
-  border: 1px solid #222222;
-  text-decoration: none;
-  position: relative;
-  overflow: hidden;
-  transition: all 0.4s ease;
-  cursor: pointer;
-}
-
-.the-danh-muc-tt::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(135deg, rgba(255,51,102,0.08) 0%, transparent 60%);
-  opacity: 0;
-  transition: opacity 0.4s ease;
-}
-
-.the-danh-muc-tt:hover {
-  transform: translateY(-8px);
-  border-color: #ff3366;
-  box-shadow: 0 20px 40px rgba(255, 51, 102, 0.15);
-}
-
-.the-danh-muc-tt:hover::before {
-  opacity: 1;
-}
-
-.bieu-tuong-danh-muc {
-  width: 90px;
-  height: 90px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: rgba(255, 51, 102, 0.08);
-  border-radius: 50%;
-  margin-bottom: 20px;
-  transition: all 0.4s ease;
-}
-
-.the-danh-muc-tt:hover .bieu-tuong-danh-muc {
-  background-color: rgba(255, 51, 102, 0.18);
-  transform: scale(1.1);
-}
-
-.ten-danh-muc-tt {
-  font-size: 18px;
-  font-weight: 800;
-  color: #ffffff;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  margin-bottom: 8px;
-}
-
-.mo-ta-danh-muc-tt {
-  font-size: 13px;
-  color: #888888;
-  line-height: 1.6;
-  margin-bottom: 20px;
-}
-
-.xem-them-tt {
-  font-size: 13px;
-  font-weight: 700;
-  color: #ff3366;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  opacity: 0;
-  transform: translateY(8px);
-  transition: all 0.3s ease;
-}
-
-.the-danh-muc-tt:hover .xem-them-tt {
-  opacity: 1;
-  transform: translateY(0);
+@media (max-width: 480px) {
+  .the-sp-premium {
+    width: 100%;
+  }
 }

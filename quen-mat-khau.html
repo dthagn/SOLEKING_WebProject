@@ -5,10 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Quên Mật Khẩu | SOLEKING</title>
 
-  <link rel="stylesheet" href="css/base.css">
-  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/auth.css">
-  <link rel="stylesheet" href="css/responsive.css">
   
   <style>
     /* Chỉnh sửa layout để form Quên Mật Khẩu nằm giữa */
@@ -24,24 +22,25 @@
       flex-direction: column;
       justify-content: center;
       padding: 40px;
+      margin: 40px auto;
     }
   </style>
 </head>
 <body>
 
-  <!-- PHẦN ĐẦU TRANG (HEADER) -->
-  <header class="phan-dau" aria-label="Phần đầu trang" style="position: sticky; background: #050505;">
+  <!-- PHẦN ĐẦU TRANG -->
+  <div class="phan-dau" style="position: sticky; background: #050505; top: 0; z-index: 100;">
     <div class="phan-dau-chinh">
       <div class="noi-dung-phan-dau">
         <a href="index.html" class="logo">SOLEKING</a>
-        <nav class="thanh-dieu-huong" aria-label="Menu chính">
+        <nav class="thanh-dieu-huong">
           <a href="index.html" class="lien-ket-dieu-huong">Trang Chủ</a>
           <a href="san-pham.html" class="lien-ket-dieu-huong">Shop</a>
           <a href="gioi-thieu.html" class="lien-ket-dieu-huong">Giới Thiệu</a>
           <a href="lien-he.html" class="lien-ket-dieu-huong">Liên Hệ</a>
         </nav>
         <div class="hanh-dong">
-          <a href="#" class="nut-hanh-dong" title="Tìm Kiếm" id="btn-tim-kiem" onclick="moTimKiem(event)">
+          <a href="#" class="nut-hanh-dong" title="Tìm Kiếm" id="btn-tim-kiem">
             <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none"
               stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <circle cx="11" cy="11" r="8" />
@@ -57,7 +56,7 @@
               </svg>
             </a>
             <div class="dropdown-tai-khoan" id="dropdown-tai-khoan">
-              <!-- Render by main.js -->
+              <!-- Render by auth.js -->
             </div>
           </div>
           <a href="thanh-toan.html" class="nut-hanh-dong" title="Giỏ Hàng" id="btn-gio-hang" style="position: relative;">
@@ -72,7 +71,7 @@
         </div>
       </div>
     </div>
-  </header>
+  </div>
 
   <!-- AUTHENTICATION PAGE -->
   <main class="auth-page">
@@ -100,6 +99,16 @@
     </div>
   </main>
 
+  <!-- SEARCH OVERLAY -->
+  <div class="overlay-tim-kiem" id="overlay-tim-kiem">
+    <div class="hop-tim-kiem">
+      <button class="dong-overlay-tk" onclick="dongTimKiem()">✕</button>
+      <input type="text" class="o-nhap-tim-kiem" id="input-tim-kiem" placeholder="Nhập tên giày..." autocomplete="off">
+    </div>
+  </div>
+
+  <script src="js/auth.js"></script>
+  <script src="js/cart.js"></script>
   <script src="js/main.js"></script>
   <script>
     function xuLyBuoc1(e) {

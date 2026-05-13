@@ -1,0 +1,286 @@
+/* ========================================
+   STYLE.CSS - CSS CƠ BẢN VÀ BỐ CỤC CHUNG
+   ======================================== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+}
+
+body {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #f0f0f0;
+  background-color: #0a0a0a;
+  overflow-x: hidden;
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: bold;
+  line-height: 1.2;
+  margin-bottom: 15px;
+  color: #fff;
+}
+
+p {
+  margin-bottom: 15px;
+  color: #ccc;
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #ff3366;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Các lớp hỗ trợ (Helpers) */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* ========================================
+   HEADER & FOOTER (LAYOUT)
+   ======================================== */
+
+/* Header */
+.phan-dau {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background-color: #0a0a0a;
+  border-bottom: 1px solid #222;
+}
+
+.noi-dung-phan-dau {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 15px 20px;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #fff;
+}
+
+.thanh-dieu-huong {
+  display: flex;
+  gap: 30px;
+}
+
+.lien-ket-dieu-huong {
+  color: #ccc;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.lien-ket-dieu-huong:hover {
+  color: #ff3366;
+}
+
+.hanh-dong {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.thong-bao-nho {
+  position: absolute;
+  top: -8px;
+  right: -10px;
+  background-color: #ff3366;
+  color: #fff;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 10px;
+}
+
+/* Dropdown Tài Khoản */
+#wrapper-tai-khoan {
+  position: relative;
+}
+
+.dropdown-tai-khoan {
+  position: absolute;
+  top: 35px;
+  right: 0;
+  background: #111;
+  border: 1px solid #333;
+  min-width: 180px;
+  display: none;
+  z-index: 999;
+}
+
+.dropdown-tai-khoan.mo {
+  display: block;
+}
+
+.muc-dropdown {
+  display: block;
+  padding: 10px 15px;
+  color: #ccc;
+  border-bottom: 1px solid #222;
+}
+
+.muc-dropdown:hover {
+  background: #222;
+  color: #fff;
+}
+
+.ke-dropdown {
+  display: none; /* Bỏ kẻ vạch cầu kỳ */
+}
+
+/* Footer */
+.phan-cuoi {
+  background-color: #050505;
+  padding: 50px 0 20px;
+  margin-top: 50px;
+  border-top: 1px solid #222;
+}
+
+.noi-dung-phan-cuoi {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.cot-phan-cuoi {
+  flex: 1;
+  min-width: 200px;
+}
+
+.tieu-de-phan-cuoi {
+  font-size: 18px;
+  margin-bottom: 15px;
+}
+
+.danh-sach-phan-cuoi a {
+  display: block;
+  color: #888;
+  margin-bottom: 10px;
+}
+
+.danh-sach-phan-cuoi a:hover {
+  color: #fff;
+}
+
+.phan-cuoi-duoi {
+  text-align: center;
+  margin-top: 30px;
+  padding-top: 20px;
+  border-top: 1px solid #222;
+  color: #666;
+}
+
+/* Modal Tìm Kiếm */
+.overlay-tim-kiem {
+  position: fixed;
+  top: 0; left: 0; width: 100%; height: 100%;
+  background: rgba(0, 0, 0, 0.9);
+  z-index: 9999;
+  display: none;
+  align-items: center;
+  justify-content: center;
+}
+
+.overlay-tim-kiem.mo {
+  display: flex;
+}
+
+.hop-tim-kiem {
+  width: 100%;
+  max-width: 600px;
+  padding: 20px;
+  position: relative;
+}
+
+.dong-overlay-tk {
+  position: absolute;
+  top: -40px;
+  right: 20px;
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.o-nhap-tim-kiem {
+  width: 100%;
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid #555;
+  color: #fff;
+  font-size: 30px;
+  padding: 10px 0;
+  outline: none;
+}
+
+.o-nhap-tim-kiem:focus {
+  border-bottom-color: #ff3366;
+}
+
+.goi-y-nhanh {
+  margin-top: 20px;
+}
+
+.the-goi-y {
+  display: inline-block;
+  padding: 5px 15px;
+  border: 1px solid #444;
+  margin-right: 10px;
+  margin-top: 10px;
+  border-radius: 20px;
+  color: #aaa;
+}
+
+.the-goi-y:hover {
+  border-color: #ff3366;
+  color: #ff3366;
+}
+
+/* ========================================
+   RESPONSIVE (ĐIỆN THOẠI & TABLET)
+   ======================================== */
+@media (max-width: 768px) {
+  .thanh-dieu-huong {
+    display: none; /* Ẩn menu ngang trên mobile */
+  }
+
+  .noi-dung-phan-cuoi {
+    flex-direction: column;
+  }
+}
