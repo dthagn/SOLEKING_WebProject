@@ -1,0 +1,225 @@
+/* CSS cho trang đơn hàng */
+body {
+  background-color: #050505;
+  color: #fff;
+}
+
+.khung-don-hang {
+  max-width: 1000px;
+  margin: 100px auto;
+  padding: 20px;
+}
+
+.tieu-de-don-hang {
+  font-size: 32px;
+  font-weight: 800;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+  border-bottom: 2px solid #222;
+  padding-bottom: 10px;
+}
+
+.the-don-hang {
+  background-color: #111;
+  border: 1px solid #333;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.header-don-hang {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  border-bottom: 1px solid #333;
+  padding-bottom: 15px;
+}
+
+.id-don-hang {
+  font-size: 18px;
+  font-weight: bold;
+  color: #ff3366;
+}
+
+.trang-thai-badge {
+  display: inline-block;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.trang-thai-cho {
+  background-color: #f59e0b;
+  color: #fff;
+}
+.trang-thai-giao {
+  background-color: #3b82f6;
+  color: #fff;
+}
+.trang-thai-hoan-thanh {
+  background-color: #22c55e;
+  color: #fff;
+}
+.trang-thai-huy {
+  background-color: #dc2626;
+  color: #fff;
+}
+
+.nut-huy-don {
+  background: transparent;
+  color: #aaa;
+  border: 1px solid #444;
+  padding: 6px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+  margin-top: 10px;
+}
+
+.nut-huy-don:hover {
+  background: #ff3366;
+  border-color: #ff3366;
+  color: #fff;
+}
+
+.danh-sach-sp-don {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.sp-don {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.sp-don img {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 4px;
+  border: 1px solid #333;
+}
+
+.thong-tin-sp-don {
+  flex: 1;
+}
+
+.ten-sp-don {
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.meta-sp-don {
+  color: #aaa;
+  font-size: 14px;
+  margin-top: 4px;
+}
+
+.gia-sp-don {
+  font-weight: bold;
+  color: #ff3366;
+}
+
+.tong-tien-don {
+  text-align: right;
+  font-size: 18px;
+  font-weight: bold;
+  padding-top: 15px;
+  border-top: 1px solid #333;
+}
+
+.don-hang-trong {
+  text-align: center;
+  padding: 50px 20px;
+  background-color: #111;
+  border-radius: 8px;
+  border: 1px dashed #444;
+}
+
+.don-hang-trong p {
+  font-size: 18px;
+  color: #aaa;
+  margin-top: 10px;
+}
+
+/* Modal Hủy Đơn */
+.modal-overlay {
+  position: fixed;
+  top: 0; left: 0; width: 100%; height: 100%;
+  background: rgba(0,0,0,0.8);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+.modal-box {
+  background: #111;
+  padding: 30px;
+  border-radius: 12px;
+  width: 450px;
+  max-width: 90%;
+  border: 1px solid #333;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+}
+.modal-box h2 {
+  margin-bottom: 20px;
+  font-size: 22px;
+  font-weight: 800;
+}
+.ly-do-huy {
+  margin-bottom: 15px;
+  color: #eee;
+}
+.ly-do-huy label {
+  display: flex;
+  align-items: center;
+  margin-bottom: 12px;
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 4px;
+  border: 1px solid transparent;
+  transition: background 0.3s;
+}
+.ly-do-huy label:hover {
+  background: #1a1a1a;
+  border-color: #333;
+}
+.ly-do-huy input[type="radio"] {
+  margin-right: 12px;
+  accent-color: #ff3366;
+  transform: scale(1.2);
+}
+.modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 24px;
+}
+.btn-dong-modal {
+  background: transparent;
+  color: #aaa;
+  border: 1px solid #444;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+}
+.btn-xac-nhan-huy {
+  background: #ff3366;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+}
+.btn-xac-nhan-huy:hover {
+  background: #e62e5c;
+}

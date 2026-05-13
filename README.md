@@ -6,8 +6,7 @@
 SOLEKING_WebProject/
 ├── assets/
 │   ├── images/              # Ảnh sản phẩm, banner, logo
-│   ├── icons/               # Icon SVG
-│   └── fonts/               # Font chữ (nếu cần)
+│                # Font chữ (nếu cần)
 ├── css/
 │   ├── base.css             # Reset, biến, typography
 │   ├── layout.css           # Header, Footer, Navbar

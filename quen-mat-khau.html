@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quên Mật Khẩu | SOLEKING</title>
+
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/auth.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  
+  <style>
+    /* Chỉnh sửa layout để form Quên Mật Khẩu nằm giữa */
+    .forgot-password-container {
+      background-color: #111111;
+      border-radius: 12px;
+      box-shadow: 0 14px 28px rgba(0,0,0,0.5), 0 10px 10px rgba(0,0,0,0.5);
+      width: 450px;
+      max-width: 100%;
+      min-height: 400px;
+      border: 1px solid #222;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 40px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- PHẦN ĐẦU TRANG (HEADER) -->
+  <header class="phan-dau" aria-label="Phần đầu trang" style="position: sticky; background: #050505;">
+    <div class="phan-dau-chinh">
+      <div class="noi-dung-phan-dau">
+        <a href="index.html" class="logo">SOLEKING</a>
+        <nav class="thanh-dieu-huong" aria-label="Menu chính">
+          <a href="index.html" class="lien-ket-dieu-huong">Trang Chủ</a>
+          <a href="san-pham.html" class="lien-ket-dieu-huong">Shop</a>
+          <a href="gioi-thieu.html" class="lien-ket-dieu-huong">Giới Thiệu</a>
+          <a href="lien-he.html" class="lien-ket-dieu-huong">Liên Hệ</a>
+        </nav>
+        <div class="hanh-dong">
+          <a href="#" class="nut-hanh-dong" title="Tìm Kiếm" id="btn-tim-kiem" onclick="moTimKiem(event)">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="11" cy="11" r="8" />
+              <line x1="21" y1="21" x2="16.65" y2="16.65" />
+            </svg>
+          </a>
+          <div id="wrapper-tai-khoan">
+            <a href="tai-khoan.html" class="nut-hanh-dong" title="Tài Khoản" id="btn-tai-khoan" onclick="toggleDropdownUser(event)">
+              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
+                <circle cx="12" cy="7" r="4" />
+              </svg>
+            </a>
+            <div class="dropdown-tai-khoan" id="dropdown-tai-khoan">
+              <!-- Render by main.js -->
+            </div>
+          </div>
+          <a href="thanh-toan.html" class="nut-hanh-dong" title="Giỏ Hàng" id="btn-gio-hang" style="position: relative;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z" />
+              <line x1="3" y1="6" x2="21" y2="6" />
+              <path d="M16 10a4 4 0 0 1-8 0" />
+            </svg>
+            <span class="thong-bao-nho">0</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- AUTHENTICATION PAGE -->
+  <main class="auth-page">
+    <div class="forgot-password-container">
+      
+      <!-- BƯỚC 1: NHẬP EMAIL -->
+      <form class="auth-form" id="form-step-1" onsubmit="xuLyBuoc1(event)" style="padding:0">
+        <h1 style="margin-bottom: 8px;">Quên Mật Khẩu</h1>
+        <p style="font-size:14px; color:#aaa; margin-bottom:24px;">Nhập email của bạn để lấy lại mật khẩu</p>
+        <input type="email" id="qm-email" placeholder="Nhập email của bạn" required />
+        <button type="submit" class="auth-btn">Tiếp Tục</button>
+        <a href="tai-khoan.html" style="display:block; margin-top:20px; color:#aaa; text-decoration:none; font-size:14px;">← Quay lại đăng nhập</a>
+      </form>
+
+      <!-- BƯỚC 2: NHẬP MẬT KHẨU MỚI (Mặc định ẩn) -->
+      <form class="auth-form" id="form-step-2" onsubmit="xuLyBuoc2(event)" style="display:none; padding:0">
+        <h1 style="margin-bottom: 8px;">Tạo Mật Khẩu Mới</h1>
+        <p style="font-size:14px; color:#aaa; margin-bottom:24px;">Nhập mật khẩu mới cho tài khoản <strong id="hien-thi-email"></strong></p>
+        <input type="password" id="qm-mat-khau-moi" placeholder="Mật khẩu mới" required minlength="6"/>
+        <input type="password" id="qm-xac-nhan" placeholder="Xác nhận mật khẩu mới" required minlength="6"/>
+        <button type="submit" class="auth-btn">Đổi Mật Khẩu</button>
+        <a href="#" onclick="quayLaiBuoc1(event)" style="display:block; margin-top:20px; color:#aaa; text-decoration:none; font-size:14px;">← Đổi email khác</a>
+      </form>
+
+    </div>
+  </main>
+
+  <script src="js/main.js"></script>
+  <script>
+    function xuLyBuoc1(e) {
+      e.preventDefault();
+      const email = document.getElementById('qm-email').value;
+      if (email) {
+        document.getElementById('form-step-1').style.display = 'none';
+        document.getElementById('form-step-2').style.display = 'flex';
+        document.getElementById('hien-thi-email').textContent = email;
+      }
+    }
+
+    function quayLaiBuoc1(e) {
+      e.preventDefault();
+      document.getElementById('form-step-2').style.display = 'none';
+      document.getElementById('form-step-1').style.display = 'flex';
+    }
+
+    function xuLyBuoc2(e) {
+      e.preventDefault();
+      const matKhauMoi = document.getElementById('qm-mat-khau-moi').value;
+      const xacNhan = document.getElementById('qm-xac-nhan').value;
+
+      if (matKhauMoi !== xacNhan) {
+        alert('Mật khẩu xác nhận không khớp! Vui lòng thử lại.');
+        return;
+      }
+
+      alert('Đổi mật khẩu thành công! Vui lòng đăng nhập lại với mật khẩu mới.');
+      window.location.href = 'tai-khoan.html';
+    }
+  </script>
+</body>
+</html>

@@ -52,11 +52,11 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   });
 
-  // ===== KIỂM TRA QUYỀN TRUY CẬP TRANG THANH TOÁN =====
-  if (window.location.pathname.includes('thanh-toan.html')) {
+  // ===== KIỂM TRA QUYỀN TRUY CẬP TRANG THANH TOÁN VÀ ĐƠN HÀNG =====
+  if (window.location.pathname.includes('thanh-toan.html') || window.location.pathname.includes('don-hang.html')) {
     if (localStorage.getItem('isLoggedIn') !== 'true') {
-      alert('Vui lòng đăng nhập hoặc đăng ký để tiếp tục thanh toán và xem đơn hàng!');
-      sessionStorage.setItem('redirectUrl', 'thanh-toan.html');
+      alert('Vui lòng đăng nhập hoặc đăng ký để sử dụng chức năng này!');
+      sessionStorage.setItem('redirectUrl', window.location.pathname.split('/').pop());
       window.location.href = 'tai-khoan.html';
     }
   }
@@ -112,7 +112,7 @@ function renderUserDropdown() {
         Xin chào, ${userName}
       </a>
       <div class="ke-dropdown"></div>
-      <a href="#" class="muc-dropdown" onclick="yeuCauDangNhap(event, 'thanh-toan.html')">
+      <a href="#" class="muc-dropdown" onclick="yeuCauDangNhap(event, 'don-hang.html')">
         <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="14" x="2" y="5" rx="2"/><line x1="2" y1="10" x2="22" y2="10"/></svg>
         Đơn Hàng
       </a>
@@ -129,7 +129,7 @@ function renderUserDropdown() {
         Đăng Nhập / Đăng Ký
       </a>
       <div class="ke-dropdown"></div>
-      <a href="#" class="muc-dropdown" onclick="yeuCauDangNhap(event, 'thanh-toan.html')">
+      <a href="#" class="muc-dropdown" onclick="yeuCauDangNhap(event, 'don-hang.html')">
         <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="14" x="2" y="5" rx="2"/><line x1="2" y1="10" x2="22" y2="10"/></svg>
         Đơn Hàng
       </a>
@@ -160,7 +160,7 @@ function xuLyDangXuat(e) {
   renderUserDropdown();
   
   // Nếu đang ở trang yêu cầu đăng nhập, đẩy về trang chủ
-  if (window.location.pathname.includes('thanh-toan.html')) {
+  if (window.location.pathname.includes('thanh-toan.html') || window.location.pathname.includes('don-hang.html')) {
     window.location.href = 'index.html';
   }
 }

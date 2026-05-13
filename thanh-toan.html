@@ -341,6 +341,16 @@
         return;
       }
       
+      // LƯU ĐƠN HÀNG VÀO LỊCH SỬ MUA HÀNG (THỜI GIAN THỰC)
+      var dsDonHang = JSON.parse(localStorage.getItem('soleking_orders')) || [];
+      dsDonHang.push({
+        id: 'DH' + Math.floor(Math.random() * 100000),
+        thoiGian: Date.now(), // Lưu mốc thời gian đặt
+        sanPham: gio,
+        tongTien: document.getElementById('tong-cong').textContent
+      });
+      localStorage.setItem('soleking_orders', JSON.stringify(dsDonHang));
+
       // Xóa giỏ sau khi đặt hàng thành công
       if (isBuyNow) {
         sessionStorage.removeItem('soleking_mua_ngay');
