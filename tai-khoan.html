@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tài Khoản | SOLEKING</title>
+
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/auth.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+  <!-- PHẦN ĐẦU TRANG (HEADER) -->
+  <header class="phan-dau" aria-label="Phần đầu trang" style="position: sticky; background: #050505;">
+    <div class="phan-dau-chinh">
+      <div class="noi-dung-phan-dau">
+        <a href="index.html" class="logo">SOLEKING</a>
+        <nav class="thanh-dieu-huong" aria-label="Menu chính">
+          <a href="index.html" class="lien-ket-dieu-huong">Trang Chủ</a>
+          <a href="san-pham.html" class="lien-ket-dieu-huong">Shop</a>
+          <a href="gioi-thieu.html" class="lien-ket-dieu-huong">Giới Thiệu</a>
+          <a href="lien-he.html" class="lien-ket-dieu-huong">Liên Hệ</a>
+        </nav>
+        <div class="hanh-dong">
+          <a href="#" class="nut-hanh-dong" title="Tìm Kiếm" id="btn-tim-kiem" onclick="moTimKiem(event)">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="11" cy="11" r="8" />
+              <line x1="21" y1="21" x2="16.65" y2="16.65" />
+            </svg>
+          </a>
+          <div id="wrapper-tai-khoan">
+            <a href="#" class="nut-hanh-dong" title="Tài Khoản" id="btn-tai-khoan" onclick="toggleDropdownUser(event)">
+              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
+                <circle cx="12" cy="7" r="4" />
+              </svg>
+            </a>
+            <div class="dropdown-tai-khoan" id="dropdown-tai-khoan">
+              <!-- Render by main.js -->
+            </div>
+          </div>
+          <a href="thanh-toan.html" class="nut-hanh-dong" title="Giỏ Hàng" id="btn-gio-hang" style="position: relative;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z" />
+              <line x1="3" y1="6" x2="21" y2="6" />
+              <path d="M16 10a4 4 0 0 1-8 0" />
+            </svg>
+            <span class="thong-bao-nho">0</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- AUTHENTICATION PAGE -->
+  <main class="auth-page">
+    <div class="auth-container" id="auth-container">
+      
+      <!-- Form Đăng Ký -->
+      <div class="form-container sign-up-container">
+        <form class="auth-form" onsubmit="xuLyDangKy(event)">
+          <h1>Tạo Tài Khoản</h1>
+          <span style="font-size:12px; color:#888; margin-bottom:12px;">hoặc sử dụng email của bạn để đăng ký</span>
+          <input type="text" id="dk-ten" placeholder="Họ và tên" required />
+          <input type="email" id="dk-email" placeholder="Email" required />
+          <input type="password" id="dk-mat-khau" placeholder="Mật khẩu" required />
+          <button type="submit" class="auth-btn">Đăng Ký</button>
+          
+          <div class="mobile-toggle">
+            Đã có tài khoản? <span onclick="document.getElementById('auth-container').classList.remove('right-panel-active')">Đăng nhập ngay</span>
+          </div>
+        </form>
+      </div>
+      
+      <!-- Form Đăng Nhập -->
+      <div class="form-container sign-in-container">
+        <form class="auth-form" onsubmit="xuLyDangNhap(event)">
+          <h1>Đăng Nhập</h1>
+          <span style="font-size:12px; color:#888; margin-bottom:12px;">sử dụng tài khoản của bạn</span>
+          <input type="email" id="dn-email" placeholder="Email" required />
+          <input type="password" id="dn-mat-khau" placeholder="Mật khẩu" required />
+          <a href="#" onclick="alert('Tính năng gửi email quên mật khẩu đang được cập nhật!');">Quên mật khẩu?</a>
+          <button type="submit" class="auth-btn">Đăng Nhập</button>
+          
+          <div class="mobile-toggle">
+            Chưa có tài khoản? <span onclick="document.getElementById('auth-container').classList.add('right-panel-active')">Đăng ký ngay</span>
+          </div>
+        </form>
+      </div>
+      
+      <!-- Overlay Panels cho Desktop Slider -->
+      <div class="overlay-container">
+        <div class="overlay">
+          <div class="overlay-panel overlay-left">
+            <h2>Chào Mừng Trở Lại!</h2>
+            <p>Để giữ kết nối với chúng tôi, vui lòng đăng nhập bằng thông tin cá nhân của bạn</p>
+            <button class="auth-btn ghost" id="signInBtn">Đăng Nhập</button>
+          </div>
+          <div class="overlay-panel overlay-right">
+            <h2>Xin Chào Bạn Mới!</h2>
+            <p>Nhập thông tin cá nhân của bạn và bắt đầu hành trình mua sắm cùng chúng tôi</p>
+            <button class="auth-btn ghost" id="signUpBtn">Đăng Ký</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- SEARCH OVERLAY -->
+  <div class="overlay-tim-kiem" id="overlay-tim-kiem" role="dialog" aria-label="Tìm kiếm">
+    <div class="hop-tim-kiem">
+      <button class="dong-overlay-tk" onclick="dongTimKiem()">✕</button>
+      <span class="nhan-tim-kiem">Tìm Kiếm</span>
+      <input type="text" class="o-nhap-tim-kiem" id="input-tim-kiem"
+             placeholder="Nike, Adidas, Puma..." autocomplete="off">
+      <div class="goi-y-nhanh">
+        <span class="nhan-goi-y">Gợi ý:</span>
+        <a href="san-pham.html" class="the-goi-y">Air Force 1</a>
+        <a href="san-pham.html" class="the-goi-y">Ultraboost</a>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/main.js"></script>
+  <script>
+    // JS for Slider effect
+    const signUpButton = document.getElementById('signUpBtn');
+    const signInButton = document.getElementById('signInBtn');
+    const container = document.getElementById('auth-container');
+
+    if(signUpButton && signInButton) {
+      signUpButton.addEventListener('click', () => {
+        container.classList.add("right-panel-active");
+      });
+      signInButton.addEventListener('click', () => {
+        container.classList.remove("right-panel-active");
+      });
+    }
+
+    // Logic Đăng Nhập
+    function xuLyDangNhap(e) {
+      e.preventDefault();
+      localStorage.setItem('isLoggedIn', 'true');
+      const email = document.getElementById('dn-email').value;
+      localStorage.setItem('userName', email.split('@')[0]);
+      alert('Đăng nhập thành công!');
+      
+      const redirectUrl = sessionStorage.getItem('redirectUrl');
+      if (redirectUrl) {
+        sessionStorage.removeItem('redirectUrl');
+        window.location.href = redirectUrl;
+      } else {
+        window.location.href = 'index.html';
+      }
+    }
+
+    // Logic Đăng Ký
+    function xuLyDangKy(e) {
+      e.preventDefault();
+      localStorage.setItem('isLoggedIn', 'true');
+      localStorage.setItem('userName', document.getElementById('dk-ten').value);
+      alert('Đăng ký thành công!');
+      
+      const redirectUrl = sessionStorage.getItem('redirectUrl');
+      if (redirectUrl) {
+        sessionStorage.removeItem('redirectUrl');
+        window.location.href = redirectUrl;
+      } else {
+        window.location.href = 'index.html';
+      }
+    }
+
+    // Tự động kiểm tra URL để mở form đăng ký
+    if (window.location.search.includes('register=true')) {
+      container.classList.add("right-panel-active");
+    }
+  </script>
+</body>
+</html>

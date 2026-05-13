@@ -30,20 +30,39 @@
           <a href="lien-he.html" class="lien-ket-dieu-huong">Liên Hệ</a>
         </nav>
         <div class="hanh-dong">
-          <a href="#" class="nut-hanh-dong" title="Tìm Kiếm" id="btn-tim-kiem">
+          <a href="#" class="nut-hanh-dong" title="Tìm Kiếm" id="btn-tim-kiem" onclick="moTimKiem(event)">
             <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none"
               stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <circle cx="11" cy="11" r="8" />
               <line x1="21" y1="21" x2="16.65" y2="16.65" />
             </svg>
           </a>
-          <a href="#" class="nut-hanh-dong" title="Tài Khoản" id="btn-tai-khoan">
-            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none"
-              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
-              <circle cx="12" cy="7" r="4" />
-            </svg>
-          </a>
+
+          <!-- WRAPPER USER DROPDOWN -->
+          <div id="wrapper-tai-khoan">
+            <a href="#" class="nut-hanh-dong" title="Tài Khoản" id="btn-tai-khoan" onclick="toggleDropdownUser(event)">
+              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
+                <circle cx="12" cy="7" r="4" />
+              </svg>
+            </a>
+            <div class="dropdown-tai-khoan" id="dropdown-tai-khoan">
+              <a href="#" class="muc-dropdown">
+                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+                Đăng Nhập
+              </a>
+              <a href="#" class="muc-dropdown">
+                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><line x1="19" y1="8" x2="19" y2="14"/><line x1="22" y1="11" x2="16" y2="11"/></svg>
+                Đăng Ký
+              </a>
+              <div class="ke-dropdown"></div>
+              <a href="#" class="muc-dropdown">
+                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="14" x="2" y="5" rx="2"/><line x1="2" y1="10" x2="22" y2="10"/></svg>
+                Đơn Hàng
+              </a>
+            </div>
+          </div>
           <a href="thanh-toan.html" class="nut-hanh-dong" title="Giỏ Hàng" id="btn-gio-hang"
             style="position: relative;">
             <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none"
@@ -382,6 +401,18 @@
         document.getElementById('nhom-size').scrollIntoView({ behavior: 'smooth', block: 'center' });
         return;
       }
+      
+      var soLuong = parseInt(document.getElementById('o-so-luong').value) || 1;
+      var tenSP = document.querySelector('.tieu-de-chi-tiet') ? document.querySelector('.tieu-de-chi-tiet').textContent.trim() : 'Sản phẩm';
+      var giaSP = document.querySelector('.gia-hien-tai-chi-tiet') ? document.querySelector('.gia-hien-tai-chi-tiet').textContent.trim() : '0đ';
+      var anhSP = document.getElementById('img-chinh') ? document.getElementById('img-chinh').src : '';
+
+      // Tách biệt luồng Mua Ngay ra khỏi Giỏ Hàng chung
+      var spMuaNgay = { ten: tenSP, gia: giaSP, size: sizeChon, soLuong: soLuong, anh: anhSP };
+      sessionStorage.setItem('soleking_mua_ngay', JSON.stringify([spMuaNgay]));
+      sessionStorage.setItem('isBuyNow', 'true');
+
+      // Chuyển tới thanh toán. (Hệ thống ở thanh-toan.html sẽ tự bắt buộc đăng nhập)
       location.href = 'thanh-toan.html';
     }
 
