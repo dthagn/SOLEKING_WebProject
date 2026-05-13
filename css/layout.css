@@ -158,3 +158,199 @@
 .duong-dan {
   display: none; /* Ẩn breadcrumb cho gọn gàng ở Premium */
 }
+
+/* ========================================
+   SEARCH OVERLAY FULLSCREEN
+   ======================================== */
+.overlay-tim-kiem {
+  position: fixed;
+  inset: 0;
+  background: rgba(5, 5, 5, 0.97);
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.35s ease;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.overlay-tim-kiem.mo {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.hop-tim-kiem {
+  width: 100%;
+  max-width: 700px;
+  padding: 0 24px;
+  position: relative;
+}
+
+.dong-overlay-tk {
+  position: absolute;
+  top: -64px;
+  right: 24px;
+  background: none;
+  border: none;
+  color: #ffffff;
+  font-size: 28px;
+  cursor: pointer;
+  opacity: 0.5;
+  transition: opacity 0.2s, transform 0.2s;
+  line-height: 1;
+  padding: 4px 8px;
+}
+
+.dong-overlay-tk:hover {
+  opacity: 1;
+  transform: rotate(90deg);
+}
+
+.nhan-tim-kiem {
+  display: block;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  color: #ff3366;
+  font-weight: 800;
+  margin-bottom: 28px;
+}
+
+.o-nhap-tim-kiem {
+  width: 100%;
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid #2a2a2a;
+  color: #ffffff;
+  font-size: clamp(28px, 5vw, 48px);
+  font-weight: 700;
+  padding: 12px 0;
+  outline: none;
+  font-family: inherit;
+  transition: border-color 0.3s ease;
+  caret-color: #ff3366;
+}
+
+.o-nhap-tim-kiem::placeholder {
+  color: #333;
+}
+
+.o-nhap-tim-kiem:focus {
+  border-bottom-color: #ff3366;
+}
+
+.goi-y-nhanh {
+  margin-top: 28px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.nhan-goi-y {
+  font-size: 11px;
+  color: #555;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 600;
+}
+
+.the-goi-y {
+  padding: 6px 18px;
+  border: 1px solid #2a2a2a;
+  color: #888;
+  font-size: 13px;
+  text-decoration: none;
+  transition: all 0.25s ease;
+  border-radius: 40px;
+}
+
+.the-goi-y:hover {
+  border-color: #ff3366;
+  color: #ff3366;
+  background: rgba(255, 51, 102, 0.06);
+}
+
+/* ========================================
+   USER DROPDOWN
+   ======================================== */
+#wrapper-tai-khoan {
+  position: relative;
+}
+
+.dropdown-tai-khoan {
+  position: absolute;
+  top: calc(100% + 18px);
+  right: 0;
+  background: #111111;
+  border: 1px solid #222222;
+  min-width: 200px;
+  padding: 6px 0;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(-8px);
+  transition: opacity 0.25s ease, transform 0.25s ease;
+  z-index: 9998;
+  box-shadow: 0 24px 48px rgba(0, 0, 0, 0.7);
+}
+
+/* Mũi tên nhỏ trên dropdown */
+.dropdown-tai-khoan::before {
+  content: '';
+  position: absolute;
+  top: -6px;
+  right: 12px;
+  width: 12px;
+  height: 12px;
+  background: #111111;
+  border-top: 1px solid #222;
+  border-left: 1px solid #222;
+  transform: rotate(45deg);
+}
+
+.dropdown-tai-khoan.mo {
+  opacity: 1;
+  pointer-events: all;
+  transform: translateY(0);
+}
+
+.muc-dropdown {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 11px 20px;
+  color: #aaaaaa;
+  font-size: 13px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  border-left: 3px solid transparent;
+  white-space: nowrap;
+}
+
+.muc-dropdown:hover {
+  color: #ffffff;
+  background: rgba(255, 51, 102, 0.07);
+  border-left-color: #ff3366;
+}
+
+.muc-dropdown svg {
+  flex-shrink: 0;
+  opacity: 0.6;
+}
+
+.muc-dropdown:hover svg {
+  opacity: 1;
+}
+
+.ke-dropdown {
+  height: 1px;
+  background: #1f1f1f;
+  margin: 6px 0;
+}
+

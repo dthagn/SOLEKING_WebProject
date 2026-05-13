@@ -28,20 +28,39 @@
           <a href="lien-he.html" class="lien-ket-dieu-huong">Liên Hệ</a>
         </nav>
         <div class="hanh-dong">
-          <a href="#" class="nut-hanh-dong" title="Tìm Kiếm" id="btn-tim-kiem">
+          <a href="#" class="nut-hanh-dong" title="Tìm Kiếm" id="btn-tim-kiem" onclick="moTimKiem(event)">
             <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none"
               stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <circle cx="11" cy="11" r="8" />
               <line x1="21" y1="21" x2="16.65" y2="16.65" />
             </svg>
           </a>
-          <a href="#" class="nut-hanh-dong" title="Tài Khoản" id="btn-tai-khoan">
-            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none"
-              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
-              <circle cx="12" cy="7" r="4" />
-            </svg>
-          </a>
+
+          <!-- WRAPPER USER DROPDOWN -->
+          <div id="wrapper-tai-khoan">
+            <a href="#" class="nut-hanh-dong" title="Tài Khoản" id="btn-tai-khoan" onclick="toggleDropdownUser(event)">
+              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
+                <circle cx="12" cy="7" r="4" />
+              </svg>
+            </a>
+            <div class="dropdown-tai-khoan" id="dropdown-tai-khoan">
+              <a href="#" class="muc-dropdown">
+                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+                Đăng Nhập
+              </a>
+              <a href="#" class="muc-dropdown">
+                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><line x1="19" y1="8" x2="19" y2="14"/><line x1="22" y1="11" x2="16" y2="11"/></svg>
+                Đăng Ký
+              </a>
+              <div class="ke-dropdown"></div>
+              <a href="#" class="muc-dropdown">
+                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="14" x="2" y="5" rx="2"/><line x1="2" y1="10" x2="22" y2="10"/></svg>
+                Đơn Hàng
+              </a>
+            </div>
+          </div>
           <a href="thanh-toan.html" class="nut-hanh-dong" title="Giỏ Hàng" id="btn-gio-hang"
             style="position: relative;">
             <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none"
@@ -239,9 +258,16 @@
     }
 
     function xoaSanPham(index) {
-      var gio = layGio();
-      gio.splice(index, 1);
-      luuGio(gio);
+      var isBuyNow = sessionStorage.getItem('isBuyNow') === 'true';
+      if (isBuyNow) {
+        var gio = JSON.parse(sessionStorage.getItem('soleking_mua_ngay')) || [];
+        gio.splice(index, 1);
+        sessionStorage.setItem('soleking_mua_ngay', JSON.stringify(gio));
+      } else {
+        var gio = layGio();
+        gio.splice(index, 1);
+        luuGio(gio);
+      }
       hienThiGio();
     }
 
@@ -250,14 +276,25 @@
     }
 
     function hienThiGio() {
-      var gio = layGio();
+      var isBuyNow = sessionStorage.getItem('isBuyNow') === 'true';
+      var gio = [];
+      
       var container = document.getElementById('danh-sach-gio');
       var soSpText = document.getElementById('so-sp-text');
       var badge = document.getElementById('badge-gio-hang');
+      var tieuDeForm = document.querySelector('.tieu-de-trang-tt');
+
+      if (isBuyNow) {
+        try { gio = JSON.parse(sessionStorage.getItem('soleking_mua_ngay')) || []; } catch(e) {}
+        if (tieuDeForm) tieuDeForm.textContent = 'Mua Ngay (Không lưu vào giỏ)';
+      } else {
+        gio = layGio();
+        if (tieuDeForm) tieuDeForm.textContent = 'Hoàn tất mua hàng';
+      }
 
       var tongSp = gio.reduce(function (t, sp) { return t + sp.soLuong; }, 0);
       soSpText.textContent = tongSp + ' sản phẩm';
-      if (badge) badge.textContent = tongSp;
+      if (badge && !isBuyNow) badge.textContent = tongSp;
 
       if (gio.length === 0) {
         container.innerHTML = '<div class="gio-trong">'
@@ -296,13 +333,22 @@
 
     function xacNhanDonHang(e) {
       e.preventDefault();
-      var gio = layGio();
+      var isBuyNow = sessionStorage.getItem('isBuyNow') === 'true';
+      var gio = isBuyNow ? (JSON.parse(sessionStorage.getItem('soleking_mua_ngay')) || []) : layGio();
+      
       if (gio.length === 0) {
         alert('Giỏ hàng của bạn đang trống! Hãy thêm sản phẩm trước khi đặt hàng.');
         return;
       }
+      
       // Xóa giỏ sau khi đặt hàng thành công
-      luuGio([]);
+      if (isBuyNow) {
+        sessionStorage.removeItem('soleking_mua_ngay');
+        sessionStorage.removeItem('isBuyNow');
+      } else {
+        luuGio([]);
+      }
+      
       alert('🎉 Đặt hàng thành công!\nCảm ơn bạn đã mua sắm tại SOLEKING.\nChúng tôi sẽ liên hệ xác nhận trong thời gian sớm nhất!');
       location.href = 'index.html';
     }
@@ -310,6 +356,23 @@
     // Khởi tạo
     hienThiGio();
   </script>
+  <!-- SEARCH OVERLAY -->
+  <div class="overlay-tim-kiem" id="overlay-tim-kiem" role="dialog" aria-label="Tìm kiếm">
+    <div class="hop-tim-kiem">
+      <button class="dong-overlay-tk" onclick="dongTimKiem()">✕</button>
+      <span class="nhan-tim-kiem">Tìm Kiếm</span>
+      <input type="text" class="o-nhap-tim-kiem" id="input-tim-kiem"
+             placeholder="Nike, Adidas, Puma..." autocomplete="off">
+      <div class="goi-y-nhanh">
+        <span class="nhan-goi-y">Gợi ý:</span>
+        <a href="san-pham.html" class="the-goi-y">Air Force 1</a>
+        <a href="san-pham.html" class="the-goi-y">Ultraboost</a>
+        <a href="san-pham.html" class="the-goi-y">MB.02</a>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/main.js"></script>
 
 </body>
 
