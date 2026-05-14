@@ -8,7 +8,8 @@
   overflow: hidden;
   white-space: nowrap;
   padding: 10px 0;
-  margin-top: 60px; /* Bù khoảng trống cho header fixed */
+  margin-top: 60px;
+  /* Bù khoảng trống cho header fixed */
 }
 
 .bang-chay {
@@ -34,8 +35,13 @@
 }
 
 @keyframes cuon-bang {
-  0%   { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
 }
 
 /* Nút Lên Đầu Trang */
@@ -189,19 +195,46 @@
 }
 
 @keyframes fadeInDown {
-  from { opacity: 0; transform: translateY(-30px); }
-  to { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 @keyframes fadeInUp {
-  from { opacity: 0; transform: translateY(30px); }
-  to { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 @keyframes bounce {
-  0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
-  40% { transform: translateY(-15px); }
-  60% { transform: translateY(-7px); }
+
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+
+  40% {
+    transform: translateY(-15px);
+  }
+
+  60% {
+    transform: translateY(-7px);
+  }
 }
 
 /* Nút chung */
@@ -391,50 +424,118 @@
   padding: 0 20px;
 }
 
+/* BANNER PHÂN CÁCH TRANG CHỦ */
+.banner-phan-cach {
+  background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('../assets/images/nike_banner.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 60px 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.noi-dung-banner-pc {
+  text-align: center;
+  z-index: 2;
+}
+
+.sub-banner {
+  color: #ff3366;
+  font-weight: 800;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  font-size: 14px;
+  display: block;
+  margin-bottom: 15px;
+}
+
+.tieu-de-banner-pc {
+  font-size: clamp(32px, 5vw, 56px);
+  font-weight: 900;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.vach-ke-banner {
+  width: 80px;
+  height: 4px;
+  background: #ff3366;
+  margin: 20px auto 0;
+}
+
 .the-san-pham-fashion {
-  background-color: #1a1a1a;
-  border: 1px solid #333;
-  border-radius: 8px;
+  background-color: #111111;
+  border: 1px solid #222;
+  border-radius: 12px;
   overflow: hidden;
   text-align: center;
-  padding-bottom: 20px;
+  padding: 15px;
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.the-san-pham-fashion:hover {
+  transform: translateY(-10px);
+  border-color: #ff3366;
+}
+
+.hinh-san-pham {
+  width: 100%;
+  height: 280px;
+  background-color: #f5f5f5; /* Nền sáng màu cho ảnh giống ảnh 2 */
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 15px;
 }
 
 .hinh-san-pham img {
   width: 100%;
-  height: 250px;
-  object-fit: cover;
+  height: 100%;
+  object-fit: contain;
+  padding: 10px;
 }
 
 .thong-tin-san-pham {
-  padding: 15px;
+  padding: 10px 0;
 }
 
 .ten-sp {
   font-size: 18px;
-  margin-bottom: 10px;
+  font-weight: 700;
   color: #fff;
+  margin-bottom: 8px;
 }
 
 .gia-sp {
   color: #ff3366;
-  font-size: 18px;
-  font-weight: bold;
+  font-size: 20px;
+  font-weight: 800;
   margin-bottom: 15px;
 }
 
 .nut-mua-sp {
+  display: inline-block;
   background-color: transparent;
   color: #ff3366;
   border: 1px solid #ff3366;
-  padding: 8px 15px;
-  cursor: pointer;
+  padding: 8px 20px;
+  border-radius: 4px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: all 0.3s;
 }
 
 .nut-mua-sp:hover {
   background-color: #ff3366;
   color: #fff;
 }
+
+
 
 .phan-xem-them {
   text-align: center;
@@ -460,12 +561,16 @@
   .the-danh-muc {
     flex-direction: column !important;
   }
+
   .the-san-pham {
     flex-direction: column;
   }
-  .anh-san-pham, .noi-dung-san-pham {
+
+  .anh-san-pham,
+  .noi-dung-san-pham {
     width: 100%;
   }
+
   .tieu-de-anh-bia {
     font-size: 30px;
   }

@@ -3,7 +3,20 @@
 // ============================================================
 
 function xacNhanDonHang(e) {
-  e.preventDefault();
+  if (e) e.preventDefault();
+  
+  // Lấy thông tin từ form
+  const hoTen = document.querySelector('input[placeholder="Nguyễn Văn A"]').value.trim();
+  const email = document.querySelector('input[type="email"]').value.trim();
+  const phone = document.querySelector('input[type="tel"]').value.trim();
+  const address = document.querySelector('input[placeholder="Số nhà, tên đường, phường/xã..."]').value.trim();
+
+  // Kiểm tra nhập liệu
+  if (!hoTen || !email || !phone || !address) {
+    alert('Vui lòng nhập đầy đủ các thông tin bắt buộc (*)!');
+    return;
+  }
+
   const isBuyNow = sessionStorage.getItem('isBuyNow') === 'true';
   const gio = isBuyNow ? (JSON.parse(sessionStorage.getItem('soleking_mua_ngay')) || []) : getCart();
   
@@ -18,7 +31,8 @@ function xacNhanDonHang(e) {
     id: 'DH' + Math.floor(Math.random() * 100000),
     thoiGian: Date.now(), 
     sanPham: gio,
-    tongTien: document.getElementById('tong-cong').textContent
+    tongTien: document.getElementById('tong-cong-tt').textContent,
+    khachHang: { hoTen, email, phone, address }
   });
   localStorage.setItem('soleking_orders', JSON.stringify(dsDonHang));
 
@@ -32,8 +46,8 @@ function xacNhanDonHang(e) {
   
   alert('🎉 Đặt hàng thành công!\nCảm ơn bạn đã mua sắm tại SOLEKING.\nChúng tôi sẽ liên hệ xác nhận trong thời gian sớm nhất!');
   
-  // Không chuyển hướng trực tiếp đến trang đơn hàng, chuyển về trang chủ
-  location.href = 'index.html';
+  // Chuyển về trang lịch sử đơn hàng
+  location.href = 'don-hang.html';
 }
 
 function formatGia(so) {
@@ -59,8 +73,7 @@ function hienThiGio() {
   let gio = [];
   
   const container = document.getElementById('danh-sach-gio');
-  const soSpText = document.getElementById('so-sp-text');
-  const badge = document.getElementById('badge-gio-hang');
+  const soSpText = document.getElementById('so-luong-tt');
   const tieuDeForm = document.querySelector('.tieu-de-trang-tt');
 
   if (isBuyNow) {
@@ -68,21 +81,21 @@ function hienThiGio() {
     if (tieuDeForm) tieuDeForm.textContent = 'Mua Ngay (Không lưu vào giỏ)';
   } else {
     gio = getCart();
-    if (tieuDeForm) tieuDeForm.textContent = 'Hoàn tất mua hàng';
+    if (tieuDeForm) tieuDeForm.textContent = 'Hoàn tất đơn hàng';
   }
 
-  const tongSp = gio.reduce((t, sp) => t + sp.soLuong, 0);
-  soSpText.textContent = tongSp + ' sản phẩm';
-  if (badge && !isBuyNow) badge.textContent = tongSp;
+  if (soSpText) {
+    const tongSp = gio.reduce((t, sp) => t + sp.soLuong, 0);
+    soSpText.textContent = tongSp + ' sản phẩm';
+  }
 
   if (gio.length === 0) {
     container.innerHTML = '<div class="gio-trong">'
       + '<p>Giỏ hàng của bạn đang trống</p>'
       + '<p style="margin-top:10px;"><a href="san-pham.html" style="color:#ff3366; text-decoration:underline;">Mua sắm ngay →</a></p>'
       + '</div>';
-    document.getElementById('tam-tinh').textContent = '0đ';
-    document.getElementById('tong-cong').textContent = '0đ';
-    document.getElementById('phi-ship').textContent = 'Miễn phí';
+    document.getElementById('tam-tinh-tt').textContent = '0đ';
+    document.getElementById('tong-cong-tt').textContent = '0đ';
     return;
   }
 
@@ -97,7 +110,7 @@ function hienThiGio() {
       + '<div style="display:flex; align-items:center;">'
       + '<img class="anh-sp-gio" src="' + (sp.anh || 'assets/images/nike1.png') + '" alt="' + sp.ten + '" style="width:60px; height:60px; object-fit:cover; border-radius:4px; margin-right:15px;">'
       + '<div>'
-      + '<div class="ten-sp-gio" style="font-weight:bold; margin-bottom:5px;">' + sp.ten + '</div>'
+      + '<div class="ten-sp-gio" style="font-weight:bold; margin-bottom:5px; color:#fff;">' + sp.ten + '</div>'
       + '<div class="meta-sp-gio" style="color:#888; font-size:13px;">Size: ' + (sp.size || '?') + ' &nbsp;|&nbsp; SL: ' + sp.soLuong + '</div>'
       + '</div>'
       + '</div>'
@@ -109,9 +122,15 @@ function hienThiGio() {
   });
 
   container.innerHTML = html;
-  document.getElementById('tam-tinh').textContent = formatGia(tongTien);
-  document.getElementById('tong-cong').textContent = formatGia(tongTien);
-  document.getElementById('phi-ship').textContent = 'Miễn phí';
+  document.getElementById('tam-tinh-tt').textContent = formatGia(tongTien);
+  document.getElementById('tong-cong-tt').textContent = formatGia(tongTien);
 }
 
-document.addEventListener('DOMContentLoaded', hienThiGio);
+document.addEventListener('DOMContentLoaded', function() {
+  hienThiGio();
+  
+  const btnXacNhan = document.querySelector('.nut-xac-nhan-tt');
+  if (btnXacNhan) {
+    btnXacNhan.addEventListener('click', xacNhanDonHang);
+  }
+});

@@ -274,6 +274,71 @@
   background: rgba(255, 51, 102, 0.06);
 }
 
+/* KHUNG GỢI Ý TÌM KIẾM MỚI */
+.khung-goi-y {
+  position: absolute;
+  top: 100%;
+  left: 24px;
+  right: 24px;
+  background: rgba(17, 17, 17, 0.95);
+  border: 1px solid #2a2a2a;
+  border-top: none;
+  max-height: 400px;
+  overflow-y: auto;
+  z-index: 100;
+  display: none;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+}
+
+.muc-goi-y {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 12px 20px;
+  cursor: pointer;
+  border-bottom: 1px solid #1a1a1a;
+  transition: background 0.2s;
+}
+
+.muc-goi-y:hover {
+  background: rgba(255, 51, 102, 0.1);
+}
+
+.muc-goi-y img {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: 4px;
+  background: #000;
+}
+
+.thong-tin-goi-y {
+  flex: 1;
+}
+
+.ten-goi-y {
+  color: #fff;
+  font-weight: 700;
+  font-size: 14px;
+  margin-bottom: 2px;
+}
+
+.gia-goi-y {
+  color: #ff3366;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+/* Tùy chỉnh thanh cuộn cho khung gợi ý */
+.khung-goi-y::-webkit-scrollbar {
+  width: 4px;
+}
+
+.khung-goi-y::-webkit-scrollbar-thumb {
+  background: #333;
+  border-radius: 10px;
+}
+
 /* ========================================
    USER DROPDOWN
    ======================================== */

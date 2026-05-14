@@ -383,12 +383,19 @@
   <div class="overlay-tim-kiem" id="overlay-tim-kiem">
     <div class="hop-tim-kiem">
       <button class="dong-overlay-tk" onclick="dongTimKiem()">✕</button>
-      <input type="text" class="o-nhap-tim-kiem" id="input-tim-kiem" placeholder="Nhập tên giày..." autocomplete="off">
+      <div style="position: relative;">
+        <input type="text" class="o-nhap-tim-kiem" id="input-tim-kiem" placeholder="Nhập tên giày..." autocomplete="off">
+        <button id="btn-thuc-hien-tk" style="position: absolute; right: 0; top: 50%; transform: translateY(-50%); background: none; border: none; color: #ff3366; cursor: pointer;">
+          <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+        </button>
+      </div>
+      <div id="goi-y-tim-kiem" class="khung-goi-y"></div>
     </div>
   </div>
 
   <script src="js/auth.js"></script>
   <script src="js/cart.js"></script>
+  <script src="js/products.js"></script>
   <script src="js/main.js"></script>
 </body>
 

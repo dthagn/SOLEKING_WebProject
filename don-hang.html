@@ -120,12 +120,19 @@
   <div class="overlay-tim-kiem" id="overlay-tim-kiem">
     <div class="hop-tim-kiem">
       <button class="dong-overlay-tk" onclick="dongTimKiem()">✕</button>
-      <input type="text" class="o-nhap-tim-kiem" id="input-tim-kiem" placeholder="Nhập tên giày..." autocomplete="off">
+      <div style="position: relative;">
+        <input type="text" class="o-nhap-tim-kiem" id="input-tim-kiem" placeholder="Nhập tên giày..." autocomplete="off">
+        <button id="btn-thuc-hien-tk" style="position: absolute; right: 0; top: 50%; transform: translateY(-50%); background: none; border: none; color: #ff3366; cursor: pointer;">
+          <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+        </button>
+      </div>
+      <div id="goi-y-tim-kiem" class="khung-goi-y"></div>
     </div>
   </div>
 
   <script src="js/auth.js"></script>
   <script src="js/cart.js"></script>
+  <script src="js/products.js"></script>
   <script src="js/main.js"></script>
   <script>
     let idDonHuyDangChon = null;
@@ -172,8 +179,15 @@
     }
 
     function renderDonHang() {
-      const dsDonHang = JSON.parse(localStorage.getItem('soleking_orders')) || [];
+      let dsDonHang = [];
+      try {
+        dsDonHang = JSON.parse(localStorage.getItem('soleking_orders')) || [];
+      } catch (e) {
+        dsDonHang = [];
+      }
+      
       const container = document.getElementById('danh-sach-don-hang');
+      if (!container) return;
 
       if (dsDonHang.length === 0) {
         container.innerHTML = `
@@ -206,29 +220,29 @@
           trangThaiText = '🚚 Đang giao hàng';
         }
 
+        // Xử lý hiển thị danh sách sản phẩm trong đơn hàng
         let spHtml = '';
-        const sanPhams = Array.isArray(don.sanPham) ? don.sanPham : [];
+        const sanPhams = Array.isArray(don.sanPham) ? don.sanPham : [don.sanPham]; 
 
-        if (sanPhams.length === 0) {
-          spHtml = '<div style="color:#aaa; font-style:italic;">Chưa có thông tin sản phẩm</div>';
-        } else {
-          sanPhams.forEach(sp => {
-            const anhSP = sp.anh || "assets/images/nike1.png";
-            const tenSP = sp.ten || "Sản phẩm không xác định";
-            const sizeSP = sp.size || "N/A";
-            const slSP = sp.soLuong || 1;
-            const giaSP = sp.gia || "?";
+        sanPhams.forEach(sp => {
+          if (!sp) return;
+          const anhSP = sp.anh || "assets/images/nike1.png";
+          const tenSP = sp.ten || "Sản phẩm";
+          const sizeSP = sp.size || "N/A";
+          const slSP = sp.soLuong || 1;
+          const giaSP = sp.gia || "0đ";
 
-            spHtml += '<div class="sp-don" style="display:flex; margin-bottom: 10px; padding-bottom: 10px; border-bottom: 1px solid #333;">' +
-              '<img src="' + anhSP + '" alt="' + tenSP + '" style="width: 80px; height: 80px; object-fit: cover; margin-right: 15px; border-radius: 4px;">' +
-              '<div class="thong-tin-sp-don" style="flex:1;">' +
-              '<div class="ten-sp-don" style="font-weight:bold; margin-bottom: 5px;">' + tenSP + '</div>' +
-              '<div class="meta-sp-don" style="color:#888; font-size:14px;">Size: ' + sizeSP + ' | Số lượng: ' + slSP + '</div>' +
-              '</div>' +
-              '<div class="gia-sp-don" style="font-weight:bold; color:#ff3366;">' + giaSP + '</div>' +
-              '</div>';
-          });
-        }
+          spHtml += `
+            <div class="sp-don" style="display:flex; align-items:center; gap:15px; margin-bottom:15px; padding-bottom:15px; border-bottom:1px solid rgba(255,255,255,0.05);">
+              <img src="${anhSP}" alt="${tenSP}" style="width:70px; height:70px; object-fit:cover; border-radius:6px; border:1px solid #333;">
+              <div class="thong-tin-sp-don" style="flex:1;">
+                <div class="ten-sp-don" style="font-weight:bold; color:#fff; font-size:16px;">${tenSP}</div>
+                <div class="meta-sp-don" style="color:#888; font-size:13px; margin-top:4px;">Size: ${sizeSP} | Số lượng: ${slSP}</div>
+              </div>
+              <div class="gia-sp-don" style="font-weight:bold; color:#ff3366;">${giaSP}</div>
+            </div>
+          `;
+        });
 
         const date = new Date(don.thoiGian);
         const timeString = date.toLocaleTimeString('vi-VN') + ' ' + date.toLocaleDateString('vi-VN');
