@@ -6,7 +6,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sản Phẩm - SOLEKING</title>
 
-  <!-- Liên kết các file CSS chuẩn -->
   <link rel="stylesheet" href="css/base.css">
   <link rel="stylesheet" href="css/layout.css">
   <link rel="stylesheet" href="css/product.css">
@@ -14,18 +13,15 @@
 </head>
 
 <body>
-  <!-- PHẦN ĐẦU TRANG -->
-  <div class="phan-dau">
+  <header class="phan-dau">
     <div class="phan-dau-chinh">
       <div class="noi-dung-phan-dau">
-        <a href="index.html" class="logo">
-          SOLEKING
-        </a>
+        <a href="index.html" class="logo">SOLEKING</a>
         <nav class="thanh-dieu-huong">
           <a href="index.html" class="lien-ket-dieu-huong">Trang Chủ</a>
-          <a href="san-pham.html" class="lien-ket-dieu-huong">Shop</a>
-          <a href="gioi-thieu.html" class="lien-ket-dieu-huong">Giới Thiệu</a>
-          <a href="lien-he.html" class="lien-ket-dieu-huong">Liên Hệ</a>
+          <a href="product.html" class="lien-ket-dieu-huong">Shop</a>
+          <a href="about.html" class="lien-ket-dieu-huong">Giới Thiệu</a>
+          <a href="contact.html" class="lien-ket-dieu-huong">Liên Hệ</a>
         </nav>
         <div class="hanh-dong">
           <a href="#" class="nut-hanh-dong" title="Tìm Kiếm" id="btn-tim-kiem">
@@ -43,10 +39,9 @@
                 <circle cx="12" cy="7" r="4" />
               </svg>
             </a>
-            <div class="dropdown-tai-khoan" id="dropdown-tai-khoan">
-            </div>
+            <div class="dropdown-tai-khoan" id="dropdown-tai-khoan"></div>
           </div>
-          <a href="thanh-toan.html" class="nut-hanh-dong" title="Giỏ Hàng" id="btn-gio-hang"
+          <a href="checkout.html" class="nut-hanh-dong" title="Giỏ Hàng" id="btn-gio-hang"
             style="position: relative;">
             <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none"
               stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -59,23 +54,21 @@
         </div>
       </div>
     </div>
-  </div>
+  </header>
 
-  <!-- KHU VỰC SẢN PHẨM TRẢI DÀI -->
-  <div class="danh-sach-san-pham">
+  <main class="danh-sach-san-pham">
 
-    <!-- NHÓM NIKE (THỂ THAO) -->
+    <!-- NHÓM NIKE -->
     <div class="nhom-thuong-hieu" id="the-thao">
       <h2 class="tieu-de-thuong-hieu">Gian Hàng Nike</h2>
-
       <div class="luoi-san-pham-nhom">
-        <!-- Thẻ sản phẩm -->
+
         <div class="the-sp-premium">
           <div class="khung-anh-sp">
             <img src="assets/images/nike1.png" alt="Nike 1">
             <div class="lop-phu-hanh-dong">
-              <a href="chi-tiet.html?id=nike1" class="nut-overlay chinh">Mua Ngay</a>
-              <a href="chi-tiet.html?id=nike1" class="nut-overlay">Xem Chi Tiết</a>
+              <a href="product-detail.html?id=nike1" class="nut-overlay chinh">Mua Ngay</a>
+              <a href="product-detail.html?id=nike1" class="nut-overlay">Xem Chi Tiết</a>
             </div>
           </div>
           <div class="thong-tin-sp-premium">
@@ -85,13 +78,12 @@
           </div>
         </div>
 
-        <!-- Thẻ sản phẩm -->
         <div class="the-sp-premium">
           <div class="khung-anh-sp">
             <img src="assets/images/NIKE+AIR+MAX+90.png" alt="Nike 2">
             <div class="lop-phu-hanh-dong">
-              <a href="chi-tiet.html?id=nike2" class="nut-overlay chinh">Mua Ngay</a>
-              <a href="chi-tiet.html?id=nike2" class="nut-overlay">Xem Chi Tiết</a>
+              <a href="product-detail.html?id=nike2" class="nut-overlay chinh">Mua Ngay</a>
+              <a href="product-detail.html?id=nike2" class="nut-overlay">Xem Chi Tiết</a>
             </div>
           </div>
           <div class="thong-tin-sp-premium">
@@ -101,13 +93,12 @@
           </div>
         </div>
 
-        <!-- Thẻ sản phẩm -->
         <div class="the-sp-premium">
           <div class="khung-anh-sp">
             <img src="assets/images/NIKE+VOMERO+PLUS.png" alt="Nike 3">
             <div class="lop-phu-hanh-dong">
-              <a href="chi-tiet.html?id=nike3" class="nut-overlay chinh">Mua Ngay</a>
-              <a href="chi-tiet.html?id=nike3" class="nut-overlay">Xem Chi Tiết</a>
+              <a href="product-detail.html?id=nike3" class="nut-overlay chinh">Mua Ngay</a>
+              <a href="product-detail.html?id=nike3" class="nut-overlay">Xem Chi Tiết</a>
             </div>
           </div>
           <div class="thong-tin-sp-premium">
@@ -116,21 +107,21 @@
             <div class="gia-sp-premium">4.299.000đ</div>
           </div>
         </div>
+
       </div>
     </div>
 
     <!-- NHÓM ADIDAS -->
     <div class="nhom-thuong-hieu">
       <h2 class="tieu-de-thuong-hieu">Gian Hàng Adidas</h2>
-
       <div class="luoi-san-pham-nhom">
-        <!-- Thẻ sản phẩm -->
+
         <div class="the-sp-premium">
           <div class="khung-anh-sp">
             <img src="assets/images/Giay_Pureboost_22.png" alt="Adidas 1">
             <div class="lop-phu-hanh-dong">
-              <a href="chi-tiet.html?id=adidas1" class="nut-overlay chinh">Mua Ngay</a>
-              <a href="chi-tiet.html?id=adidas1" class="nut-overlay">Xem Chi Tiết</a>
+              <a href="product-detail.html?id=adidas1" class="nut-overlay chinh">Mua Ngay</a>
+              <a href="product-detail.html?id=adidas1" class="nut-overlay">Xem Chi Tiết</a>
             </div>
           </div>
           <div class="thong-tin-sp-premium">
@@ -140,13 +131,12 @@
           </div>
         </div>
 
-        <!-- Thẻ sản phẩm -->
         <div class="the-sp-premium">
           <div class="khung-anh-sp">
             <img src="assets/images/NMD1.jpg" alt="Adidas 2">
             <div class="lop-phu-hanh-dong">
-              <a href="chi-tiet.html?id=adidas2" class="nut-overlay chinh">Mua Ngay</a>
-              <a href="chi-tiet.html?id=adidas2" class="nut-overlay">Xem Chi Tiết</a>
+              <a href="product-detail.html?id=adidas2" class="nut-overlay chinh">Mua Ngay</a>
+              <a href="product-detail.html?id=adidas2" class="nut-overlay">Xem Chi Tiết</a>
             </div>
           </div>
           <div class="thong-tin-sp-premium">
@@ -156,13 +146,12 @@
           </div>
         </div>
 
-        <!-- Thẻ sản phẩm -->
         <div class="the-sp-premium">
           <div class="khung-anh-sp">
             <img src="assets/images/adidassupernovarise2.jpg" alt="Adidas 3">
             <div class="lop-phu-hanh-dong">
-              <a href="chi-tiet.html?id=adidas3" class="nut-overlay chinh">Mua Ngay</a>
-              <a href="chi-tiet.html?id=adidas3" class="nut-overlay">Xem Chi Tiết</a>
+              <a href="product-detail.html?id=adidas3" class="nut-overlay chinh">Mua Ngay</a>
+              <a href="product-detail.html?id=adidas3" class="nut-overlay">Xem Chi Tiết</a>
             </div>
           </div>
           <div class="thong-tin-sp-premium">
@@ -171,21 +160,21 @@
             <div class="gia-sp-premium">2.799.000đ</div>
           </div>
         </div>
+
       </div>
     </div>
 
-    <!-- NHÓM PUMA (BÓNG RỔ) -->
+    <!-- NHÓM PUMA -->
     <div class="nhom-thuong-hieu" id="bong-ro">
       <h2 class="tieu-de-thuong-hieu">Gian Hàng Puma</h2>
-
       <div class="luoi-san-pham-nhom">
-        <!-- Thẻ sản phẩm -->
+
         <div class="the-sp-premium">
           <div class="khung-anh-sp">
             <img src="assets/images/Puma MB.02 Phenom.jpg" alt="Puma 1">
             <div class="lop-phu-hanh-dong">
-              <a href="chi-tiet.html?id=puma1" class="nut-overlay chinh">Mua Ngay</a>
-              <a href="chi-tiet.html?id=puma1" class="nut-overlay">Xem Chi Tiết</a>
+              <a href="product-detail.html?id=puma1" class="nut-overlay chinh">Mua Ngay</a>
+              <a href="product-detail.html?id=puma1" class="nut-overlay">Xem Chi Tiết</a>
             </div>
           </div>
           <div class="thong-tin-sp-premium">
@@ -195,13 +184,12 @@
           </div>
         </div>
 
-        <!-- Thẻ sản phẩm -->
         <div class="the-sp-premium">
           <div class="khung-anh-sp">
             <img src="assets/images/Clyde_all_pro.jpg" alt="Puma 2">
             <div class="lop-phu-hanh-dong">
-              <a href="chi-tiet.html?id=puma2" class="nut-overlay chinh">Mua Ngay</a>
-              <a href="chi-tiet.html?id=puma2" class="nut-overlay">Xem Chi Tiết</a>
+              <a href="product-detail.html?id=puma2" class="nut-overlay chinh">Mua Ngay</a>
+              <a href="product-detail.html?id=puma2" class="nut-overlay">Xem Chi Tiết</a>
             </div>
           </div>
           <div class="thong-tin-sp-premium">
@@ -211,13 +199,12 @@
           </div>
         </div>
 
-        <!-- Thẻ sản phẩm -->
         <div class="the-sp-premium">
           <div class="khung-anh-sp">
             <img src="assets/images/RS_X_efekt.jpg" alt="Puma 3">
             <div class="lop-phu-hanh-dong">
-              <a href="chi-tiet.html?id=puma3" class="nut-overlay chinh">Mua Ngay</a>
-              <a href="chi-tiet.html?id=puma3" class="nut-overlay">Xem Chi Tiết</a>
+              <a href="product-detail.html?id=puma3" class="nut-overlay chinh">Mua Ngay</a>
+              <a href="product-detail.html?id=puma3" class="nut-overlay">Xem Chi Tiết</a>
             </div>
           </div>
           <div class="thong-tin-sp-premium">
@@ -226,22 +213,21 @@
             <div class="gia-sp-premium">2.699.000đ</div>
           </div>
         </div>
+
       </div>
     </div>
 
     <!-- NHÓM THỜI TRANG & PHỤ KIỆN -->
     <div class="nhom-thuong-hieu" id="thoi-trang">
       <h2 class="tieu-de-thuong-hieu">Thời Trang & Phụ Kiện</h2>
-
       <div class="luoi-san-pham-nhom">
 
-        <!-- Áo Thể Thao -->
         <div class="the-sp-premium">
           <div class="khung-anh-sp">
             <img src="assets/images/aott.jpg" alt="Áo Thể Thao">
             <div class="lop-phu-hanh-dong">
-              <a href="chi-tiet.html?id=ao1" class="nut-overlay chinh">Mua Ngay</a>
-              <a href="chi-tiet.html?id=ao1" class="nut-overlay">Xem Chi Tiết</a>
+              <a href="product-detail.html?id=ao1" class="nut-overlay chinh">Mua Ngay</a>
+              <a href="product-detail.html?id=ao1" class="nut-overlay">Xem Chi Tiết</a>
             </div>
           </div>
           <div class="thong-tin-sp-premium">
@@ -251,13 +237,12 @@
           </div>
         </div>
 
-        <!-- Quần Thể Thao -->
         <div class="the-sp-premium">
           <div class="khung-anh-sp">
             <img src="assets/images/quantt.jpg" alt="Quần Thể Thao">
             <div class="lop-phu-hanh-dong">
-              <a href="chi-tiet.html?id=quan1" class="nut-overlay chinh">Mua Ngay</a>
-              <a href="chi-tiet.html?id=quan1" class="nut-overlay">Xem Chi Tiết</a>
+              <a href="product-detail.html?id=quan1" class="nut-overlay chinh">Mua Ngay</a>
+              <a href="product-detail.html?id=quan1" class="nut-overlay">Xem Chi Tiết</a>
             </div>
           </div>
           <div class="thong-tin-sp-premium">
@@ -267,13 +252,12 @@
           </div>
         </div>
 
-        <!-- Mũ & Nón -->
         <div class="the-sp-premium">
           <div class="khung-anh-sp">
             <img src="assets/images/mu.jpg" alt="Mũ & Nón">
             <div class="lop-phu-hanh-dong">
-              <a href="chi-tiet.html?id=mu1" class="nut-overlay chinh">Mua Ngay</a>
-              <a href="chi-tiet.html?id=mu1" class="nut-overlay">Xem Chi Tiết</a>
+              <a href="product-detail.html?id=mu1" class="nut-overlay chinh">Mua Ngay</a>
+              <a href="product-detail.html?id=mu1" class="nut-overlay">Xem Chi Tiết</a>
             </div>
           </div>
           <div class="thong-tin-sp-premium">
@@ -283,13 +267,12 @@
           </div>
         </div>
 
-        <!-- Túi & Ba Lô -->
         <div class="the-sp-premium">
           <div class="khung-anh-sp">
             <img src="assets/images/tui.jpg" alt="Túi & Ba Lô">
             <div class="lop-phu-hanh-dong">
-              <a href="chi-tiet.html?id=tui1" class="nut-overlay chinh">Mua Ngay</a>
-              <a href="chi-tiet.html?id=tui1" class="nut-overlay">Xem Chi Tiết</a>
+              <a href="product-detail.html?id=tui1" class="nut-overlay chinh">Mua Ngay</a>
+              <a href="product-detail.html?id=tui1" class="nut-overlay">Xem Chi Tiết</a>
             </div>
           </div>
           <div class="thong-tin-sp-premium">
@@ -299,13 +282,12 @@
           </div>
         </div>
 
-        <!-- Vớ Thể Thao -->
         <div class="the-sp-premium">
           <div class="khung-anh-sp">
             <img src="assets/images/tat.avif" alt="Vớ Thể Thao">
             <div class="lop-phu-hanh-dong">
-              <a href="chi-tiet.html?id=tat1" class="nut-overlay chinh">Mua Ngay</a>
-              <a href="chi-tiet.html?id=tat1" class="nut-overlay">Xem Chi Tiết</a>
+              <a href="product-detail.html?id=tat1" class="nut-overlay chinh">Mua Ngay</a>
+              <a href="product-detail.html?id=tat1" class="nut-overlay">Xem Chi Tiết</a>
             </div>
           </div>
           <div class="thong-tin-sp-premium">
@@ -315,13 +297,12 @@
           </div>
         </div>
 
-        <!-- Phụ Kiện Giày -->
         <div class="the-sp-premium">
           <div class="khung-anh-sp">
             <img src="assets/images/lot.jpg" alt="Phụ Kiện Giày">
             <div class="lop-phu-hanh-dong">
-              <a href="chi-tiet.html?id=phukien1" class="nut-overlay chinh">Mua Ngay</a>
-              <a href="chi-tiet.html?id=phukien1" class="nut-overlay">Xem Chi Tiết</a>
+              <a href="product-detail.html?id=phukien1" class="nut-overlay chinh">Mua Ngay</a>
+              <a href="product-detail.html?id=phukien1" class="nut-overlay">Xem Chi Tiết</a>
             </div>
           </div>
           <div class="thong-tin-sp-premium">
@@ -334,9 +315,8 @@
       </div>
     </div>
 
-  </div>
+  </main>
 
-  <!-- PHẦN CUỐI TRANG -->
   <footer class="phan-cuoi">
     <div class="noi-dung-phan-cuoi">
       <div class="cot-phan-cuoi">
@@ -347,16 +327,16 @@
         <h3 class="tieu-de-phan-cuoi">KHÁM PHÁ</h3>
         <div class="danh-sach-phan-cuoi">
           <a href="index.html">Trang Chủ</a>
-          <a href="san-pham.html">Shop</a>
-          <a href="gioi-thieu.html">Giới Thiệu</a>
-          <a href="lien-he.html">Liên Hệ</a>
+          <a href="product.html">Shop</a>
+          <a href="about.html">Giới Thiệu</a>
+          <a href="contact.html">Liên Hệ</a>
         </div>
       </div>
       <div class="cot-phan-cuoi">
         <h3 class="tieu-de-phan-cuoi">HỖ TRỢ</h3>
         <div class="danh-sach-phan-cuoi">
-          <a href="thanh-toan.html">Hướng dẫn mua hàng</a>
-          <a href="lien-he.html">Chính sách đổi trả</a>
+          <a href="checkout.html">Hướng dẫn mua hàng</a>
+          <a href="contact.html">Chính sách đổi trả</a>
         </div>
       </div>
       <div class="cot-phan-cuoi">
@@ -379,7 +359,6 @@
     </div>
   </footer>
 
-  <!-- SEARCH OVERLAY -->
   <div class="overlay-tim-kiem" id="overlay-tim-kiem">
     <div class="hop-tim-kiem">
       <button class="dong-overlay-tk" onclick="dongTimKiem()">✕</button>

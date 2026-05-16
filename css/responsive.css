@@ -1,6 +1,4 @@
-/* ========================================
-   RESPONSIVE.CSS - Tối ưu hóa cực bộ cho Mobile
-   ======================================== */
+/* responsive.css */
 
 /* Máy tính bảng (Tablet) */
 @media (max-width: 1024px) {
@@ -249,6 +247,21 @@
     aspect-ratio: 1/1;
     object-fit: contain !important;
     background-color: #111;
+  }
+
+  /* Trang Thanh Toán */
+  .trang-thanh-toan {
+    grid-template-columns: 1fr;
+    padding: 100px 15px 40px;
+    gap: 32px;
+  }
+
+  .hang-form-tt {
+    grid-template-columns: 1fr;
+  }
+
+  .khung-form-tt {
+    padding: 20px;
   }
 }
 

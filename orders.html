@@ -6,22 +6,24 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Đơn Hàng Của Tôi | SOLEKING</title>
 
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
   <link rel="stylesheet" href="css/don-hang.css">
+  <link rel="stylesheet" href="css/responsive.css">
 </head>
 
 <body>
 
   <!-- PHẦN ĐẦU TRANG -->
-  <div class="phan-dau">
+  <header class="phan-dau">
     <div class="phan-dau-chinh">
       <div class="noi-dung-phan-dau">
         <a href="index.html" class="logo">SOLEKING</a>
         <nav class="thanh-dieu-huong">
           <a href="index.html" class="lien-ket-dieu-huong">Trang Chủ</a>
-          <a href="san-pham.html" class="lien-ket-dieu-huong">Shop</a>
-          <a href="gioi-thieu.html" class="lien-ket-dieu-huong">Giới Thiệu</a>
-          <a href="lien-he.html" class="lien-ket-dieu-huong">Liên Hệ</a>
+          <a href="product.html" class="lien-ket-dieu-huong">Shop</a>
+          <a href="about.html" class="lien-ket-dieu-huong">Giới Thiệu</a>
+          <a href="contact.html" class="lien-ket-dieu-huong">Liên Hệ</a>
         </nav>
         <div class="hanh-dong">
           <a href="#" class="nut-hanh-dong" title="Tìm Kiếm" id="btn-tim-kiem">
@@ -39,11 +41,9 @@
                 <circle cx="12" cy="7" r="4" />
               </svg>
             </a>
-            <div class="dropdown-tai-khoan" id="dropdown-tai-khoan">
-              <!-- Render by main.js -->
-            </div>
+            <div class="dropdown-tai-khoan" id="dropdown-tai-khoan"></div>
           </div>
-          <a href="thanh-toan.html" class="nut-hanh-dong" title="Giỏ Hàng" id="btn-gio-hang"
+          <a href="checkout.html" class="nut-hanh-dong" title="Giỏ Hàng" id="btn-gio-hang"
             style="position: relative;">
             <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none"
               stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -56,7 +56,7 @@
         </div>
       </div>
     </div>
-  </div>
+  </header>
 
   <!-- NỘI DUNG ĐƠN HÀNG -->
   <div class="khung-don-hang">
@@ -98,16 +98,16 @@
         <h3 class="tieu-de-phan-cuoi">KHÁM PHÁ</h3>
         <div class="danh-sach-phan-cuoi">
           <a href="index.html">Trang Chủ</a>
-          <a href="san-pham.html">Shop</a>
-          <a href="gioi-thieu.html">Giới Thiệu</a>
-          <a href="lien-he.html">Liên Hệ</a>
+          <a href="product.html">Shop</a>
+          <a href="about.html">Giới Thiệu</a>
+          <a href="contact.html">Liên Hệ</a>
         </div>
       </div>
       <div class="cot-phan-cuoi">
         <h3 class="tieu-de-phan-cuoi">HỖ TRỢ</h3>
         <div class="danh-sach-phan-cuoi">
-          <a href="thanh-toan.html">Hướng dẫn mua hàng</a>
-          <a href="lien-he.html">Chính sách đổi trả</a>
+          <a href="checkout.html">Hướng dẫn mua hàng</a>
+          <a href="contact.html">Chính sách đổi trả</a>
         </div>
       </div>
     </div>
@@ -155,10 +155,7 @@
       const radios = document.getElementsByName('ly-do');
       let lyDo = '';
       for (const r of radios) {
-        if (r.checked) {
-          lyDo = r.value;
-          break;
-        }
+        if (r.checked) { lyDo = r.value; break; }
       }
 
       if (!lyDo) {
@@ -185,7 +182,7 @@
       } catch (e) {
         dsDonHang = [];
       }
-      
+
       const container = document.getElementById('danh-sach-don-hang');
       if (!container) return;
 
@@ -193,7 +190,7 @@
         container.innerHTML = `
           <div class="don-hang-trong">
             <p>Bạn chưa có đơn hàng nào.</p>
-            <p style="margin-top:10px;"><a href="san-pham.html" style="color:#ff3366; text-decoration: underline;">Mua sắm ngay →</a></p>
+            <p style="margin-top:10px;"><a href="product.html" style="color:#ff3366; text-decoration:underline;">Mua sắm ngay →</a></p>
           </div>
         `;
         return;
@@ -212,72 +209,62 @@
         if (don.daHuy) {
           trangThaiClass = 'trang-thai-huy';
           trangThaiText = '❌ Đã hủy';
-        } else if (diffSeconds >= 90) { 
+        } else if (diffSeconds >= 90) {
           trangThaiClass = 'trang-thai-hoan-thanh';
           trangThaiText = '✅ Đã nhận hàng';
-        } else if (diffSeconds >= 60) { 
+        } else if (diffSeconds >= 60) {
           trangThaiClass = 'trang-thai-giao';
           trangThaiText = '🚚 Đang giao hàng';
         }
 
-        // Xử lý hiển thị danh sách sản phẩm trong đơn hàng
         let spHtml = '';
-        const sanPhams = Array.isArray(don.sanPham) ? don.sanPham : [don.sanPham]; 
+        const sanPhams = Array.isArray(don.sanPham) ? don.sanPham : [don.sanPham];
 
         sanPhams.forEach(sp => {
           if (!sp) return;
-          const anhSP = sp.anh || "assets/images/nike1.png";
-          const tenSP = sp.ten || "Sản phẩm";
-          const sizeSP = sp.size || "N/A";
-          const slSP = sp.soLuong || 1;
-          const giaSP = sp.gia || "0đ";
-
           spHtml += `
             <div class="sp-don" style="display:flex; align-items:center; gap:15px; margin-bottom:15px; padding-bottom:15px; border-bottom:1px solid rgba(255,255,255,0.05);">
-              <img src="${anhSP}" alt="${tenSP}" style="width:70px; height:70px; object-fit:cover; border-radius:6px; border:1px solid #333;">
-              <div class="thong-tin-sp-don" style="flex:1;">
-                <div class="ten-sp-don" style="font-weight:bold; color:#fff; font-size:16px;">${tenSP}</div>
-                <div class="meta-sp-don" style="color:#888; font-size:13px; margin-top:4px;">Size: ${sizeSP} | Số lượng: ${slSP}</div>
+              <img src="${sp.anh || 'assets/images/nike1.png'}" alt="${sp.ten || 'Sản phẩm'}" style="width:70px; height:70px; object-fit:cover; border-radius:6px; border:1px solid #333;">
+              <div style="flex:1;">
+                <div style="font-weight:bold; color:#fff; font-size:16px;">${sp.ten || 'Sản phẩm'}</div>
+                <div style="color:#888; font-size:13px; margin-top:4px;">Size: ${sp.size || 'N/A'} | Số lượng: ${sp.soLuong || 1}</div>
               </div>
-              <div class="gia-sp-don" style="font-weight:bold; color:#ff3366;">${giaSP}</div>
+              <div style="font-weight:bold; color:#ff3366;">${sp.gia || '0đ'}</div>
             </div>
           `;
         });
 
         const date = new Date(don.thoiGian);
         const timeString = date.toLocaleTimeString('vi-VN') + ' ' + date.toLocaleDateString('vi-VN');
+        const showCancelBtn = !don.daHuy && diffSeconds < 60;
 
-        const showCancelBtn = !don.daHuy && diffSeconds < 60; 
+        let lyDoHtml = don.daHuy
+          ? `<div style="color:#ef4444; font-size:13px; margin-top:6px; font-weight:bold;">Lý do hủy: ${don.lyDoHuy}</div>`
+          : '';
 
-        let lyDoHtml = '';
-        if (don.daHuy) {
-          lyDoHtml = '<div style="color:#ef4444; font-size:13px; margin-top:6px; font-weight:bold;">Lý do hủy: ' + don.lyDoHuy + '</div>';
-        }
+        let btnHuyHtml = showCancelBtn
+          ? `<div style="text-align:right; margin-top:15px;"><button onclick="moModalHuy('${don.id}')" style="background:transparent; border:1px solid #ff3366; color:#ff3366; padding:8px 16px; cursor:pointer;">Hủy đơn hàng</button></div>`
+          : '';
 
-        let btnHuyHtml = '';
-        if (showCancelBtn) {
-          btnHuyHtml = '<div style="text-align: right; margin-top: 15px;"><button class="nut-huy-don" onclick="moModalHuy(\'' + don.id + '\')" style="background:transparent; border:1px solid #ff3366; color:#ff3366; padding:8px 16px; cursor:pointer;">Hủy đơn hàng</button></div>';
-        }
-
-        html += '<div class="the-don-hang" style="background:#111; border:1px solid #333; margin-bottom:20px; padding:20px; border-radius:8px;">' +
-          '<div class="header-don-hang" style="display:flex; justify-content:space-between; margin-bottom:20px; border-bottom:1px dashed #444; padding-bottom:10px;">' +
-          '<div>' +
-          '<span class="id-don-hang" style="font-weight:bold;">Mã đơn: #' + don.id + '</span>' +
-          '<div style="color:#888; font-size:14px; margin-top:4px;">Đặt lúc: ' + timeString + '</div>' +
-          lyDoHtml +
-          '</div>' +
-          '<div style="text-align: right;">' +
-          '<div class="trang-thai-badge ' + trangThaiClass + '" style="color:#fff; padding:5px 10px; border-radius:4px; font-weight:bold;">' + trangThaiText + '</div>' +
-          '</div>' +
-          '</div>' +
-          '<div class="danh-sach-sp-don">' +
-          spHtml +
-          '</div>' +
-          '<div class="tong-tien-don" style="text-align:right; font-weight:bold; font-size:18px; margin-top:15px;">' +
-          'Tổng thanh toán: ' + don.tongTien +
-          btnHuyHtml +
-          '</div>' +
-          '</div>';
+        html += `
+          <div style="background:#111; border:1px solid #333; margin-bottom:20px; padding:20px; border-radius:8px;">
+            <div style="display:flex; justify-content:space-between; margin-bottom:20px; border-bottom:1px dashed #444; padding-bottom:10px;">
+              <div>
+                <span style="font-weight:bold;">Mã đơn: #${don.id}</span>
+                <div style="color:#888; font-size:14px; margin-top:4px;">Đặt lúc: ${timeString}</div>
+                ${lyDoHtml}
+              </div>
+              <div>
+                <div class="${trangThaiClass}" style="color:#fff; padding:5px 10px; border-radius:4px; font-weight:bold;">${trangThaiText}</div>
+              </div>
+            </div>
+            ${spHtml}
+            <div style="text-align:right; font-weight:bold; font-size:18px; margin-top:15px;">
+              Tổng thanh toán: ${don.tongTien}
+              ${btnHuyHtml}
+            </div>
+          </div>
+        `;
       });
 
       container.innerHTML = html;
