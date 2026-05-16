@@ -13,18 +13,18 @@
 </head>
 
 <body>
-  <header class="phan-dau">
-    <div class="phan-dau-chinh">
-      <div class="noi-dung-phan-dau">
+  <header class="header">
+    <div class="header-main">
+      <div class="header-content">
         <a href="index.html" class="logo">SOLEKING</a>
-        <nav class="thanh-dieu-huong">
-          <a href="index.html" class="lien-ket-dieu-huong">Trang Chủ</a>
-          <a href="product.html" class="lien-ket-dieu-huong">Shop</a>
-          <a href="about.html" class="lien-ket-dieu-huong">Giới Thiệu</a>
-          <a href="contact.html" class="lien-ket-dieu-huong">Liên Hệ</a>
+        <nav class="navbar">
+          <a href="index.html" class="nav-link">Trang Chủ</a>
+          <a href="product.html" class="nav-link">Shop</a>
+          <a href="about.html" class="nav-link">Giới Thiệu</a>
+          <a href="contact.html" class="nav-link">Liên Hệ</a>
         </nav>
-        <div class="hanh-dong">
-          <a href="#" class="nut-hanh-dong" title="Tìm Kiếm" id="btn-tim-kiem">
+        <div class="header-actions">
+          <a href="#" class="btn-action" title="Tìm Kiếm" id="btn-tim-kiem">
             <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none"
               stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <circle cx="11" cy="11" r="8" />
@@ -32,7 +32,7 @@
             </svg>
           </a>
           <div id="wrapper-tai-khoan">
-            <a href="#" class="nut-hanh-dong" title="Tài Khoản" id="btn-tai-khoan" onclick="toggleDropdownUser(event)">
+            <a href="#" class="btn-action" title="Tài Khoản" id="btn-tai-khoan" onclick="toggleDropdownUser(event)">
               <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none"
                 stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
@@ -43,7 +43,7 @@
               <!-- Render by auth.js -->
             </div>
           </div>
-          <a href="checkout.html" class="nut-hanh-dong" title="Giỏ Hàng" id="btn-gio-hang"
+          <a href="checkout.html" class="btn-action" title="Giỏ Hàng" id="btn-gio-hang"
             style="position: relative;">
             <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none"
               stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -51,7 +51,7 @@
               <line x1="3" y1="6" x2="21" y2="6" />
               <path d="M16 10a4 4 0 0 1-8 0" />
             </svg>
-            <span class="thong-bao-nho">0</span>
+            <span class="badge">0</span>
           </a>
         </div>
       </div>
@@ -68,23 +68,23 @@
           <h1>Tạo Tài Khoản</h1>
           <p>Chào mừng bạn gia nhập cộng đồng SOLEKING</p>
 
-          <div class="nhom-nhap-lieu">
-            <label class="nhan-nhap-lieu" for="reg-name">Họ và tên <span>*</span></label>
+          <div class="input-group">
+            <label class="input-label" for="reg-name">Họ và tên <span>*</span></label>
             <input type="text" id="reg-name" placeholder="Nhập họ và tên" required />
           </div>
 
-          <div class="nhom-nhap-lieu">
-            <label class="nhan-nhap-lieu" for="reg-email">Email <span>*</span></label>
+          <div class="input-group">
+            <label class="input-label" for="reg-email">Email <span>*</span></label>
             <input type="email" id="reg-email" placeholder="example@email.com" required />
           </div>
 
-          <div class="nhom-nhap-lieu">
-            <label class="nhan-nhap-lieu" for="reg-password">Mật khẩu <span>*</span></label>
+          <div class="input-group">
+            <label class="input-label" for="reg-password">Mật khẩu <span>*</span></label>
             <input type="password" id="reg-password" placeholder="••••••••" required />
           </div>
 
-          <div class="nhom-nhap-lieu">
-            <label class="nhan-nhap-lieu" for="reg-confirm">Xác nhận mật khẩu <span>*</span></label>
+          <div class="input-group">
+            <label class="input-label" for="reg-confirm">Xác nhận mật khẩu <span>*</span></label>
             <input type="password" id="reg-confirm" placeholder="••••••••" required />
           </div>
 
@@ -99,13 +99,13 @@
           <h1>Đăng Nhập</h1>
           <p>Chào mừng bạn quay trở lại</p>
 
-          <div class="nhom-nhap-lieu">
-            <label class="nhan-nhap-lieu" for="login-email">Email <span>*</span></label>
+          <div class="input-group">
+            <label class="input-label" for="login-email">Email <span>*</span></label>
             <input type="email" id="login-email" placeholder="example@email.com" required />
           </div>
 
-          <div class="nhom-nhap-lieu">
-            <label class="nhan-nhap-lieu" for="login-password">Mật khẩu <span>*</span></label>
+          <div class="input-group">
+            <label class="input-label" for="login-password">Mật khẩu <span>*</span></label>
             <input type="password" id="login-password" placeholder="••••••••" required />
           </div>
 
@@ -134,30 +134,30 @@
   </div>
 
   <!-- PHẦN CUỐI TRANG -->
-  <footer class="phan-cuoi">
-    <div class="noi-dung-phan-cuoi">
-      <div class="cot-phan-cuoi">
-        <h3 class="tieu-de-phan-cuoi">SOLEKING</h3>
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-col">
+        <h3 class="footer-title">SOLEKING</h3>
         <p style="color:#888; font-size:14px; line-height:1.8;">Chuyên cung cấp giày thể thao chính hãng Nike, Adidas, Puma.</p>
       </div>
-      <div class="cot-phan-cuoi">
-        <h3 class="tieu-de-phan-cuoi">KHÁM PHÁ</h3>
-        <div class="danh-sach-phan-cuoi">
+      <div class="footer-col">
+        <h3 class="footer-title">KHÁM PHÁ</h3>
+        <div class="footer-links">
           <a href="index.html">Trang Chủ</a>
           <a href="product.html">Shop</a>
           <a href="about.html">Giới Thiệu</a>
           <a href="contact.html">Liên Hệ</a>
         </div>
       </div>
-      <div class="cot-phan-cuoi">
-        <h3 class="tieu-de-phan-cuoi">HỖ TRỢ</h3>
-        <div class="danh-sach-phan-cuoi">
+      <div class="footer-col">
+        <h3 class="footer-title">HỖ TRỢ</h3>
+        <div class="footer-links">
           <a href="checkout.html">Hướng dẫn mua hàng</a>
           <a href="contact.html">Chính sách đổi trả</a>
         </div>
       </div>
-      <div class="cot-phan-cuoi">
-        <h3 class="tieu-de-phan-cuoi">KẾT NỐI</h3>
+      <div class="footer-col">
+        <h3 class="footer-title">KẾT NỐI</h3>
         <div style="display: flex; gap: 20px; margin-top: 15px;">
           <a href="https://www.facebook.com/thang.nguyen.118650" title="Facebook">
             <img src="assets/icons/facebook.svg" alt="Facebook" width="24" height="24" style="filter: invert(1);">
@@ -174,16 +174,16 @@
   </footer>
 
   <!-- SEARCH OVERLAY -->
-  <div class="overlay-tim-kiem" id="overlay-tim-kiem">
-    <div class="hop-tim-kiem">
-      <button class="dong-overlay-tk" onclick="dongTimKiem()">✕</button>
+  <div class="search-overlay" id="search-overlay">
+    <div class="search-box">
+      <button class="btn-close-search" onclick="dongTimKiem()">✕</button>
       <div style="position: relative;">
-        <input type="text" class="o-nhap-tim-kiem" id="input-tim-kiem" placeholder="Nhập tên giày..." autocomplete="off">
-        <button id="btn-thuc-hien-tk" style="position: absolute; right: 0; top: 50%; transform: translateY(-50%); background: none; border: none; color: #ff3366; cursor: pointer;">
+        <input type="text" class="search-input" id="input-tim-kiem" placeholder="Nhập tên giày..." autocomplete="off">
+        <button id="btn-submit-search" style="position: absolute; right: 0; top: 50%; transform: translateY(-50%); background: none; border: none; color: #ff3366; cursor: pointer;">
           <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
         </button>
       </div>
-      <div id="goi-y-tim-kiem" class="khung-goi-y"></div>
+      <div id="goi-y-tim-kiem" class="search-suggestions"></div>
     </div>
   </div>
 

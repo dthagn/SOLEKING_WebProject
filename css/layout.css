@@ -1,6 +1,6 @@
 /* layout.css - Header, Footer, Search overlay, User dropdown */
 
-.phan-dau {
+.header {
   position: fixed;
   top: 0;
   left: 0;
@@ -16,11 +16,11 @@
   display: none;
 }
 
-.phan-dau-chinh {
+.header-main {
   padding: 16px 0;
 }
 
-.noi-dung-phan-dau {
+.header-content {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -39,14 +39,14 @@
   letter-spacing: 2px;
 }
 
-.thanh-dieu-huong {
+.navbar {
   flex: 1;
   display: flex;
   justify-content: center;
   gap: 40px;
 }
 
-.lien-ket-dieu-huong {
+.nav-link {
   color: #cccccc;
   font-weight: 600;
   font-size: 14px;
@@ -54,18 +54,18 @@
   letter-spacing: 1px;
 }
 
-.lien-ket-dieu-huong:hover {
+.nav-link:hover {
   color: #ff3366;
 }
 
-.hanh-dong {
+.header-actions {
   display: flex;
   align-items: center;
   gap: 24px;
   justify-content: flex-end;
 }
 
-.nut-hanh-dong {
+.btn-action {
   position: relative;
   color: #ffffff;
   font-size: 14px;
@@ -73,11 +73,11 @@
   text-transform: uppercase;
 }
 
-.nut-hanh-dong:hover {
+.btn-action:hover {
   color: #ff3366;
 }
 
-.thong-bao-nho {
+.badge {
   position: absolute;
   top: -8px;
   right: -12px;
@@ -94,7 +94,7 @@
 }
 
 /* Phần Cuối */
-.phan-cuoi {
+.footer {
   background-color: #050505;
   color: #ffffff;
   padding: 80px 0 40px;
@@ -102,7 +102,7 @@
   border-top: 1px solid #1f1f1f;
 }
 
-.noi-dung-phan-cuoi {
+.footer-content {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 24px;
@@ -111,12 +111,12 @@
   margin-bottom: 64px;
 }
 
-.cot-phan-cuoi {
+.footer-col {
   flex: 1;
   margin-right: 32px;
 }
 
-.tieu-de-phan-cuoi {
+.footer-title {
   font-size: 16px;
   font-weight: 800;
   margin-bottom: 24px;
@@ -125,7 +125,7 @@
   letter-spacing: 1px;
 }
 
-.danh-sach-phan-cuoi {
+.footer-links {
   display: flex;
   flex-direction: column;
   gap: 16px;
@@ -140,7 +140,7 @@
   color: #ffffff;
 }
 
-.phan-cuoi-duoi {
+.footer-bottom {
   border-top: 1px solid #1f1f1f;
   padding-top: 32px;
   max-width: 1200px;
@@ -152,12 +152,12 @@
   color: #666666;
 }
 
-.duong-dan {
+.breadcrumb {
   display: none;
 }
 
 /* Search overlay fullscreen */
-.overlay-tim-kiem {
+.search-overlay {
   position: fixed;
   inset: 0;
   background: rgba(5, 5, 5, 0.97);
@@ -172,19 +172,19 @@
   -webkit-backdrop-filter: blur(12px);
 }
 
-.overlay-tim-kiem.mo {
+.search-overlay.mo {
   opacity: 1;
   pointer-events: all;
 }
 
-.hop-tim-kiem {
+.search-box {
   width: 100%;
   max-width: 700px;
   padding: 0 24px;
   position: relative;
 }
 
-.dong-overlay-tk {
+.btn-close-search {
   position: absolute;
   top: -64px;
   right: 24px;
@@ -199,7 +199,7 @@
   padding: 4px 8px;
 }
 
-.dong-overlay-tk:hover {
+.btn-close-search:hover {
   opacity: 1;
   transform: rotate(90deg);
 }
@@ -214,7 +214,7 @@
   margin-bottom: 28px;
 }
 
-.o-nhap-tim-kiem {
+.search-input {
   width: 100%;
   background: transparent;
   border: none;
@@ -229,11 +229,11 @@
   caret-color: #ff3366;
 }
 
-.o-nhap-tim-kiem::placeholder {
+.search-input::placeholder {
   color: #333;
 }
 
-.o-nhap-tim-kiem:focus {
+.search-input:focus {
   border-bottom-color: #ff3366;
 }
 
@@ -270,7 +270,7 @@
 }
 
 /* KHUNG GỢI Ý TÌM KIẾM MỚI */
-.khung-goi-y {
+.search-suggestions {
   position: absolute;
   top: 100%;
   left: 24px;
@@ -325,11 +325,11 @@
 }
 
 /* Tùy chỉnh thanh cuộn cho khung gợi ý */
-.khung-goi-y::-webkit-scrollbar {
+.search-suggestions::-webkit-scrollbar {
   width: 4px;
 }
 
-.khung-goi-y::-webkit-scrollbar-thumb {
+.search-suggestions::-webkit-scrollbar-thumb {
   background: #333;
   border-radius: 10px;
 }

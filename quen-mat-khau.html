@@ -32,18 +32,18 @@
 <body>
 
   <!-- PHẦN ĐẦU TRANG -->
-  <div class="phan-dau" style="position: sticky; background: #050505; top: 0; z-index: 100;">
-    <div class="phan-dau-chinh">
-      <div class="noi-dung-phan-dau">
+  <div class="header" style="position: sticky; background: #050505; top: 0; z-index: 100;">
+    <div class="header-main">
+      <div class="header-content">
         <a href="index.html" class="logo">SOLEKING</a>
-        <nav class="thanh-dieu-huong">
-          <a href="index.html" class="lien-ket-dieu-huong">Trang Chủ</a>
-          <a href="san-pham.html" class="lien-ket-dieu-huong">Shop</a>
-          <a href="gioi-thieu.html" class="lien-ket-dieu-huong">Giới Thiệu</a>
-          <a href="lien-he.html" class="lien-ket-dieu-huong">Liên Hệ</a>
+        <nav class="navbar">
+          <a href="index.html" class="nav-link">Trang Chủ</a>
+          <a href="san-pham.html" class="nav-link">Shop</a>
+          <a href="gioi-thieu.html" class="nav-link">Giới Thiệu</a>
+          <a href="lien-he.html" class="nav-link">Liên Hệ</a>
         </nav>
-        <div class="hanh-dong">
-          <a href="#" class="nut-hanh-dong" title="Tìm Kiếm" id="btn-tim-kiem">
+        <div class="header-actions">
+          <a href="#" class="btn-action" title="Tìm Kiếm" id="btn-tim-kiem">
             <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none"
               stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <circle cx="11" cy="11" r="8" />
@@ -51,7 +51,7 @@
             </svg>
           </a>
           <div id="wrapper-tai-khoan">
-            <a href="tai-khoan.html" class="nut-hanh-dong" title="Tài Khoản" id="btn-tai-khoan" onclick="toggleDropdownUser(event)">
+            <a href="tai-khoan.html" class="btn-action" title="Tài Khoản" id="btn-tai-khoan" onclick="toggleDropdownUser(event)">
               <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none"
                 stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
@@ -62,14 +62,14 @@
               <!-- Render by auth.js -->
             </div>
           </div>
-          <a href="thanh-toan.html" class="nut-hanh-dong" title="Giỏ Hàng" id="btn-gio-hang" style="position: relative;">
+          <a href="thanh-toan.html" class="btn-action" title="Giỏ Hàng" id="btn-gio-hang" style="position: relative;">
             <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none"
               stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z" />
               <line x1="3" y1="6" x2="21" y2="6" />
               <path d="M16 10a4 4 0 0 1-8 0" />
             </svg>
-            <span class="thong-bao-nho">0</span>
+            <span class="badge">0</span>
           </a>
         </div>
       </div>
@@ -85,8 +85,8 @@
         <h1>Quên Mật Khẩu</h1>
         <p>Nhập email của bạn để lấy lại mật khẩu</p>
 
-        <div class="nhom-nhap-lieu">
-          <label class="nhan-nhap-lieu" for="qm-email">Email <span>*</span></label>
+        <div class="input-group">
+          <label class="input-label" for="qm-email">Email <span>*</span></label>
           <input type="email" id="qm-email" placeholder="Nhập email của bạn" required />
         </div>
 
@@ -99,13 +99,13 @@
         <h1>Tạo Mật Khẩu Mới</h1>
         <p>Nhập mật khẩu mới cho tài khoản <strong id="hien-thi-email"></strong></p>
 
-        <div class="nhom-nhap-lieu">
-          <label class="nhan-nhap-lieu" for="qm-mat-khau-moi">Mật khẩu mới <span>*</span></label>
+        <div class="input-group">
+          <label class="input-label" for="qm-mat-khau-moi">Mật khẩu mới <span>*</span></label>
           <input type="password" id="qm-mat-khau-moi" placeholder="••••••••" required minlength="6"/>
         </div>
 
-        <div class="nhom-nhap-lieu">
-          <label class="nhan-nhap-lieu" for="qm-xac-nhan">Xác nhận mật khẩu <span>*</span></label>
+        <div class="input-group">
+          <label class="input-label" for="qm-xac-nhan">Xác nhận mật khẩu <span>*</span></label>
           <input type="password" id="qm-xac-nhan" placeholder="••••••••" required minlength="6"/>
         </div>
 
@@ -117,10 +117,10 @@
   </main>
 
   <!-- SEARCH OVERLAY -->
-  <div class="overlay-tim-kiem" id="overlay-tim-kiem">
-    <div class="hop-tim-kiem">
-      <button class="dong-overlay-tk" onclick="dongTimKiem()">✕</button>
-      <input type="text" class="o-nhap-tim-kiem" id="input-tim-kiem" placeholder="Nhập tên giày..." autocomplete="off">
+  <div class="search-overlay" id="search-overlay">
+    <div class="search-box">
+      <button class="btn-close-search" onclick="dongTimKiem()">✕</button>
+      <input type="text" class="search-input" id="input-tim-kiem" placeholder="Nhập tên giày..." autocomplete="off">
     </div>
   </div>
 

@@ -64,9 +64,9 @@ function hienThiGio() {
   const isBuyNow = sessionStorage.getItem('isBuyNow') === 'true';
   let gio = [];
 
-  const container = document.getElementById('danh-sach-gio');
+  const container = document.getElementById('cart-list');
   const soSpText = document.getElementById('so-luong-tt');
-  const tieuDe = document.querySelector('.tieu-de-trang-tt');
+  const tieuDe = document.querySelector('.checkout-subtitle');
 
   if (isBuyNow) {
     try { gio = JSON.parse(sessionStorage.getItem('soleking_mua_ngay')) || []; } catch (e) {}
@@ -81,7 +81,7 @@ function hienThiGio() {
   }
 
   if (gio.length === 0) {
-    container.innerHTML = '<div class="gio-trong">'
+    container.innerHTML = '<div class="cart-empty">'
       + '<p>Giỏ hàng của bạn đang trống</p>'
       + '<p style="margin-top:10px;"><a href="product.html" style="color:#ff3366; text-decoration:underline;">Mua sắm ngay →</a></p>'
       + '</div>';
@@ -97,7 +97,7 @@ function hienThiGio() {
     const giaNum = parseInt((sp.gia || '0').replace(/\./g, '').replace('đ', ''));
     tongTien += giaNum * sp.soLuong;
 
-    html += '<div class="dong-sp-gio" style="display:flex; justify-content:space-between; align-items:center; margin-bottom:15px; padding-bottom:15px; border-bottom:1px solid #333;">'
+    html += '<div class="cart-item" style="display:flex; justify-content:space-between; align-items:center; margin-bottom:15px; padding-bottom:15px; border-bottom:1px solid #333;">'
       + '<div style="display:flex; align-items:center;">'
       + '<img src="' + (sp.anh || 'assets/images/nike1.png') + '" alt="' + sp.ten + '" style="width:60px; height:60px; object-fit:cover; border-radius:4px; margin-right:15px;">'
       + '<div>'
@@ -117,6 +117,6 @@ function hienThiGio() {
 
 document.addEventListener('DOMContentLoaded', function () {
   hienThiGio();
-  const btnXacNhan = document.querySelector('.nut-xac-nhan-tt');
+  const btnXacNhan = document.querySelector('.btn-submit-order');
   if (btnXacNhan) btnXacNhan.addEventListener('click', xacNhanDonHang);
 });

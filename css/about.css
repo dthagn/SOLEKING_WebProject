@@ -3,7 +3,7 @@
    ======================================== */
 
 /* Phần bìa trang Giới Thiệu */
-.bia-gioi-thieu {
+.about-cover {
   padding: 180px 24px 100px;
   text-align: center;
   background-color: #0a0a0a;
@@ -19,7 +19,7 @@
   margin-bottom: 24px;
 }
 
-.tieu-de-gioi-thieu {
+.about-title {
   font-size: clamp(32px, 8vw, 72px);
   font-weight: 900;
   color: #ffffff;
@@ -28,7 +28,7 @@
   margin-bottom: 32px;
 }
 
-.mo-ta-gioi-thieu {
+.about-desc {
   max-width: 600px;
   margin: 0 auto;
   font-size: 18px;
@@ -43,7 +43,7 @@
   padding: 120px 24px;
 }
 
-.khoi-cau-chuyen {
+.story-block {
   display: flex;
   align-items: center;
   gap: 60px; /* Giảm gap để dành chỗ cho ảnh to */
@@ -51,11 +51,11 @@
 }
 
 /* Đảo chiều zig-zag ở mục chẵn */
-.khoi-cau-chuyen:nth-child(even) {
+.story-block:nth-child(even) {
   flex-direction: row-reverse;
 }
 
-.anh-cau-chuyen {
+.story-image {
   flex: 1.6; /* Tăng mạnh diện tích ảnh */
   width: 100%;
   aspect-ratio: 3/2; /* Ảnh to và cao hơn */
@@ -64,7 +64,7 @@
   border: 1px solid #1f1f1f;
 }
 
-.anh-cau-chuyen img {
+.story-image img {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -75,7 +75,7 @@
   padding: 0; /* Loại bỏ padding dư thừa */
 }
 
-.so-thu-tu {
+.story-number {
   font-size: 60px;
   font-weight: 900;
   color: #1f1f1f;
@@ -83,7 +83,7 @@
   margin-bottom: -15px;
 }
 
-.tieu-de-khoi-ct {
+.story-title {
   font-size: 32px;
   font-weight: 900;
   color: #ffffff;
@@ -116,12 +116,12 @@
   text-align: center;
 }
 
-.muc-so-lieu {
+.stat-item {
   padding: 20px;
   min-width: 200px;
 }
 
-.con-so {
+.stat-number {
   font-size: 48px;
   font-weight: 900;
   color: #ff3366;

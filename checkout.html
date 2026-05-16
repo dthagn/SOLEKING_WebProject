@@ -17,18 +17,18 @@
 <body>
 
   <!-- PHẦN ĐẦU TRANG -->
-  <header class="phan-dau">
-    <div class="phan-dau-chinh">
-      <div class="noi-dung-phan-dau">
+  <header class="header">
+    <div class="header-main">
+      <div class="header-content">
         <a href="index.html" class="logo">SOLEKING</a>
-        <nav class="thanh-dieu-huong">
-          <a href="index.html" class="lien-ket-dieu-huong">Trang Chủ</a>
-          <a href="product.html" class="lien-ket-dieu-huong">Shop</a>
-          <a href="about.html" class="lien-ket-dieu-huong">Giới Thiệu</a>
-          <a href="contact.html" class="lien-ket-dieu-huong">Liên Hệ</a>
+        <nav class="navbar">
+          <a href="index.html" class="nav-link">Trang Chủ</a>
+          <a href="product.html" class="nav-link">Shop</a>
+          <a href="about.html" class="nav-link">Giới Thiệu</a>
+          <a href="contact.html" class="nav-link">Liên Hệ</a>
         </nav>
-        <div class="hanh-dong">
-          <a href="#" class="nut-hanh-dong" title="Tìm Kiếm" id="btn-tim-kiem">
+        <div class="header-actions">
+          <a href="#" class="btn-action" title="Tìm Kiếm" id="btn-tim-kiem">
             <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none"
               stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <circle cx="11" cy="11" r="8" />
@@ -36,7 +36,7 @@
             </svg>
           </a>
           <div id="wrapper-tai-khoan">
-            <a href="#" class="nut-hanh-dong" title="Tài Khoản" id="btn-tai-khoan" onclick="toggleDropdownUser(event)">
+            <a href="#" class="btn-action" title="Tài Khoản" id="btn-tai-khoan" onclick="toggleDropdownUser(event)">
               <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none"
                 stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
@@ -50,68 +50,68 @@
     </div>
   </header>
 
-  <main class="trang-thanh-toan">
+  <main class="checkout-page">
     <div>
-      <p class="tieu-de-trang-tt">Hoàn tất đơn hàng</p>
-      <h1 class="tieu-de-chinh-tt">Thanh Toán</h1>
+      <p class="checkout-subtitle">Hoàn tất đơn hàng</p>
+      <h1 class="checkout-title">Thanh Toán</h1>
 
-      <div class="khung-form-tt">
-        <h2 class="tieu-de-phan-form" style="margin-top: 0;">Thông tin giao hàng</h2>
-        <div class="nhom-form-tt">
-          <label class="nhan-form-tt">Họ và tên *</label>
-          <input type="text" class="o-form-tt" placeholder="Nguyễn Văn A">
+      <div class="checkout-form-wrapper">
+        <h2 class="form-section-title" style="margin-top: 0;">Thông tin giao hàng</h2>
+        <div class="form-group">
+          <label class="form-label">Họ và tên *</label>
+          <input type="text" class="form-input" placeholder="Nguyễn Văn A">
         </div>
-        <div class="hang-form-tt">
-          <div class="nhom-form-tt">
-            <label class="nhan-form-tt">Email *</label>
-            <input type="email" class="o-form-tt" placeholder="email@vi-du.com">
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label">Email *</label>
+            <input type="email" class="form-input" placeholder="email@vi-du.com">
           </div>
-          <div class="nhom-form-tt">
-            <label class="nhan-form-tt">Số điện thoại *</label>
-            <input type="tel" class="o-form-tt" placeholder="0912 345 678">
+          <div class="form-group">
+            <label class="form-label">Số điện thoại *</label>
+            <input type="tel" class="form-input" placeholder="0912 345 678">
           </div>
         </div>
-        <div class="nhom-form-tt">
-          <label class="nhan-form-tt">Địa chỉ nhận hàng *</label>
-          <input type="text" class="o-form-tt" placeholder="Số nhà, tên đường, phường/xã...">
+        <div class="form-group">
+          <label class="form-label">Địa chỉ nhận hàng *</label>
+          <input type="text" class="form-input" placeholder="Số nhà, tên đường, phường/xã...">
         </div>
 
-        <h2 class="tieu-de-phan-form">Phương thức thanh toán</h2>
-        <div class="phuong-thuc-tt">
-          <label class="tuy-chon-tt">
+        <h2 class="form-section-title">Phương thức thanh toán</h2>
+        <div class="payment-methods">
+          <label class="payment-option">
             <input type="radio" name="payment" checked>
             <span>Thanh toán khi nhận hàng (COD)</span>
           </label>
-          <label class="tuy-chon-tt">
+          <label class="payment-option">
             <input type="radio" name="payment">
             <span>Chuyển khoản ngân hàng</span>
           </label>
         </div>
 
-        <button class="nut-xac-nhan-tt">Đặt hàng ngay</button>
+        <button class="btn-submit-order">Đặt hàng ngay</button>
       </div>
     </div>
 
-    <aside class="khung-gio-hang-tt">
-      <h2 class="tieu-de-gio-tt">
+    <aside class="checkout-cart-wrapper">
+      <h2 class="checkout-cart-title">
         Đơn hàng của bạn
-        <span class="so-sp-gio" id="so-luong-tt">0 sản phẩm</span>
+        <span class="cart-item-count" id="so-luong-tt">0 sản phẩm</span>
       </h2>
-      <div id="danh-sach-gio">
+      <div id="cart-list">
         <!-- Rendered by cart.js -->
-        <div class="gio-trong">Giỏ hàng đang trống</div>
+        <div class="cart-empty">Giỏ hàng đang trống</div>
       </div>
 
-      <div class="tong-ket-gio">
-        <div class="dong-tong-ket">
+      <div class="cart-summary">
+        <div class="summary-row">
           <span>Tạm tính</span>
           <span id="tam-tinh-tt">0đ</span>
         </div>
-        <div class="dong-tong-ket">
+        <div class="summary-row">
           <span>Phí vận chuyển</span>
-          <span class="mien-phi-tag">Miễn phí</span>
+          <span class="tag-free">Miễn phí</span>
         </div>
-        <div class="dong-tong-ket tong-cuoi">
+        <div class="summary-row summary-total">
           <span>Tổng cộng</span>
           <span id="tong-cong-tt">0đ</span>
         </div>

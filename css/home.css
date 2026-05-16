@@ -3,7 +3,7 @@
    ======================================== */
 
 /* Băng chạy thương hiệu */
-.bang-thuong-hieu {
+.brand-marquee {
   background-color: #ff3366;
   overflow: hidden;
   white-space: nowrap;
@@ -12,16 +12,16 @@
   /* Bù khoảng trống cho header fixed */
 }
 
-.bang-chay {
+.marquee-track {
   display: inline-block;
   animation: cuon-bang 20s linear infinite;
 }
 
-.bang-thuong-hieu:hover .bang-chay {
+.brand-marquee:hover .marquee-track {
   animation-play-state: paused;
 }
 
-.muc-bang {
+.marquee-item {
   font-size: 14px;
   font-weight: bold;
   color: #fff;
@@ -29,7 +29,7 @@
   margin: 0 20px;
 }
 
-.dau-phan-cach {
+.marquee-separator {
   color: #fff;
   margin: 0 10px;
 }
@@ -45,7 +45,7 @@
 }
 
 /* Nút Lên Đầu Trang */
-.nut-len-dau {
+.btn-scroll-top {
   position: fixed;
   bottom: 20px;
   right: 20px;
@@ -62,7 +62,7 @@
   z-index: 100;
 }
 
-.nut-len-dau:hover {
+.btn-scroll-top:hover {
   background-color: #fff;
   color: #ff3366;
 }
@@ -79,7 +79,7 @@
   overflow: hidden;
 }
 
-.video-nen {
+.video-bg {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -92,7 +92,7 @@
   object-fit: cover;
 }
 
-.video-lop-phu {
+.video-overlay {
   position: absolute;
   top: 0;
   left: 0;
@@ -102,7 +102,7 @@
   z-index: -1;
 }
 
-.video-noi-dung {
+.video-content {
   position: relative;
   z-index: 1;
   text-align: center;
@@ -137,14 +137,14 @@
   animation: fadeInUp 1s ease-out 0.6s backwards;
 }
 
-.video-nhom-nut {
+.video-btn-group {
   display: flex;
   gap: 20px;
   justify-content: center;
   animation: fadeInUp 1s ease-out 0.9s backwards;
 }
 
-.video-cta {
+.video-btn {
   display: inline-block;
   padding: 15px 30px;
   background-color: #ff3366;
@@ -154,13 +154,13 @@
   transition: all 0.3s ease;
 }
 
-.video-cta:hover {
+.video-btn:hover {
   background-color: #fff;
   color: #ff3366;
   transform: translateY(-2px);
 }
 
-.video-cta-phu {
+.video-btn-secondary {
   display: inline-block;
   padding: 15px 30px;
   background-color: transparent;
@@ -171,7 +171,7 @@
   transition: all 0.3s ease;
 }
 
-.video-cta-phu:hover {
+.video-btn-secondary:hover {
   background-color: #fff;
   color: #000;
   transform: translateY(-2px);
@@ -259,19 +259,19 @@
 }
 
 /* Khối Danh mục */
-.danh-muc {
+.categories {
   padding: 50px 0;
   background-color: #111;
 }
 
-.tieu-de-khoi {
+.section-title {
   text-align: center;
   font-size: 32px;
   margin-bottom: 40px;
   color: #fff;
 }
 
-.luoi-danh-muc {
+.category-grid {
   display: flex;
   flex-direction: column;
   gap: 50px;
@@ -280,7 +280,7 @@
   padding: 0 20px;
 }
 
-.the-danh-muc {
+.category-card {
   display: flex;
   align-items: center;
   gap: 30px;
@@ -289,33 +289,33 @@
   border-radius: 8px;
 }
 
-.the-danh-muc:nth-child(even) {
+.category-card:nth-child(even) {
   flex-direction: row-reverse;
 }
 
-.khung-anh-danh-muc {
+.category-img-wrapper {
   flex: 1;
   height: 300px;
 }
 
-.anh-danh-muc {
+.category-img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   border-radius: 4px;
 }
 
-.lop-phu-danh-muc {
+.category-overlay {
   flex: 1;
 }
 
-.tieu-de-the-danh-muc {
+.category-title {
   font-size: 24px;
   margin-bottom: 15px;
   color: #fff;
 }
 
-.lien-ket-danh-muc {
+.category-link {
   display: inline-block;
   color: #ff3366;
   font-weight: bold;
@@ -323,7 +323,7 @@
   border-bottom: 1px solid #ff3366;
 }
 
-.lien-ket-danh-muc:hover {
+.category-link:hover {
   color: #fff;
   border-bottom-color: #fff;
 }
@@ -405,7 +405,7 @@
 }
 
 /* Sản Phẩm Thời Trang Khác */
-.phan-san-pham-noi-bat {
+.featured-products {
   padding: 50px 0;
   background-color: #111;
 }
@@ -415,7 +415,7 @@
   margin-bottom: 40px;
 }
 
-.luoi-san-pham-grid {
+.product-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 20px;
@@ -425,7 +425,7 @@
 }
 
 /* BANNER PHÂN CÁCH TRANG CHỦ */
-.banner-phan-cach {
+.separator-banner {
   background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('../assets/images/nike_banner.jpg');
   background-size: cover;
   background-position: center;
@@ -439,12 +439,12 @@
   overflow: hidden;
 }
 
-.noi-dung-banner-pc {
+.banner-content {
   text-align: center;
   z-index: 2;
 }
 
-.sub-banner {
+.banner-sub {
   color: #ff3366;
   font-weight: 800;
   letter-spacing: 4px;
@@ -454,7 +454,7 @@
   margin-bottom: 15px;
 }
 
-.tieu-de-banner-pc {
+.banner-title {
   font-size: clamp(32px, 5vw, 56px);
   font-weight: 900;
   color: #fff;
@@ -462,14 +462,14 @@
   letter-spacing: 2px;
 }
 
-.vach-ke-banner {
+.banner-line {
   width: 80px;
   height: 4px;
   background: #ff3366;
   margin: 20px auto 0;
 }
 
-.the-san-pham-fashion {
+.product-card {
   background-color: #111111;
   border: 1px solid #222;
   border-radius: 12px;
@@ -479,12 +479,12 @@
   transition: transform 0.3s ease, border-color 0.3s ease;
 }
 
-.the-san-pham-fashion:hover {
+.product-card:hover {
   transform: translateY(-10px);
   border-color: #ff3366;
 }
 
-.hinh-san-pham {
+.product-img-wrapper {
   width: 100%;
   height: 280px;
   background-color: #f5f5f5; /* Nền sáng màu cho ảnh giống ảnh 2 */
@@ -493,32 +493,32 @@
   margin-bottom: 15px;
 }
 
-.hinh-san-pham img {
+.product-img-wrapper img {
   width: 100%;
   height: 100%;
   object-fit: contain;
   padding: 10px;
 }
 
-.thong-tin-san-pham {
+.product-info {
   padding: 10px 0;
 }
 
-.ten-sp {
+.product-name {
   font-size: 18px;
   font-weight: 700;
   color: #fff;
   margin-bottom: 8px;
 }
 
-.gia-sp {
+.product-price {
   color: #ff3366;
   font-size: 20px;
   font-weight: 800;
   margin-bottom: 15px;
 }
 
-.nut-mua-sp {
+.btn-buy {
   display: inline-block;
   background-color: transparent;
   color: #ff3366;
@@ -530,19 +530,19 @@
   transition: all 0.3s;
 }
 
-.nut-mua-sp:hover {
+.btn-buy:hover {
   background-color: #ff3366;
   color: #fff;
 }
 
 
 
-.phan-xem-them {
+.view-more {
   text-align: center;
   margin-top: 30px;
 }
 
-.nut-xem-them {
+.btn-view-more {
   display: inline-block;
   padding: 10px 30px;
   background-color: #fff;
@@ -551,14 +551,14 @@
   text-transform: uppercase;
 }
 
-.nut-xem-them:hover {
+.btn-view-more:hover {
   background-color: #ff3366;
   color: #fff;
 }
 
 /* Responsive cơ bản cho trang chủ */
 @media (max-width: 768px) {
-  .the-danh-muc {
+  .category-card {
     flex-direction: column !important;
   }
 
