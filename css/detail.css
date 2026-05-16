@@ -6,14 +6,14 @@
    THANH ĐƯỜNG DẪN (BREADCRUMB)
    ======================================== */
 
-.duong-dan {
+.breadcrumb {
   padding: 100px 24px 0;
   max-width: 1200px;
   margin: 0 auto;
   display: block;
 }
 
-.danh-sach-duong-dan {
+.breadcrumb-list {
   display: flex;
   align-items: center;
   gap: 8px;
@@ -22,22 +22,22 @@
   color: #888888;
 }
 
-.muc-duong-dan + .muc-duong-dan::before {
+.breadcrumb-item + .breadcrumb-item::before {
   content: '/';
   color: #444444;
   margin-right: 8px;
 }
 
-.lien-ket-duong-dan {
+.breadcrumb-link {
   color: #888888;
   transition: color 0.3s;
 }
 
-.lien-ket-duong-dan:hover {
+.breadcrumb-link:hover {
   color: #ff3366;
 }
 
-.duong-dan-hien-tai {
+.breadcrumb-current {
   color: #ffffff;
   font-weight: 600;
 }
@@ -46,7 +46,7 @@
    CHI TIẾT SẢN PHẨM CHÍNH
    ======================================== */
 
-.chi-tiet-san-pham {
+.product-detail {
   display: flex;
   max-width: 1200px;
   margin: 40px auto 80px;
@@ -55,11 +55,11 @@
 }
 
 /* Bộ sưu tập ảnh bên trái */
-.bo-suu-tap-anh {
+.product-gallery {
   flex: 1;
 }
 
-.anh-chinh {
+.main-image-wrapper {
   width: 100%;
   aspect-ratio: 1/1;
   background-color: #111111;
@@ -71,23 +71,23 @@
   justify-content: center;
 }
 
-.anh-chinh img {
+.main-image-wrapper img {
   max-width: 100%;
   max-height: 100%;
   object-fit: contain; /* Giữ nguyên vẹn hình ảnh sản phẩm */
   transition: transform 0.5s ease;
 }
 
-.anh-chinh img:hover {
+.main-image-wrapper img:hover {
   transform: scale(1.05);
 }
 
-.anh-thu-nho-nhom {
+.thumbnail-group {
   display: flex;
   gap: 12px;
 }
 
-.anh-thu-nho {
+.thumbnail {
   flex: 1;
   border: 2px solid #222222;
   overflow: hidden;
@@ -96,23 +96,23 @@
   transition: border-color 0.3s;
 }
 
-.anh-thu-nho:hover {
+.thumbnail:hover {
   border-color: #ff3366;
 }
 
-.anh-thu-nho img {
+.thumbnail img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   transition: transform 0.4s ease;
 }
 
-.anh-thu-nho:hover img {
+.thumbnail:hover img {
   transform: scale(1.1);
 }
 
 /* Thông tin sản phẩm bên phải */
-.thong-tin-san-pham {
+.product-info {
   flex: 1;
   display: flex;
   flex-direction: column;
@@ -120,7 +120,7 @@
   padding-top: 8px;
 }
 
-.danh-muc-chi-tiet {
+.detail-category {
   font-size: 13px;
   color: #ff3366;
   text-transform: uppercase;
@@ -129,7 +129,7 @@
   letter-spacing: 2px;
 }
 
-.tieu-de-chi-tiet {
+.detail-title {
   font-size: 48px;
   font-weight: 900;
   line-height: 1.1;
@@ -139,31 +139,31 @@
 }
 
 /* Đánh giá sao */
-.danh-gia-chi-tiet {
+.detail-rating {
   display: flex;
   align-items: center;
   gap: 12px;
   margin-bottom: 24px;
 }
 
-.sao-chi-tiet {
+.detail-stars {
   color: #ffaa00;
   font-size: 18px;
   letter-spacing: 2px;
 }
 
-.lien-ket-danh-gia {
+.detail-review-link {
   font-size: 13px;
   color: #888888;
   text-decoration: underline;
 }
 
-.lien-ket-danh-gia:hover {
+.detail-review-link:hover {
   color: #ff3366;
 }
 
 /* Giá */
-.gia-chi-tiet {
+.detail-price-wrapper {
   display: flex;
   align-items: center;
   gap: 16px;
@@ -173,19 +173,19 @@
   border-bottom: 1px solid #1f1f1f;
 }
 
-.gia-hien-tai-chi-tiet {
+.detail-price-current {
   font-size: 36px;
   font-weight: 900;
   color: #ff3366;
 }
 
-.gia-cu-chi-tiet {
+.detail-price-old {
   font-size: 20px;
   color: #555555;
   text-decoration: line-through;
 }
 
-.giam-gia-chi-tiet {
+.detail-discount {
   background-color: #ff3366;
   color: #ffffff;
   font-size: 13px;
@@ -194,7 +194,7 @@
   border-radius: 2px;
 }
 
-.mo-ta-chi-tiet {
+.detail-desc {
   color: #cccccc;
   line-height: 1.8;
   margin-bottom: 28px;
@@ -205,15 +205,15 @@
    TÙY CHỌN SẢN PHẨM
    ======================================== */
 
-.tuy-chon-san-pham {
+.product-options {
   margin-bottom: 32px;
 }
 
-.nhom-tuy-chon {
+.option-group {
   margin-bottom: 24px;
 }
 
-.nhan-tuy-chon {
+.option-label {
   font-weight: 800;
   font-size: 13px;
   margin-bottom: 12px;
@@ -223,13 +223,13 @@
   color: #ffffff;
 }
 
-.tuy-chon-kich-thuoc {
+.size-options {
   display: flex;
   flex-wrap: wrap;
   gap: 12px;
 }
 
-.kich-thuoc {
+.size-item {
   padding: 12px 18px;
   border: 2px solid #222222;
   text-align: center;
@@ -243,14 +243,14 @@
   user-select: none;
 }
 
-.kich-thuoc:hover,
-.kich-thuoc.active {
+.size-item:hover,
+.size-item.active {
   border-color: #ff3366;
   background-color: #ff3366;
   color: #ffffff;
 }
 
-.chon-so-luong {
+.quantity-selector {
   display: flex;
   align-items: center;
   border: 2px solid #222222;
@@ -258,7 +258,7 @@
   background-color: transparent;
 }
 
-.nut-chon-so-luong {
+.btn-quantity {
   width: 44px;
   height: 44px;
   border: none;
@@ -270,11 +270,11 @@
   transition: color 0.3s;
 }
 
-.nut-chon-so-luong:hover {
+.btn-quantity:hover {
   color: #ff3366;
 }
 
-.o-nhap-so-luong {
+.quantity-input {
   flex: 1;
   text-align: center;
   border: none;
@@ -288,12 +288,12 @@
    HÀNH ĐỘNG CHI TIẾT
    ======================================== */
 
-.hanh-dong-chi-tiet {
+.detail-actions {
   display: flex;
   gap: 16px;
 }
 
-.hanh-dong-chinh {
+.btn-primary {
   flex: 1;
   padding: 20px;
   background-color: #ff3366;
@@ -307,12 +307,12 @@
   transition: all 0.3s;
 }
 
-.hanh-dong-chinh:hover {
+.btn-primary:hover {
   background-color: #e62e5c;
   transform: translateY(-4px);
 }
 
-.hanh-dong-phu {
+.btn-secondary {
   flex: 1;
   padding: 20px;
   background-color: transparent;
@@ -326,7 +326,7 @@
   transition: all 0.3s;
 }
 
-.hanh-dong-phu:hover {
+.btn-secondary:hover {
   background-color: #ffffff;
   color: #0a0a0a;
   transform: translateY(-4px);
@@ -435,13 +435,13 @@
    SẢN PHẨM LIÊN QUAN
    ======================================== */
 
-.san-pham-lien-quan {
+.related-products {
   max-width: 1200px;
   margin: 0 auto 80px;
   padding: 0 24px;
 }
 
-.tieu-de-san-pham-lq {
+.related-title {
   font-size: 32px;
   font-weight: 900;
   color: #ffffff;

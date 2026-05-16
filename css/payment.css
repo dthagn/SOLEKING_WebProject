@@ -1,5 +1,5 @@
 /* === TRANG THANH TOÁN === */
-.trang-thanh-toan {
+.checkout-page {
     max-width: 1200px;
     margin: 0 auto;
     padding: 120px 24px 80px;
@@ -9,7 +9,7 @@
     align-items: start;
 }
 
-.tieu-de-trang-tt {
+.checkout-subtitle {
     font-size: 14px;
     color: #ff3366;
     text-transform: uppercase;
@@ -18,7 +18,7 @@
     margin-bottom: 8px;
 }
 
-.tieu-de-chinh-tt {
+.checkout-title {
     font-size: 48px;
     font-weight: 900;
     color: #ffffff;
@@ -28,17 +28,17 @@
 }
 
 /* Cột trái: Form */
-.khung-form-tt {
+.checkout-form-wrapper {
     background-color: #111111;
     border: 1px solid #222222;
     padding: 40px;
 }
 
-.nhom-form-tt {
+.form-group {
     margin-bottom: 24px;
 }
 
-.nhan-form-tt {
+.form-label {
     display: block;
     font-size: 11px;
     font-weight: 800;
@@ -48,7 +48,7 @@
     margin-bottom: 8px;
 }
 
-.o-form-tt {
+.form-input {
     width: 100%;
     padding: 14px 18px;
     background-color: #1a1a1a;
@@ -60,23 +60,23 @@
     display: block;
 }
 
-.o-form-tt:focus {
+.form-input:focus {
     outline: none;
     border-color: #ff3366;
     background-color: #0d0d0d;
 }
 
-.o-form-tt::placeholder {
+.form-input::placeholder {
     color: #555;
 }
 
-.hang-form-tt {
+.form-row {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 16px;
 }
 
-.tieu-de-phan-form {
+.form-section-title {
     font-size: 16px;
     font-weight: 800;
     color: #ffffff;
@@ -87,13 +87,13 @@
     border-bottom: 1px solid #222;
 }
 
-.phuong-thuc-tt {
+.payment-methods {
     display: flex;
     flex-direction: column;
     gap: 12px;
 }
 
-.tuy-chon-tt {
+.payment-option {
     display: flex;
     align-items: center;
     gap: 12px;
@@ -103,18 +103,18 @@
     transition: border-color 0.3s;
 }
 
-.tuy-chon-tt:has(input:checked) {
+.payment-option:has(input:checked) {
     border-color: #ff3366;
     background-color: rgba(255, 51, 102, 0.05);
 }
 
-.tuy-chon-tt input[type="radio"] {
+.payment-option input[type="radio"] {
     accent-color: #ff3366;
     width: 16px;
     height: 16px;
 }
 
-.nut-xac-nhan-tt {
+.btn-submit-order {
     width: 100%;
     padding: 20px;
     background-color: #ff3366;
@@ -129,19 +129,19 @@
     transition: all 0.3s;
 }
 
-.nut-xac-nhan-tt:hover {
+.btn-submit-order:hover {
     background-color: #e62e5c;
     transform: translateY(-3px);
     box-shadow: 0 8px 24px rgba(255, 51, 102, 0.3);
 }
 
 /* Cột phải: Giỏ hàng */
-.khung-gio-hang-tt {
+.checkout-cart-wrapper {
     position: sticky;
     top: 100px;
 }
 
-.tieu-de-gio-tt {
+.checkout-cart-title {
     font-size: 18px;
     font-weight: 800;
     color: #ffffff;
@@ -155,7 +155,7 @@
     align-items: center;
 }
 
-.so-sp-gio {
+.cart-item-count {
     font-size: 13px;
     color: #888;
     font-weight: 600;
@@ -164,7 +164,7 @@
 }
 
 /* Danh sách sản phẩm trong giỏ */
-#danh-sach-gio {
+#cart-list {
     display: flex;
     flex-direction: column;
     gap: 16px;
@@ -174,20 +174,20 @@
     padding-right: 4px;
 }
 
-#danh-sach-gio::-webkit-scrollbar {
+#cart-list::-webkit-scrollbar {
     width: 4px;
 }
 
-#danh-sach-gio::-webkit-scrollbar-track {
+#cart-list::-webkit-scrollbar-track {
     background: #1a1a1a;
 }
 
-#danh-sach-gio::-webkit-scrollbar-thumb {
+#cart-list::-webkit-scrollbar-thumb {
     background: #ff3366;
     border-radius: 2px;
 }
 
-.dong-sp-gio {
+.cart-item {
     display: flex;
     align-items: center;
     gap: 16px;
@@ -196,7 +196,7 @@
     padding: 14px;
 }
 
-.anh-sp-gio {
+.cart-item-img {
     width: 72px;
     height: 72px;
     object-fit: cover;
@@ -204,30 +204,30 @@
     flex-shrink: 0;
 }
 
-.thong-tin-sp-gio {
+.cart-item-info {
     flex: 1;
 }
 
-.ten-sp-gio {
+.cart-item-name {
     font-size: 14px;
     font-weight: 700;
     color: #ffffff;
     margin-bottom: 4px;
 }
 
-.meta-sp-gio {
+.cart-item-meta {
     font-size: 12px;
     color: #888;
 }
 
-.gia-sp-gio {
+.cart-item-price {
     font-size: 15px;
     font-weight: 800;
     color: #ff3366;
     white-space: nowrap;
 }
 
-.nut-xoa-gio {
+.btn-remove-item {
     background: none;
     border: none;
     color: #555;
@@ -238,12 +238,12 @@
     transition: color 0.2s;
 }
 
-.nut-xoa-gio:hover {
+.btn-remove-item:hover {
     color: #ff3366;
 }
 
 /* Gio trong */
-.gio-trong {
+.cart-empty {
     text-align: center;
     padding: 40px 20px;
     color: #555;
@@ -251,19 +251,19 @@
     border: 1px dashed #333;
 }
 
-.gio-trong svg {
+.cart-empty svg {
     margin-bottom: 12px;
     opacity: 0.4;
 }
 
 /* Tổng kết */
-.tong-ket-gio {
+.cart-summary {
     background-color: #111111;
     border: 1px solid #222;
     padding: 20px;
 }
 
-.dong-tong-ket {
+.summary-row {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -272,7 +272,7 @@
     color: #aaa;
 }
 
-.dong-tong-ket.tong-cuoi {
+.summary-row.summary-total {
     border-top: 1px solid #333;
     margin-top: 8px;
     padding-top: 16px;
@@ -281,11 +281,11 @@
     color: #ffffff;
 }
 
-.dong-tong-ket.tong-cuoi span:last-child {
+.summary-row.summary-total span:last-child {
     color: #ff3366;
 }
 
-.mien-phi-tag {
+.tag-free {
     color: #22c55e;
     font-weight: 700;
 }

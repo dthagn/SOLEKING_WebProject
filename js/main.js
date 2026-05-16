@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', function () {
   const btnTimKiem = document.getElementById('btn-tim-kiem');
-  const overlayTK = document.getElementById('overlay-tim-kiem');
+  const overlayTK = document.getElementById('search-overlay');
   const inputTK = document.getElementById('input-tim-kiem');
 
   if (btnTimKiem) {
@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', function () {
     inputTK.addEventListener('input', hienGoiY);
     inputTK.addEventListener('keyup', hienGoiY);
 
-    const btnThucHien = document.getElementById('btn-thuc-hien-tk');
+    const btnThucHien = document.getElementById('btn-submit-search');
     if (btnThucHien) {
       btnThucHien.addEventListener('click', function () {
         if (inputTK.value.trim()) {
@@ -93,7 +93,7 @@ function hienGoiY() {
 }
 
 function dongTimKiem() {
-  const overlay = document.getElementById('overlay-tim-kiem');
+  const overlay = document.getElementById('search-overlay');
   if (!overlay) return;
   overlay.classList.remove('mo');
   document.body.style.overflow = '';

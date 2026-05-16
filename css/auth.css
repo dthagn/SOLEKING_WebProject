@@ -187,13 +187,13 @@
   margin-bottom: 24px;
 }
 
-.nhom-nhap-lieu {
+.input-group {
   width: 100%;
   text-align: left;
   margin-bottom: 12px;
 }
 
-.nhan-nhap-lieu {
+.input-label {
   display: block;
   font-size: 12px;
   font-weight: 700;
@@ -203,7 +203,7 @@
   margin-bottom: 8px;
 }
 
-.nhan-nhap-lieu span {
+.input-label span {
   color: #ff3366;
   margin-left: 4px;
 }

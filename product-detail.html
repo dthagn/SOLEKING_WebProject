@@ -19,32 +19,32 @@
 <body>
 
   <!-- PHẦN ĐẦU TRANG (HEADER) -->
-  <header class="phan-dau" aria-label="Phần đầu trang">
-    <div class="phan-dau-chinh">
-      <div class="noi-dung-phan-dau">
+  <header class="header" aria-label="Phần đầu trang">
+    <div class="header-main">
+      <div class="header-content">
         <a href="index.html" class="logo" aria-label="SOLEKING - Về trang chủ">SOLEKING</a>
-        <nav class="thanh-dieu-huong" aria-label="Menu chính">
-          <a href="index.html" class="lien-ket-dieu-huong">Trang Chủ</a>
-          <a href="product.html" class="lien-ket-dieu-huong">Shop</a>
-          <a href="about.html" class="lien-ket-dieu-huong">Giới Thiệu</a>
-          <a href="contact.html" class="lien-ket-dieu-huong">Liên Hệ</a>
+        <nav class="navbar" aria-label="Menu chính">
+          <a href="index.html" class="nav-link">Trang Chủ</a>
+          <a href="product.html" class="nav-link">Shop</a>
+          <a href="about.html" class="nav-link">Giới Thiệu</a>
+          <a href="contact.html" class="nav-link">Liên Hệ</a>
         </nav>
-        <div class="hanh-dong">
-          <a href="#" class="nut-hanh-dong" title="Tìm Kiếm" id="btn-tim-kiem">
+        <div class="header-actions">
+          <a href="#" class="btn-action" title="Tìm Kiếm" id="btn-tim-kiem">
             <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none"
               stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <circle cx="11" cy="11" r="8" />
               <line x1="21" y1="21" x2="16.65" y2="16.65" />
             </svg>
           </a>
-          <a href="#" class="nut-hanh-dong" title="Tài Khoản" id="btn-tai-khoan">
+          <a href="#" class="btn-action" title="Tài Khoản" id="btn-tai-khoan">
             <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none"
               stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
               <circle cx="12" cy="7" r="4" />
             </svg>
           </a>
-          <a href="checkout.html" class="nut-hanh-dong" title="Giỏ Hàng" id="btn-gio-hang"
+          <a href="checkout.html" class="btn-action" title="Giỏ Hàng" id="btn-gio-hang"
             style="position: relative;">
             <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none"
               stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -52,55 +52,55 @@
               <line x1="3" y1="6" x2="21" y2="6" />
               <path d="M16 10a4 4 0 0 1-8 0" />
             </svg>
-            <span class="thong-bao-nho">0</span>
+            <span class="badge">0</span>
           </a>
         </div>
       </div>
     </div>
   </header>
 
-  <nav class="duong-dan" aria-label="Đường dẫn trang">
-    <ol class="danh-sach-duong-dan">
-      <li class="muc-duong-dan"><a href="index.html" class="lien-ket-duong-dan">Trang Chủ</a></li>
-      <li class="muc-duong-dan"><a href="san-pham.html" class="lien-ket-duong-dan">Sản Phẩm</a></li>
-      <li class="muc-duong-dan duong-dan-hien-tai" aria-current="page">Chi Tiết Sản Phẩm</li>
+  <nav class="breadcrumb" aria-label="Đường dẫn trang">
+    <ol class="breadcrumb-list">
+      <li class="breadcrumb-item"><a href="index.html" class="breadcrumb-link">Trang Chủ</a></li>
+      <li class="breadcrumb-item"><a href="san-pham.html" class="breadcrumb-link">Sản Phẩm</a></li>
+      <li class="breadcrumb-item breadcrumb-current" aria-current="page">Chi Tiết Sản Phẩm</li>
     </ol>
   </nav>
 
   <main>
     <!-- CHI TIẾT SẢN PHẨM CHÍNH -->
-    <article class="chi-tiet-san-pham" aria-label="Chi tiết sản phẩm Nike Air Force 1 '07">
+    <article class="product-detail" aria-label="Chi tiết sản phẩm Nike Air Force 1 '07">
 
       <!-- KHỐI BÊN TRÁI: BỘ SƯU TẬP ẢNH SẢN PHẨM -->
-      <div class="bo-suu-tap-anh">
+      <div class="product-gallery">
 
-        <div class="anh-chinh" id="anh-chinh-lon">
+        <div class="main-image-wrapper" id="anh-chinh-lon">
           <!-- CHÈN ẢNH CHÍNH TẠI ĐÂY -->
           <img id="img-chinh" src="assets/images/nike1.png" alt="Nike Air Force 1 '07 - Ảnh chính">
         </div>
 
-        <div class="anh-thu-nho-nhom" id="nhom-thumbnail" aria-label="Ảnh thu nhỏ sản phẩm">
+        <div class="thumbnail-group" id="nhom-thumbnail" aria-label="Ảnh thu nhỏ sản phẩm">
 
           <!-- Thumbnail 1 — Góc chính diện -->
-          <div class="anh-thu-nho active" onclick="doiAnh(this, 'assets/images/nike1.png', 'Góc chính diện')">
+          <div class="thumbnail active" onclick="doiAnh(this, 'assets/images/nike1.png', 'Góc chính diện')">
             <!-- CHÈN ẢNH 1 TẠI ĐÂY -->
             <img src="assets/images/nike1.png" alt="Góc chính diện">
           </div>
 
           <!-- Thumbnail 2 — Góc nhìn 2 -->
-          <div class="anh-thu-nho" onclick="doiAnh(this, 'assets/images/nike2.jpg', 'Góc nhìn 2')">
+          <div class="thumbnail" onclick="doiAnh(this, 'assets/images/nike2.jpg', 'Góc nhìn 2')">
             <!-- CHÈN ẢNH 2 TẠI ĐÂY -->
             <img src="assets/images/nike2.jpg" alt="Góc nhìn 2">
           </div>
 
           <!-- Thumbnail 3 — Góc nhìn 3 -->
-          <div class="anh-thu-nho" onclick="doiAnh(this, 'assets/images/nike3.jpg', 'Góc nhìn 3')">
+          <div class="thumbnail" onclick="doiAnh(this, 'assets/images/nike3.jpg', 'Góc nhìn 3')">
             <!-- CHÈN ẢNH 3 TẠI ĐÂY -->
             <img src="assets/images/nike3.jpg" alt="Góc nhìn 3">
           </div>
 
           <!-- Thumbnail 4 — Góc nhìn 4 (thêm mới) -->
-          <div class="anh-thu-nho" onclick="doiAnh(this, 'assets/images/nike4.jpg', 'Góc nhìn 4')">
+          <div class="thumbnail" onclick="doiAnh(this, 'assets/images/nike4.jpg', 'Góc nhìn 4')">
             <!-- CHÈN ẢNH 4 TẠI ĐÂY -->
             <img src="assets/images/nike4.jpg" alt="Góc nhìn 4">
           </div>
@@ -109,114 +109,114 @@
       </div>
 
       <!-- KHỐI BÊN PHẢI: THÔNG TIN VÀ CHỌN LỰA -->
-      <div class="thong-tin-san-pham">
-        <p class="danh-muc-chi-tiet">Nike — Nam</p>
-        <h1 class="tieu-de-chi-tiet">Nike Air Force 1 '07</h1>
+      <div class="product-info">
+        <p class="detail-category">Nike — Nam</p>
+        <h1 class="detail-title">Nike Air Force 1 '07</h1>
 
-        <div class="danh-gia-chi-tiet" aria-label="Đánh giá sản phẩm">
-          <span class="sao-chi-tiet"></span>
-          <a href="#danh-gia" class="lien-ket-danh-gia"></a>
+        <div class="detail-rating" aria-label="Đánh giá sản phẩm">
+          <span class="detail-stars"></span>
+          <a href="#danh-gia" class="detail-review-link"></a>
         </div>
 
-        <div class="gia-chi-tiet" aria-label="Thông tin giá">
-          <span class="gia-hien-tai-chi-tiet"></span>
-          <span class="gia-cu-chi-tiet"></span>
-          <span class="giam-gia-chi-tiet"></span>
+        <div class="detail-price-wrapper" aria-label="Thông tin giá">
+          <span class="detail-price-current"></span>
+          <span class="detail-price-old"></span>
+          <span class="detail-discount"></span>
         </div>
 
-        <p class="mo-ta-chi-tiet">
+        <p class="detail-desc">
           Sự tỏa sáng tồn tại trong Nike Air Force 1 '07. Mẫu giày bóng rổ nguyên bản kết hợp độ bền chắc và phong cách
           hoàn hảo.
         </p>
 
         <!-- Tùy chọn Kích thước -->
-        <div class="tuy-chon-san-pham">
-          <div class="nhom-tuy-chon">
-            <span class="nhan-tuy-chon" id="nhan-kich-thuoc">
+        <div class="product-options">
+          <div class="option-group">
+            <span class="option-label" id="nhan-kich-thuoc">
               Kích thước (Size):
               <span id="size-da-chon" style="color:#ff3366; margin-left:8px; font-weight:900;"></span>
             </span>
-            <div class="tuy-chon-kich-thuoc" id="nhom-size" role="group" aria-labelledby="nhan-kich-thuoc">
-              <div class="kich-thuoc" role="button" tabindex="0" aria-label="Size 39" onclick="chonSize(this)">39</div>
-              <div class="kich-thuoc" role="button" tabindex="0" aria-label="Size 40" onclick="chonSize(this)">40</div>
-              <div class="kich-thuoc" role="button" tabindex="0" aria-label="Size 41" onclick="chonSize(this)">41</div>
-              <div class="kich-thuoc" role="button" tabindex="0" aria-label="Size 42" onclick="chonSize(this)">42</div>
-              <div class="kich-thuoc" role="button" tabindex="0" aria-label="Size 43" onclick="chonSize(this)">43</div>
+            <div class="size-options" id="nhom-size" role="group" aria-labelledby="nhan-kich-thuoc">
+              <div class="size-item" role="button" tabindex="0" aria-label="Size 39" onclick="chonSize(this)">39</div>
+              <div class="size-item" role="button" tabindex="0" aria-label="Size 40" onclick="chonSize(this)">40</div>
+              <div class="size-item" role="button" tabindex="0" aria-label="Size 41" onclick="chonSize(this)">41</div>
+              <div class="size-item" role="button" tabindex="0" aria-label="Size 42" onclick="chonSize(this)">42</div>
+              <div class="size-item" role="button" tabindex="0" aria-label="Size 43" onclick="chonSize(this)">43</div>
             </div>
             <p id="canh-bao-size" style="display:none; color:#ff3366; font-size:13px; margin-top:8px; font-weight:600;">
               ⚠ Vui lòng chọn kích thước trước khi mua!
             </p>
           </div>
 
-          <div class="nhom-tuy-chon">
-            <span class="nhan-tuy-chon" id="nhan-so-luong">Số lượng:</span>
-            <div class="chon-so-luong" role="group" aria-labelledby="nhan-so-luong">
-              <button class="nut-chon-so-luong" id="btn-giam" aria-label="Giảm số lượng"
+          <div class="option-group">
+            <span class="option-label" id="nhan-so-luong">Số lượng:</span>
+            <div class="quantity-selector" role="group" aria-labelledby="nhan-so-luong">
+              <button class="btn-quantity" id="btn-giam" aria-label="Giảm số lượng"
                 onclick="thayDoiSoLuong(-1)">−</button>
-              <input type="number" id="o-so-luong" value="1" min="1" max="10" class="o-nhap-so-luong"
+              <input type="number" id="o-so-luong" value="1" min="1" max="10" class="quantity-input"
                 aria-label="Số lượng sản phẩm" readonly>
-              <button class="nut-chon-so-luong" id="btn-tang" aria-label="Tăng số lượng"
+              <button class="btn-quantity" id="btn-tang" aria-label="Tăng số lượng"
                 onclick="thayDoiSoLuong(1)">+</button>
             </div>
           </div>
         </div>
 
         <!-- Hành động -->
-        <div class="hanh-dong-chi-tiet">
-          <button class="hanh-dong-chinh" id="btn-them-gio" onclick="themVaoGio()" aria-label="Thêm vào giỏ hàng">Thêm
+        <div class="detail-actions">
+          <button class="btn-primary" id="btn-them-gio" onclick="themVaoGio()" aria-label="Thêm vào giỏ hàng">Thêm
             Vào Giỏ Hàng</button>
-          <button class="hanh-dong-phu" id="btn-mua-ngay" onclick="muaNgay()" aria-label="Mua ngay">Mua Ngay</button>
+          <button class="btn-secondary" id="btn-mua-ngay" onclick="muaNgay()" aria-label="Mua ngay">Mua Ngay</button>
         </div>
       </div>
     </article>
 
     <!-- SẢN PHẨM LIÊN QUAN -->
-    <section class="san-pham-lien-quan" aria-label="Sản phẩm tương tự">
-      <h2 class="tieu-de-san-pham-lq">Sản Phẩm Tương Tự</h2>
-      <div class="luoi-san-pham-nhom">
+    <section class="related-products" aria-label="Sản phẩm tương tự">
+      <h2 class="related-title">Sản Phẩm Tương Tự</h2>
+      <div class="related-grid">
 
-        <div class="the-sp-premium">
-          <div class="khung-anh-sp">
+        <div class="premium-card">
+          <div class="premium-img-wrapper">
             <img src="assets/images/Giay_Pureboost_22.png" alt="Adidas Ultraboost 22">
-            <div class="lop-phu-hanh-dong">
-              <a href="product-detail.html?id=adidas1" class="nut-overlay chinh">Mua Ngay</a>
-              <a href="product-detail.html?id=adidas1" class="nut-overlay">Xem Chi Tiết</a>
+            <div class="premium-overlay">
+              <a href="product-detail.html?id=adidas1" class="btn-overlay chinh">Mua Ngay</a>
+              <a href="product-detail.html?id=adidas1" class="btn-overlay">Xem Chi Tiết</a>
             </div>
           </div>
-          <div class="thong-tin-sp-premium">
-            <h3 class="ten-sp-premium">Adidas Ultraboost 22</h3>
-            <p class="mo-ta-sp-ngan">Sự hoàn hảo cho đôi chân cùng công nghệ đệm Boost trứ danh.</p>
-            <div class="gia-sp-premium">2.299.000đ</div>
+          <div class="premium-info">
+            <h3 class="premium-name">Adidas Ultraboost 22</h3>
+            <p class="premium-desc">Sự hoàn hảo cho đôi chân cùng công nghệ đệm Boost trứ danh.</p>
+            <div class="premium-price">2.299.000đ</div>
           </div>
         </div>
 
-        <div class="the-sp-premium">
-          <div class="khung-anh-sp">
+        <div class="premium-card">
+          <div class="premium-img-wrapper">
             <img src="assets/images/Puma MB.02 Phenom.jpg" alt="Puma MB.02 Phenom">
-            <div class="lop-phu-hanh-dong">
-              <a href="product-detail.html?id=puma1" class="nut-overlay chinh">Mua Ngay</a>
-              <a href="product-detail.html?id=puma1" class="nut-overlay">Xem Chi Tiết</a>
+            <div class="premium-overlay">
+              <a href="product-detail.html?id=puma1" class="btn-overlay chinh">Mua Ngay</a>
+              <a href="product-detail.html?id=puma1" class="btn-overlay">Xem Chi Tiết</a>
             </div>
           </div>
-          <div class="thong-tin-sp-premium">
-            <h3 class="ten-sp-premium">Puma MB.02 Phenom</h3>
-            <p class="mo-ta-sp-ngan">Phủ sóng sàn đấu với bản phối màu nổi bật từ LaMelo Ball.</p>
-            <div class="gia-sp-premium">3.199.000đ</div>
+          <div class="premium-info">
+            <h3 class="premium-name">Puma MB.02 Phenom</h3>
+            <p class="premium-desc">Phủ sóng sàn đấu với bản phối màu nổi bật từ LaMelo Ball.</p>
+            <div class="premium-price">3.199.000đ</div>
           </div>
         </div>
 
-        <div class="the-sp-premium">
-          <div class="khung-anh-sp">
+        <div class="premium-card">
+          <div class="premium-img-wrapper">
             <img src="assets/images/NIKE+VOMERO+PLUS.png" alt="Nike ZoomX Invincible">
-            <div class="lop-phu-hanh-dong">
-              <a href="product-detail.html?id=nike3" class="nut-overlay chinh">Mua Ngay</a>
-              <a href="product-detail.html?id=nike3" class="nut-overlay">Xem Chi Tiết</a>
+            <div class="premium-overlay">
+              <a href="product-detail.html?id=nike3" class="btn-overlay chinh">Mua Ngay</a>
+              <a href="product-detail.html?id=nike3" class="btn-overlay">Xem Chi Tiết</a>
             </div>
           </div>
-          <div class="thong-tin-sp-premium">
-            <h3 class="ten-sp-premium">Nike ZoomX Invincible</h3>
-            <p class="mo-ta-sp-ngan">Độ nảy và đàn hồi cực tốt từ công nghệ bọt ZoomX mới.</p>
-            <div class="gia-sp-premium">4.299.000đ</div>
+          <div class="premium-info">
+            <h3 class="premium-name">Nike ZoomX Invincible</h3>
+            <p class="premium-desc">Độ nảy và đàn hồi cực tốt từ công nghệ bọt ZoomX mới.</p>
+            <div class="premium-price">4.299.000đ</div>
           </div>
         </div>
 
@@ -225,40 +225,40 @@
   </main>
 
   <!-- PHẦN CUỐI TRANG -->
-  <footer class="phan-cuoi" aria-label="Phần cuối trang">
-    <div class="noi-dung-phan-cuoi">
-      <div class="cot-phan-cuoi">
-        <h3 class="tieu-de-phan-cuoi">SOLEKING</h3>
+  <footer class="footer" aria-label="Phần cuối trang">
+    <div class="footer-content">
+      <div class="footer-col">
+        <h3 class="footer-title">SOLEKING</h3>
         <p style="color:#888; font-size:14px; line-height:1.8;">Chuyên cung cấp giày thể thao chính hãng các thương hiệu
           Nike, Adidas, Puma. Chất lượng đảm bảo, uy tín hàng đầu.</p>
       </div>
-      <div class="cot-phan-cuoi">
-        <h3 class="tieu-de-phan-cuoi">KHÁM PHÁ</h3>
-        <div class="danh-sach-phan-cuoi">
+      <div class="footer-col">
+        <h3 class="footer-title">KHÁM PHÁ</h3>
+        <div class="footer-links">
           <a href="index.html" class="lien-ket-phan-cuoi">Trang Chủ</a>
           <a href="san-pham.html" class="lien-ket-phan-cuoi">Shop</a>
           <a href="gioi-thieu.html" class="lien-ket-phan-cuoi">Giới Thiệu</a>
           <a href="lien-he.html" class="lien-ket-phan-cuoi">Liên Hệ</a>
         </div>
       </div>
-      <div class="cot-phan-cuoi">
-        <h3 class="tieu-de-phan-cuoi">HỖ TRỢ</h3>
-        <div class="danh-sach-phan-cuoi">
+      <div class="footer-col">
+        <h3 class="footer-title">HỖ TRỢ</h3>
+        <div class="footer-links">
           <a href="thanh-toan.html" class="lien-ket-phan-cuoi">Hướng dẫn mua hàng</a>
           <a href="lien-he.html" class="lien-ket-phan-cuoi">Chính sách đổi trả</a>
           <a href="lien-he.html" class="lien-ket-phan-cuoi">Hỏi đáp (FAQ)</a>
         </div>
       </div>
-      <div class="cot-phan-cuoi">
-        <h3 class="tieu-de-phan-cuoi">LIÊN HỆ</h3>
-        <div class="danh-sach-phan-cuoi">
+      <div class="footer-col">
+        <h3 class="footer-title">LIÊN HỆ</h3>
+        <div class="footer-links">
           <a href="tel:0123456789" class="lien-ket-phan-cuoi">Hotline: 0123.456.789</a>
           <a href="mailto:contact@soleking.com" class="lien-ket-phan-cuoi">contact@soleking.com</a>
           <a href="lien-he.html" class="lien-ket-phan-cuoi">234 Hoàng Quốc Việt,Cầu Giấy,Hà Nội</a>
         </div>
       </div>
     </div>
-    <div class="phan-cuoi-duoi">
+    <div class="footer-bottom">
       <p>&copy; 2026 SOLEKING. Thiết kế đẳng cấp.</p>
     </div>
   </footer>
@@ -268,7 +268,7 @@
     function doiAnh(thumb, src, alt) {
       document.getElementById('img-chinh').src = src;
       document.getElementById('img-chinh').alt = alt;
-      document.querySelectorAll('.anh-thu-nho').forEach(el => el.classList.remove('active'));
+      document.querySelectorAll('.thumbnail').forEach(el => el.classList.remove('active'));
       thumb.classList.add('active');
     }
 
@@ -276,7 +276,7 @@
     var sizeChon = null;
 
     function chonSize(el) {
-      document.querySelectorAll('.kich-thuoc').forEach(function (item) {
+      document.querySelectorAll('.size-item').forEach(function (item) {
         item.classList.remove('active');
         item.setAttribute('aria-pressed', 'false');
       });
@@ -318,7 +318,7 @@
       var tong = gio.reduce(function (t, sp) { return t + sp.soLuong; }, 0);
       var badge = document.getElementById('btn-gio-hang');
       if (badge) {
-        var badgeEl = badge.querySelector('.thong-bao-nho');
+        var badgeEl = badge.querySelector('.badge');
         if (badgeEl) badgeEl.textContent = tong;
       }
     }
@@ -331,9 +331,9 @@
         return;
       }
       var soLuong = parseInt(document.getElementById('o-so-luong').value) || 1;
-      var tenSP = document.querySelector('.tieu-de-chi-tiet') ? document.querySelector('.tieu-de-chi-tiet').textContent.trim() : 'Sản phẩm';
-      var giaSP = document.querySelector('.gia-hien-tai-chi-tiet') ? document.querySelector('.gia-hien-tai-chi-tiet').textContent.trim() : '0đ';
-      var anhSP = document.getElementById('img-chinh') ? document.getElementById('img-chinh').src : '';
+      var tenSP = document.querySelector('.detail-title') ? document.querySelector('.detail-title').textContent.trim() : 'Sản phẩm';
+      var giaSP = document.querySelector('.detail-price-current') ? document.querySelector('.detail-price-current').textContent.trim() : '0đ';
+      var anhSP = document.getElementById('img-chinh') ? document.getElementById('img-chinh').getAttribute('src') : '';
 
       var gio = layGio();
       // Tìm sản phẩm trùng (cùng tên + size)
@@ -621,9 +621,9 @@
     if (id && sanPham[id]) {
       const sp = sanPham[id];
 
-      document.querySelector(".tieu-de-chi-tiet").textContent = sp.ten;
-      document.querySelector(".gia-hien-tai-chi-tiet").textContent = sp.gia;
-      document.querySelector(".mo-ta-chi-tiet").textContent = sp.moTa;
+      document.querySelector(".detail-title").textContent = sp.ten;
+      document.querySelector(".detail-price-current").textContent = sp.gia;
+      document.querySelector(".detail-desc").textContent = sp.moTa;
       document.getElementById("img-chinh").src = sp.anh;
       // ===== CẬP NHẬT THUMBNAIL =====
       const nhomThumb = document.getElementById("nhom-thumbnail");
@@ -632,7 +632,7 @@
 
       sp.dsAnh.forEach((anh, index) => {
         const thumb = document.createElement("div");
-        thumb.className = "anh-thu-nho";
+        thumb.className = "thumbnail";
 
         if (index === 0) {
           thumb.classList.add("active");
@@ -650,15 +650,15 @@
         nhomThumb.appendChild(thumb);
       });
 
-      document.querySelector(".lien-ket-danh-gia").textContent =
+      document.querySelector(".detail-review-link").textContent =
         "Đọc " + sp.danhGia + " đánh giá";
 
-      const saoEl = document.querySelector(".sao-chi-tiet");
+      const saoEl = document.querySelector(".detail-stars");
       saoEl.textContent = "★".repeat(sp.soSao) + "☆".repeat(5 - sp.soSao);
       saoEl.setAttribute("aria-label", sp.soSao + " sao");
 
-      const giaCu = document.querySelector(".gia-cu-chi-tiet");
-      const giamGia = document.querySelector(".giam-gia-chi-tiet");
+      const giaCu = document.querySelector(".detail-price-old");
+      const giamGia = document.querySelector(".detail-discount");
 
       if (sp.giaCu && sp.giamGia) {
         giaCu.textContent = sp.giaCu;
@@ -673,16 +673,16 @@
   </script>
 
   <!-- SEARCH OVERLAY -->
-  <div class="overlay-tim-kiem" id="overlay-tim-kiem">
-    <div class="hop-tim-kiem">
-      <button class="dong-overlay-tk" onclick="dongTimKiem()">✕</button>
+  <div class="search-overlay" id="search-overlay">
+    <div class="search-box">
+      <button class="btn-close-search" onclick="dongTimKiem()">✕</button>
       <div style="position: relative;">
-        <input type="text" class="o-nhap-tim-kiem" id="input-tim-kiem" placeholder="Nhập tên giày..." autocomplete="off">
-        <button id="btn-thuc-hien-tk" style="position: absolute; right: 0; top: 50%; transform: translateY(-50%); background: none; border: none; color: #ff3366; cursor: pointer;">
+        <input type="text" class="search-input" id="input-tim-kiem" placeholder="Nhập tên giày..." autocomplete="off">
+        <button id="btn-submit-search" style="position: absolute; right: 0; top: 50%; transform: translateY(-50%); background: none; border: none; color: #ff3366; cursor: pointer;">
           <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
         </button>
       </div>
-      <div id="goi-y-tim-kiem" class="khung-goi-y"></div>
+      <div id="goi-y-tim-kiem" class="search-suggestions"></div>
     </div>
   </div>
 

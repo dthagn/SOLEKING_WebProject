@@ -22,14 +22,14 @@
   text-transform: uppercase;
 }
 
-.luoi-san-pham-nhom {
+.related-grid {
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
 }
 
 /* Thẻ sản phẩm */
-.the-sp-premium {
+.premium-card {
   width: calc(33.333% - 14px);
   background-color: #111;
   border: 1px solid #333;
@@ -39,13 +39,13 @@
   flex-direction: column;
 }
 
-.the-sp-premium:hover {
+.premium-card:hover {
   border-color: #ff3366;
   transform: translateY(-5px);
   z-index: 10;
 }
 
-.khung-anh-sp {
+.premium-img-wrapper {
   width: 100%;
   height: 250px;
   background-color: #1a1a1a;
@@ -54,14 +54,14 @@
   flex-shrink: 0;
 }
 
-.khung-anh-sp img {
+.premium-img-wrapper img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 
 /* Overlay hiển thị khi hover */
-.lop-phu-hanh-dong {
+.premium-overlay {
   position: absolute;
   top: 0; left: 0; width: 100%; height: 100%;
   background: rgba(0,0,0,0.7);
@@ -73,11 +73,11 @@
   z-index: 5;
 }
 
-.the-sp-premium:hover .lop-phu-hanh-dong {
+.premium-card:hover .premium-overlay {
   display: flex;
 }
 
-.nut-overlay {
+.btn-overlay {
   padding: 10px 20px;
   background-color: transparent;
   color: #fff;
@@ -90,22 +90,22 @@
   transition: all 0.2s;
 }
 
-.nut-overlay.chinh {
+.btn-overlay.chinh {
   background-color: #ff3366;
   border-color: #ff3366;
 }
 
-.nut-overlay:hover {
+.btn-overlay:hover {
   background-color: #fff;
   color: #000;
 }
 
-.nut-overlay.chinh:hover {
+.btn-overlay.chinh:hover {
   background-color: #fff;
   color: #ff3366;
 }
 
-.thong-tin-sp-premium {
+.premium-info {
   padding: 20px 15px;
   text-align: center;
   flex-grow: 1;
@@ -114,7 +114,7 @@
   justify-content: space-between;
 }
 
-.ten-sp-premium {
+.premium-name {
   font-size: 18px;
   color: #fff;
   margin-bottom: 8px;
@@ -122,14 +122,14 @@
   letter-spacing: 0.5px;
 }
 
-.mo-ta-sp-ngan {
+.premium-desc {
   font-size: 13px;
   color: #888;
   margin-bottom: 15px;
   line-height: 1.4;
 }
 
-.gia-sp-premium {
+.premium-price {
   font-size: 18px;
   color: #ff3366;
   font-weight: bold;
@@ -137,7 +137,7 @@
 }
 
 /* Trang Chi Tiết */
-.chi-tiet-san-pham {
+.product-detail {
   display: flex;
   max-width: 1200px;
   margin: 100px auto 40px;
@@ -145,11 +145,11 @@
   gap: 40px;
 }
 
-.bo-suu-tap-anh {
+.product-gallery {
   flex: 1;
 }
 
-.anh-chinh {
+.main-image-wrapper {
   width: 100%;
   height: 400px;
   background-color: #111;
@@ -157,29 +157,29 @@
   margin-bottom: 15px;
 }
 
-.anh-chinh img {
+.main-image-wrapper img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 
-.anh-thu-nho-nhom {
+.thumbnail-group {
   display: flex;
   gap: 10px;
 }
 
-.anh-thu-nho {
+.thumbnail {
   width: calc(25% - 7.5px);
   height: 80px;
   border: 1px solid #333;
   cursor: pointer;
 }
 
-.anh-thu-nho:hover {
+.thumbnail:hover {
   border-color: #ff3366;
 }
 
-.anh-thu-nho img {
+.thumbnail img {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -189,45 +189,45 @@
   flex: 1;
 }
 
-.tieu-de-chi-tiet {
+.detail-title {
   font-size: 32px;
   color: #fff;
   margin-bottom: 15px;
   text-transform: uppercase;
 }
 
-.gia-hien-tai-chi-tiet {
+.detail-price-current {
   font-size: 28px;
   color: #ff3366;
   font-weight: bold;
   margin-bottom: 20px;
 }
 
-.mo-ta-chi-tiet {
+.detail-desc {
   color: #ccc;
   line-height: 1.6;
   margin-bottom: 30px;
 }
 
 /* Tùy chọn */
-.nhom-tuy-chon {
+.option-group {
   margin-bottom: 20px;
 }
 
-.nhan-tuy-chon {
+.option-label {
   display: block;
   font-weight: bold;
   margin-bottom: 10px;
   color: #fff;
 }
 
-.tuy-chon-kich-thuoc {
+.size-options {
   display: flex;
   gap: 10px;
   flex-wrap: wrap;
 }
 
-.kich-thuoc {
+.size-item {
   padding: 10px 15px;
   border: 1px solid #555;
   background: transparent;
@@ -235,18 +235,18 @@
   cursor: pointer;
 }
 
-.kich-thuoc:hover {
+.size-item:hover {
   border-color: #ff3366;
   background-color: #ff3366;
 }
 
-.chon-so-luong {
+.quantity-selector {
   display: flex;
   width: 120px;
   border: 1px solid #555;
 }
 
-.nut-chon-so-luong {
+.btn-quantity {
   width: 40px;
   height: 40px;
   background: transparent;
@@ -255,7 +255,7 @@
   cursor: pointer;
 }
 
-.o-nhap-so-luong {
+.quantity-input {
   width: 40px;
   text-align: center;
   background: transparent;
@@ -263,13 +263,13 @@
   border: none;
 }
 
-.hanh-dong-chi-tiet {
+.detail-actions {
   display: flex;
   gap: 15px;
   margin-top: 30px;
 }
 
-.hanh-dong-chinh {
+.btn-primary {
   flex: 1;
   background-color: #ff3366;
   color: #fff;
@@ -280,11 +280,11 @@
   cursor: pointer;
 }
 
-.hanh-dong-chinh:hover {
+.btn-primary:hover {
   background-color: #e62e5c;
 }
 
-.hanh-dong-phu {
+.btn-secondary {
   flex: 1;
   background-color: transparent;
   color: #fff;
@@ -295,23 +295,23 @@
   cursor: pointer;
 }
 
-.hanh-dong-phu:hover {
+.btn-secondary:hover {
   background-color: #fff;
   color: #000;
 }
 
 /* Responsive */
 @media (max-width: 768px) {
-  .the-sp-premium {
+  .premium-card {
     width: calc(50% - 10px);
   }
-  .chi-tiet-san-pham {
+  .product-detail {
     flex-direction: column;
   }
 }
 
 @media (max-width: 480px) {
-  .the-sp-premium {
+  .premium-card {
     width: 100%;
   }
 }

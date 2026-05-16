@@ -3,7 +3,7 @@ let sizeChon = '';
 function doiAnh(element, imgPath) {
   document.getElementById('img-chinh').src = imgPath;
 
-  document.querySelectorAll('.anh-thu-nho').forEach(t => t.classList.remove('active'));
+  document.querySelectorAll('.thumbnail').forEach(t => t.classList.remove('active'));
   if (element) element.classList.add('active');
 }
 
@@ -13,7 +13,7 @@ function chonSize(element, size) {
   document.getElementById('canh-bao-size').style.display = 'none';
   document.getElementById('nhom-size').style.outline = 'none';
 
-  document.querySelectorAll('.kich-thuoc').forEach(btn => {
+  document.querySelectorAll('.size-item').forEach(btn => {
     btn.style.backgroundColor = 'transparent';
     btn.style.color = '#ffffff';
   });
@@ -43,8 +43,8 @@ function themVaoGio() {
   }
 
   const soLuong = parseInt(document.getElementById('o-so-luong').value) || 1;
-  const tenSP = document.querySelector('.tieu-de-chi-tiet')?.textContent.trim() || 'Sản phẩm';
-  const giaSP = document.querySelector('.gia-hien-tai-chi-tiet')?.textContent.trim() || '0đ';
+  const tenSP = document.querySelector('.detail-title')?.textContent.trim() || 'Sản phẩm';
+  const giaSP = document.querySelector('.detail-price-current')?.textContent.trim() || '0đ';
   const anhSP = document.getElementById('img-chinh')?.src || '';
 
   const gio = getCart();
@@ -79,8 +79,8 @@ function muaNgay() {
   }
 
   const soLuong = parseInt(document.getElementById('o-so-luong').value) || 1;
-  const tenSP = document.querySelector('.tieu-de-chi-tiet')?.textContent.trim() || 'Sản phẩm';
-  const giaSP = document.querySelector('.gia-hien-tai-chi-tiet')?.textContent.trim() || '0đ';
+  const tenSP = document.querySelector('.detail-title')?.textContent.trim() || 'Sản phẩm';
+  const giaSP = document.querySelector('.detail-price-current')?.textContent.trim() || '0đ';
   const anhSP = document.getElementById('img-chinh')?.src || '';
 
   sessionStorage.setItem('soleking_mua_ngay', JSON.stringify([{ ten: tenSP, gia: giaSP, size: sizeChon, soLuong, anh: anhSP }]));
@@ -97,23 +97,23 @@ document.addEventListener('DOMContentLoaded', function () {
 
   const sp = sanPhamData[id];
 
-  document.querySelector('.tieu-de-chi-tiet').textContent = sp.ten;
-  document.querySelector('.gia-hien-tai-chi-tiet').textContent = sp.gia;
-  document.querySelector('.mo-ta-chi-tiet').textContent = sp.moTa;
+  document.querySelector('.detail-title').textContent = sp.ten;
+  document.querySelector('.detail-price-current').textContent = sp.gia;
+  document.querySelector('.detail-desc').textContent = sp.moTa;
   document.getElementById('img-chinh').src = sp.anh;
 
   const nhomThumb = document.getElementById('nhom-thumbnail');
   nhomThumb.innerHTML = '';
   sp.dsAnh.forEach((anh, index) => {
     const thumb = document.createElement('div');
-    thumb.className = 'anh-thu-nho' + (index === 0 ? ' active' : '');
+    thumb.className = 'thumbnail' + (index === 0 ? ' active' : '');
     thumb.onclick = function () { doiAnh(this, anh); };
     thumb.innerHTML = `<img src="${anh}" alt="Ảnh ${index + 1}">`;
     nhomThumb.appendChild(thumb);
   });
 
-  const giaCu = document.querySelector('.gia-cu-chi-tiet');
-  const giamGia = document.querySelector('.giam-gia-chi-tiet');
+  const giaCu = document.querySelector('.detail-price-old');
+  const giamGia = document.querySelector('.detail-discount');
   if (sp.giaCu && sp.giamGia) {
     if (giaCu) { giaCu.textContent = sp.giaCu; giaCu.style.display = 'inline'; }
     if (giamGia) { giamGia.textContent = sp.giamGia; giamGia.style.display = 'inline'; }

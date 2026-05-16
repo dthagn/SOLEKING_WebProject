@@ -2,29 +2,29 @@
 
 /* Máy tính bảng (Tablet) */
 @media (max-width: 1024px) {
-  .noi-dung-phan-cuoi {
+  .footer-content {
     flex-wrap: wrap;
     gap: 30px;
   }
   
-  .cot-phan-cuoi {
+  .footer-col {
     min-width: 45%;
   }
 
-  .chi-tiet-san-pham {
+  .product-detail {
     flex-direction: column;
     gap: 40px;
   }
   
-  .bo-suu-tap-anh, .thong-tin-san-pham {
+  .product-gallery, .product-info {
     width: 100%;
   }
 
-  .anh-chinh {
+  .main-image-wrapper {
     height: 400px;
   }
 
-  .tieu-de-chi-tiet {
+  .detail-title {
     font-size: 32px;
   }
 }
@@ -41,11 +41,11 @@
   h3 { font-size: 22px; }
 
   /* Header - Hiện Logo và Icon, ẩn Menu chữ */
-  .thanh-dieu-huong {
+  .navbar {
     display: none;
   }
 
-  .noi-dung-phan-dau {
+  .header-content {
     padding: 0 15px;
     height: 60px;
   }
@@ -55,7 +55,7 @@
     letter-spacing: 1px;
   }
 
-  .hanh-dong {
+  .header-actions {
     gap: 15px;
   }
 
@@ -75,38 +75,38 @@
     margin-bottom: 25px;
   }
 
-  .video-nhom-nut {
+  .video-btn-group {
     flex-direction: column;
     gap: 10px;
     width: 100%;
     padding: 0 20px;
   }
 
-  .video-cta, .video-cta-phu {
+  .video-btn, .video-btn-secondary {
     width: 100%;
     padding: 12px;
     font-size: 14px;
   }
 
   /* Danh mục Zig-zag - Xếp chồng */
-  .luoi-danh-muc {
+  .category-grid {
     gap: 30px;
   }
 
-  .the-danh-muc {
+  .category-card {
     flex-direction: column !important;
     padding: 15px;
   }
 
-  .khung-anh-danh-muc {
+  .category-img-wrapper {
     height: 250px !important;
   }
 
-  .tieu-de-the-danh-muc {
+  .category-title {
     font-size: 20px;
   }
 
-  .mo-ta-anh-bia {
+  .category-desc {
     font-size: 14px;
   }
 
@@ -134,90 +134,90 @@
   }
 
   /* Trang Liên Hệ */
-  .bia-lien-he, .bia-gioi-thieu {
+  .contact-cover, .about-cover {
     padding: 120px 20px 60px;
   }
 
-  .khu-vuc-lien-he {
+  .contact-area {
     flex-direction: column;
     padding: 60px 15px;
     gap: 40px;
   }
 
-  .tieu-de-lien-he, .tieu-de-gioi-thieu {
+  .contact-title, .about-title {
     font-size: 36px !important;
   }
 
-  .hang-nhap-lieu {
+  .input-row {
     flex-direction: column;
     gap: 24px; /* Giữ khoảng cách khi xếp chồng */
   }
 
-  .khung-bieu-mau-lh {
+  .contact-form-wrapper {
     padding: 30px 20px;
   }
 
   /* Trang Giới Thiệu */
-  .bia-lien-he, .bia-gioi-thieu {
+  .contact-cover, .about-cover {
     padding: 100px 20px 40px;
   }
 
-  .khoi-cau-chuyen {
+  .story-block {
     flex-direction: column !important;
     gap: 40px;
     margin-bottom: 60px;
   }
 
-  .anh-cau-chuyen {
+  .story-image {
     width: 100%;
     aspect-ratio: 4/3;
   }
 
-  .so-thu-tu {
+  .story-number {
     font-size: 40px;
   }
 
-  .tieu-de-khoi-ct {
+  .story-title {
     font-size: 24px;
   }
 
-  .con-so {
+  .stat-number {
     font-size: 32px;
   }
 
-  .muc-so-lieu {
+  .stat-item {
     padding: 10px;
     min-width: 45%;
   }
 
   /* Trang Chi Tiết */
-  .chi-tiet-san-pham {
+  .product-detail {
     margin-top: 80px;
     padding: 0 15px;
   }
 
-  .anh-chinh {
+  .main-image-wrapper {
     height: 300px;
   }
 
-  .anh-thu-nho {
+  .thumbnail {
     height: 60px;
   }
 
-  .tieu-de-chi-tiet {
+  .detail-title {
     font-size: 24px;
   }
 
-  .gia-hien-tai-chi-tiet {
+  .detail-price-current {
     font-size: 24px;
   }
 
-  .hanh-dong-chi-tiet {
+  .detail-actions {
     flex-direction: column;
   }
 
   /* Footer - Bố cục hàng ngang (2 cột mỗi hàng) cho đẹp */
-  .noi-dung-phan-cuoi {
+  .footer-content {
     display: flex;
     flex-direction: row !important;
     flex-wrap: wrap;
@@ -227,22 +227,22 @@
     padding: 0 15px;
   }
 
-  .cot-phan-cuoi {
+  .footer-col {
     width: calc(50% - 10px); /* Xếp 2 cột một hàng */
     margin-bottom: 20px;
   }
 
-  .cot-phan-cuoi div[style*="display: flex"] {
+  .footer-col div[style*="display: flex"] {
     justify-content: flex-start !important;
   }
 
   /* Fix lưới sản phẩm và hình ảnh không bị cắt */
-  .luoi-san-pham-grid {
+  .product-grid {
     grid-template-columns: 1fr !important;
     gap: 20px;
   }
 
-  .the-san-pham-fashion img {
+  .product-card img {
     height: auto !important;
     aspect-ratio: 1/1;
     object-fit: contain !important;
@@ -250,24 +250,24 @@
   }
 
   /* Trang Thanh Toán */
-  .trang-thanh-toan {
+  .checkout-page {
     grid-template-columns: 1fr;
     padding: 100px 15px 40px;
     gap: 32px;
   }
 
-  .hang-form-tt {
+  .form-row {
     grid-template-columns: 1fr;
   }
 
-  .khung-form-tt {
+  .checkout-form-wrapper {
     padding: 20px;
   }
 }
 
 /* Các màn hình cực nhỏ (Phone dọc) */
 @media (max-width: 480px) {
-  .cot-phan-cuoi {
+  .footer-col {
     width: 100%; /* Trên màn hình quá nhỏ thì mới xếp dọc */
   }
 }
@@ -277,7 +277,7 @@
   max-width: 100vw;
 }
 
-.video-nen {
+.video-bg {
   width: 100% !important;
   height: 100% !important;
   object-fit: cover;

@@ -32,7 +32,7 @@ function updateCartBadge() {
   
   const badge = document.getElementById('btn-gio-hang');
   if (badge) {
-    const badgeEl = badge.querySelector('.thong-bao-nho');
+    const badgeEl = badge.querySelector('.badge');
     if (badgeEl) {
       badgeEl.textContent = totalItems;
     }

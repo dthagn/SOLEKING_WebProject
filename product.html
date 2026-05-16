@@ -13,18 +13,18 @@
 </head>
 
 <body>
-  <header class="phan-dau">
-    <div class="phan-dau-chinh">
-      <div class="noi-dung-phan-dau">
+  <header class="header">
+    <div class="header-main">
+      <div class="header-content">
         <a href="index.html" class="logo">SOLEKING</a>
-        <nav class="thanh-dieu-huong">
-          <a href="index.html" class="lien-ket-dieu-huong">Trang Chủ</a>
-          <a href="product.html" class="lien-ket-dieu-huong">Shop</a>
-          <a href="about.html" class="lien-ket-dieu-huong">Giới Thiệu</a>
-          <a href="contact.html" class="lien-ket-dieu-huong">Liên Hệ</a>
+        <nav class="navbar">
+          <a href="index.html" class="nav-link">Trang Chủ</a>
+          <a href="product.html" class="nav-link">Shop</a>
+          <a href="about.html" class="nav-link">Giới Thiệu</a>
+          <a href="contact.html" class="nav-link">Liên Hệ</a>
         </nav>
-        <div class="hanh-dong">
-          <a href="#" class="nut-hanh-dong" title="Tìm Kiếm" id="btn-tim-kiem">
+        <div class="header-actions">
+          <a href="#" class="btn-action" title="Tìm Kiếm" id="btn-tim-kiem">
             <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none"
               stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <circle cx="11" cy="11" r="8" />
@@ -32,7 +32,7 @@
             </svg>
           </a>
           <div id="wrapper-tai-khoan">
-            <a href="#" class="nut-hanh-dong" title="Tài Khoản" id="btn-tai-khoan" onclick="toggleDropdownUser(event)">
+            <a href="#" class="btn-action" title="Tài Khoản" id="btn-tai-khoan" onclick="toggleDropdownUser(event)">
               <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none"
                 stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
@@ -41,7 +41,7 @@
             </a>
             <div class="dropdown-tai-khoan" id="dropdown-tai-khoan"></div>
           </div>
-          <a href="checkout.html" class="nut-hanh-dong" title="Giỏ Hàng" id="btn-gio-hang"
+          <a href="checkout.html" class="btn-action" title="Giỏ Hàng" id="btn-gio-hang"
             style="position: relative;">
             <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none"
               stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -49,7 +49,7 @@
               <line x1="3" y1="6" x2="21" y2="6" />
               <path d="M16 10a4 4 0 0 1-8 0" />
             </svg>
-            <span class="thong-bao-nho">0</span>
+            <span class="badge">0</span>
           </a>
         </div>
       </div>
@@ -59,288 +59,288 @@
   <main class="danh-sach-san-pham">
 
     <!-- NHÓM NIKE -->
-    <div class="nhom-thuong-hieu" id="the-thao">
+    <section class="nhom-thuong-hieu" id="the-thao">
       <h2 class="tieu-de-thuong-hieu">Gian Hàng Nike</h2>
-      <div class="luoi-san-pham-nhom">
+      <div class="related-grid">
 
-        <div class="the-sp-premium">
-          <div class="khung-anh-sp">
+        <div class="premium-card">
+          <div class="premium-img-wrapper">
             <img src="assets/images/nike1.png" alt="Nike 1">
-            <div class="lop-phu-hanh-dong">
-              <a href="product-detail.html?id=nike1" class="nut-overlay chinh">Mua Ngay</a>
-              <a href="product-detail.html?id=nike1" class="nut-overlay">Xem Chi Tiết</a>
+            <div class="premium-overlay">
+              <a href="product-detail.html?id=nike1" class="btn-overlay chinh">Mua Ngay</a>
+              <a href="product-detail.html?id=nike1" class="btn-overlay">Xem Chi Tiết</a>
             </div>
           </div>
-          <div class="thong-tin-sp-premium">
-            <h3 class="ten-sp-premium">Nike Air Force 1 '07</h3>
-            <p class="mo-ta-sp-ngan">Sự tỏa sáng tồn tại trong mẫu giày bóng rổ nguyên bản, kết hợp độ bền chắc và phong cách.</p>
-            <div class="gia-sp-premium">1.599.000đ</div>
+          <div class="premium-info">
+            <h3 class="premium-name">Nike Air Force 1 '07</h3>
+            <p class="premium-desc">Sự tỏa sáng tồn tại trong mẫu giày bóng rổ nguyên bản, kết hợp độ bền chắc và phong cách.</p>
+            <div class="premium-price">1.599.000đ</div>
           </div>
         </div>
 
-        <div class="the-sp-premium">
-          <div class="khung-anh-sp">
+        <div class="premium-card">
+          <div class="premium-img-wrapper">
             <img src="assets/images/NIKE+AIR+MAX+90.png" alt="Nike 2">
-            <div class="lop-phu-hanh-dong">
-              <a href="product-detail.html?id=nike2" class="nut-overlay chinh">Mua Ngay</a>
-              <a href="product-detail.html?id=nike2" class="nut-overlay">Xem Chi Tiết</a>
+            <div class="premium-overlay">
+              <a href="product-detail.html?id=nike2" class="btn-overlay chinh">Mua Ngay</a>
+              <a href="product-detail.html?id=nike2" class="btn-overlay">Xem Chi Tiết</a>
             </div>
           </div>
-          <div class="thong-tin-sp-premium">
-            <h3 class="ten-sp-premium">Nike Air Max 2024</h3>
-            <p class="mo-ta-sp-ngan">Trải nghiệm đệm khí Air tối đa cho mỗi bước chạy êm ái hơn bao giờ hết.</p>
-            <div class="gia-sp-premium">3.499.000đ</div>
+          <div class="premium-info">
+            <h3 class="premium-name">Nike Air Max 2024</h3>
+            <p class="premium-desc">Trải nghiệm đệm khí Air tối đa cho mỗi bước chạy êm ái hơn bao giờ hết.</p>
+            <div class="premium-price">3.499.000đ</div>
           </div>
         </div>
 
-        <div class="the-sp-premium">
-          <div class="khung-anh-sp">
+        <div class="premium-card">
+          <div class="premium-img-wrapper">
             <img src="assets/images/NIKE+VOMERO+PLUS.png" alt="Nike 3">
-            <div class="lop-phu-hanh-dong">
-              <a href="product-detail.html?id=nike3" class="nut-overlay chinh">Mua Ngay</a>
-              <a href="product-detail.html?id=nike3" class="nut-overlay">Xem Chi Tiết</a>
+            <div class="premium-overlay">
+              <a href="product-detail.html?id=nike3" class="btn-overlay chinh">Mua Ngay</a>
+              <a href="product-detail.html?id=nike3" class="btn-overlay">Xem Chi Tiết</a>
             </div>
           </div>
-          <div class="thong-tin-sp-premium">
-            <h3 class="ten-sp-premium">Nike ZoomX Invincible</h3>
-            <p class="mo-ta-sp-ngan">Giày chạy bộ chuyên nghiệp với độ nảy và đàn hồi tốt nhất từ công nghệ ZoomX.</p>
-            <div class="gia-sp-premium">4.299.000đ</div>
+          <div class="premium-info">
+            <h3 class="premium-name">Nike ZoomX Invincible</h3>
+            <p class="premium-desc">Giày chạy bộ chuyên nghiệp với độ nảy và đàn hồi tốt nhất từ công nghệ ZoomX.</p>
+            <div class="premium-price">4.299.000đ</div>
           </div>
         </div>
 
       </div>
-    </div>
+    </section>
 
     <!-- NHÓM ADIDAS -->
-    <div class="nhom-thuong-hieu">
+    <section class="nhom-thuong-hieu">
       <h2 class="tieu-de-thuong-hieu">Gian Hàng Adidas</h2>
-      <div class="luoi-san-pham-nhom">
+      <div class="related-grid">
 
-        <div class="the-sp-premium">
-          <div class="khung-anh-sp">
+        <div class="premium-card">
+          <div class="premium-img-wrapper">
             <img src="assets/images/Giay_Pureboost_22.png" alt="Adidas 1">
-            <div class="lop-phu-hanh-dong">
-              <a href="product-detail.html?id=adidas1" class="nut-overlay chinh">Mua Ngay</a>
-              <a href="product-detail.html?id=adidas1" class="nut-overlay">Xem Chi Tiết</a>
+            <div class="premium-overlay">
+              <a href="product-detail.html?id=adidas1" class="btn-overlay chinh">Mua Ngay</a>
+              <a href="product-detail.html?id=adidas1" class="btn-overlay">Xem Chi Tiết</a>
             </div>
           </div>
-          <div class="thong-tin-sp-premium">
-            <h3 class="ten-sp-premium">Adidas Ultraboost 22</h3>
-            <p class="mo-ta-sp-ngan">Sự hoàn hảo cho đôi chân, ôm sát như tất cùng công nghệ đệm Boost trứ danh.</p>
-            <div class="gia-sp-premium">2.299.000đ</div>
+          <div class="premium-info">
+            <h3 class="premium-name">Adidas Ultraboost 22</h3>
+            <p class="premium-desc">Sự hoàn hảo cho đôi chân, ôm sát như tất cùng công nghệ đệm Boost trứ danh.</p>
+            <div class="premium-price">2.299.000đ</div>
           </div>
         </div>
 
-        <div class="the-sp-premium">
-          <div class="khung-anh-sp">
+        <div class="premium-card">
+          <div class="premium-img-wrapper">
             <img src="assets/images/NMD1.jpg" alt="Adidas 2">
-            <div class="lop-phu-hanh-dong">
-              <a href="product-detail.html?id=adidas2" class="nut-overlay chinh">Mua Ngay</a>
-              <a href="product-detail.html?id=adidas2" class="nut-overlay">Xem Chi Tiết</a>
+            <div class="premium-overlay">
+              <a href="product-detail.html?id=adidas2" class="btn-overlay chinh">Mua Ngay</a>
+              <a href="product-detail.html?id=adidas2" class="btn-overlay">Xem Chi Tiết</a>
             </div>
           </div>
-          <div class="thong-tin-sp-premium">
-            <h3 class="ten-sp-premium">Adidas NMD R1 V2</h3>
-            <p class="mo-ta-sp-ngan">Phong cách đường phố táo bạo với các điểm nhấn đặc trưng không thể nhầm lẫn.</p>
-            <div class="gia-sp-premium">2.599.000đ</div>
+          <div class="premium-info">
+            <h3 class="premium-name">Adidas NMD R1 V2</h3>
+            <p class="premium-desc">Phong cách đường phố táo bạo với các điểm nhấn đặc trưng không thể nhầm lẫn.</p>
+            <div class="premium-price">2.599.000đ</div>
           </div>
         </div>
 
-        <div class="the-sp-premium">
-          <div class="khung-anh-sp">
+        <div class="premium-card">
+          <div class="premium-img-wrapper">
             <img src="assets/images/adidassupernovarise2.jpg" alt="Adidas 3">
-            <div class="lop-phu-hanh-dong">
-              <a href="product-detail.html?id=adidas3" class="nut-overlay chinh">Mua Ngay</a>
-              <a href="product-detail.html?id=adidas3" class="nut-overlay">Xem Chi Tiết</a>
+            <div class="premium-overlay">
+              <a href="product-detail.html?id=adidas3" class="btn-overlay chinh">Mua Ngay</a>
+              <a href="product-detail.html?id=adidas3" class="btn-overlay">Xem Chi Tiết</a>
             </div>
           </div>
-          <div class="thong-tin-sp-premium">
-            <h3 class="ten-sp-premium">Adidas Supernova Rise</h3>
-            <p class="mo-ta-sp-ngan">Thiết kế nhẹ, thoáng khí và êm ái cho chạy bộ hằng ngày.</p>
-            <div class="gia-sp-premium">2.799.000đ</div>
+          <div class="premium-info">
+            <h3 class="premium-name">Adidas Supernova Rise</h3>
+            <p class="premium-desc">Thiết kế nhẹ, thoáng khí và êm ái cho chạy bộ hằng ngày.</p>
+            <div class="premium-price">2.799.000đ</div>
           </div>
         </div>
 
       </div>
-    </div>
+    </section>
 
     <!-- NHÓM PUMA -->
-    <div class="nhom-thuong-hieu" id="bong-ro">
+    <section class="nhom-thuong-hieu" id="bong-ro">
       <h2 class="tieu-de-thuong-hieu">Gian Hàng Puma</h2>
-      <div class="luoi-san-pham-nhom">
+      <div class="related-grid">
 
-        <div class="the-sp-premium">
-          <div class="khung-anh-sp">
+        <div class="premium-card">
+          <div class="premium-img-wrapper">
             <img src="assets/images/Puma MB.02 Phenom.jpg" alt="Puma 1">
-            <div class="lop-phu-hanh-dong">
-              <a href="product-detail.html?id=puma1" class="nut-overlay chinh">Mua Ngay</a>
-              <a href="product-detail.html?id=puma1" class="nut-overlay">Xem Chi Tiết</a>
+            <div class="premium-overlay">
+              <a href="product-detail.html?id=puma1" class="btn-overlay chinh">Mua Ngay</a>
+              <a href="product-detail.html?id=puma1" class="btn-overlay">Xem Chi Tiết</a>
             </div>
           </div>
-          <div class="thong-tin-sp-premium">
-            <h3 class="ten-sp-premium">Puma MB.02 Phenom</h3>
-            <p class="mo-ta-sp-ngan">Phủ sóng sàn đấu với bản phối màu nổi bật từ chữ ký của LaMelo Ball.</p>
-            <div class="gia-sp-premium">3.199.000đ</div>
+          <div class="premium-info">
+            <h3 class="premium-name">Puma MB.02 Phenom</h3>
+            <p class="premium-desc">Phủ sóng sàn đấu với bản phối màu nổi bật từ chữ ký của LaMelo Ball.</p>
+            <div class="premium-price">3.199.000đ</div>
           </div>
         </div>
 
-        <div class="the-sp-premium">
-          <div class="khung-anh-sp">
+        <div class="premium-card">
+          <div class="premium-img-wrapper">
             <img src="assets/images/Clyde_all_pro.jpg" alt="Puma 2">
-            <div class="lop-phu-hanh-dong">
-              <a href="product-detail.html?id=puma2" class="nut-overlay chinh">Mua Ngay</a>
-              <a href="product-detail.html?id=puma2" class="nut-overlay">Xem Chi Tiết</a>
+            <div class="premium-overlay">
+              <a href="product-detail.html?id=puma2" class="btn-overlay chinh">Mua Ngay</a>
+              <a href="product-detail.html?id=puma2" class="btn-overlay">Xem Chi Tiết</a>
             </div>
           </div>
-          <div class="thong-tin-sp-premium">
-            <h3 class="ten-sp-premium">Puma Clyde All-Pro</h3>
-            <p class="mo-ta-sp-ngan">Thiết kế nhẹ, bám sân tốt, hỗ trợ di chuyển linh hoạt cho các trận đấu cường độ cao.</p>
-            <div class="gia-sp-premium">2.899.000đ</div>
+          <div class="premium-info">
+            <h3 class="premium-name">Puma Clyde All-Pro</h3>
+            <p class="premium-desc">Thiết kế nhẹ, bám sân tốt, hỗ trợ di chuyển linh hoạt cho các trận đấu cường độ cao.</p>
+            <div class="premium-price">2.899.000đ</div>
           </div>
         </div>
 
-        <div class="the-sp-premium">
-          <div class="khung-anh-sp">
+        <div class="premium-card">
+          <div class="premium-img-wrapper">
             <img src="assets/images/RS_X_efekt.jpg" alt="Puma 3">
-            <div class="lop-phu-hanh-dong">
-              <a href="product-detail.html?id=puma3" class="nut-overlay chinh">Mua Ngay</a>
-              <a href="product-detail.html?id=puma3" class="nut-overlay">Xem Chi Tiết</a>
+            <div class="premium-overlay">
+              <a href="product-detail.html?id=puma3" class="btn-overlay chinh">Mua Ngay</a>
+              <a href="product-detail.html?id=puma3" class="btn-overlay">Xem Chi Tiết</a>
             </div>
           </div>
-          <div class="thong-tin-sp-premium">
-            <h3 class="ten-sp-premium">Puma RS-X Efekt</h3>
-            <p class="mo-ta-sp-ngan">Phong cách thể thao đường phố với form hầm hố, đệm êm và phối màu nổi bật.</p>
-            <div class="gia-sp-premium">2.699.000đ</div>
+          <div class="premium-info">
+            <h3 class="premium-name">Puma RS-X Efekt</h3>
+            <p class="premium-desc">Phong cách thể thao đường phố với form hầm hố, đệm êm và phối màu nổi bật.</p>
+            <div class="premium-price">2.699.000đ</div>
           </div>
         </div>
 
       </div>
-    </div>
+    </section>
 
     <!-- NHÓM THỜI TRANG & PHỤ KIỆN -->
-    <div class="nhom-thuong-hieu" id="thoi-trang">
+    <section class="nhom-thuong-hieu" id="thoi-trang">
       <h2 class="tieu-de-thuong-hieu">Thời Trang & Phụ Kiện</h2>
-      <div class="luoi-san-pham-nhom">
+      <div class="related-grid">
 
-        <div class="the-sp-premium">
-          <div class="khung-anh-sp">
+        <div class="premium-card">
+          <div class="premium-img-wrapper">
             <img src="assets/images/aott.jpg" alt="Áo Thể Thao">
-            <div class="lop-phu-hanh-dong">
-              <a href="product-detail.html?id=ao1" class="nut-overlay chinh">Mua Ngay</a>
-              <a href="product-detail.html?id=ao1" class="nut-overlay">Xem Chi Tiết</a>
+            <div class="premium-overlay">
+              <a href="product-detail.html?id=ao1" class="btn-overlay chinh">Mua Ngay</a>
+              <a href="product-detail.html?id=ao1" class="btn-overlay">Xem Chi Tiết</a>
             </div>
           </div>
-          <div class="thong-tin-sp-premium">
-            <h3 class="ten-sp-premium">Áo Thể Thao Nike Pro</h3>
-            <p class="mo-ta-sp-ngan">Bộ sưu tập áo thể thao hiện đại, thoáng mát, phù hợp mọi hoạt động.</p>
-            <div class="gia-sp-premium">299.000đ</div>
+          <div class="premium-info">
+            <h3 class="premium-name">Áo Thể Thao Nike Pro</h3>
+            <p class="premium-desc">Bộ sưu tập áo thể thao hiện đại, thoáng mát, phù hợp mọi hoạt động.</p>
+            <div class="premium-price">299.000đ</div>
           </div>
         </div>
 
-        <div class="the-sp-premium">
-          <div class="khung-anh-sp">
+        <div class="premium-card">
+          <div class="premium-img-wrapper">
             <img src="assets/images/quantt.jpg" alt="Quần Thể Thao">
-            <div class="lop-phu-hanh-dong">
-              <a href="product-detail.html?id=quan1" class="nut-overlay chinh">Mua Ngay</a>
-              <a href="product-detail.html?id=quan1" class="nut-overlay">Xem Chi Tiết</a>
+            <div class="premium-overlay">
+              <a href="product-detail.html?id=quan1" class="btn-overlay chinh">Mua Ngay</a>
+              <a href="product-detail.html?id=quan1" class="btn-overlay">Xem Chi Tiết</a>
             </div>
           </div>
-          <div class="thong-tin-sp-premium">
-            <h3 class="ten-sp-premium">Quần Tập Gym Nam/Nữ</h3>
-            <p class="mo-ta-sp-ngan">Thoải mái vận động mọi ngày, chất liệu co giãn 4 chiều cực tốt.</p>
-            <div class="gia-sp-premium">249.000đ</div>
+          <div class="premium-info">
+            <h3 class="premium-name">Quần Tập Gym Nam/Nữ</h3>
+            <p class="premium-desc">Thoải mái vận động mọi ngày, chất liệu co giãn 4 chiều cực tốt.</p>
+            <div class="premium-price">249.000đ</div>
           </div>
         </div>
 
-        <div class="the-sp-premium">
-          <div class="khung-anh-sp">
+        <div class="premium-card">
+          <div class="premium-img-wrapper">
             <img src="assets/images/mu.jpg" alt="Mũ & Nón">
-            <div class="lop-phu-hanh-dong">
-              <a href="product-detail.html?id=mu1" class="nut-overlay chinh">Mua Ngay</a>
-              <a href="product-detail.html?id=mu1" class="nut-overlay">Xem Chi Tiết</a>
+            <div class="premium-overlay">
+              <a href="product-detail.html?id=mu1" class="btn-overlay chinh">Mua Ngay</a>
+              <a href="product-detail.html?id=mu1" class="btn-overlay">Xem Chi Tiết</a>
             </div>
           </div>
-          <div class="thong-tin-sp-premium">
-            <h3 class="ten-sp-premium">Mũ Snapback Streetwear</h3>
-            <p class="mo-ta-sp-ngan">Style đường phố đỉnh cao với các thiết kế snapback và dad hat cá tính.</p>
-            <div class="gia-sp-premium">199.000đ</div>
+          <div class="premium-info">
+            <h3 class="premium-name">Mũ Snapback Streetwear</h3>
+            <p class="premium-desc">Style đường phố đỉnh cao với các thiết kế snapback và dad hat cá tính.</p>
+            <div class="premium-price">199.000đ</div>
           </div>
         </div>
 
-        <div class="the-sp-premium">
-          <div class="khung-anh-sp">
+        <div class="premium-card">
+          <div class="premium-img-wrapper">
             <img src="assets/images/tui.jpg" alt="Túi & Ba Lô">
-            <div class="lop-phu-hanh-dong">
-              <a href="product-detail.html?id=tui1" class="nut-overlay chinh">Mua Ngay</a>
-              <a href="product-detail.html?id=tui1" class="nut-overlay">Xem Chi Tiết</a>
+            <div class="premium-overlay">
+              <a href="product-detail.html?id=tui1" class="btn-overlay chinh">Mua Ngay</a>
+              <a href="product-detail.html?id=tui1" class="btn-overlay">Xem Chi Tiết</a>
             </div>
           </div>
-          <div class="thong-tin-sp-premium">
-            <h3 class="ten-sp-premium">Ba Lô Thể Thao Đa Năng</h3>
-            <p class="mo-ta-sp-ngan">Linh động và thời trang, dung tích lớn phù hợp đi học và đi làm.</p>
-            <div class="gia-sp-premium">499.000đ</div>
+          <div class="premium-info">
+            <h3 class="premium-name">Ba Lô Thể Thao Đa Năng</h3>
+            <p class="premium-desc">Linh động và thời trang, dung tích lớn phù hợp đi học và đi làm.</p>
+            <div class="premium-price">499.000đ</div>
           </div>
         </div>
 
-        <div class="the-sp-premium">
-          <div class="khung-anh-sp">
+        <div class="premium-card">
+          <div class="premium-img-wrapper">
             <img src="assets/images/tat.avif" alt="Vớ Thể Thao">
-            <div class="lop-phu-hanh-dong">
-              <a href="product-detail.html?id=tat1" class="nut-overlay chinh">Mua Ngay</a>
-              <a href="product-detail.html?id=tat1" class="nut-overlay">Xem Chi Tiết</a>
+            <div class="premium-overlay">
+              <a href="product-detail.html?id=tat1" class="btn-overlay chinh">Mua Ngay</a>
+              <a href="product-detail.html?id=tat1" class="btn-overlay">Xem Chi Tiết</a>
             </div>
           </div>
-          <div class="thong-tin-sp-premium">
-            <h3 class="ten-sp-premium">Vớ Thể Thao Chống Trượt</h3>
-            <p class="mo-ta-sp-ngan">Chất liệu cao cấp, kháng khuẩn, khử mùi, bảo vệ gót chân tối ưu.</p>
-            <div class="gia-sp-premium">89.000đ</div>
+          <div class="premium-info">
+            <h3 class="premium-name">Vớ Thể Thao Chống Trượt</h3>
+            <p class="premium-desc">Chất liệu cao cấp, kháng khuẩn, khử mùi, bảo vệ gót chân tối ưu.</p>
+            <div class="premium-price">89.000đ</div>
           </div>
         </div>
 
-        <div class="the-sp-premium">
-          <div class="khung-anh-sp">
+        <div class="premium-card">
+          <div class="premium-img-wrapper">
             <img src="assets/images/lot.jpg" alt="Phụ Kiện Giày">
-            <div class="lop-phu-hanh-dong">
-              <a href="product-detail.html?id=phukien1" class="nut-overlay chinh">Mua Ngay</a>
-              <a href="product-detail.html?id=phukien1" class="nut-overlay">Xem Chi Tiết</a>
+            <div class="premium-overlay">
+              <a href="product-detail.html?id=phukien1" class="btn-overlay chinh">Mua Ngay</a>
+              <a href="product-detail.html?id=phukien1" class="btn-overlay">Xem Chi Tiết</a>
             </div>
           </div>
-          <div class="thong-tin-sp-premium">
-            <h3 class="ten-sp-premium">Lót Giày Silicon Cao Cấp</h3>
-            <p class="mo-ta-sp-ngan">Dây giày, siết dây thông minh, lót giày cao cấp đủ loại kích cỡ.</p>
-            <div class="gia-sp-premium">59.000đ</div>
+          <div class="premium-info">
+            <h3 class="premium-name">Lót Giày Silicon Cao Cấp</h3>
+            <p class="premium-desc">Dây giày, siết dây thông minh, lót giày cao cấp đủ loại kích cỡ.</p>
+            <div class="premium-price">59.000đ</div>
           </div>
         </div>
 
       </div>
-    </div>
+    </section>
 
   </main>
 
-  <footer class="phan-cuoi">
-    <div class="noi-dung-phan-cuoi">
-      <div class="cot-phan-cuoi">
-        <h3 class="tieu-de-phan-cuoi">SOLEKING</h3>
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-col">
+        <h3 class="footer-title">SOLEKING</h3>
         <p style="color:#888; font-size:14px; line-height:1.8;">Chuyên cung cấp giày thể thao chính hãng Nike, Adidas, Puma. Chất lượng đảm bảo.</p>
       </div>
-      <div class="cot-phan-cuoi">
-        <h3 class="tieu-de-phan-cuoi">KHÁM PHÁ</h3>
-        <div class="danh-sach-phan-cuoi">
+      <div class="footer-col">
+        <h3 class="footer-title">KHÁM PHÁ</h3>
+        <div class="footer-links">
           <a href="index.html">Trang Chủ</a>
           <a href="product.html">Shop</a>
           <a href="about.html">Giới Thiệu</a>
           <a href="contact.html">Liên Hệ</a>
         </div>
       </div>
-      <div class="cot-phan-cuoi">
-        <h3 class="tieu-de-phan-cuoi">HỖ TRỢ</h3>
-        <div class="danh-sach-phan-cuoi">
+      <div class="footer-col">
+        <h3 class="footer-title">HỖ TRỢ</h3>
+        <div class="footer-links">
           <a href="checkout.html">Hướng dẫn mua hàng</a>
           <a href="contact.html">Chính sách đổi trả</a>
         </div>
       </div>
-      <div class="cot-phan-cuoi">
-        <h3 class="tieu-de-phan-cuoi">KẾT NỐI</h3>
+      <div class="footer-col">
+        <h3 class="footer-title">KẾT NỐI</h3>
         <div style="display: flex; gap: 20px; margin-top: 15px;">
           <a href="https://www.facebook.com/thang.nguyen.118650" title="Facebook">
             <img src="assets/icons/facebook.svg" alt="Facebook" width="24" height="24" style="filter: invert(1);">
@@ -354,21 +354,21 @@
         </div>
       </div>
     </div>
-    <div class="phan-cuoi-duoi">
+    <div class="footer-bottom">
       <p>&copy; 2026 SOLEKING. Đẳng cấp từng bước chân.</p>
     </div>
   </footer>
 
-  <div class="overlay-tim-kiem" id="overlay-tim-kiem">
-    <div class="hop-tim-kiem">
-      <button class="dong-overlay-tk" onclick="dongTimKiem()">✕</button>
+  <div class="search-overlay" id="search-overlay">
+    <div class="search-box">
+      <button class="btn-close-search" onclick="dongTimKiem()">✕</button>
       <div style="position: relative;">
-        <input type="text" class="o-nhap-tim-kiem" id="input-tim-kiem" placeholder="Nhập tên giày..." autocomplete="off">
-        <button id="btn-thuc-hien-tk" style="position: absolute; right: 0; top: 50%; transform: translateY(-50%); background: none; border: none; color: #ff3366; cursor: pointer;">
+        <input type="text" class="search-input" id="input-tim-kiem" placeholder="Nhập tên giày..." autocomplete="off">
+        <button id="btn-submit-search" style="position: absolute; right: 0; top: 50%; transform: translateY(-50%); background: none; border: none; color: #ff3366; cursor: pointer;">
           <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
         </button>
       </div>
-      <div id="goi-y-tim-kiem" class="khung-goi-y"></div>
+      <div id="goi-y-tim-kiem" class="search-suggestions"></div>
     </div>
   </div>
 

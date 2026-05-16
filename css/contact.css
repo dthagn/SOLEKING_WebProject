@@ -2,7 +2,7 @@
    CONTACT.CSS - Trang Liên Hệ
    ======================================== */
 
-.bia-lien-he {
+.contact-cover {
   padding: 180px 24px 80px;
   text-align: center;
   background-color: #0a0a0a;
@@ -18,7 +18,7 @@
   margin-bottom: 24px;
 }
 
-.tieu-de-lien-he {
+.contact-title {
   font-size: clamp(32px, 8vw, 72px);
   font-weight: 900;
   color: #ffffff;
@@ -27,7 +27,7 @@
   margin-bottom: 32px;
 }
 
-.mo-ta-lien-he {
+.contact-desc {
   max-width: 500px;
   margin: 0 auto;
   font-size: 18px;
@@ -36,7 +36,7 @@
 }
 
 /* Khu vực nội dung liên hệ */
-.khu-vuc-lien-he {
+.contact-area {
   max-width: 1200px;
   margin: 0 auto;
   padding: 100px 24px;
@@ -100,7 +100,7 @@
   flex: 1.5;
 }
 
-.khung-bieu-mau-lh {
+.contact-form-wrapper {
   background-color: #111111;
   padding: 48px;
   border: 1px solid #222222;
@@ -115,13 +115,13 @@
 }
 
 /* Ô nhập liệu */
-.nhom-nhap-lieu {
+.input-group {
   margin-bottom: 24px;
   display: flex;
   flex-direction: column;
 }
 
-.nhan-nhap-lieu {
+.input-label {
   font-weight: 800;
   margin-bottom: 8px;
   color: #ffffff;
@@ -130,11 +130,11 @@
   font-size: 12px;
 }
 
-.nhan-nhap-lieu span {
+.input-label span {
   color: #ff3366;
 }
 
-.o-nhap-lieu {
+.input-field {
   padding: 16px 24px;
   background-color: #1a1a1a;
   border: 1px solid #333333;
@@ -143,13 +143,13 @@
   transition: all 0.3s;
 }
 
-.o-nhap-lieu:focus {
+.input-field:focus {
   outline: none;
   border-color: #ff3366;
   background-color: #000000;
 }
 
-.o-nhap-lieu::placeholder {
+.input-field::placeholder {
   color: #555555;
 }
 
@@ -175,12 +175,12 @@
   color: #555555;
 }
 
-.hang-nhap-lieu {
+.input-row {
   display: flex;
   gap: 24px;
 }
 
-.hang-nhap-lieu .nhom-nhap-lieu {
+.input-row .input-group {
   flex: 1;
 }
 
