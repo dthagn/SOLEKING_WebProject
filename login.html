@@ -6,7 +6,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Tài Khoản | SOLEKING</title>
 
-  <!-- Liên kết các file CSS chuẩn -->
   <link rel="stylesheet" href="css/base.css">
   <link rel="stylesheet" href="css/layout.css">
   <link rel="stylesheet" href="css/auth.css">
@@ -14,16 +13,15 @@
 </head>
 
 <body>
-  <!-- PHẦN ĐẦU TRANG (GLASSMORPHISM TỰ ĐỘNG TỪ LAYOUT.CSS) -->
   <header class="phan-dau">
     <div class="phan-dau-chinh">
       <div class="noi-dung-phan-dau">
         <a href="index.html" class="logo">SOLEKING</a>
         <nav class="thanh-dieu-huong">
           <a href="index.html" class="lien-ket-dieu-huong">Trang Chủ</a>
-          <a href="san-pham.html" class="lien-ket-dieu-huong">Shop</a>
-          <a href="gioi-thieu.html" class="lien-ket-dieu-huong">Giới Thiệu</a>
-          <a href="lien-he.html" class="lien-ket-dieu-huong">Liên Hệ</a>
+          <a href="product.html" class="lien-ket-dieu-huong">Shop</a>
+          <a href="about.html" class="lien-ket-dieu-huong">Giới Thiệu</a>
+          <a href="contact.html" class="lien-ket-dieu-huong">Liên Hệ</a>
         </nav>
         <div class="hanh-dong">
           <a href="#" class="nut-hanh-dong" title="Tìm Kiếm" id="btn-tim-kiem">
@@ -45,7 +43,7 @@
               <!-- Render by auth.js -->
             </div>
           </div>
-          <a href="thanh-toan.html" class="nut-hanh-dong" title="Giỏ Hàng" id="btn-gio-hang"
+          <a href="checkout.html" class="nut-hanh-dong" title="Giỏ Hàng" id="btn-gio-hang"
             style="position: relative;">
             <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none"
               stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -63,6 +61,7 @@
   <!-- NỘI DUNG ĐĂNG NHẬP / ĐĂNG KÝ -->
   <div class="auth-page">
     <div class="auth-container" id="auth-container">
+
       <!-- FORM ĐĂNG KÝ -->
       <div class="form-container sign-up-container">
         <form action="#" id="form-dang-ky" class="auth-form">
@@ -90,8 +89,7 @@
           </div>
 
           <button type="submit" class="auth-btn">Đăng Ký</button>
-          <div class="mobile-toggle">Đã có tài khoản? <span onclick="document.getElementById('signIn').click()">Đăng
-              nhập ngay</span></div>
+          <div class="mobile-toggle">Đã có tài khoản? <span onclick="document.getElementById('signIn').click()">Đăng nhập ngay</span></div>
         </form>
       </div>
 
@@ -113,12 +111,11 @@
 
           <a href="quen-mat-khau.html" class="quen-mk">Quên mật khẩu?</a>
           <button type="submit" class="auth-btn">Đăng Nhập</button>
-          <div class="mobile-toggle">Chưa có tài khoản? <span onclick="document.getElementById('signUp').click()">Đăng
-              ký ngay</span></div>
+          <div class="mobile-toggle">Chưa có tài khoản? <span onclick="document.getElementById('signUp').click()">Đăng ký ngay</span></div>
         </form>
       </div>
 
-      <!-- LỚP PHỦ CHUYỂN ĐỔI (OVERLAY) -->
+      <!-- LỚP PHỦ CHUYỂN ĐỔI -->
       <div class="overlay-container">
         <div class="overlay">
           <div class="overlay-panel overlay-left">
@@ -141,23 +138,22 @@
     <div class="noi-dung-phan-cuoi">
       <div class="cot-phan-cuoi">
         <h3 class="tieu-de-phan-cuoi">SOLEKING</h3>
-        <p style="color:#888; font-size:14px; line-height:1.8;">Chuyên cung cấp giày thể thao chính hãng Nike, Adidas,
-          Puma.</p>
+        <p style="color:#888; font-size:14px; line-height:1.8;">Chuyên cung cấp giày thể thao chính hãng Nike, Adidas, Puma.</p>
       </div>
       <div class="cot-phan-cuoi">
         <h3 class="tieu-de-phan-cuoi">KHÁM PHÁ</h3>
         <div class="danh-sach-phan-cuoi">
           <a href="index.html">Trang Chủ</a>
-          <a href="san-pham.html">Shop</a>
-          <a href="gioi-thieu.html">Giới Thiệu</a>
-          <a href="lien-he.html">Liên Hệ</a>
+          <a href="product.html">Shop</a>
+          <a href="about.html">Giới Thiệu</a>
+          <a href="contact.html">Liên Hệ</a>
         </div>
       </div>
       <div class="cot-phan-cuoi">
         <h3 class="tieu-de-phan-cuoi">HỖ TRỢ</h3>
         <div class="danh-sach-phan-cuoi">
-          <a href="thanh-toan.html">Hướng dẫn mua hàng</a>
-          <a href="lien-he.html">Chính sách đổi trả</a>
+          <a href="checkout.html">Hướng dẫn mua hàng</a>
+          <a href="contact.html">Chính sách đổi trả</a>
         </div>
       </div>
       <div class="cot-phan-cuoi">
@@ -192,6 +188,7 @@
   </div>
 
   <script src="js/auth.js"></script>
+  <script src="js/cart.js"></script>
   <script src="js/products.js"></script>
   <script src="js/main.js"></script>
 </body>

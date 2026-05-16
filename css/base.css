@@ -7,33 +7,22 @@
 html {
   scroll-behavior: smooth;
   font-family: 'Helvetica Neue', Arial, sans-serif;
-  /* Phông chữ cơ bản, hiện đại */
 }
 
 body {
   font-size: 16px;
   line-height: 1.6;
   color: #f0f0f0;
-  /* Chữ trắng xám */
   background-color: #0a0a0a;
-  /* Nền đen tuyền cao cấp */
   overflow-x: hidden;
 }
 
-/* Các thẻ tiêu đề cỡ lớn */
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+h1, h2, h3, h4, h5, h6 {
   font-weight: 800;
-  /* In đậm cực đại */
   line-height: 1.1;
   margin-bottom: 16px;
   color: #ffffff;
   letter-spacing: -1px;
-  /* Khoảng cách chữ hẹp lại cho cảm giác cao cấp */
 }
 
 h1 {
@@ -63,7 +52,6 @@ a {
 
 a:hover {
   color: #ff3366;
-  /* Đỏ neon */
 }
 
 img {
@@ -72,20 +60,9 @@ img {
   display: block;
 }
 
-/* Các lớp tiện ích cơ bản */
 .khung-bao {
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 24px;
-}
-
-.hien-thi-ngang {
-  display: flex;
-}
-
-.dan-deu-flex {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
 }
